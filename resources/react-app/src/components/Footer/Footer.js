@@ -57,10 +57,10 @@ function Footer() {
                 <img
                     src={bglogo}
                     alt="Background"
-                    className="absolute right-0 bottom-0 w-[55%]"
+                    className="absolute right-0 bottom-0 w-[55%] max-md:w-[85%]"
                 />
 
-                <div className="relative pt-20 pb-[31rem]">
+                <div className="relative top-20 mb-[31rem] max-lg:mb-[20rem] max-md:mb-[12rem] max-md:top-10">
                     <img
                         id="image-id"
                         src={map}
@@ -96,75 +96,82 @@ function Footer() {
                     />
                 </div>
 
-                <div className="flex px-10 pb-14 h-96 justify-between relative z-20">
-                    <div className="flex flex-col justify-between w-2/6">
-                        <img src={logo} alt="Vito Logo" className="w-52" />
-                        <div className="text-white text-base">
+                <div className="flex px-10 max-sm:px-2 pb-14 h-96 justify-between relative z-20">
+                    <div className="flex flex-col justify-between w-2/6 max-md:w-3/6">
+                        <img
+                            src={logo}
+                            alt="Vito Logo"
+                            className="w-52 max-md:w-36"
+                        />
+                        <div className="text-white text-base max-md:text-sm">
                             <p>Ayazağa, Vadistanbul, Azerbaycan Cd. 3B D:1B </p>
                             <p>Blok, 34485 Sarıyer/İstanbul</p>
                             <p>Phone: +90 (212) 232 3030</p>
                         </div>
                     </div>
-                    <div className=" flex justify-between w-4/6 text-white flex-col">
-                        <div className="flex justify-between text-white">
+                    <div className=" flex justify-between w-4/6 max-md:w-3/6 text-white flex-col">
+                        <div className="flex justify-between text-white max-lg:flex-wrap max-md:flex-col max-md:items-end">
                             <ul className="">
-                                <li className="py-2">
+                                <li className="pb-2 max-sm:text-sm text-end">
                                     <a href="/">ANASAYFA</a>
                                 </li>
-                                <li className="py-2">
+                                <li className="pb-2 max-sm:text-sm text-end">
                                     <a href="#">KURUMSAL</a>
                                 </li>
-                                <li className="py-2">
+                                <li className="pb-2 max-sm:text-sm text-end">
                                     <a href="#">HİZMETLER</a>
                                 </li>
                             </ul>
                             <ul className="">
-                                <li className="py-2">
+                                <li className="pb-2 max-sm:text-sm text-end">
                                     <a href="#">PROJELER</a>
                                 </li>
-                                <li className="py-2">
+                                <li className="pb-2 max-sm:text-sm text-end">
                                     <a href="#">SEKTÖRLER</a>
                                 </li>
                             </ul>
                             <ul className="">
-                                <li className="py-2">
+                                <li className="pb-2 max-sm:text-sm text-end">
                                     <a href="#">İNSAN KAYNAKLARI</a>
                                 </li>
                             </ul>
                             <ul className="">
-                                <li className="py-2">
+                                <li className="pb-2 max-sm:text-sm text-end">
                                     <a href="#">BASIN ODASI</a>
                                 </li>
                             </ul>
                             <ul className="">
-                                <li className="py-2">
+                                <li className="pb-2 max-sm:text-sm text-end">
                                     <a href="#">İLETİŞİM</a>
                                 </li>
                             </ul>
                         </div>
                         <div className="flex justify-end items-center">
-                            <div className="flex justify-center items-center mr-12">
+                            <div className="flex justify-center items-center mr-12 max-sm:mr-0">
                                 <a
                                     href="https://twitter.com/GroupVito"
                                     target="blank"
                                 >
-                                    <BiLogoTwitter className="text-3xl mx-1 text-[#456998] cursor-pointer hover:text-[#1DA1F2]" />
+                                    <BiLogoTwitter className="text-3xl mx-1 text-[#456998] cursor-pointer hover:text-[#1DA1F2] max-md:text-[#1DA1F2]" />
                                 </a>
 
                                 <a
                                     href="https://www.linkedin.com/company/vitogroup?originalSubdomain=tr"
                                     target="blank"
                                 >
-                                    <BiLogoLinkedin className="text-3xl mx-1 text-[#456998] cursor-pointer hover:text-white" />
+                                    <BiLogoLinkedin className="text-3xl mx-1 text-[#456998] cursor-pointer hover:text-white max-md:text-white" />
                                 </a>
                             </div>
 
-                            <p className="text-sm">
+                            <p className="text-sm max-sm:hidden ">
                                 Vito ©. Copyright {date.getFullYear()}
                             </p>
                         </div>
                     </div>
                 </div>
+                <p className="hidden max-sm:block text-xs text-white w-full text-end p-4">
+                    Vito ©. Copyright {date.getFullYear()}
+                </p>
             </div>
 
             <Transition appear show={isOpen} as={Fragment}>
