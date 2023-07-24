@@ -3,14 +3,12 @@ import Home from "../pages/Home/Home";
 import RootLayout from "../layouts/RootLayout";
 import Contact from "../pages/Contact/Contact";
 import Deneme from "../components/Deneme/MenuFirst";
-import Footer from "../components/Footer/Footer";
 
 function AppRoute() {
     return (
         <>
             <Routes>
                 <Route>
-                    {/* Örnek tanımlama.*/}
                     <Route path="" element={<RootLayout />}>
                         <Route path="/" element={<Home />} />
                     </Route>

@@ -2,5 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;300;600;700;800;900&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;300;400;500;600;700;800;900&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+/* app.css veya main.css gibi bir dosya */
+@keyframes moveUpAndDownFirst {
+  100% {
+    transform: translateY(0px);
+  }
+  0% {
+    transform: translateY(200px);
+  }
+}
 
+@keyframes moveDownAndUpFirst {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+.animate-card-first {
+   animation: moveUpAndDownFirst 1s ease-in-out;
+}
+.animate-card-down-first {
+    animation: moveDownAndUpFirst 1s ease-in-out;
+}
+
+@keyframes moveUpAndDownSecond {
+  100% {
+    transform: translateY(0px);
+  }
+  0% {
+    transform: translateY(250px);
+  }
+}
+@keyframes moveDownAndUpSecond  {
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(80px);
+  }
+}
+.animate-card-second {
+   animation: moveUpAndDownSecond 1s ease-in-out;
+}
+.animate-card-down-second {
+    animation: moveDownAndUpSecond 1s ease-in-out;
+}
+@keyframes moveUpAndDownThird  {
+  100% {
+    transform: translateY(0px);
+  }
+  0% {
+    transform: translateY(300px);
+  }
+}
+@keyframes moveDownAndUpThird {
+  0% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+.animate-card-thirt {
+   animation: moveUpAndDownThird 1s ease-in-out;
+}
+.animate-card-down-thirt{
+    animation: moveDownAndUpThird 1s ease-in-out;
+}
+
+.loader {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(0deg, rgba(255, 244, 35, 0.129) 33%, #ff3d00 100%);
+  box-sizing: border-box;
+  animation: rotation 5s ease-in-out;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: white;
+}
+@keyframes rotation {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg)}
+} 
+
+.map-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-image {
+  position: absolute;
+  top: 0;
+  left: 0; /* Başlangıçta görünür olmasını sağlar */
+  opacity: 0; /* Görünürlüğü başlangıçta sıfır yapar */
+  transition: opacity 4s ease-in-out; /* Geçiş efektini opacity üzerinden tanımlar */
+}
+
+.map-container.show-map .map-image {
+  opacity: 1; /* Görünürlüğü 1 (tamamen görünür) yapar */
+}
+.map-image-cursor {
+  opacity: 0; /* Görünürlüğü başlangıçta sıfır yapar */
+  transition: opacity 0.2s ease-in 1.5s; /* Geçiş efektini opacity üzerinden tanımlar */
+}
+.map-container.show-map .map-image-cursor {
+  opacity: 1; /* Görünürlüğü 1 (tamamen görünür) yapar */
+}
