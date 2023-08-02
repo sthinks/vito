@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;300;400;500;600;700;800;900&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 /* app.css veya main.css gibi bir dosya */
 @keyframes moveUpAndDownFirst {
@@ -108,7 +109,7 @@
 }
 
 .map-image {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0; /* Başlangıçta görünür olmasını sağlar */
   opacity: 0; /* Görünürlüğü başlangıçta sıfır yapar */
@@ -124,4 +125,22 @@
 }
 .map-container.show-map .map-image-cursor {
   opacity: 1; /* Görünürlüğü 1 (tamamen görünür) yapar */
+}
+.sector-video{
+  height: 700px !important;
+}
+@media screen and (max-width: 1200px) {
+  .sector-video{
+    height: 500px !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sector-video{
+    height: 400px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sector-video{
+    height: 225px !important;
+  }
 }

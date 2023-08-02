@@ -21,3 +21,6 @@ Route::get('/all-news', [
     \App\Http\Controllers\NewsController::class,
     'getAllNews',
 ]);
+
+Route::get('get-sector-slider',[\App\Http\Controllers\SectorController::class,'getSliders',]);
+Route::get('get-vito-global',[\App\Http\Controllers\GlobalController::class,'getGlobalVito',]);

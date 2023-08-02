@@ -7,6 +7,7 @@ import mapcursor from "../../assets/footer/mapcursor.png";
 import { Dialog, Transition } from "@headlessui/react";
 import { useInView } from "react-intersection-observer";
 import { BiLogoTwitter, BiLogoLinkedin } from "react-icons/bi";
+import footerWave from "../../assets/footer/footerwaves.png";
 
 function Footer() {
     const [isOpen, setIsOpen] = useState(false);
@@ -65,9 +66,9 @@ function Footer() {
                 onScroll={(e) => console.log(e.currentTarget.scrollTop)}
             >
                 <img
-                    src={bglogosecond}
-                    alt="Background"
-                    className="absolute w-2/6"
+                    src={footerWave}
+                    alt="footerWave"
+                    className="relative top-[-2px]"
                 />
 
                 <img
@@ -76,7 +77,7 @@ function Footer() {
                     className="absolute right-0 bottom-0 w-[55%] max-md:w-[85%]"
                 />
 
-                <div className="relative top-20 mb-[31rem] max-lg:mb-[20rem] max-md:mb-[12rem] max-md:top-10 h-[700px]">
+                <div className="relative top-20 mb-[31rem] max-lg:mb-[20rem] max-md:mb-[12rem] max-md:top-10">
                     <img
                         className="map-image"
                         id="image-id"
@@ -202,7 +203,7 @@ function Footer() {
                             <BiLogoLinkedin className="text-3xl mx-1 text-[#456998] cursor-pointer hover:text-white max-md:text-white" />
                         </a>
                     </div>
-                    <p className="hidden max-lg:block text-xs text-white w-full text-end ">
+                    <p className="hidden max-lg:flex text-xs text-white w-full text-end max-lg:justify-end max-lg:items-center ">
                         Vito ©. Copyright {date.getFullYear()}
                     </p>
                 </div>
