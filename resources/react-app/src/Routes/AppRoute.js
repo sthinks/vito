@@ -7,6 +7,7 @@ import Contact from "../pages/Contact/Contact";
 import Deneme from "../components/Deneme/MenuFirst";
 import Sector from "../pages/Sector/Sector";
 import Global from "../pages/Global/Global";
+import AboutUs from "../pages/AboutUs/AboutUs";
 
 function AppRoute() {
     return (
@@ -19,6 +20,7 @@ function AppRoute() {
                     <Route element={<RootLayout />}>
                         <Route path="/" element={<Home />} />
                         <Route path="/sector" element={<Sector />} />
+                        <Route path="/about-us" element={<AboutUs />} />
                     </Route>
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/deneme" element={<Deneme />} />

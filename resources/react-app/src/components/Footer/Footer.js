@@ -133,31 +133,31 @@ function Footer() {
                     <div className=" flex justify-between w-4/6 max-lg:w-full text-white flex-col">
                         <div className="flex justify-between text-white max-lg:flex-wrap  max-md:gap-5 max-md:flex-initial max-md:items-start">
                             <ul className="">
-                                <li className="pb-2 max-sm:text-sm text-end">
+                                <li className="pb-2 max-sm:text-sm text-start">
                                     <a href="/">ANASAYFA</a>
                                 </li>
-                                <li className="pb-2 max-sm:text-sm text-end">
+                                <li className="pb-2 max-sm:text-sm text-start">
                                     <a href="#">KURUMSAL</a>
                                 </li>
-                                <li className="pb-2 max-sm:text-sm text-end">
+                                <li className="pb-2 max-sm:text-sm text-start">
                                     <a href="#">HİZMETLER</a>
                                 </li>
                             </ul>
                             <ul className="">
-                                <li className="pb-2 max-sm:text-sm text-end">
+                                <li className="pb-2 max-sm:text-sm text-start">
                                     <a href="#">PROJELER</a>
                                 </li>
-                                <li className="pb-2 max-sm:text-sm text-end">
+                                <li className="pb-2 max-sm:text-sm text-start">
                                     <a href="#">SEKTÖRLER</a>
                                 </li>
                             </ul>
                             <ul className="">
-                                <li className="pb-2 max-sm:text-sm text-end">
+                                <li className="pb-2 max-sm:text-sm text-start">
                                     <a href="#">İNSAN KAYNAKLARI</a>
                                 </li>
                             </ul>
                             <ul className="">
-                                <li className="pb-2 max-sm:text-sm text-end">
+                                <li className="pb-2 max-sm:text-sm text-start">
                                     <a href="#">BASIN ODASI</a>
                                 </li>
                             </ul>

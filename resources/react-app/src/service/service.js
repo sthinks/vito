@@ -12,10 +12,15 @@ const getGlobalVito = async () => {
     const result = await axiosInstance.get("get-vito-global");
     return result;
 };
+const getAboutStat = async () => {
+    const result = await axiosInstance.get("get-about-stats");
+    return result;
+};
 const exportFunction = {
     getAllNews,
     getSectorSlider,
     getGlobalVito,
+    getAboutStat,
 };
 
 export default exportFunction;

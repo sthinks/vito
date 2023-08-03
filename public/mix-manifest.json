@@ -1,5 +1,5 @@
 {
-    "/js/app.js": "/js/app.js?id=1a5197d1e0bc08dfb89f98297d9971d2",
+    "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css?id=68b329da9893e34099c7d8ad5cb9c940",
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/slick-carousel/slick/slick.eot": "/fonts/vendor/slick-carousel/slick/slick.eot?id=4bb08b6ed048eaf8be2a371ffc8faec2",
@@ -47,6 +47,14 @@
     "/logo192.png": "/logo192.png?id=995306f3f1b50873ba0fe4c857a90d22",
     "/logo512.png": "/logo512.png?id=93c81d868a39562d52258e5b5b267644",
     "/manifest.json": "/manifest.json?id=d9d975cebe2ec20b6c652e1e4c12ccf0",
-    "/mix-manifest.json": "/mix-manifest.json?id=fb7082c63b3515088d44f3ee295aa296",
-    "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850"
+    "/mix-manifest.json": "/mix-manifest.json?id=bfa32b347b519852f25f286ab22485ed",
+    "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850",
+    "/images/aboutusbg.png": "/images/aboutusbg.png?id=fb32c5652d4670ebe239e04fc1f94c58",
+    "/images/aboutusright.png": "/images/aboutusright.png?id=3900f2db6c4837b1f75185830f189087",
+    "/images/aboutwawes.png": "/images/aboutwawes.png?id=e7a20be7f27bfbd287c7421b308b60e8",
+    "/images/pr1.png": "/images/pr1.png?id=2fce9cab20e7b5ba6b4f6d9219712569",
+    "/images/pr2.png": "/images/pr2.png?id=8441f5d9704763def1edf84e22c95928",
+    "/images/pr3.png": "/images/pr3.png?id=2ba8a8e76e293df6ddea9ac47f7480c2",
+    "/images/pr4.png": "/images/pr4.png?id=10534362b98a43a295db7a24131aa324",
+    "/images/pr5.jpg": "/images/pr5.jpg?id=0cdb10bb5b6653856c278b9e466a1ea9"
 }

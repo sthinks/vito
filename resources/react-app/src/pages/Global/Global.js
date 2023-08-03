@@ -152,7 +152,7 @@ function Global() {
                 </div>
                 <div className="w-full flex justify-end">
                     <img
-                        className="w-4/6"
+                        className="w-4/6 max-md:w-5/6"
                         src={globalLayer}
                         alt="GlobalImage"
                     />
