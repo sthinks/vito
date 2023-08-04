@@ -6,11 +6,7 @@ import Footer from "../components/Footer/Footer";
 function RootLayout() {
     return (
         <>
-            {/* Header */}
-            <div>
-                {/* Buradaki div'e genel container css verilebilir. */}
-                <Outlet />
-            </div>
+            <Outlet />
             <Footer />
         </>
     );

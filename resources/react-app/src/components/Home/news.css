@@ -1,0 +1,20 @@
+.container {
+  position: relative;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+}
+
+.card {
+  background-color: #f0f0f0;
+  padding: 16px;
+  width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}

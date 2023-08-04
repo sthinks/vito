@@ -1,18 +1,31 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import RootLayout from "../layouts/RootLayout";
+import RootLayout2 from "../layouts/RootLayout2";
+
+import ShortFooterLayout from "../layouts/ShortFooterLayout";
+
 import Contact from "../pages/Contact/Contact";
 import Deneme from "../components/Deneme/MenuFirst";
-import Footer from "../components/Footer/Footer";
+import Sector from "../pages/Sector/Sector";
+import Global from "../pages/Global/Global";
+import AboutUs from "../pages/AboutUs/AboutUs";
 
 function AppRoute() {
     return (
         <>
             <Routes>
                 <Route>
-                    {/* Örnek tanımlama.*/}
-                    <Route path="" element={<RootLayout />}>
+                    <Route element={<ShortFooterLayout />}>
+                        <Route path="/vito-global" element={<Global />} />
+                    </Route>
+                    <Route element={<RootLayout />}>
                         <Route path="/" element={<Home />} />
+                        <Route path="/sector" element={<Sector />} />
+                        <Route path="/about-us" element={<AboutUs />} />
+                    </Route>
+                    <Route element={<RootLayout2 />}>
+                        <Route path="/contact" element={<Contact />} />
                     </Route>
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/deneme" element={<Deneme />} />
