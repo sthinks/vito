@@ -16,11 +16,16 @@ const getAboutStat = async () => {
     const result = await axiosInstance.get("get-about-stats");
     return result;
 };
+const getAboutServices = async () => {
+    const result = await axiosInstance.get("get-about-services");
+    return result;
+};
 const exportFunction = {
     getAllNews,
     getSectorSlider,
     getGlobalVito,
     getAboutStat,
+    getAboutServices,
 };
 
 export default exportFunction;

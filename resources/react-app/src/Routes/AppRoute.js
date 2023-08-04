@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import RootLayout from "../layouts/RootLayout";
+import RootLayout2 from "../layouts/RootLayout2";
+
 import ShortFooterLayout from "../layouts/ShortFooterLayout";
 
 import Contact from "../pages/Contact/Contact";
@@ -21,6 +23,9 @@ function AppRoute() {
                         <Route path="/" element={<Home />} />
                         <Route path="/sector" element={<Sector />} />
                         <Route path="/about-us" element={<AboutUs />} />
+                    </Route>
+                    <Route element={<RootLayout2 />}>
+                        <Route path="/contact" element={<Contact />} />
                     </Route>
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/deneme" element={<Deneme />} />

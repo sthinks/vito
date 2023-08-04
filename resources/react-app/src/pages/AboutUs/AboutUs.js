@@ -8,17 +8,33 @@ import pr2 from "../../assets/aboutus/pr2.png";
 import pr3 from "../../assets/aboutus/pr3.png";
 import pr4 from "../../assets/aboutus/pr4.png";
 import pr5 from "../../assets/aboutus/pr5.jpg";
+import serviceBg from "../../assets/aboutus/servicebg.png";
+import { useInView } from "react-intersection-observer";
 function AboutUs() {
     const [data, setData] = useState(null);
+    const [dataService, setDataService] = useState(null);
+    const [newsAnim, setNewsAnim] = useState(false);
     useLayoutEffect(() => {
-        getDataHandler();
+        getDataStatHandler();
+        getDataServiceHandler();
     }, []);
-    const getDataHandler = async () => {
+    const getDataStatHandler = async () => {
         const result = await service.getAboutStat();
-        console.log(result);
         setData(result.data);
     };
-
+    const getDataServiceHandler = async () => {
+        const result = await service.getAboutServices();
+        setDataService(result.data);
+    };
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0,
+    });
+    if (inView === true) {
+        if (newsAnim !== true) {
+            setNewsAnim(true);
+        }
+    }
     return (
         <>
             <div
@@ -199,45 +215,48 @@ function AboutUs() {
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
             </div>
-            <div className="w-full flex flex-wrap justify-center items-center px-40 py-6 max-lg:px-20 max-md:px-6">
-                <div className="w-2/6 flex justify-center items-center circle-container">
-                    <div className="outer-circle">
-                        <img
-                            className="inner-image rounded-full rotating-circle"
-                            src={pr1}
-                            alt="ServicesImage"
-                        />
-                    </div>
-                </div>
-
-                <div className="w-2/6 flex justify-center items-center">
-                    <img
-                        className="rounded-full"
-                        src={pr2}
-                        alt="ServicesImage"
-                    />
-                </div>
-                <div className="w-2/6 flex justify-center items-center">
-                    <img
-                        className="rounded-full"
-                        src={pr3}
-                        alt="ServicesImage"
-                    />
-                </div>
-                <div className="w-2/6 flex justify-center items-center">
-                    <img
-                        className="rounded-full"
-                        src={pr4}
-                        alt="ServicesImage"
-                    />
-                </div>
-                <div className="w-2/6 flex justify-center items-center">
-                    <img
-                        className="rounded-full"
-                        src={pr5}
-                        alt="ServicesImage"
-                    />
-                </div>
+            <div
+                ref={ref}
+                className="w-full flex flex-wrap justify-center items-center px-32 py-6 max-lg:px-10 max-md:px-6 max-sm:px-2"
+            >
+                {dataService != null &&
+                    dataService.map((item, i) => (
+                        <div
+                            key={i}
+                            className="w-2/6 flex justify-center items-center max-md:w-5/6"
+                        >
+                            <div className="relative rounded-full w-64 h-64 flex justify-center items-center max-sm:w-52 max-sm:h-52 max-sm:m-2">
+                                {/* Dönen Çerçeve */}
+                                <div
+                                    style={{
+                                        backgroundColor: `${item.color_code}`,
+                                    }}
+                                    className={`absolute top-0 left-0 w-full h-full rounded-full bg-cover ${
+                                        newsAnim ? "animate-spin" : ""
+                                    }`}
+                                ></div>
+                                {/* Dönen Border */}
+                                <div
+                                    className={`absolute top-0 left-0 w-full h-full  rounded-full ${
+                                        newsAnim ? "animate-spin" : ""
+                                    } bg-cover`}
+                                    style={{
+                                        backgroundImage: `url(${serviceBg})`,
+                                    }}
+                                ></div>
+                                {/* Sabit Resim */}
+                                <img
+                                    className="w-[90%] relative z-30 rounded-full border-[12px] border-[#ffffff57]"
+                                    src={item.image}
+                                    alt="ServicesImage"
+                                />
+                                <div className="absolute z-40 w-[83%] h-[82%] border-4 border-black   rounded-full bg-black opacity-30" />
+                                <p className="absolute text-white text-2xl font-bold text-center z-50">
+                                    {item.title}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
             </div>
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5 relative z-40 ">
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
@@ -250,33 +269,33 @@ function AboutUs() {
                 <p className="text-2xl font-bold text-black py-4 text-center ">
                     CODE OF ETHICS AND BUSINESS CONDUCT
                 </p>
-                <p className="text-xl font-medium text-slate-700 text-center py-5">
+                <p className="text-lg font-normal text-slate-700 text-center py-5">
                     ViTOGroup displays the highest standards for understanding
                     and observing laws and regulations; and expects its
                     Employees and Business Partners to always act in a compliant
                     manner.
                 </p>
-                <p className="text-xl font-medium text-slate-700 text-center py-5">
+                <p className="text-xl font-normal text-slate-700 text-center py-5">
                     “Respect for people” is the core element of our philosophy.
                     We value human rights and employee rights. Harassment and
                     mobbingare unethical ways of behaving towards a person.
                 </p>
-                <p className="text-xl font-medium text-slate-700 text-center py-5">
+                <p className="text-lg font-normal text-slate-700 text-center py-5">
                     Protecting the environment and human health are the basic
                     principles that we prioritize in all our activities.
                 </p>
-                <p className="text-xl font-medium text-slate-700 text-center py-5">
+                <p className="text-lg font-normal text-slate-700 text-center py-5">
                     We pay utmost attention to business ethics and moral values.
                     We do not engage in any type of corruption, including
                     facilitation payments, all forms of bribery and corrupt
                     practices, and money laundering.
                 </p>
-                <p className="text-xl font-medium text-slate-700 text-center py-5">
+                <p className="text-lg font-normal text-slate-700 text-center py-5">
                     ViTOGroup Employees and Business Partners shall not directly
                     or indirectly obtain personal gain from any transactions and
                     contractsrelated to ViTOGroup.
                 </p>
-                <p className="text-xl font-medium text-slate-700 text-center py-5">
+                <p className="text-lg font-normal text-slate-700 text-center py-5">
                     If Employees and Business Partners suspect any actual or
                     potential violation, we expect them to speak up. All such
                     communicationwill be kept confidential.
