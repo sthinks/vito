@@ -10,6 +10,7 @@ import Deneme from "../components/Deneme/MenuFirst";
 import Sector from "../pages/Sector/Sector";
 import Global from "../pages/Global/Global";
 import AboutUs from "../pages/AboutUs/AboutUs";
+import News from "../pages/News/News";
 
 function AppRoute() {
     return (
@@ -18,6 +19,7 @@ function AppRoute() {
                 <Route>
                     <Route element={<ShortFooterLayout />}>
                         <Route path="/vito-global" element={<Global />} />
+                        <Route path="/news" element={<News />} />
                     </Route>
                     <Route element={<RootLayout />}>
                         <Route path="/" element={<Home />} />

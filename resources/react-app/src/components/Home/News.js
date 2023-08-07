@@ -9,7 +9,7 @@ function Haber() {
         threshold: 0,
     });
     const getAllNews = async () => {
-        const result = await services.getAllNews();
+        const result = await services.getHomeNews();
         setNews(result.data);
     };
     if (inView === true) {
@@ -40,7 +40,7 @@ function Haber() {
                     >
                         <div className="relative h-3/4 w-full flex justify-center items-center">
                             <img
-                                className="w-full h-full object-cover"
+                                className="w-full h-72 object-fill"
                                 src={news[0].media}
                                 alt="newsimage"
                             />
@@ -50,15 +50,18 @@ function Haber() {
                             </p>
                         </div>
 
-                        <div className="w-full h-1/4 p-8 max-md:p-4 flex justify-center items-start flex-col">
+                        <div className="w-full h-48 p-6 max-md:p-4 flex justify-center items-start flex-col">
                             <p
-                                className="text-[0.9rem] font-medium text-[#3a3a3a]"
+                                className="text-[0.9rem]  font-medium text-[#3a3a3a]"
                                 dangerouslySetInnerHTML={{
-                                    __html: news[0].content,
+                                    __html: news[0].content
+                                        .split(" ")
+                                        .slice(0, 16)
+                                        .join(" "),
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href="#">Devamı</a>
+                                <a href="/news">Devamı</a>
                             </p>
                         </div>
                     </div>
@@ -71,7 +74,7 @@ function Haber() {
                     >
                         <div className="relative h-3/4 w-full flex justify-center items-center">
                             <img
-                                className="w-full h-full object-cover"
+                                className="w-full h-72 object-fill"
                                 src={news[1].media}
                                 alt="newsimage"
                             />
@@ -81,15 +84,18 @@ function Haber() {
                             </p>
                         </div>
 
-                        <div className="w-full h-1/4 p-8 max-md:p-4 flex justify-center items-start flex-col">
+                        <div className="w-full h-48 p-6 max-md:p-4 flex justify-center items-start flex-col">
                             <p
-                                className="text-[0.9rem] font-medium text-[#3a3a3a]"
+                                className="text-[0.9rem]  font-medium text-[#3a3a3a]"
                                 dangerouslySetInnerHTML={{
-                                    __html: news[1].content,
+                                    __html: news[1].content
+                                        .split(" ")
+                                        .slice(0, 16)
+                                        .join(" "),
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href="#">Devamı</a>
+                                <a href="/news">Devamı</a>
                             </p>
                         </div>
                     </div>
@@ -102,7 +108,7 @@ function Haber() {
                     >
                         <div className="relative h-3/4 w-full flex justify-center items-center">
                             <img
-                                className="w-full h-full object-cover"
+                                className="w-full h-72 object-fill"
                                 src={news[2].media}
                                 alt="newsimage"
                             />
@@ -112,15 +118,18 @@ function Haber() {
                             </p>
                         </div>
 
-                        <div className="w-full h-1/4 p-8 max-md:p-4 flex justify-center items-start flex-col">
+                        <div className="w-full h-48 p-6 max-md:p-4 flex justify-center items-start flex-col">
                             <p
-                                className="text-[0.9rem] font-medium text-[#3a3a3a]"
+                                className="text-[0.9rem]  font-medium text-[#3a3a3a]"
                                 dangerouslySetInnerHTML={{
-                                    __html: news[2].content,
+                                    __html: news[2].content
+                                        .split(" ")
+                                        .slice(0, 16)
+                                        .join(" "),
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href="#">Devamı</a>
+                                <a href="/news">Devamı</a>
                             </p>
                         </div>
                     </div>
