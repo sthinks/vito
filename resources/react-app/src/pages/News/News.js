@@ -30,8 +30,8 @@ function News() {
                             backgroundColor: `${item.color_code}`,
                         }}
                     >
-                        <div className="ml-10 mb-5 flex justify-start items-start bg-white">
-                            <div className="w-1/4 h-72">
+                        <div className="ml-10 mb-5 flex justify-start items-start bg-white max-md:flex-col">
+                            <div className="w-1/4 h-auto max-md:w-full">
                                 {item.video === null ? (
                                     <img
                                         className="w-full h-full object-cover"
@@ -41,7 +41,7 @@ function News() {
                                 ) : (
                                     <ReactPlayer
                                         width="100%"
-                                        height="100%"
+                                        height="250px"
                                         controls={true}
                                         url={`${item.video}`}
                                     />
@@ -50,11 +50,11 @@ function News() {
                             <div
                                 className={
                                     openText === item.id
-                                        ? "w-3/4 h-full bg-white px-10 flex justify-start flex-col"
-                                        : "w-3/4 h-72 bg-white px-10 flex justify-start flex-col"
+                                        ? "w-3/4 h-full bg-white px-10 flex justify-start flex-col max-md:w-full max-md:px-3"
+                                        : "w-3/4 h-auto bg-white px-10 flex justify-start flex-col max-md:w-full max-md:px-3"
                                 }
                             >
-                                <p className="text-3xl text-black font-semibold py-5">
+                                <p className="text-3xl text-black font-semibold py-5 max-md:text-xl">
                                     {item.title
                                         .split(" ")
                                         .slice(0, 10)
@@ -105,8 +105,8 @@ function News() {
                             backgroundColor: `${item.color_code}`,
                         }}
                     >
-                        <div className="mr-10 pb-5 flex flex-row-reverse justify-between items-start bg-white">
-                            <div className="w-1/4 h-72">
+                        <div className="mr-10 pb-5 flex flex-row-reverse justify-between items-start bg-white max-md:flex-col">
+                            <div className="w-1/4 h-auto max-md:w-full">
                                 {item?.video === null ? (
                                     <img
                                         className="w-full h-full object-cover"
@@ -116,7 +116,7 @@ function News() {
                                 ) : (
                                     <ReactPlayer
                                         width="100%"
-                                        height="100%"
+                                        height="250px"
                                         controls={true}
                                         url={`${item.video}`}
                                     />
@@ -125,11 +125,11 @@ function News() {
                             <div
                                 className={
                                     openText === item.id
-                                        ? "w-3/4 h-full bg-white px-10 flex justify-start flex-col"
-                                        : "w-3/4 h-72 bg-white px-10 flex justify-start flex-col"
+                                        ? "w-3/4 h-full bg-white px-10 flex justify-start flex-col max-md:w-full max-md:px-3"
+                                        : "w-3/4 h-auto bg-white px-10 flex justify-start flex-col max-md:w-full max-md:px-3"
                                 }
                             >
-                                <p className="text-3xl text-black font-semibold py-5">
+                                <p className="text-3xl text-black font-semibold py-5 max-md:text-xl">
                                     {item.title
                                         .split(" ")
                                         .slice(0, 10)

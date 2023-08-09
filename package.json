@@ -29,6 +29,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "formik": "^2.4.2",
     "react-burger-menu": "^3.0.9",
+    "react-countup": "^6.4.2",
     "react-icons": "^4.10.1",
     "react-intersection-observer": "^9.5.2",
     "react-player": "^2.12.0",
