@@ -15,9 +15,47 @@ function DenemeSlider() {
     const settings = {
         dots: false,
         infinite: true,
+        arrows: false,
         speed: 500,
         slidesToShow: 7,
         slidesToScroll: 7,
+        responsive: [
+            {
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                },
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 380,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
     const arrayLeft = [
         {
@@ -79,7 +117,7 @@ function DenemeSlider() {
     return (
         <div>
             <h2> Multiple items </h2>
-            <Slider {...settings} className="">
+            <Slider {...settings} className="pt-40 bg-transparent">
                 <div className="h-[25rem] relative -right-[50px]">
                     <div className="absolute w-full h-2/4 bg-orange-600 z-40" />
                     <img
@@ -89,6 +127,7 @@ function DenemeSlider() {
                     />
                     <div className="w-full h-2/4  bg-transparent " />
                 </div>
+
                 {arrayLeft.map((item, i) => (
                     <div className={` h-[25rem] relative `}>
                         {i % 2 !== 0 ? (
@@ -105,8 +144,16 @@ function DenemeSlider() {
                                         left: marginLeft * i,
                                     }}
                                 >
+                                    <div className="absolute text-center -top-28">
+                                        <p>
+                                            2011 İlk Ofisimiz Elmadağ'da Gebze
+                                            Santralinin alınması şerefine
+                                            Ansaldo Proje Müdürü Aldo Canepe ile
+                                            kutlama
+                                        </p>
+                                    </div>
                                     <img
-                                        className="absolute z-50 w-4/6"
+                                        className="absolute z-50 w-4/6 max-md:5/6"
                                         src={resm}
                                         alt="ssss"
                                     />
@@ -137,8 +184,16 @@ function DenemeSlider() {
                                         left: marginLeft * i,
                                     }}
                                 >
+                                    <div className="absolute text-center -bottom-28">
+                                        <p>
+                                            2011 İlk Ofisimiz Elmadağ'da Gebze
+                                            Santralinin alınması şerefine
+                                            Ansaldo Proje Müdürü Aldo Canepe ile
+                                            kutlama
+                                        </p>
+                                    </div>
                                     <img
-                                        className="absolute z-50 w-4/6"
+                                        className="absolute z-50 w-4/6 max-md:5/6"
                                         src={resm}
                                         alt="ssss"
                                     />
