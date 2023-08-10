@@ -17,3 +17,18 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/all-news', [
+    \App\Http\Controllers\NewsController::class,
+    'getAllNews',
+]);
+Route::get('/home-news', [
+    \App\Http\Controllers\NewsController::class,
+    'getHomeNews',
+]);
+
+Route::get('get-sector-slider',[\App\Http\Controllers\SectorController::class,'getSliders',]);
+Route::get('get-vito-global',[\App\Http\Controllers\GlobalController::class,'getGlobalVito',]);
+Route::get('get-about-stats',[\App\Http\Controllers\AboutusController::class,'getAboutStat',]);
+Route::get('get-about-services',[\App\Http\Controllers\AboutusController::class,'getAboutServices',]);
+
+

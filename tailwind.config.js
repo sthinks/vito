@@ -7,7 +7,11 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                custom: ["Kumbh Sans", "Urbanist", "sans-serif"],
+            },
+        },
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/aspect-ratio")],
 };
