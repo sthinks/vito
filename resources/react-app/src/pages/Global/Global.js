@@ -17,7 +17,9 @@ function Global() {
         /* Optional options */
         threshold: 0,
     });
+
     useLayoutEffect(() => {
+        window.scrollTo(0, 0);
         getDataHandler();
     }, []);
     const getDataHandler = async () => {

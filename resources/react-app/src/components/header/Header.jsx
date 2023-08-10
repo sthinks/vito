@@ -46,30 +46,34 @@ function Header() {
                 <nav className="bg-[#1b4378] h-20 flex justify-center items-center fixed z-[200] w-full opacity-90 ">
                     <div className="flex justify-center items-center">
                         <Link to="/">
-                            <img src={Logo} alt="sa" className="w-[150px] max-lg:w-[115px]" />
+                            <img
+                                src={Logo}
+                                alt="sa"
+                                className="w-[150px] max-lg:w-[115px]"
+                            />
                         </Link>
                     </div>
                     <ul className="flex flex-row gap-4 max-lg:mt-2">
                         <li className="text-white font-bold text-lg ml-5 max-lg:text-sm ">
-                            <Link to="/hakkimizda"> ABOUT US </Link>
+                            <Link to="/about-us"> ABOUT US </Link>
                         </li>
                         <li className="text-white font-bold text-lg max-lg:text-sm">
-                            <Link to="/kurumsal"> INSTITUONAL </Link>
+                            <Link to="/instituonal"> INSTITUONAL </Link>
                         </li>
                         <li className="text-white font-bold text-lg max-lg:text-sm">
-                            <Link to="/global"> GLOBAL </Link>
+                            <Link to="/vito-global"> GLOBAL </Link>
                         </li>
                         <li className="text-white font-bold text-lg max-lg:text-sm">
-                            <Link to="/projeler"> PROJECTS </Link>
+                            <Link to="/projects"> PROJECTS </Link>
                         </li>
                         <li className="text-white font-bold text-lg max-lg:text-sm">
-                            <Link to="/sektorler"> SECTORS </Link>
+                            <Link to="/sector"> SECTORS </Link>
                         </li>
                         <li className="text-white font-bold text-lg max-lg:text-sm">
-                            <Link to="/haberler"> NEWS </Link>
+                            <Link to="/news"> NEWS </Link>
                         </li>
                         <li className="text-white font-bold text-lg max-lg:text-sm">
-                            <Link to="/iletisim"> CONTACT </Link>
+                            <Link to="/contact"> CONTACT </Link>
                         </li>
                         {/* <li>
                             <img
@@ -140,25 +144,25 @@ function Header() {
                             {/* Burada menü öğelerini ekleyebilirsiniz */}
                             <ul className="bg-[#1b4378] ">
                                 <li className="text-white font-bold text-lg  max-xl:text-sm ">
-                                    <Link to="/hakkimizda">ABOUT US </Link>
+                                    <Link to="/about-us">ABOUT US </Link>
                                 </li>
                                 <li className="text-white font-bold text-lg max-xl:text-sm">
-                                    <Link to="/kurumsal"> INSTITUONAL </Link>
+                                    <Link to="/instituonal"> INSTITUONAL </Link>
                                 </li>
                                 <li className="text-white font-bold text-lg max-xl:text-sm">
-                                    <Link to="/global"> GLOBAL </Link>
+                                    <Link to="/vito-global"> GLOBAL </Link>
                                 </li>
                                 <li className="text-white font-bold text-lg max-xl:text-sm">
-                                    <Link to="/projeler"> PROJECTS </Link>
+                                    <Link to="/projects"> PROJECTS </Link>
                                 </li>
                                 <li className="text-white font-bold text-lg max-xl:text-sm">
-                                    <Link to="/sektorler"> SECROTS </Link>
+                                    <Link to="/sector"> SECROTS </Link>
                                 </li>
                                 <li className="text-white font-bold text-lg max-xl:text-sm">
-                                    <Link to="/haberler"> NEWS </Link>
+                                    <Link to="/news"> NEWS </Link>
                                 </li>
                                 <li className="text-white font-bold text-lg max-xl:text-sm">
-                                    <Link to="/iletisim"> CONTACT </Link>
+                                    <Link to="/contact"> CONTACT </Link>
                                 </li>
                                 {/* <li className="flex items-center gap-3">
                                     <img

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactPlayer from "react-player";
 import SliderComp from "../../components/Sector/Slider";
 import { AiOutlinePlayCircle } from "react-icons/ai";
@@ -7,9 +7,12 @@ import rightImage from "../../assets/sector/asasa.png";
 import leftImage from "../../assets/sector/bgsector.png";
 import endPageImage from "../../assets/sector/Group 15.png";
 function Sector() {
+    useEffect(() => {
+        window.scrollTo(0, 0); // Sayfanın en üstüne kaydır
+    }, []);
     return (
         <div className="w-full">
-            <div className="w-full flex justify-center items-center py-28">
+            <div className="w-full flex justify-center items-center py-28   ">
                 <p className="text-6xl font-extrabold tracking-widest">
                     SECTORS
                 </p>

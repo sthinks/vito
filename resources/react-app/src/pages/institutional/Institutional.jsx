@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import Vedat from "../.././assets/institutional/vedatirelp.png";
 import Fuat from "../.././assets/institutional/fuatsengül.png";
@@ -18,7 +18,9 @@ const paragraphStyles = {
 
 function Institutional() {
     const [isOpen, setIsOpen] = useState(false);
-
+    useEffect(() => {
+        window.scrollTo(0, 0); // Sayfanın en üstüne kaydır
+    }, []);
     return (
         <>
             <Header />

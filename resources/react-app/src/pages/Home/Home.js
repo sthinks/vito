@@ -1,19 +1,22 @@
 import React, { useEffect, useRef, useState } from "react";
 import News from "../../components/Home/News";
-import service from "../../service/service";
-import DenemeSlider from "../../components/Contact/DenemeSlider";
+import Header from "../../components/header/Header";
+import HomeSlider from "../../components/home/home-slider/HomeSlider";
+import HomeAbout from "../../components/home/homeAbout/HomeAbout";
+import Activity from "../../components/home/activity/ActivityHome";
+import HomeAnimation from "../../components/home/homeAnimation/HomeAnimation";
 
 function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0); // Sayfanın en üstüne kaydır
+    }, []);
     return (
         <div className="">
-            <div className="h-[1200px] bg-white">
-                <DenemeSlider />
-            </div>
-            <div className="h-[1200px] bg-white">
-                B<div class="loader"></div>
-            </div>
-            <div className="h-[1200px] bg-red-500">C</div>
-            <div className="h-[1200px] bg-green-300">D</div>
+            <Header />
+            <HomeSlider />
+            <HomeAbout />
+            <Activity />
+            <HomeAnimation />
             <News />
         </div>
     );

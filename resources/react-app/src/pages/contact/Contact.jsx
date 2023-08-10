@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import contactBanner from "../../assets/contact/contactbanner.png";
 import contactLogo from "../../assets/contact/contactlogo.png";
 import { BsTelephone } from "react-icons/bs";
@@ -7,6 +7,9 @@ import { AiOutlineMail } from "react-icons/ai";
 import { IoLocationSharp } from "react-icons/io5";
 
 function Contact() {
+    useEffect(() => {
+        window.scrollTo(0, 0); // Sayfanın en üstüne kaydır
+    }, []);
     return (
         <div
             className="w-full bg-[#093977] relative"

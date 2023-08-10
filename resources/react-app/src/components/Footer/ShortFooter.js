@@ -26,36 +26,36 @@ function ShortFooter() {
                     <div className="flex justify-between text-white max-lg:flex-wrap  max-md:gap-5 max-md:flex-initial max-md:items-start">
                         <ul className="">
                             <li className="pb-2 max-sm:text-sm text-start">
-                                <a href="/">ANASAYFA</a>
+                                <a href="/">HOME</a>
                             </li>
                             <li className="pb-2 max-sm:text-sm text-start">
-                                <a href="#">KURUMSAL</a>
+                                <a href="/instituonal">INSTITUTIONAL</a>
                             </li>
                             <li className="pb-2 max-sm:text-sm text-start">
-                                <a href="#">HİZMETLER</a>
-                            </li>
-                        </ul>
-                        <ul className="">
-                            <li className="pb-2 max-sm:text-sm text-start">
-                                <a href="#">PROJELER</a>
-                            </li>
-                            <li className="pb-2 max-sm:text-sm text-start">
-                                <a href="#">SEKTÖRLER</a>
+                                <a href="#">SERVICES</a>
                             </li>
                         </ul>
                         <ul className="">
                             <li className="pb-2 max-sm:text-sm text-start">
-                                <a href="#">İNSAN KAYNAKLARI</a>
+                                <a href="#">PROJECTS</a>
+                            </li>
+                            <li className="pb-2 max-sm:text-sm text-start">
+                                <a href="#">SECTORS</a>
                             </li>
                         </ul>
                         <ul className="">
                             <li className="pb-2 max-sm:text-sm text-start">
-                                <a href="#">BASIN ODASI</a>
+                                <a href="#">HUMAN RESOURCES</a>
+                            </li>
+                        </ul>
+                        <ul className="">
+                            <li className="pb-2 max-sm:text-sm text-start">
+                                <a href="#">MEDIA</a>
                             </li>
                         </ul>
                         <ul className="">
                             <li className="pb-2 max-sm:text-sm text-end">
-                                <a href="#">İLETİŞİM</a>
+                                <a href="#">CONTACT</a>
                             </li>
                         </ul>
                     </div>

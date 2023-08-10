@@ -10,6 +10,7 @@ function News() {
         setData(result.data);
     };
     useLayoutEffect(() => {
+        window.scrollTo(0, 0);
         getAllNews();
     }, []);
     return (

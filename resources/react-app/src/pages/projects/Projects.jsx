@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/header/Header";
 import ProjectBaner from "../../assets/projects/project-banner.png";
 import HomeAboutSlider from "../../components/home/homeAbout/HomeAboutSlider";
@@ -31,6 +31,9 @@ function Projects() {
             style: true,
         },
     ];
+    useEffect(() => {
+        window.scrollTo(0, 0); // Sayfanın en üstüne kaydır
+    }, []);
     return (
         <>
             <Header />

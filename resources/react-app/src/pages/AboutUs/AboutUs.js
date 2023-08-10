@@ -10,7 +10,9 @@ function AboutUs() {
     const [data, setData] = useState(null);
     const [dataService, setDataService] = useState(null);
     const [newsAnim, setNewsAnim] = useState(false);
+
     useLayoutEffect(() => {
+        window.scrollTo(0, 0);
         getDataStatHandler();
         getDataServiceHandler();
     }, []);
