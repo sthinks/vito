@@ -3,11 +3,7 @@ import Aboutusbg from "../../assets/aboutus/aboutusbg.png";
 import AboutusRight from "../../assets/aboutus/aboutusright.png";
 import AboutWawes from "../../assets/aboutus/aboutwawes.png";
 import service from "../../service/service";
-import pr1 from "../../assets/aboutus/pr1.png";
-import pr2 from "../../assets/aboutus/pr2.png";
-import pr3 from "../../assets/aboutus/pr3.png";
-import pr4 from "../../assets/aboutus/pr4.png";
-import pr5 from "../../assets/aboutus/pr5.jpg";
+import CountUp from "react-countup";
 import serviceBg from "../../assets/aboutus/servicebg.png";
 import { useInView } from "react-intersection-observer";
 function AboutUs() {
@@ -35,6 +31,7 @@ function AboutUs() {
             setNewsAnim(true);
         }
     }
+
     return (
         <>
             <div
@@ -55,16 +52,33 @@ function AboutUs() {
                         ABOUT US
                     </p>
                     <p className="text-xl font-normal max-md:text-lg text-center text-white z-50 py-10">
-                        Hindistan’daki mühendislik ofisimiz, Türkiye’deki uzman
-                        mühendislerimiz ile proje yönetimi ve satın alma,
-                        Katar,Azerbaycan’daki inşaat gruplarımız ile EPC tank
-                        çiftliği projeleri yanı sıra OIL&GAS ve enerji
-                        sektöründeki tüm projeler de tek çatı altındaanahtar
-                        teslim inşaat ve montaj hizmetleri vermekteyiz.
-                        Bergama'da kurulu tüm uluslararası kalite
-                        sertifikalarına sahip fabrikamız ile de müşterilerimize
-                        basınçlı kap, borulama prefabrikasyonu ve muhtelif çelik
-                        konstrüksiyonu dünya standartlarında üretebilmektedir.
+                        VITO Companies Group, founded in the year 2000, is
+                        steadily growing in a healthy manner. Its main
+                        activities include the assembly and construction of
+                        power plants, petrochemical facilities, refineries, and
+                        industrial plants. • VITO has successfully delivered
+                        projects for clients in the global petroleum and energy
+                        sector, ensuring strict adherence to safety and quality,
+                        and meeting project deadlines. • Today, with our expert
+                        employees in offices located in Mumbai, Doha, Dubai,
+                        Baku, Istanbul, Izmir, and Frankfurt, as well as our
+                        quality production in the factory in Bergama, we provide
+                        services to clients worldwide. • Our engineering office
+                        in Mumbai, India specializes in storage tank services
+                        that comply with internationally recognized standards.
+                        We are one of the few companies capable of offering
+                        comprehensive project management and procurement
+                        services under one roof, thanks to our expert teams in
+                        Doha, Dubai, Baku, Istanbul, Izmir, and Frankfurt. • As
+                        a leading contracting company, we provide engineering,
+                        procurement, and construction services for tank farm
+                        projects consisting of cryogenic and atmospheric
+                        pressure tanks. • To date, we have successfully
+                        completed turnkey projects for facilities consisting of
+                        83 tanks with a total capacity of 2.3 million cubic
+                        meters. We have completed project disciplines
+                        vertically, including construction, electro-mechanical
+                        assembly, piping, and electrical instrumentation.
                     </p>
                 </div>
                 {data != null && (
@@ -82,7 +96,10 @@ function AboutUs() {
                                 >
                                     <div className="text-white text-center flex items-end">
                                         <p className="text-4xl font-bold max-lg:text-2xl max-md:text-xl">
-                                            {item.value}
+                                            <CountUp
+                                                start={1}
+                                                end={item.value}
+                                            />
                                         </p>
                                         <p className="text-lg ml-2 max-md:text-base text-center">
                                             {item.type}
@@ -107,17 +124,18 @@ function AboutUs() {
                     <div className="w-full flex justify-start items-center px-20 pb-20 max-sm:px-0 max-sm:pb-0 max-sm:justify-center">
                         <div className="w-[40%] max-lg:w-[55%] max-sm:w-5/6">
                             <p className="text-4xl font-bold text-white py-2">
-                                OUT VISION
+                                OUR VISION
                             </p>
                             <p className="text-lg font-light text-white py-2">
-                                Our vision is to be among the premier
-                                engineering, construction, and project
-                                management organizations by achieving
-                                extraordinary results for our customers who
-                                engage us for our expertise, industry knowledge
-                                and ability to execute. We strive to establish
-                                long-lasting relationships with our customers
-                                who work together with us year after year.
+                                Our vision is to become a leading contracting
+                                company in the petrochemical and refinery
+                                sectors. We aspire to achieve a leadership
+                                position in the industry by delivering the
+                                highest quality services, embracing innovation,
+                                and executing projects that are environmentally
+                                conscious. Our vision is built upon the
+                                principles of leadership, excellence, and
+                                continuous improvement.
                             </p>
                         </div>
                     </div>
@@ -136,72 +154,72 @@ function AboutUs() {
                         <div className="w-3/4 relative -left-40 max-lg:-left-24 max-md:-left-12 max-sm:left-0 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:w-full">
                             <div className="w-3/6 max-lg:w-5/6 my-10">
                                 <p className="text-4xl font-bold text-white py-2">
-                                    MISSINION
+                                    OUR MISSINION
                                 </p>
                                 <p className="text-lg font-light text-white py-2">
-                                    Petrotrokim ya ve rafineri sektöründe öncü
-                                    bir müteahhitlik firması olmayı
-                                    hedefliyoruz. Sektörde liderlik konumuna
-                                    ulaşarak, müşterilerimize en kaliteli
-                                    hizmeti sunan, yeniliklere açık ve çevreye
-                                    duyarlı projeler gerçekleştiren bir firma
-                                    olmak istiyoruz. Vizyonumuz, liderlik,
-                                    mükemmeliyet ve sürekli gelişim anlayışı
-                                    üzerine kuruludur.
+                                    Our mission is to provide high-quality,
+                                    reliable, and sustainable solutions that
+                                    meet and exceed the needs and expectations
+                                    of our customers. We strive to successfully
+                                    complete projects in the petrochemical and
+                                    refinery sectors, maintain the highest
+                                    safety standards, and prioritize customer
+                                    satisfaction.
                                 </p>
                             </div>
                             <div className="w-5/6  my-10">
                                 <p className="text-4xl font-bold text-white py-2">
-                                    DEĞERLERİMİZ
+                                    OUR VALUES
                                 </p>
                                 <p className="text-lg font-light text-white py-2">
-                                    Müşteri Odaklılık: Müşterilerimizin
-                                    ihtiyaçlarını anlamak, onlara
-                                    özelleştirilmiş çözümler sunmak ve uzun
-                                    süreli iş ilişkileri kurmak için çaba
-                                    gösteriyoruz. Kalite ve Güvenilirlik:
-                                    Projelerimizde yüksek kalite standartlarını
-                                    koruyor, güvenilir ve zamanında hizmet
-                                    sunmayı taahhüt ediyoruz. İnovasyon ve
-                                    Sürekli Gelişim: Sektörde öncü olmak için
-                                    yenilikçi çözümler geliştiriyor, araştırma
-                                    ve teknolojiye yatırım yaparak sürekli
-                                    kendimizi geliştiriyoruz. Çevreye
-                                    Duyarlılık: Projelerimizi çevresel etkilere
-                                    duyarlı bir şekilde planlıyor, çevre yönetim
-                                    sistemlerine uymayı önemsiyor ve
-                                    sürdürülebilir çözümler üretmek için çaba
-                                    gösteriyoruz. Ekip Çalışması ve İşbirliği:
-                                    Takım çalışmasını teşvik ediyor,
-                                    çalışanlarımız arasında açık iletişim ve
-                                    işbirliği kültürünü destekliyoruz.
+                                    Customer Focus: We strive to understand our
+                                    customers' needs, provide customized
+                                    solutions, and establish long-term business
+                                    relationships. Quality and Reliability: We
+                                    uphold high-quality standards in our
+                                    projects, commit to delivering reliable and
+                                    timely services. Innovation and Continuous
+                                    Improvement: We develop innovative solutions
+                                    to be at the forefront of the industry,
+                                    invest in research and technology, and
+                                    continuously improve ourselves.
+                                    Environmental Awareness: We plan our
+                                    projects with consideration for
+                                    environmental impact, adhere to
+                                    environmental management systems, and strive
+                                    to provide sustainable solutions. Teamwork
+                                    and Collaboration: We encourage teamwork,
+                                    foster open communication and a culture of
+                                    collaboration among our employees.
                                 </p>
                             </div>
                             <div className="w-5/6  my-10">
                                 <p className="text-4xl font-bold text-white py-2">
-                                    ÇALIŞMA PRENSİBİMİZ
+                                    OUR WORKING PRINCIPLE
                                 </p>
                                 <p className="text-lg font-light text-white py-2">
-                                    Müşteri Odaklılık: Müşterilerimizin
-                                    ihtiyaçlarını anlamak, onlara
-                                    özelleştirilmiş çözümler sunmak ve uzun
-                                    süreli iş ilişkileri kurmak için çaba
-                                    gösteriyoruz. Kalite ve Güvenilirlik:
-                                    Projelerimizde yüksek kalite standartlarını
-                                    koruyor, güvenilir ve zamanında hizmet
-                                    sunmayı taahhüt ediyoruz. İnovasyon ve
-                                    Sürekli Gelişim: Sektörde öncü olmak için
-                                    yenilikçi çözümler geliştiriyor, araştırma
-                                    ve teknolojiye yatırım yaparak sürekli
-                                    kendimizi geliştiriyoruz. Çevreye
-                                    Duyarlılık: Projelerimizi çevresel etkilere
-                                    duyarlı bir şekilde planlıyor, çevre yönetim
-                                    sistemlerine uymayı önemsiyor ve
-                                    sürdürülebilir çözümler üretmek için çaba
-                                    gösteriyoruz. Ekip Çalışması ve İşbirliği:
-                                    Takım çalışmasını teşvik ediyor,
-                                    çalışanlarımız arasında açık iletişim ve
-                                    işbirliği kültürünü destekliyoruz.
+                                    Ethical Principles: We fully comply with
+                                    business ethics and integrity principles,
+                                    adhere to laws and regulations. Occupational
+                                    Health and Safety: The safety and health of
+                                    our employees are our top priorities. We
+                                    take necessary precautions to ensure
+                                    compliance with occupational health and
+                                    safety policies. Continuous Improvement: We
+                                    constantly review our work processes,
+                                    identify improvement opportunities, and
+                                    strive to enhance efficiency. Transparency
+                                    and Accountability: We maintain transparent
+                                    communication and accountability towards our
+                                    customers, suppliers, and employees. Social
+                                    Responsibility: We are committed to being
+                                    socially responsible, supporting social
+                                    responsibility projects, and contributing to
+                                    sustainability. Based on these values and
+                                    working principles, we aim to maintain the
+                                    highest level of quality and customer
+                                    satisfaction as a leading company in the
+                                    petrochemical and refinery sectors
                                 </p>
                             </div>
                         </div>
@@ -211,7 +229,7 @@ function AboutUs() {
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5 relative z-40 ">
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
                 <p className="text-6xl font-semibold text-[#093977] max-md:text-5xl">
-                    HİZMETLER
+                    SERVICES
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
             </div>
@@ -261,7 +279,7 @@ function AboutUs() {
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5 relative z-40 ">
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
                 <p className="text-6xl font-semibold text-[#093977] max-md:text-5xl">
-                    ETİK
+                    ETHIC
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
             </div>

@@ -32,7 +32,7 @@ function SamplePrevArrow(props) {
         />
     );
 }
-function GlobalSlider({ sliderImage }) {
+function GlobalSlider({ sliderImage, bg }) {
     var settings = {
         dots: false,
         speed: 500,
@@ -90,7 +90,7 @@ function GlobalSlider({ sliderImage }) {
     };
     return (
         <>
-            <Slider {...settings}>
+            <Slider className={bg ? `bg-white` : ""} {...settings}>
                 {sliderImage.map((item, i) => (
                     <div className="w-56 h-56 outline-0">
                         <img

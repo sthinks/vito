@@ -4,6 +4,10 @@ const getAllNews = async () => {
     const result = await axiosInstance.get("all-news");
     return result;
 };
+const getHomeNews = async () => {
+    const result = await axiosInstance.get("home-news");
+    return result;
+};
 const getSectorSlider = async () => {
     const result = await axiosInstance.get("get-sector-slider");
     return result;
@@ -26,6 +30,7 @@ const exportFunction = {
     getGlobalVito,
     getAboutStat,
     getAboutServices,
+    getHomeNews,
 };
 
 export default exportFunction;

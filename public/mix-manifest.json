@@ -1,5 +1,5 @@
 {
-    "/js/app.js": "/js/app.js?id=5b01618ce16103b17899fb14aa7c6d23",
+    "/js/app.js": "/js/app.js?id=e804b6e39c4d7331fa35ae14525682e7",
     "/css/app.css": "/css/app.css?id=68b329da9893e34099c7d8ad5cb9c940",
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/slick-carousel/slick/slick.eot": "/fonts/vendor/slick-carousel/slick/slick.eot?id=4bb08b6ed048eaf8be2a371ffc8faec2",
@@ -19,6 +19,8 @@
     "/images/bgsecond.png": "/images/bgsecond.png?id=79c9cf302e688b46349d33cf8c743299",
     "/images/bgsector.png": "/images/bgsector.png?id=b570b4a11c38ea756443028be9746ad8",
     "/images/bgsector2.png": "/images/bgsector2.png?id=ecb8968933cf5c1db5a1fecde96767ea",
+    "/images/contactbanner.png": "/images/contactbanner.png?id=37d6457cdf5fd90a561eefa966cd7b0b",
+    "/images/contactlogo.png": "/images/contactlogo.png?id=59a084c90d9dad47dc5f1953ea014dc3",
     "/images/footermap.png": "/images/footermap.png?id=2c5d3d22c217b2f40c3e742ab430f688",
     "/images/footerwaves.png": "/images/footerwaves.png?id=d4b07109dee0698c8826225c5df6bf88",
     "/images/globalheader.png": "/images/globalheader.png?id=8325ef51c109aecb4d3a7e06610c3898",
@@ -32,6 +34,7 @@
     "/images/pr3.png": "/images/pr3.png?id=2ba8a8e76e293df6ddea9ac47f7480c2",
     "/images/pr4.png": "/images/pr4.png?id=10534362b98a43a295db7a24131aa324",
     "/images/pr5.jpg": "/images/pr5.jpg?id=0cdb10bb5b6653856c278b9e466a1ea9",
+    "/images/servicebg.png": "/images/servicebg.png?id=c47e58b4e54b0f179113eca3eca87b84",
     "/images/vendor/slick-carousel/slick/ajax-loader.gif": "/images/vendor/slick-carousel/slick/ajax-loader.gif?id=c5f04404df58fc3deb42d69f94476b6c",
     "/images/vitologo.png": "/images/vitologo.png?id=d44f7187139b3689f277d52ae75f1317",
     "/index.html": "/index.html?id=ef8a02db437c74f2ecb0d88becc4b9d4",
@@ -55,9 +58,14 @@
     "/logo192.png": "/logo192.png?id=995306f3f1b50873ba0fe4c857a90d22",
     "/logo512.png": "/logo512.png?id=93c81d868a39562d52258e5b5b267644",
     "/manifest.json": "/manifest.json?id=d9d975cebe2ec20b6c652e1e4c12ccf0",
-    "/mix-manifest.json": "/mix-manifest.json?id=67c15d19f68c81464a801c20939cd6c8",
+    "/mix-manifest.json": "/mix-manifest.json?id=7afecb953045e2e36d08b165e3a8d60c",
     "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850",
-    "/images/servicebg.png": "/images/servicebg.png?id=c47e58b4e54b0f179113eca3eca87b84",
-    "/images/contactbanner.png": "/images/contactbanner.png?id=37d6457cdf5fd90a561eefa966cd7b0b",
-    "/images/contactlogo.png": "/images/contactlogo.png?id=59a084c90d9dad47dc5f1953ea014dc3"
+    "/images/1.png": "/images/1.png?id=8a8cd4abbc2a5022fc5deadae8e1947f",
+    "/images/2.png": "/images/2.png?id=8a8cd4abbc2a5022fc5deadae8e1947f",
+    "/images/3.png": "/images/3.png?id=aded6f8af2915a8d821a8deffcbaa261",
+    "/images/4.png": "/images/4.png?id=16ee4fde4900f4632a3a18ec15617ee5",
+    "/images/6.png": "/images/6.png?id=2ae25f2fe26f09af28dfdb4e0572182b",
+    "/images/55.png": "/images/55.png?id=be7df5c5a5dd0d666bf4eef8c3f0326f",
+    "/images/11.png": "/images/11.png?id=ff4bc72a095aedad49a93792b2105606",
+    "/images/Layer 635.png": "/images/Layer 635.png?id=66941c8d4e25a2211f7fce51a9aa70d7"
 }
