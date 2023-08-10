@@ -1,11 +1,47 @@
 {
+<<<<<<< HEAD
+    "/js/app.js": "/js/app.js?id=10ee520038eb932fa58ea8b63271c6be",
+    "/css/app.css": "/css/app.css?id=81051bcc2cf1bedf378224b0a93e2877",
+=======
     "/js/app.js": "/js/app.js?id=e804b6e39c4d7331fa35ae14525682e7",
     "/css/app.css": "/css/app.css?id=68b329da9893e34099c7d8ad5cb9c940",
+>>>>>>> main
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/slick-carousel/slick/slick.eot": "/fonts/vendor/slick-carousel/slick/slick.eot?id=4bb08b6ed048eaf8be2a371ffc8faec2",
     "/fonts/vendor/slick-carousel/slick/slick.svg": "/fonts/vendor/slick-carousel/slick/slick.svg?id=f97e3bbf73254b0112091d0192f17aec",
     "/fonts/vendor/slick-carousel/slick/slick.ttf": "/fonts/vendor/slick-carousel/slick/slick.ttf?id=74144acfc01b478e4e42106977bfa954",
     "/fonts/vendor/slick-carousel/slick/slick.woff": "/fonts/vendor/slick-carousel/slick/slick.woff?id=4a1b9b9ce5944b65bc328dda7f20a8a8",
+<<<<<<< HEAD
+    "/images/1._Meclis_Binası.jpg": "/images/1._Meclis_Binası.jpg?id=e2758e0d47be5e459f3196f9724e4152",
+    "/images/about-wave.png": "/images/about-wave.png?id=20265f74ef50dad94bc046d31981f6e1",
+    "/images/aboutSlider.png": "/images/aboutSlider.png?id=ebd11cc468505dd71e92b8c24c3045f5",
+    "/images/activity-1.png": "/images/activity-1.png?id=6ec6601b67bd15a66d2ac595ad4d194f",
+    "/images/activity-2.png": "/images/activity-2.png?id=e30005e63da89b8392b33812c6b9d16d",
+    "/images/activity-3.png": "/images/activity-3.png?id=67469939d483abebe1e06646675d0b5e",
+    "/images/activity.png": "/images/activity.png?id=642399242da6e1dedd096ee248dcf9f4",
+    "/images/activity4.png": "/images/activity4.png?id=9f47e06c4391d856e3c466beaab9f18e",
+    "/images/british_flag.jpg": "/images/british_flag.jpg?id=d5e49e2d762cabb587b26029745a9d6b",
+    "/images/burhantekdemir.png": "/images/burhantekdemir.png?id=34fadb406b18dbbc72029ca632dc386f",
+    "/images/contproject.png": "/images/contproject.png?id=ccacd48227881ea7560c0ab885a434f8",
+    "/images/dinçsenliler.png": "/images/dinçsenliler.png?id=6087237fe285261d298289eddf68a8e8",
+    "/images/famous.png": "/images/famous.png?id=83a62894549c45bfc717de774688481a",
+    "/images/fuatsengül.png": "/images/fuatsengül.png?id=782b144667a0b172c103a8efb5004403",
+    "/images/ghistory.png": "/images/ghistory.png?id=317ed03a32a607453cc4ed5d75ae27cd",
+    "/images/institional-bannerpng.png": "/images/institional-bannerpng.png?id=c4f01ff42985f50edd5c8653c6180f88",
+    "/images/institonal-bottom.png": "/images/institonal-bottom.png?id=561dd939f208ee19ef5261664252526d",
+    "/images/logo.png": "/images/logo.png?id=f90c33931597a30780d156710afe1043",
+    "/images/logo.svg": "/images/logo.svg?id=06e733283fa43d1dd57738cfc409adbd",
+    "/images/project-banner.png": "/images/project-banner.png?id=47001726e8176566f597363419ec7ae4",
+    "/images/project_card.png": "/images/project_card.png?id=b8ed8a5992ebd1abe7e6d7b570ef97d5",
+    "/images/slider.png": "/images/slider.png?id=a73a5b9b000936bb2ef9e7a27a581bc5",
+    "/images/turkish_flag.jpg": "/images/turkish_flag.jpg?id=f95caa6ae2893e09c0b3f15f893fa782",
+    "/images/vedatirelp.png": "/images/vedatirelp.png?id=4ee65ff6cf3353d52c09c78abad97355",
+    "/images/vendor/slick-carousel/slick/ajax-loader.gif": "/images/vendor/slick-carousel/slick/ajax-loader.gif?id=c5f04404df58fc3deb42d69f94476b6c",
+    "/images/zekigunay.png": "/images/zekigunay.png?id=0790d47596b9321de9d2a6264b85c957",
+    "/index.html": "/index.html?id=0e9b00e6aae584857704c6e01fa51556",
+    "/index.php": "/index.php?id=b6605d09fed85d7117fdf897183f8a37",
+    "/js/app.js.LICENSE.txt": "/js/app.js.LICENSE.txt?id=9681bf2bbc9994fd3a7ccc74c999182f",
+=======
     "/images/1.jpg": "/images/1.jpg?id=894dd1c3eb9dc679eca8c51b010a0538",
     "/images/2.jpg": "/images/2.jpg?id=9f54ec153e055c6f2137d8931e77279b",
     "/images/3.jpeg": "/images/3.jpeg?id=2cc472e3c1c1d97e9a3414eb7860a0b3",
@@ -40,6 +76,7 @@
     "/index.html": "/index.html?id=ef8a02db437c74f2ecb0d88becc4b9d4",
     "/index.php": "/index.php?id=3b58bff18126a61c142cc576457c82a6",
     "/js/app.js.LICENSE.txt": "/js/app.js.LICENSE.txt?id=97ac82e49cc518e0aa946868869a9f52",
+>>>>>>> main
     "/js/chunks/131.js": "/js/chunks/131.js?id=c1d863a4de89598d51bbca4da0ed382f",
     "/js/chunks/node_modules_web-vitals_dist_web-vitals_js.js": "/js/chunks/node_modules_web-vitals_dist_web-vitals_js.js?id=179aa87cec5771dd61ccd925db490996",
     "/js/chunks/reactPlayerDailyMotion.js": "/js/chunks/reactPlayerDailyMotion.js?id=9a7e1ba9e9bf58c8919d1079a2037da9",
@@ -57,6 +94,11 @@
     "/js/chunks/reactPlayerYouTube.js": "/js/chunks/reactPlayerYouTube.js?id=6d4a158ce03dd2c763b5d1022180e336",
     "/logo192.png": "/logo192.png?id=995306f3f1b50873ba0fe4c857a90d22",
     "/logo512.png": "/logo512.png?id=93c81d868a39562d52258e5b5b267644",
+<<<<<<< HEAD
+    "/manifest.json": "/manifest.json?id=89be60895176466398d53bd4a693d9f6",
+    "/mix-manifest.json": "/mix-manifest.json?id=ba4976a1f043360d2755c4918573e577",
+    "/robots.txt": "/robots.txt?id=61c27d2cd39a713f7829422c3d9edcc7"
+=======
     "/manifest.json": "/manifest.json?id=d9d975cebe2ec20b6c652e1e4c12ccf0",
     "/mix-manifest.json": "/mix-manifest.json?id=7afecb953045e2e36d08b165e3a8d60c",
     "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850",
@@ -68,4 +110,5 @@
     "/images/55.png": "/images/55.png?id=be7df5c5a5dd0d666bf4eef8c3f0326f",
     "/images/11.png": "/images/11.png?id=ff4bc72a095aedad49a93792b2105606",
     "/images/Layer 635.png": "/images/Layer 635.png?id=66941c8d4e25a2211f7fce51a9aa70d7"
+>>>>>>> main
 }
