@@ -15,7 +15,7 @@ function News() {
     }, []);
     return (
         <div className="w-full">
-            <div className="w-full flex justify-center items-center py-28">
+            <div className="w-full flex justify-center items-center pb-32 pt-56">
                 <p className="text-6xl font-extrabold tracking-widest">NEWS</p>
             </div>
             {data?.map((item, i) =>

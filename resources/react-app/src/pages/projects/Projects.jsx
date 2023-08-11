@@ -1,33 +1,78 @@
 import React, { useEffect } from "react";
 import Header from "../../components/header/Header";
 import ProjectBaner from "../../assets/projects/project-banner.png";
-import HomeAboutSlider from "../../components/home/homeAbout/HomeAboutSlider";
-import PrCard from "../../assets/projects/project_card.png";
+
+import PrCard2 from "../../assets/projects/Star1.jpg";
+import PrCard3 from "../../assets/projects/Star1.png";
+import PrCard4 from "../../assets/projects/Star2.jpg";
+import PrCard5 from "../../assets/projects/Star Jetty piping.jpg";
+import PrCard6 from "../../assets/projects/Star Rafiner.jpg";
+import ProjectSlider from "../../components/Projects/ProjectSlider";
+
+import As1 from "../../assets/projects/project2/as.jpg";
+import As2 from "../../assets/projects/project2/as2.jpg";
+import As3 from "../../assets/projects/project2/as3.jpg";
+import As4 from "../../assets/projects/project2/as4.jpg";
+import As5 from "../../assets/projects/project2/as5.jpg";
+import As6 from "../../assets/projects/project2/as6.jpg";
+
 function Projects() {
     const projectImage = [
         {
             id: 0,
-            url: PrCard,
+            url: PrCard2,
             style: true,
         },
         {
             id: 1,
-            url: PrCard,
+            url: PrCard3,
             style: true,
         },
         {
             id: 2,
-            url: PrCard,
+            url: PrCard4,
             style: true,
         },
         {
             id: 3,
-            url: PrCard,
+            url: PrCard5,
             style: true,
         },
         {
             id: 4,
-            url: PrCard,
+            url: PrCard6,
+            style: true,
+        },
+    ];
+    const project2 = [
+        {
+            id: 0,
+            url: As1,
+            style: true,
+        },
+        {
+            id: 1,
+            url: As2,
+            style: true,
+        },
+        {
+            id: 2,
+            url: As6,
+            style: true,
+        },
+        {
+            id: 3,
+            url: As4,
+            style: true,
+        },
+        {
+            id: 4,
+            url: As5,
+            style: true,
+        },
+        {
+            id: 5,
+            url: As3,
             style: true,
         },
     ];
@@ -102,9 +147,9 @@ function Projects() {
                     </div>
                 </div>
             </div>
-            <HomeAboutSlider sliderImage={projectImage} />
-            <div className="relative top-0 z-10 bg-[#093977]">
-                <div className="flex p-10 justify-evenly items-center text-white">
+            <ProjectSlider sliderImage={projectImage} />
+            <div className="relative p-10 top-0 z-10 bg-[#33b4e6]">
+                <div className="flex justify-evenly items-center text-white">
                     <div
                         className="max-md:hidden"
                         style={{
@@ -126,7 +171,7 @@ function Projects() {
                     </div>
                     <div className="w-3/4 leading-9">
                         <h1 className="mb-6 text-white text-3xl font-bold l ">
-                            Star Mechanical and Piping Works
+                            AOSTE
                         </h1>
                         <h2 className="font-bold">Description</h2>
                         <p>
@@ -163,9 +208,9 @@ function Projects() {
                     </div>
                 </div>
             </div>
-            <HomeAboutSlider sliderImage={projectImage} />
-            <div className="relative p-10 top-0 z-10 bg-[#33b4e6]">
-                <div className="flex justify-evenly items-center text-white">
+            <ProjectSlider sliderImage={project2} />
+            <div className="relative top-0 z-10 bg-[#093977]">
+                <div className="flex p-10 justify-evenly items-center text-white">
                     <div
                         className="max-md:hidden"
                         style={{
@@ -187,7 +232,7 @@ function Projects() {
                     </div>
                     <div className="w-3/4 leading-9">
                         <h1 className="mb-6 text-white text-3xl font-bold l ">
-                            AOSTE
+                            Star Mechanical and Piping Works
                         </h1>
                         <h2 className="font-bold">Description</h2>
                         <p>

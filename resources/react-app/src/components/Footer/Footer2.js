@@ -31,22 +31,30 @@ function Footer2() {
         {
             address: "Ayazağa, Vadistanbul, Azerbaycan Cd. 3B D:1B",
             location: "Blok, 34485 Sarıyer/İstanbul",
-            img: "https://img.freepik.com/free-photo/promenade-canal-dubai-marina-with-luxury-skyscrapers-around-united-arab-emirates_231208-7556.jpg?w=740&t=st=1689763355~exp=1689763955~hmac=a8b2713c9697bf098ff182cde2a0a5e257adc266ff35a1f3f0bc25b3376dba4c",
+            img: "https://1.bp.blogspot.com/-b05_L9u_wf4/X5d2fWg1SQI/AAAAAAAANRs/JzHRWiZWsOo_RKXo3IKsRMqVwOz2mArmwCLcBGAsYHQ/w1200-h630-p-k-no-nu/Vadistanbul.jpg",
+            left: 54,
+            top: 19,
         },
         {
-            address: "Selam adresi naber ",
-            location: "Blok, 34485 Sarıyer/İstanbul",
+            address: "Technicon Mumbai",
+            location: "Indian",
             img: "https://img.freepik.com/free-photo/new-york-skycraper-sunset-usa_268835-758.jpg?w=740&t=st=1689763378~exp=1689763978~hmac=838893463fe82ede3b799e9d933f90c02a9d85e015208afd647f95f0ad9f2201",
+            left: 69,
+            top: 42,
         },
         {
-            address: "Deneme naber naber",
-            location: "Blok, 34485 Sarıyer/İstanbul",
+            address: "Technicon Dubai",
+            location: "Dubai",
             img: "https://img.freepik.com/free-photo/axelborg-towers_181624-29215.jpg?w=740&t=st=1689763407~exp=1689764007~hmac=9a9ea5aa64efdf9f8b1cec63726d6de4109e8a0f22d3ca549cc4b90c1251d470",
+            left: 59,
+            top: 42,
         },
         {
-            address: "Selamlar merhabalar iyi dewnemeler kolay gelsin",
-            location: "Blok, 34485 Sarıyer/İstanbul",
+            address: "Technicon Bakü",
+            location: "Azerbaycan",
             img: "https://img.freepik.com/free-photo/axelborg-towers_181624-29215.jpg?w=740&t=st=1689763407~exp=1689764007~hmac=9a9ea5aa64efdf9f8b1cec63726d6de4109e8a0f22d3ca549cc4b90c1251d470",
+            left: 69,
+            top: 20,
         },
     ];
     function closeModal() {
@@ -78,33 +86,21 @@ function Footer2() {
                         src={map}
                         alt="FooterMap"
                     />
-                    <img
-                        src={mapcursor}
-                        onClick={() => {
-                            setSelectedIndex(1);
-                            openModal();
-                        }}
-                        className="absolute top-[19%] left-[19%] w-[4%] hover:scale-110 ease-in duration-100 cursor-pointer map-image-cursor"
-                        alt="Map Cursor"
-                    />
-                    <img
-                        src={mapcursor}
-                        onClick={() => {
-                            setSelectedIndex(0);
-                            openModal();
-                        }}
-                        className="absolute top-[19%] left-[45%] w-[4%] hover:scale-110 ease-in duration-100 cursor-pointer map-image-cursor"
-                        alt="Map Cursor"
-                    />
-                    <img
-                        src={mapcursor}
-                        onClick={() => {
-                            setSelectedIndex(3);
-                            openModal();
-                        }}
-                        className="absolute top-[12%] right-[20%] w-[4%] hover:scale-110 ease-in duration-100 cursor-pointer map-image-cursor"
-                        alt="Map Cursor"
-                    />
+                    {locationList.map((item, i) => (
+                        <img
+                            src={mapcursor}
+                            onClick={() => {
+                                setSelectedIndex(i);
+                                openModal();
+                            }}
+                            className="absolute  w-[4%] hover:scale-110 ease-in duration-100 cursor-pointer map-image-cursor"
+                            style={{
+                                left: `${item.left}%`,
+                                top: `${item.top}%`,
+                            }}
+                            alt="Map Cursor"
+                        />
+                    ))}
                 </div>
 
                 <div className="flex px-10 max-sm:px-2 pb-14 h-96 justify-between relative z-20 max-lg:flex-col-reverse">
@@ -152,7 +148,7 @@ function Footer2() {
                             </ul>
                             <ul className="">
                                 <li className="pb-2 max-sm:text-sm text-start">
-                                    <a href="#">PRESS ROOM</a>
+                                    <a href="#">MEDIA</a>
                                 </li>
                             </ul>
                             <ul className="">

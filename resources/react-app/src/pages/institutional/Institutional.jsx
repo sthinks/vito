@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import Vedat from "../.././assets/institutional/vedatirelp.png";
-import Fuat from "../.././assets/institutional/fuatsengül.png";
+import Fuat from "../.././assets/institutional/Fuat Şengül.png";
 import Burhan from "../.././assets/institutional/burhantekdemir.png";
-import Dinc from "../.././assets/institutional/dinçsenliler.png";
+import Dinc from "../.././assets/institutional/dinsellier.jpg";
 import Zeki from "../.././assets/institutional/zekigunay.png";
 import InstBanner from "../.././assets/institutional/institional-bannerpng.png";
 import AboutWave from "../.././assets/institutional/about-wave.png";
@@ -24,9 +24,9 @@ function Institutional() {
     return (
         <>
             <Header />
-            <div className="relative h-full w-full flex justify-center items-center">
+            <div className="relative w-full flex justify-center items-center h-96">
                 <img src={InstBanner} alt="instbanner" />
-                <h2 className="overlay-text absolute text-center text-4xl text-[#093977] bg-opacity-70 px-2 py-1 rounded font-bold">
+                <h2 className="overlay-text mt-10 absolute text-center text-4xl text-[#093977] bg-opacity-70 px-2 py-1 rounded font-bold">
                     INSTITUTIONAL
                 </h2>
             </div>
@@ -40,7 +40,11 @@ function Institutional() {
                             </h1>
                         </div>
                         <div className="sol-alt ">
-                            <img src={Vedat} alt="deneme" className="w-full" />
+                            <img
+                                src={Vedat}
+                                alt="deneme"
+                                className="w-full object-cover"
+                            />
                         </div>
                     </div>
                     <div className="flex flex-[2_2_0%] flex-col justify-between  ">
@@ -95,7 +99,11 @@ function Institutional() {
                     </p>
                 </div>
                 <div className="w-[27%] max-lg:w-full">
-                    <img src={Fuat} alt="fuat" className="h-[450px] w-full" />
+                    <img
+                        src={Fuat}
+                        alt="fuat"
+                        className="h-[450px] w-full object-cover"
+                    />
                 </div>
                 <div className="w-[8%] flex-col text-center  max-lg:hidden">
                     <div className="k bg-[#093977] h-4/5 relative flex justify-center">
@@ -147,7 +155,7 @@ function Institutional() {
                     <img
                         src={Burhan}
                         alt="fuat"
-                        className="h-[450px] max-lg:w-full"
+                        className="h-[450px] max-lg:w-full object-cover"
                     />
                 </div>
                 <div className="bg-[#be677b]  text-white w-[65%] p-4 text-left h-[450px] max-lg:w-full h-auto">
@@ -189,7 +197,7 @@ function Institutional() {
                     <img
                         src={Zeki}
                         alt="zeki"
-                        className="h-[450px] max-lg:w-full max-lg:h-auto"
+                        className="h-[450px] max-lg:w-full max-lg:h-auto object-cover"
                     />
                 </div>
                 <div className="flex justify-center items-center text-center w-[8%] max-lg:hidden">
@@ -220,7 +228,11 @@ function Institutional() {
 
             <div className="flex flex-row justify-between  bg-[#00a1e0] w-full max-lg:flex-col">
                 <div className="w-[35%] max-lg:w-full">
-                    <img src={Dinc} alt="dnc" className="h-[450px] w-full " />
+                    <img
+                        src={Dinc}
+                        alt="dnc"
+                        className="h-[450px] w-full object-cover"
+                    />
                 </div>
                 <div className="w-[5%] h-full bg-blue-500"></div>
 

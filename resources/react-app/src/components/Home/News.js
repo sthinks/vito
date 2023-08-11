@@ -25,7 +25,7 @@ function Haber() {
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5">
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
                 <p className="text-6xl font-semibold text-[#093977] max-md:text-5xl">
-                    HABERLER
+                    NEWS
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
             </div>

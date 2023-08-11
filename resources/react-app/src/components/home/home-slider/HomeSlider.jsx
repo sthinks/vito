@@ -1,5 +1,7 @@
 import React from "react";
-import Banner from "../../../assets/banner/slider.png";
+import Banner from "../../../assets/banner/Star 2.jpg";
+import Banner2 from "../../../assets/banner/ccc.jpg";
+import Banner3 from "../../../assets/banner/bbb.jpg";
 
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Slider from "react-slick";
@@ -47,11 +49,12 @@ function HomeSlider() {
         <div>
             <Slider {...settings}>
                 <div className="relative ">
+                    <div className="absolute w-full h-full left-0 top-0 bg-blue-800 opacity-30" />
                     <h2 className="text-white font-bold text-4xl absolute text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        WELCOME TO VITO GROUP
+                        All In One Solutions
                     </h2>
                     <img
-                        src={Banner}
+                        src={Banner3}
                         className="w-full  object-cover max-sm:h-[250px]"
                         alt="imageSlider"
                     />
@@ -65,22 +68,8 @@ function HomeSlider() {
                 </div>
                 <div>
                     <img
-                        src={Banner}
+                        src={Banner2}
                         className="w-full object-cover max-sm:h-[250px]"
-                        alt="imageSlider"
-                    />
-                </div>
-                <div>
-                    <img
-                        src={Banner}
-                        className="w-full  object-cover max-sm:h-[250px]"
-                        alt="imageSlider"
-                    />
-                </div>
-                <div>
-                    <img
-                        src={Banner}
-                        className="w-full  object-cover max-sm:h-[250px]"
                         alt="imageSlider"
                     />
                 </div>

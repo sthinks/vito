@@ -1,5 +1,9 @@
 import React from "react";
-import AboutImg from "../../../assets/homeAbout/aboutSlider.png";
+import AboutImg from "../../../assets/homeAbout/AOSTE 3.jpg";
+import AboutImg2 from "../../../assets/homeAbout/COFOT 1.jpg";
+import AboutImg3 from "../../../assets/homeAbout/COFOT 5.jpg";
+import AboutImg4 from "../../../assets/homeAbout/STAR Rafineri.jpg";
+import AboutImg5 from "../../../assets/homeAbout/asote.jpg";
 import HomeAboutSlider from "./HomeAboutSlider";
 function HomeAbout() {
     const arrayImage = [
@@ -9,19 +13,19 @@ function HomeAbout() {
         },
         {
             id: 1,
-            url: AboutImg,
+            url: AboutImg2,
         },
         {
             id: 2,
-            url: AboutImg,
+            url: AboutImg3,
         },
         {
             id: 3,
-            url: AboutImg,
+            url: AboutImg4,
         },
         {
             id: 4,
-            url: AboutImg,
+            url: AboutImg5,
         },
     ];
     return (

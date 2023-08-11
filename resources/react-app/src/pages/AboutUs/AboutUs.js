@@ -156,7 +156,7 @@ function AboutUs() {
                         <div className="w-3/4 relative -left-40 max-lg:-left-24 max-md:-left-12 max-sm:left-0 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:w-full">
                             <div className="w-3/6 max-lg:w-5/6 my-10">
                                 <p className="text-4xl font-bold text-white py-2">
-                                    OUR MISSINION
+                                    OUR MISSION
                                 </p>
                                 <p className="text-lg font-light text-white py-2">
                                     Our mission is to provide high-quality,

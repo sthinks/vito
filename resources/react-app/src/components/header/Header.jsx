@@ -53,7 +53,7 @@ function Header() {
                             />
                         </Link>
                     </div>
-                    <ul className="flex flex-row gap-4 max-lg:mt-2">
+                    <ul className="flex flex-row gap-8 max-lg:mt-2">
                         <li className="text-white font-bold text-lg ml-5 max-lg:text-sm ">
                             <Link to="/about-us"> ABOUT US </Link>
                         </li>
