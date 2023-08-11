@@ -49,30 +49,30 @@ function Header() {
                             <img
                                 src={Logo}
                                 alt="sa"
-                                className="w-[150px] max-lg:w-[115px]"
+                                className="w-[250px] mr-10 max-xl:w-[150px] max-lg:w-[115px] "
                             />
                         </Link>
                     </div>
-                    <ul className="flex flex-row gap-8 max-lg:mt-2">
-                        <li className="text-white font-bold text-lg ml-5 max-lg:text-sm ">
+                    <ul className="flex flex-row gap-10 max-lg:mt-2 ">
+                        <li className="text-white font-bold text-lg ml-5 max-lg:text-sm max-xl:text-base">
                             <Link to="/about-us"> ABOUT US </Link>
                         </li>
-                        <li className="text-white font-bold text-lg max-lg:text-sm">
+                        <li className="text-white font-bold text-lg max-lg:text-sm max-xl:text-base">
                             <Link to="/instituonal"> INSTITUONAL </Link>
                         </li>
-                        <li className="text-white font-bold text-lg max-lg:text-sm">
+                        <li className="text-white font-bold text-lg max-lg:text-sm max-xl:text-base">
                             <Link to="/vito-global"> GLOBAL </Link>
                         </li>
-                        <li className="text-white font-bold text-lg max-lg:text-sm">
+                        <li className="text-white font-bold text-lg max-lg:text-sm max-xl:text-base">
                             <Link to="/projects"> PROJECTS </Link>
                         </li>
-                        <li className="text-white font-bold text-lg max-lg:text-sm">
+                        <li className="text-white font-bold text-lg max-lg:text-sm max-xl:text-base">
                             <Link to="/sector"> SECTORS </Link>
                         </li>
-                        <li className="text-white font-bold text-lg max-lg:text-sm">
+                        <li className="text-white font-bold text-lg max-lg:text-sm max-xl:text-base">
                             <Link to="/news"> NEWS </Link>
                         </li>
-                        <li className="text-white font-bold text-lg max-lg:text-sm">
+                        <li className="text-white font-bold text-lg max-lg:text-sm max-xl:text-base">
                             <Link to="/contact"> CONTACT </Link>
                         </li>
                         {/* <li>
