@@ -36,7 +36,7 @@ function ProjectSlider({ sliderImage, bg }) {
     var settings = {
         dots: false,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 3,
         infinite: true,
         slidesToScroll: 2,
         initialSlide: 0,
@@ -75,12 +75,12 @@ function ProjectSlider({ sliderImage, bg }) {
                 {sliderImage.map((item, i) => (
                     <div
                         key={i}
-                        className="w-full h-full flex justify-center items-center"
+                        className="w-1/2 h-1/2 flex justify-center items-center gap-5"
                     >
                         <img
                             src={item.url}
                             alt="asdas"
-                            className="rounded-[100%]  object-cover"
+                            className="rounded-[100%] w-full h-full object-cover"
                         />
                     </div>
                 ))}

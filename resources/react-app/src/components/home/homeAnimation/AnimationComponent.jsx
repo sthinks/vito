@@ -34,8 +34,8 @@ const AnimationComponent = ({ description, targetNumber, unit }) => {
                   duration={10}
                   end={targetNumber}
                   redraw={true} // Bu özelliği eklemeyi unutmayın
-                />{' '}
-                {unit}{' '}
+                />
+                {unit}
               </>
             )}
           </p>

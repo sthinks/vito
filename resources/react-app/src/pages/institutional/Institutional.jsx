@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import Vedat from "../.././assets/institutional/vedatirelp.png";
 import Fuat from "../.././assets/institutional/Fuat Şengül.png";
-import Burhan from "../.././assets/institutional/burhantekdemir.png";
+import Burhan from "../.././assets/institutional/burhant.png";
 import Dinc from "../.././assets/institutional/dinsellier.jpg";
 import Zeki from "../.././assets/institutional/zekigunay.png";
 import InstBanner from "../.././assets/institutional/institional-bannerpng.png";
@@ -80,7 +80,7 @@ function Institutional() {
                 <div className="bg-[#093977]  text-white w-[65%] p-4 text-left h-[450px] max-lg:w-full max-lg:h-auto">
                     <h2 className="text-3xl">Fuat Şengül</h2>
                     <p className="text-xl mt-5">
-                        Civil Engineer Vito Engineering Construction and
+                        Civil Engineer ViTO Engineering Construction and
                         Contracting Inc. Vice Chairman of the Board Born in
                         Istanbul in 1964, Fuat Şengül graduated from Istanbul
                         Technical University Civil Engineering Department
@@ -92,7 +92,7 @@ function Institutional() {
                         specialist in private banks, is the General Manager and
                         Board of Directors of Istanbul Gaz Dağıtım A.Ş (İGDAŞ).
                         member assumed the duties of .(1994-2000). Şengül joined
-                        the Vito Group in 2001 and still serves as the Vice
+                        the ViTo Group in 2001 and still serves as the Vice
                         Chairman of the Board of Directors at Vito Mühendislik
                         İnşaat ve Taahhüt A.Ş. He is married and has four
                         children.

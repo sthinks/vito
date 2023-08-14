@@ -35,7 +35,7 @@ function HomeAbout() {
             </h1>
             <HomeAboutSlider sliderImage={arrayImage} />
             <div className="m-20">
-                <h2 className="text-center font-bold text-2xl">VİTO Group</h2>
+                <h2 className="text-center font-bold text-3xl">ViTO Group</h2>
                 <div className="flex justify-between items-center mt-5 max-md:flex-col max-md:justify-center max-md:items-center">
                     <div className="w-[60%] max-md:w-full">
                         <p className="text-center mt-6 ">
