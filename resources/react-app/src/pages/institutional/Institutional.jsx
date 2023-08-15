@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../../components/header/Header";
 import Vedat from "../.././assets/institutional/vedatirelp.png";
 import Fuat from "../.././assets/institutional/Fuat Şengül.png";
@@ -21,6 +21,21 @@ function Institutional() {
     useEffect(() => {
         window.scrollTo(0, 0); // Sayfanın en üstüne kaydır
     }, []);
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        const container = containerRef.current;
+        container.addEventListener("scroll", handleScroll);
+
+        return () => {
+            container.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+    const handleScroll = (event) => {
+        console.log(event);
+        const container = event.target;
+        container.scrollTop = 0; // Dikey kaydırmayı sıfırla
+    };
     return (
         <>
             <Header />
@@ -295,13 +310,13 @@ function Institutional() {
             <div className="w-full mt-10">
                 <img src={AboutWave} alt="about-wave" />
             </div>
-            <div className="w-full overflow-scroll">
+            <div className="w-full overflow-scroll" ref={containerRef}>
                 <div className="flex w-[3000px]">
                     <img
                         src={History}
                         draggable="true"
                         alt="asdasdsa"
-                        className="w-[5000px] h-auto"
+                        className="w-[5000px] h-auto cursor-pointer"
                     />
                 </div>
             </div>
