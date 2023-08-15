@@ -74,7 +74,7 @@ function Global() {
             <div className="w-full flex justify-center items-center relative">
                 <img src={globalheader} alt="VitoGlobal" />
                 <p className="absolute text-6xl font-bold max-md:text-3xl text-center text-[#093977] tracking-widest z-50">
-                    VITO GLOBAL
+                    ViTO GLOBAL
                 </p>
                 <div className="w-full h-full absolute bg-cyan-400 opacity-20 z-40" />
             </div>

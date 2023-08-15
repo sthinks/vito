@@ -24,7 +24,7 @@ function AboutUs() {
         const result = await service.getAboutServices();
         setDataService(result.data);
     };
-    const { ref, inView, entry } = useInView({
+    const { ref, inView } = useInView({
         /* Optional options */
         threshold: 0,
     });
@@ -54,33 +54,33 @@ function AboutUs() {
                         ABOUT US
                     </p>
                     <p className="text-xl font-normal max-md:text-lg text-center text-white z-50 py-10">
-                        VITO Companies Group, founded in the year 2000, is
+                        ViTO Companies Group, founded in the year 2000, is
                         steadily growing in a healthy manner. Its main
                         activities include the assembly and construction of
                         power plants, petrochemical facilities, refineries, and
-                        industrial plants. • VITO has successfully delivered
+                        industrial plants. ViTO has successfully delivered
                         projects for clients in the global petroleum and energy
                         sector, ensuring strict adherence to safety and quality,
-                        and meeting project deadlines. • Today, with our expert
+                        and meeting project deadlines. Today, with our expert
                         employees in offices located in Mumbai, Doha, Dubai,
                         Baku, Istanbul, Izmir, and Frankfurt, as well as our
                         quality production in the factory in Bergama, we provide
-                        services to clients worldwide. • Our engineering office
-                        in Mumbai, India specializes in storage tank services
-                        that comply with internationally recognized standards.
-                        We are one of the few companies capable of offering
+                        services to clients worldwide.Our engineering office in
+                        Mumbai, India specializes in storage tank services that
+                        comply with internationally recognized standards. We are
+                        one of the few companies capable of offering
                         comprehensive project management and procurement
                         services under one roof, thanks to our expert teams in
-                        Doha, Dubai, Baku, Istanbul, Izmir, and Frankfurt. • As
-                        a leading contracting company, we provide engineering,
+                        Doha, Dubai, Baku, Istanbul, Izmir, and Frankfurt.As a
+                        leading contracting company, we provide engineering,
                         procurement, and construction services for tank farm
                         projects consisting of cryogenic and atmospheric
-                        pressure tanks. • To date, we have successfully
-                        completed turnkey projects for facilities consisting of
-                        83 tanks with a total capacity of 2.3 million cubic
-                        meters. We have completed project disciplines
-                        vertically, including construction, electro-mechanical
-                        assembly, piping, and electrical instrumentation.
+                        pressure tanks.To date, we have successfully completed
+                        turnkey projects for facilities consisting of 83 tanks
+                        with a total capacity of 2.3 million cubic meters. We
+                        have completed project disciplines vertically, including
+                        construction, electro-mechanical assembly, piping, and
+                        electrical instrumentation.
                     </p>
                 </div>
                 {data != null && (
@@ -290,7 +290,7 @@ function AboutUs() {
                     CODE OF ETHICS AND BUSINESS CONDUCT
                 </p>
                 <p className="text-lg font-normal text-slate-700 text-center py-5">
-                    ViTOGroup displays the highest standards for understanding
+                    ViTO Group displays the highest standards for understanding
                     and observing laws and regulations; and expects its
                     Employees and Business Partners to always act in a compliant
                     manner.
@@ -311,9 +311,9 @@ function AboutUs() {
                     practices, and money laundering.
                 </p>
                 <p className="text-lg font-normal text-slate-700 text-center py-5">
-                    ViTOGroup Employees and Business Partners shall not directly
-                    or indirectly obtain personal gain from any transactions and
-                    contractsrelated to ViTOGroup.
+                    ViTO Group Employees and Business Partners shall not
+                    directly or indirectly obtain personal gain from any
+                    transactions and contractsrelated to ViTO Group.
                 </p>
                 <p className="text-lg font-normal text-slate-700 text-center py-5">
                     If Employees and Business Partners suspect any actual or

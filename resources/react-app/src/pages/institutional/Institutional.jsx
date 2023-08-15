@@ -50,7 +50,7 @@ function Institutional() {
                     <div className="flex flex-[2_2_0%] flex-col justify-between  ">
                         <div className="w-full">
                             <h1 className=" text-white text-3xl  p-3 bg-[#1b4378] text-left font-bold">
-                                President's Message
+                                The Message of The President
                             </h1>
                         </div>
                         <div className="bg-[#00a1e0] h-full text-white p-4 text-left">
@@ -59,17 +59,14 @@ function Institutional() {
                             </h2>
                             <p className="text-xl mt-5">
                                 Founded in 2000, ViTO Group continues to grow
-                                steadily. With the establishment of our
-                                subsidiary IVT Construction in 2017, and then
-                                its consolidation within ViTO engineering in
-                                2020, we are able to better meet the demands of
-                                our customers and business partners thanks to
-                                their EPC (Engineering, Procurement and
-                                Construction) application capabilities for the
-                                comprehensive tank farm. We come together with
-                                our customers in our branches in Mumbai, Baku,
-                                Qatar and Dubai, and in our head office in
-                                Aliağa (İzmir) and Istanbul.
+                                consistently. Following the establishment of our
+                                subsidiary IVT Construction in 2017, we can now
+                                better meet the demands of our customers and
+                                business partners thanks to comprehensive EPC
+                                execution capabilities. We meet with our
+                                customers in our branches in Mumbai, Baku, Qatar
+                                and Dubai as well as our main site office in
+                                Aliağa (Izmir), and headquarters in Istanbul
                             </p>
                         </div>
                     </div>
@@ -80,22 +77,24 @@ function Institutional() {
                 <div className="bg-[#093977]  text-white w-[65%] p-4 text-left h-[450px] max-lg:w-full max-lg:h-auto">
                     <h2 className="text-3xl">Fuat Şengül</h2>
                     <p className="text-xl mt-5">
-                        Civil Engineer ViTO Engineering Construction and
-                        Contracting Inc. Vice Chairman of the Board Born in
-                        Istanbul in 1964, Fuat Şengül graduated from Istanbul
-                        Technical University Civil Engineering Department
-                        (1985), Istanbul Technical University Engineering He
-                        completed his master's degree in the Faculty of Medicine
-                        (1987). He received his specialization certificate from
-                        Marmara University Finance and Accounting Department
-                        (1988). Şengül, who works as an investment valuation
-                        specialist in private banks, is the General Manager and
-                        Board of Directors of Istanbul Gaz Dağıtım A.Ş (İGDAŞ).
-                        member assumed the duties of .(1994-2000). Şengül joined
-                        the ViTo Group in 2001 and still serves as the Vice
-                        Chairman of the Board of Directors at Vito Mühendislik
-                        İnşaat ve Taahhüt A.Ş. He is married and has four
-                        children.
+                        Mr. Fuat Şengül is a highly experienced professional
+                        with over 25 years of experience in the energy sector.
+                        He currently holds the position of Deputy Chairman of
+                        the Board at ViTO Mühendislik İnşaat ve Taahhüt A.Ş, a
+                        role he has held since 2017. He joined the ViTO Group in
+                        2014, initially serving as the Deputy Chairman of the
+                        Board at ViTO Enerji ve Ticaret Yatırım A.Ş from 2014 to
+                        2020. Prior to joining the ViTO Group, Mr. Şengül served
+                        as the General Manager of SMM Engineering Audit (EPDK)
+                        from 2000 to 2014. Additionally, he held the position of
+                        General Manager at İGDAŞ (Istanbul Gas Distribution
+                        Company) from 1994 to 2000. Mr. Şengül holds an MSc. in
+                        Civil Engineering with a specialization in Geotechnical
+                        Engineering and a BSc. in Civil Engineering, both
+                        obtained from Istanbul Technical University. With his
+                        extensive experience and expertise in the energy sector,
+                        Mr. Fuat Şengül brings valuable insights and leadership
+                        to his role at ViTO.
                     </p>
                 </div>
                 <div className="w-[27%] max-lg:w-full">
@@ -161,21 +160,27 @@ function Institutional() {
                 <div className="bg-[#be677b]  text-white w-[65%] p-4 text-left h-[450px] max-lg:w-full h-auto">
                     <h2 className="text-3xl">Burhan Tekdemir </h2>
                     <p className="text-xl mt-5">
-                        Technicon General Manager since 2018
+                        General Manager of Technicon since 2018‍
                         <br />
-                        Since 2017, ViTO Engineering Construction and
-                        Contracting Inc. board member
+                        Board Member at ViTO Mühendislik İnşaat ve Taahhüt A.Ş.
+                        since 2017‍
                         <br />
                         Joined ViTOGroup in 2005
                         <br />
-                        2014 - 2018: IOT ViTO Engineering Construction and
-                        Contracting Inc. general manager
+                        2014 - 2018: Managing Director at IOT ViTO Mühendislik
+                        İnşaat ve Taahhüt A.Ş.‍
                         <br />
-                        2008 - 2017: ViTO Energy and Trade Investment Inc.
-                        Business Development Manager
+                        2008 - 2017: Managing Director Business Development at
+                        ViTO Enerji ve Ticaret Yatırım A.Ş.‍
                         <br />
-                        2005 - 2008: ViTO Energy and Trade Investment Inc.
-                        Business Development Manager
+                        2005 - 2008:Business Development Manager at ViTO Enerji
+                        ve Ticaret Yatırım A.Ş
+                        <br />
+                        1999 - 2004: Business Development Director at IBS
+                        Research & Consultancy in Istanbul, Turkey‍
+                        <br />
+                        25+ years of experience in project management and the
+                        energy sector
                     </p>
                 </div>
             </div>
@@ -184,13 +189,25 @@ function Institutional() {
                 <div className="w-1/2 max-lg:w-full  ">
                     <h2 className="text-3xl p-5 mb-1">Zeki Gunay</h2>
                     <p className="text-black text-left p-5">
-                        Zeki Gunay was born in 1972 and was born in 1994. He
-                        graduated from Hacettepe Mechanical Engineering Faculty.
-                        After completing his military service in 1996, natural
-                        gas distribution pipelines and He started his
-                        professional career on terminal design studies. Petrol
-                        Ofisi Terminal in Turkey with Foster Wheeler between
-                        1996-2001 Worked on revision and renovation projects,
+                        Zeki Gunay, born in 1972, graduated from Hacettepe
+                        Mechanical Engineering Faculty in 1994, after completing
+                        his military service in 1996, started his professional
+                        carried in Turkey for natural gas distribution pipe
+                        lines and terminal design works. From 1996 to 2001, Mr.
+                        Gunay worked with Foster Wheeler, rewamping and
+                        renovation of Petrol Ofisi Terminals in Turkey, from
+                        design stage up to commissioning. From 2001 to 2010
+                        contunied his professional career in abroad projects
+                        with Gama Industry and Enka Insaat taking roles in
+                        different regions from Libya up to Sakhalin in Oil & Gas
+                        Project , worked with BP, Technip, Bechtel and Shell. In
+                        2010 started to work in Akenerji until 2015 to establish
+                        one the biggest combined power plant in Turkey from feed
+                        to commissioning. He contunied his professional services
+                        as advisor from 2015 to 2017 in power plants projects in
+                        Turkey. Joined to Vito in 2017, between 2017 and 2022
+                        worked as project director in couple of works and
+                        contunie his career as Country Manager in Qatar.
                     </p>
                 </div>
                 <div className="w-[32%] max-lg:w-full">
@@ -237,49 +254,35 @@ function Institutional() {
                 <div className="w-[5%] h-full bg-blue-500"></div>
 
                 <div className="bg-[#093977]  text-white w-[65%] p-4 text-left h-auto max-lg:w-full">
-                    <h2 className="text-3xl p-5">Dinc Senlier </h2>
+                    <h2 className="text-3xl px-5 py-2">Dinc Senlier</h2>
+                    <br />
+                    <h3 className="text-2xl">
+                        Deputy Managing Directory HSEQ & IT
+                    </h3>
                     <p
                         className="text-xl mt-5"
                         style={isOpen ? null : paragraphStyles}
                     >
-                        Dinç Senlier graduated from the Middle East Technical
-                        University (METU) in 1976 with a B.Sc. degree in
-                        Electronics Engineering, and in 1980, he obtained his
-                        M.Sc. degree in Electronics Engineering from the same
-                        university. He began his professional career in 1976 as
-                        a Research Assistant at METU. After working at PTT
-                        General Directorate and Aselsan, he joined the Tekfen
-                        Group in 1982. He spent 40 years at Tekfen, one of
-                        Turkey's largest conglomerates, holding various
-                        positions and responsibilities. After working as the
-                        General Manager of two Tekfen Group companies engaged in
-                        defense industry for 8 years, he served as the
+                        Dinç Şenlier graduated from the Middle East Technical
+                        University (METU) in 1976 with a degree in Electronic
+                        Engineering, and in 1980, he obtained a Master's degree
+                        in Electronic Engineering from the same university. He
+                        began his professional career in 1976 as a Research
+                        Assistant at METU. After working at PTT General
+                        Directorate and Aselsan, he joined the Tekfen Group in
+                        1982. He spent 40 years at Tekfen, one of Turkey's
+                        largest conglomerates, holding various positions and
+                        responsibilities. After working as the General Manager
+                        of two Tekfen Group companies engaged in defense
+                        industry production for 8 years, he served as the
                         Management Representative in the Contracting company.
-                        Later, he worked as the Consultant to the President of
-                        Tekfen Group Companies in the Holding company, providing
-                        guidance in various fields. Since the beginning of 2022,
-                        he has been contributing to ViTO Engineering
-                        Construction and Contracting Inc. as the Deputy Managing
-                        Director responsible for Health-Safety-Environment,
-                        Quality, and Information Technologies. Dinç Şenlier
-                        graduated from Middle East Technical University as an
-                        Electronics Engineer in 1976 and as an Electronics
-                        Engineer from the same university in 1980. He started
-                        his career as a Research Assistant at METU in 1976,
-                        continued his career at the PTT General Directorate and
-                        Aselsan, and joined the Tekfen Group in 1982. He took
-                        part in almost every position and responsibility in his
-                        life at Tekfen, one of the largest groups in Turkey,
-                        which lasted 40 years until 2022. After working as a
-                        General Manager at 2 Tekfen Group companies that
-                        manufacture for the Defense Industry for 8 years, and
-                        then as a Management Representative at the Contracting
-                        Company, he acted as a consultant to the Group Companies
-                        President in the Holding company in many areas. Since
-                        the beginning of 2022, he has been contributing to ViTO
-                        Mühendislik İnşaat ve Taahhüt A.Ş. as Assistant General
-                        Manager responsible for Health-Safety-Environment,
-                        Quality and Information Technologies.
+                        Later, he worked as the Group Companies President
+                        Advisor in the Holding company, providing guidance in
+                        various fields. Since the beginning of 2022, he has been
+                        contributing to ViTO Engineering Construction and
+                        Contracting Inc. as the Deputy General Manager
+                        responsible for Health-Safety-Environment, Quality, and
+                        Information Technologies.
                     </p>
                     <p
                         className="text-2xl text-blue-500 mt-5 cursor-pointer"
