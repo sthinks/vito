@@ -24,6 +24,8 @@ class ProjectController extends Controller
                         "index" => $i + 1 // Index 0'dan değil 1'den başlamalı
                     ];
                 
+
+                    //hello world
                 $item->image_gallery = $image_gallery;
                 }
             }
