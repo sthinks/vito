@@ -1,5 +1,5 @@
 {
-    "/js/app.js": "/js/app.js?id=5c21e1c2dbd928fe4cea0b74799ded61",
+    "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css?id=68b329da9893e34099c7d8ad5cb9c940",
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/slick-carousel/slick/slick.eot": "/fonts/vendor/slick-carousel/slick/slick.eot?id=4bb08b6ed048eaf8be2a371ffc8faec2",
@@ -115,6 +115,7 @@
     "/logo192.png": "/logo192.png?id=995306f3f1b50873ba0fe4c857a90d22",
     "/logo512.png": "/logo512.png?id=93c81d868a39562d52258e5b5b267644",
     "/manifest.json": "/manifest.json?id=d9d975cebe2ec20b6c652e1e4c12ccf0",
-    "/mix-manifest.json": "/mix-manifest.json?id=40a076f5d11b0f2cfa17a6612b7e944e",
-    "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850"
+    "/mix-manifest.json": "/mix-manifest.json?id=7dc1a34568ea05646ec826841c51be42",
+    "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850",
+    "/images/burhant.png": "/images/burhant.png?id=465b337d27d72c8122a578254c816302"
 }

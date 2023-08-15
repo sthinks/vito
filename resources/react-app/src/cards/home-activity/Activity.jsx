@@ -10,27 +10,27 @@ function Activity() {
         {
             id: 0,
             src: ActiveFirst,
-            description: "Lorem Ipsum",
+            description: "PROJECT DEVELOPMENT",
         },
         {
             id: 1,
             src: ActiveSecond,
-            description: "Lorem Ipsum",
+            description: "EPC",
         },
         {
             id: 2,
             src: ActiveThird,
-            description: "Lorem Ipsum",
+            description: "FABRICATION",
         },
         {
             id: 3,
             src: ActiveFourth,
-            description: "Lorem Ipsum",
+            description: "MAINTANCE AND SPARE PARTS",
         },
     ];
     return (
         <div className="container mx-auto">
-            <ul className="grid grid-cols-4 place-items-center max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:gap-4" >
+            <ul className="grid grid-cols-4 place-items-center max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:gap-4">
                 {active_cards.map((item, index) => (
                     <ActivityCard
                         key={index}

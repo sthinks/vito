@@ -111,13 +111,24 @@ function Footer2() {
                             className="w-52 max-md:w-36"
                         />
                         <div className="text-white text-base max-md:text-sm">
-                            <p>Ayazağa, Vadistanbul, Azerbaycan Cd. 3B D:1B </p>
-                            <p>Blok, 34485 Sarıyer/İstanbul</p>
+                            <p>Vadistanbul Ayazağa Mah.</p>
+
                             <p>
-                                <a href="tel:+902122323030">
-                                    +90 (212) 232 3030
-                                </a>
+                                Azerbaycan Cad. 3B 1B Blok <br />
                             </p>
+                            <p>34485 Sarıyer-İstanbul</p>
+                            <p>Türkiye</p>
+                            <div className="flex justify-start items-start mt-5">
+                                <p className="font-bold ">
+                                    CONTACT <br />
+                                    <a
+                                        className="font-normal"
+                                        href="tel:+902122323030"
+                                    >
+                                        +90 (212) 232 30 30
+                                    </a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div className=" flex justify-between w-4/6 max-lg:w-full text-white flex-col">

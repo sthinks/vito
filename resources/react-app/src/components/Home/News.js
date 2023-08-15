@@ -44,6 +44,8 @@ function Haber() {
                                 src={news[0].media}
                                 alt="newsimage"
                             />
+
+
                             <div className="absolute bg-[#456998] w-full h-full opacity-50 z-40" />
                             <p className="absolute text-2xl font-semibold text-white z-50 text-center">
                                 {news[0].title}

@@ -18,7 +18,7 @@ function HomeAnimation() {
         {
             id: 2,
             targetValue: 23000000,
-            unit: "m3",
+            unit: "m³",
             content: "Plate for Fabrication and Erection",
         },
     ];

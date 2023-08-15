@@ -49,30 +49,30 @@ function Header() {
                             <img
                                 src={Logo}
                                 alt="sa"
-                                className="w-[150px] max-lg:w-[115px]"
+                                className="w-[250px] mr-10 max-xl:w-[150px] max-lg:w-[120px] max-lg:mr-0 "
                             />
                         </Link>
                     </div>
-                    <ul className="flex flex-row gap-8 max-lg:mt-2">
-                        <li className="text-white font-bold text-lg ml-5 max-lg:text-sm ">
+                    <ul className="flex flex-row gap-10 max-xl:gap-6 max-lg:mt-2 max-lg:gap-4 navbar-ul ">
+                        <li className="text-white font-bold text-lg ml-5 max-lg:text-xs max-xl:text-base">
                             <Link to="/about-us"> ABOUT US </Link>
                         </li>
-                        <li className="text-white font-bold text-lg max-lg:text-sm">
+                        <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
                             <Link to="/instituonal"> INSTITUONAL </Link>
                         </li>
-                        <li className="text-white font-bold text-lg max-lg:text-sm">
+                        <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
                             <Link to="/vito-global"> GLOBAL </Link>
                         </li>
-                        <li className="text-white font-bold text-lg max-lg:text-sm">
+                        <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
                             <Link to="/projects"> PROJECTS </Link>
                         </li>
-                        <li className="text-white font-bold text-lg max-lg:text-sm">
+                        <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
                             <Link to="/sector"> SECTORS </Link>
                         </li>
-                        <li className="text-white font-bold text-lg max-lg:text-sm">
+                        <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
                             <Link to="/news"> NEWS </Link>
                         </li>
-                        <li className="text-white font-bold text-lg max-lg:text-sm">
+                        <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
                             <Link to="/contact"> CONTACT </Link>
                         </li>
                         {/* <li>
@@ -90,23 +90,22 @@ function Header() {
                                 alt="british_flag"
                             />
                         </li> */}
-                        <li>
+                        <li className="flex flex-row justify-center items-center gap-2">
                             <div className="text-white opacity-50 text-3xl cursor-pointer max-lg:text-2xl">
                                 <a
                                     href="https://twitter.com/groupvito"
                                     target="blank"
                                 >
-                                    <AiOutlineTwitter />
+                                    <AiOutlineTwitter className="hover:text-[#1DA1F2]"/>
                                 </a>
                             </div>
-                        </li>
-                        <li>
+
                             <div className="text-white opacity-50 text-3xl cursor-pointer max-lg:text-2xl ">
                                 <a
                                     href="https://tr.linkedin.com/company/vitogroup"
                                     target="blank"
                                 >
-                                    <FaLinkedinIn />
+                                    <FaLinkedinIn className="hover:text-white" />
                                 </a>
                             </div>
                         </li>
