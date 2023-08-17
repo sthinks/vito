@@ -5,17 +5,18 @@
 .navbar-ul > li > a:hover {
     color: #1b4378;
     background-color: white;
+    padding: 30px 5px;
 }
-
-.info-box-container {
-    position: relative;
+.navbar-ul > li > a {
+    padding: 30px 5px;
 }
 
 .info-box {
     position: absolute;
     top: 20%;
     right: 0;
-    background-color: rgba(0, 0, 255, 0.781);
+    background-color: #4774a9;
+    opacity: 0.5;
     padding: 20px;
     font-size: 20px;
     color: white;
@@ -27,4 +28,15 @@
 .info-box.active {
     opacity: 0.8;
     transform: translateX(0);
+}
+@media (max-width: 1280px) {
+    .navbar-ul > li > a:hover {
+        color: #1b4378;
+        background-color: white;
+        padding: 32px 5px;
+    }
+
+    .navbar-ul > li > a {
+        padding: 32px 5px;
+    }
 }

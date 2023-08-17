@@ -85,7 +85,7 @@ function Footer() {
                     className="absolute right-0 bottom-0 w-[55%] max-md:w-[85%]"
                 />
 
-                <div className="relative top-20 mb-[31rem] max-lg:mb-[20rem] max-md:mb-[12rem] max-md:top-10">
+                <div className="relative top-20 mb-[20rem] max-lg:mb-[14rem] max-md:mb-[8rem] max-md:top-10">
                     <img
                         className="map-image"
                         id="image-id"
@@ -119,7 +119,7 @@ function Footer() {
 
                         <div className="text-white text-base max-md:text-sm">
                             <p>Vadistanbul Ayazağa Mah.</p>
-                        
+
 
                             <p>
                                 Azerbaycan Cad. 3B 1B Blok <br />
@@ -131,6 +131,7 @@ function Footer() {
                                     CONTACT <br />
                                     <a
                                         className="font-normal"
+
                                         href="tel:+902122323030"
                                     >
                                         +90 (212) 232 30 30
@@ -142,36 +143,36 @@ function Footer() {
                     <div className=" flex justify-between w-4/6 max-lg:w-full text-white flex-col">
                         <div className="flex justify-between text-white max-lg:flex-wrap  max-md:gap-5 max-md:flex-initial max-md:items-start">
                             <ul className="">
-                                <li className="pb-2 max-sm:text-sm text-start">
+                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                     <a href="/">HOME</a>
                                 </li>
-                                <li className="pb-2 max-sm:text-sm text-start">
+                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                     <a href="/instituonal">INSTITUTIONAL</a>
                                 </li>
-                                <li className="pb-2 max-sm:text-sm text-start">
+                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                     <a href="#">SERVICES</a>
                                 </li>
                             </ul>
                             <ul className="">
-                                <li className="pb-2 max-sm:text-sm text-start">
+                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                     <a href="#">PROJECTS</a>
                                 </li>
-                                <li className="pb-2 max-sm:text-sm text-start">
+                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                     <a href="#">SECTORS</a>
                                 </li>
                             </ul>
                             <ul className="">
-                                <li className="pb-2 max-sm:text-sm text-start">
+                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                     <a href="#">HUMAN RESOURCES</a>
                                 </li>
                             </ul>
                             <ul className="">
-                                <li className="pb-2 max-sm:text-sm text-start">
+                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                     <a href="#">MEDIA</a>
                                 </li>
                             </ul>
                             <ul className="">
-                                <li className="pb-2 max-sm:text-sm text-end">
+                                <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2]">
                                     <a href="#">CONTACT</a>
                                 </li>
                             </ul>

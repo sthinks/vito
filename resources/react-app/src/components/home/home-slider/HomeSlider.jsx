@@ -30,7 +30,7 @@ function SampleNextArrow(props) {
 
     return (
         <MdKeyboardArrowRight
-            className="slick-arrow slick-next right-4 max-lg:right-2 h-56 w-56 z-50 max-xl:w-36 max-xl:h-36 max-lg:w-24 max-lg:h-24 max-md:w-12  max-md:h-12"
+            className="slick-arrow slick-slider-home slick-next right-4 max-lg:right-2 h-56 w-56 z-50 max-xl:w-36 max-xl:h-36 max-lg:w-24 max-lg:h-24 max-md:w-12 max-md:h-12 hover:text-blue-500"
             style={{
                 ...style,
                 display: "block",
@@ -45,7 +45,7 @@ function SamplePrevArrow(props) {
     const { style, onClick } = props;
     return (
         <MdKeyboardArrowLeft
-            className="slick-arrow slick-next left-4 max-lg:left-2 h-56 w-56 z-50 max-xl:w-36 max-xl:h-36 max-lg:w-24 max-lg:h-24 max-md:w-12  max-md:h-12"
+            className="slick-arrow slick-slider-home slick-next left-4 max-lg:left-2 h-56 w-56 z-50 max-xl:w-36 max-xl:h-36 max-lg:w-24 max-lg:h-24 max-md:w-12  max-md:h-12"
             style={{
                 ...style,
                 display: "block",
@@ -87,7 +87,7 @@ function HomeSlider() {
         <div>
             <Slider {...settings}>
                 {slidesData.map((slide, index) => (
-                    <div key={index} className="relative">
+                    <div key={index} className="relative max-md:mt-20">
                         <div className="slide-content relative">
                             {index === 0 && (
                                 <h1 className="text-white font-bold text-4xl absolute text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">

@@ -44,12 +44,12 @@ function Header() {
         <header>
             {isVisible ? (
                 <nav className="bg-[#1b4378] h-20 flex justify-center items-center fixed z-[200] w-full opacity-90 ">
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center logo">
                         <Link to="/">
                             <img
                                 src={Logo}
                                 alt="sa"
-                                className="w-[250px] mr-10 max-xl:w-[150px] max-lg:w-[120px] max-lg:mr-0 "
+                                className="w-[250px] mr-10 max-xl:w-[140px] max-lg:w-[120px] max-lg:mr-0 "
                             />
                         </Link>
                     </div>
@@ -91,19 +91,20 @@ function Header() {
                             />
                         </li> */}
                         <li className="flex flex-row justify-center items-center gap-2">
-                            <div className="text-white opacity-50 text-3xl cursor-pointer max-lg:text-2xl">
+                            <div className="text-[#456998] text-3xl cursor-pointer max-lg:text-2xl">
                                 <a
                                     href="https://twitter.com/groupvito"
                                     target="blank"
                                 >
-                                    <AiOutlineTwitter className="hover:text-[#1DA1F2]"/>
+                                    <AiOutlineTwitter className="hover:text-[#1DA1F2] " />
                                 </a>
                             </div>
 
-                            <div className="text-white opacity-50 text-3xl cursor-pointer max-lg:text-2xl ">
+                            <div className="text-[#456998] text-3xl cursor-pointer max-lg:text-2xl">
                                 <a
                                     href="https://tr.linkedin.com/company/vitogroup"
                                     target="blank"
+
                                 >
                                     <FaLinkedinIn className="hover:text-white" />
                                 </a>
