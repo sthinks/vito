@@ -23,9 +23,6 @@ class ProjectController extends Controller
                     sprintf('storage/%s', str_replace('\\', '/', $image_gallery[$i]))),
                         "index" => $i + 1 // Index 0'dan değil 1'den başlamalı
                     ];
-                
-
-                    //hello world
                 $item->image_gallery = $image_gallery;
                 }
             }

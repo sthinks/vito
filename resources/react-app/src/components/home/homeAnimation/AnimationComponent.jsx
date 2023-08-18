@@ -32,8 +32,7 @@ const AnimationComponent = ({ description, targetNumber, unit }) => {
     ));
     return (
         <li ref={ref} className="flex flex-col justify-center items-center">
-            <div className="animation-container">
-                <span>{spans}</span>
+            <div className="animation-container p-20">
                 <p className="text-center text-2xl">
                     {isVisible && (
                         <>
