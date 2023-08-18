@@ -8,6 +8,7 @@ import Zeki from "../.././assets/institutional/zekigunay.png";
 import InstBanner from "../.././assets/institutional/institional-bannerpng.png";
 import AboutWave from "../.././assets/institutional/about-wave.png";
 import History from "../.././assets/institutional/ghistory.png";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const paragraphStyles = {
     WebkitLineClamp: 5,
@@ -17,25 +18,26 @@ const paragraphStyles = {
 };
 
 function Institutional() {
+    const [objectPosition, setObjectPosition] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
     useEffect(() => {
         window.scrollTo(0, 0); // Sayfanın en üstüne kaydır
     }, []);
-    const containerRef = useRef(null);
 
-    useEffect(() => {
-        const container = containerRef.current;
-        container.addEventListener("scroll", handleScroll);
+    //İmage slider start
+    const handleDrag = (value) => {
+        if (objectPosition + value < 0) {
+            setObjectPosition(0);
+        } else if (objectPosition + value > 100) {
+            setObjectPosition(100);
+        } else {
+            setObjectPosition(objectPosition + value);
+        }
 
-        return () => {
-            container.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-    const handleScroll = (event) => {
-        console.log(event);
-        const container = event.target;
-        container.scrollTop = 0; // Dikey kaydırmayı sıfırla
+        console.log(objectPosition);
     };
+    //İmage slider end
+
     return (
         <>
             <Header />
@@ -310,13 +312,32 @@ function Institutional() {
             <div className="w-full mt-10">
                 <img src={AboutWave} alt="about-wave" />
             </div>
-            <div className="w-full overflow-scroll" ref={containerRef}>
-                <div className="flex w-[3000px]">
+            <div className="w-full">
+                <div
+                    className="flex w-full justify-center items-center"
+                    onDragOver={(e) => e.preventDefault()}
+                >
+                    <MdKeyboardArrowLeft
+                        className="absolute left-4 max-md:-left-2 max-lg:left-2 h-48 w-48 z-50 hover:-translate-x-4 cursor-pointer duration-100"
+                        style={{
+                            color: "#f1f2f2",
+                        }}
+                        onClick={(e) => handleDrag(-25)}
+                    />
                     <img
-                        src={History}
+                        style={{ objectPosition: `${objectPosition}% center` }}
                         draggable="true"
+                        src={History}
                         alt="asdasdsa"
-                        className="w-[5000px] h-auto cursor-pointer"
+                        className="object-cover cursor-pointer h-[500px] duration-200 py-5"
+                    />
+
+                    <MdKeyboardArrowRight
+                        className="absolute right-4 max-md:-right-2 max-lg:right-2 h-48 w-48 z-50 hover:translate-x-4 cursor-pointer duration-100"
+                        style={{
+                            color: "#f1f2f2",
+                        }}
+                        onClick={(e) => handleDrag(25)}
                     />
                 </div>
             </div>

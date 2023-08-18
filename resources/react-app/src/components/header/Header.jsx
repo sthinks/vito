@@ -96,7 +96,7 @@ function Header() {
                                     href="https://twitter.com/groupvito"
                                     target="blank"
                                 >
-                                    <AiOutlineTwitter className="hover:text-[#1DA1F2]"/>
+                                    <AiOutlineTwitter className="hover:text-[#1DA1F2]" />
                                 </a>
                             </div>
 
