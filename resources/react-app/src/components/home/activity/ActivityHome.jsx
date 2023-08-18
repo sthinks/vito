@@ -9,14 +9,14 @@ function ActivityHome() {
         <>
             <div className="container mx-auto flex flex-row items-center justify-center">
                 <div className="w-2/5 h-[2px] bg-[#093977] mr-4"></div>
-                <h1 className="font-bold text-5xl my-5 mx-0 text-[#093977] text-center">
+                <h1 className="font-bold text-4xl my-5 mx-0 text-[#093977] text-center">
                     FIELDS OF ACTIVITY
                 </h1>
                 <div className="w-2/5 h-[2px] bg-[#093977] ml-4"></div>
             </div>
             <Activity />
-            <div className="flex flex-row justify-center items-center mt-10 ">
-                <div className="w-1/2 relative cursor-pointer">
+            <div className="flex flex-row justify-center items-center mt-10 max-md:flex-col max-md:gap-4">
+                <div className="w-1/2 relative cursor-pointer max-md:w-full">
                     <img
                         src={Continous}
                         alt="contprj"
@@ -30,7 +30,7 @@ function ActivityHome() {
                     </Link>
                 </div>
 
-                <div className="w-1/2 relative cursor-pointer">
+                <div className="w-1/2 relative cursor-pointer max-md:w-full">
                     <img
                         src={Famous}
                         alt="contprj"

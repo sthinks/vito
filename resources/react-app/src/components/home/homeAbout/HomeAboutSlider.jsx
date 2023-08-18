@@ -7,7 +7,7 @@ function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
         <MdKeyboardArrowRight
-            className="slick-arrow slick-next right-4 max-md:-right-2 max-lg:right-2 h-20 w-20 z-50"
+            className="slick-arrow slick-next right-4 max-md:right-4 max-lg:right-2 h-20 w-20 z-50 max-md:w-12 max-md:h-12"
             style={{
                 ...style,
                 display: "block",
@@ -22,7 +22,7 @@ function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
         <MdKeyboardArrowLeft
-            className="slick-arrow slick-next left-4 max-md:-left-2 max-lg:left-2 h-20 w-20 z-50"
+            className="slick-arrow slick-next left-4 max-md:left-4 max-lg:left-0 h-20 w-20 z-50 max-md:w-12 max-md:h-12"
             style={{
                 ...style,
                 display: "block",
@@ -35,10 +35,10 @@ function SamplePrevArrow(props) {
 function HomeAboutSlider({ sliderImage, bg }) {
     var settings = {
         dots: false,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 3,
         infinite: true,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         initialSlide: 0,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,

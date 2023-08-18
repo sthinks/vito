@@ -31,6 +31,7 @@ Route::get('get-vito-global',[\App\Http\Controllers\GlobalController::class,'get
 Route::get('get-about-stats',[\App\Http\Controllers\AboutusController::class,'getAboutStat',]);
 Route::get('get-about-services',[\App\Http\Controllers\AboutusController::class,'getAboutServices',]);
 Route::get('get-projects',[\App\Http\Controllers\ProjectController::class,'getProjects',]);
+Route::get('get-home-sliders',[\App\Http\Controllers\BaseController::class,'getHomeSlider',]);
 
 
 

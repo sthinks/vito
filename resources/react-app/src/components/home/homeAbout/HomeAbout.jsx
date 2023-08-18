@@ -30,7 +30,7 @@ function HomeAbout() {
     ];
     return (
         <div>
-            <h1 className="text-[#093977] text-center text-5xl my-10 font-bold max-md:text-3xl ">
+            <h1 className="text-[#093977] text-center text-4xl my-10 font-bold max-md:text-3xl ">
                 WHO WE ARE ?
             </h1>
             <HomeAboutSlider sliderImage={arrayImage} />

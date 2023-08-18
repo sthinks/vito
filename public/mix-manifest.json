@@ -1,5 +1,5 @@
 {
-    "/js/app.js": "/js/app.js?id=c853a7d58840abc25eea52fbb8967a7d",
+    "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css?id=68b329da9893e34099c7d8ad5cb9c940",
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/slick-carousel/slick/slick.eot": "/fonts/vendor/slick-carousel/slick/slick.eot?id=4bb08b6ed048eaf8be2a371ffc8faec2",
@@ -81,7 +81,7 @@
     "/images/servicebg.png": "/images/servicebg.png?id=c47e58b4e54b0f179113eca3eca87b84",
     "/images/slider.png": "/images/slider.png?id=a73a5b9b000936bb2ef9e7a27a581bc5",
     "/images/Star 1.png": "/images/Star 1.png?id=244416bee8fa3891b38ee53417cc8d8a",
-    "/images/Star 2.jpg": "/images/Star 2.jpg?id=e7fe8d0bb36e2c12c176539a9a94c3ab",
+    "/images/Star 2.jpg": "/images/Star 2.jpg?id=c59cb304045ef338080de88c126be6e5",
     "/images/Star 3.png": "/images/Star 3.png?id=428f07131ae4e784a57334fe86b99f2f",
     "/images/Star Jetty piping.jpg": "/images/Star Jetty piping.jpg?id=92212a6cd336f81d5bf6670a9f566546",
     "/images/Star Rafiner.jpg": "/images/Star Rafiner.jpg?id=5f09c7d8baad430f2a38eed27cb400b0",
@@ -116,6 +116,6 @@
     "/logo192.png": "/logo192.png?id=995306f3f1b50873ba0fe4c857a90d22",
     "/logo512.png": "/logo512.png?id=93c81d868a39562d52258e5b5b267644",
     "/manifest.json": "/manifest.json?id=d9d975cebe2ec20b6c652e1e4c12ccf0",
-    "/mix-manifest.json": "/mix-manifest.json?id=3891ab659990b5c705f889465d827aa6",
+    "/mix-manifest.json": "/mix-manifest.json?id=676aa09703495c15a1bb04207f3aaa6e",
     "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850"
 }
