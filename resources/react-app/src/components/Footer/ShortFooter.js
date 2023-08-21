@@ -39,36 +39,36 @@ function ShortFooter() {
                 <div className=" flex justify-between w-4/6 max-lg:w-full text-white flex-col">
                     <div className="flex justify-between text-white max-lg:flex-wrap  max-md:gap-5 max-md:flex-initial max-md:items-start">
                         <ul className="">
-                            <li className="pb-2 max-sm:text-sm text-start">
+                            <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                 <a href="/">HOME</a>
                             </li>
-                            <li className="pb-2 max-sm:text-sm text-start">
+                            <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                 <a href="/instituonal">INSTITUTIONAL</a>
                             </li>
-                            <li className="pb-2 max-sm:text-sm text-start">
+                            <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                 <a href="#">SERVICES</a>
                             </li>
                         </ul>
                         <ul className="">
-                            <li className="pb-2 max-sm:text-sm text-start">
+                            <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                 <a href="#">PROJECTS</a>
                             </li>
-                            <li className="pb-2 max-sm:text-sm text-start">
+                            <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                 <a href="#">SECTORS</a>
                             </li>
                         </ul>
                         <ul className="">
-                            <li className="pb-2 max-sm:text-sm text-start">
+                            <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                 <a href="#">HUMAN RESOURCES</a>
                             </li>
                         </ul>
                         <ul className="">
-                            <li className="pb-2 max-sm:text-sm text-start">
+                            <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                 <a href="#">MEDIA</a>
                             </li>
                         </ul>
                         <ul className="">
-                            <li className="pb-2 max-sm:text-sm text-end">
+                            <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2]">
                                 <a href="#">CONTACT</a>
                             </li>
                         </ul>

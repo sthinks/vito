@@ -22,17 +22,10 @@ const AnimationComponent = ({ description, targetNumber, unit }) => {
             observer.disconnect();
         };
     }, []);
-    const spans = Array.from({ length: 20 }, (_, index) => (
-        <span
-            key={index}
-            style={{
-                "--i": index + 1,
-            }}
-        />
-    ));
+
     return (
         <li ref={ref} className="flex flex-col justify-center items-center">
-            <div className="animation-container p-20">
+            <div className="animation-container ">
                 <p className="text-center text-2xl">
                     {isVisible && (
                         <>

@@ -171,7 +171,7 @@ function Institutional() {
                     <img
                         src={Burhan}
                         alt="fuat"
-                        className="h-[450px] max-lg:w-full object-cover"
+                        className="w-full max-lg:w-full object-cover"
                     />
                 </div>
                 <div className="bg-[#be677b]  text-white w-[65%] p-4 text-left h-[450px] max-lg:w-full h-auto">

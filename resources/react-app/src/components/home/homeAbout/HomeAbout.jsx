@@ -53,7 +53,7 @@ function HomeAbout() {
                             strength.
                         </p>
                     </div>
-                    <div class="w-[30%] h-full flex justify-center items-center max-md:mt-10 max-md:w-full">
+                    <div class="w-[30%] h-[350px] flex justify-center items-center max-md:mt-10 max-md:w-full">
                         <iframe
                             class="w-full h-full"
                             src="https://www.youtube.com/embed/Qd1yzIDtQiU"
