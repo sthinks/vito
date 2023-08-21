@@ -25,7 +25,10 @@ Route::get('/home-news', [
     \App\Http\Controllers\NewsController::class,
     'getHomeNews',
 ]);
-
+Route::get('/news-detail/{slug}', [
+    \App\Http\Controllers\NewsController::class,
+    'getByNews',
+]);
 Route::get('get-sector-slider',[\App\Http\Controllers\SectorController::class,'getSliders',]);
 Route::get('get-vito-global',[\App\Http\Controllers\GlobalController::class,'getGlobalVito',]);
 Route::get('get-about-stats',[\App\Http\Controllers\AboutusController::class,'getAboutStat',]);

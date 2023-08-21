@@ -24,6 +24,10 @@ const getAboutServices = async () => {
     const result = await axiosInstance.get("get-about-services");
     return result;
 };
+const getNewsDetail = async (slug) => {
+    const result = await axiosInstance.get(`news-detail/${slug}`);
+    return result;
+};
 const exportFunction = {
     getAllNews,
     getSectorSlider,
@@ -31,6 +35,7 @@ const exportFunction = {
     getAboutStat,
     getAboutServices,
     getHomeNews,
+    getNewsDetail,
 };
 
 export default exportFunction;

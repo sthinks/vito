@@ -45,7 +45,6 @@ function Haber() {
                                 alt="newsimage"
                             />
 
-
                             <div className="absolute bg-[#456998] w-full h-full opacity-50 z-40" />
                             <p className="absolute text-2xl font-semibold text-white z-50 text-center">
                                 {news[0].title}
@@ -63,7 +62,7 @@ function Haber() {
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href="/news">Devamı</a>
+                                <a href={`news/${news[0].slug}`}>Devamı</a>
                             </p>
                         </div>
                     </div>
@@ -97,7 +96,7 @@ function Haber() {
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href="/news">Devamı</a>
+                                <a href={`news/${news[1].slug}`}>Devamı</a>
                             </p>
                         </div>
                     </div>
@@ -131,7 +130,7 @@ function Haber() {
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href="/news">Devamı</a>
+                                <a href={`news/${news[2].slug}`}>Devamı</a>
                             </p>
                         </div>
                     </div>
