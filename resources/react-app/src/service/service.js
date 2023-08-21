@@ -24,6 +24,15 @@ const getAboutServices = async () => {
     const result = await axiosInstance.get("get-about-services");
     return result;
 };
+const getProjects = async () => {
+    const result = await axiosInstance.get(`get-projects`);
+    return result;
+};
+const getMainProjects = async (slug) => {
+    const result = await axiosInstance.get(`get-project-detail/${slug}`);
+    return result;
+};
+
 const exportFunction = {
     getAllNews,
     getSectorSlider,
@@ -31,6 +40,8 @@ const exportFunction = {
     getAboutStat,
     getAboutServices,
     getHomeNews,
+    getMainProjects,
+    getProjects,
 };
 
 export default exportFunction;

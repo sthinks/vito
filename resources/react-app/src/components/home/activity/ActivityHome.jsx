@@ -23,7 +23,7 @@ function ActivityHome() {
                         className="w-full h-full relative z-30"
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-blue-500 opacity-50 z-40" />
-                    <Link to="/projects">
+                    <Link to="/projects/ongoing-projects">
                         <p className="text-white text-2xl absolute z-50 text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                             ONGOING PROJECTS
                         </p>
@@ -37,10 +37,10 @@ function ActivityHome() {
                         className="w-full h-full relative z-30"
                     />
                     <div className="absolute top-0 right-0 w-full h-full bg-red-500 opacity-50 z-40" />
-                    <Link to="/projects">
-                    <p className="text-white text-2xl absolute z-50 text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        MAIN PROJECTS
-                    </p>
+                    <Link to="/projects/main-projects">
+                        <p className="text-white text-2xl absolute z-50 text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            MAIN PROJECTS
+                        </p>
                     </Link>
                 </div>
             </div>
