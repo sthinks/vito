@@ -210,7 +210,7 @@ function AboutUs() {
                                     working principles, we aim to maintain the
                                     highest level of quality and customer
                                     satisfaction as a leading company in the
-                                    petrochemical and refinery sectors
+                                    petrochemical and refinery sectors.
                                 </p>
                             </div>
                         </div>

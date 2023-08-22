@@ -1,5 +1,5 @@
 {
-    "/js/app.js": "/js/app.js",
+    "/js/app.js": "/js/app.js?id=faadb022f5d08eb3fef9a1b50c13ae94",
     "/css/app.css": "/css/app.css?id=68b329da9893e34099c7d8ad5cb9c940",
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/slick-carousel/slick/slick.eot": "/fonts/vendor/slick-carousel/slick/slick.eot?id=4bb08b6ed048eaf8be2a371ffc8faec2",
@@ -139,7 +139,7 @@
     "/logo192.png": "/logo192.png?id=995306f3f1b50873ba0fe4c857a90d22",
     "/logo512.png": "/logo512.png?id=93c81d868a39562d52258e5b5b267644",
     "/manifest.json": "/manifest.json?id=d9d975cebe2ec20b6c652e1e4c12ccf0",
-    "/mix-manifest.json": "/mix-manifest.json?id=2e01e527f1d04be58288f3839ecab96e",
+    "/mix-manifest.json": "/mix-manifest.json?id=542120f5bc83ea0c12128f59cf57332d",
     "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850",
     "/images/blue.png": "/images/blue.png?id=206a3033050df339d392c7394c95a3b7"
 }

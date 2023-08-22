@@ -124,7 +124,7 @@ function Footer() {
                                 setSelectedIndex(i);
                                 openModal();
                             }}
-                            className="absolute  w-[4%] hover:scale-110 ease-in duration-100 cursor-pointer map-image-cursor"
+                            className="absolute  w-[3%] hover:scale-110 ease-in duration-100 cursor-pointer map-image-cursor"
                             style={{
                                 left: `${item.left}%`,
                                 top: `${item.top}%`,
