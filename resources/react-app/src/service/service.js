@@ -24,6 +24,10 @@ const getAboutServices = async () => {
     const result = await axiosInstance.get("get-about-services");
     return result;
 };
+const getNewsDetail = async (slug) => {
+    const result = await axiosInstance.get(`news-detail/${slug}`);
+    return result;
+};
 const getProjects = async () => {
     const result = await axiosInstance.get(`get-projects`);
     return result;
@@ -32,7 +36,10 @@ const getMainProjects = async (slug) => {
     const result = await axiosInstance.get(`get-project-detail/${slug}`);
     return result;
 };
-
+const getHomeSlider = async () => {
+    const result = await axiosInstance.get(`get-home-slider`);
+    return result;
+};
 const exportFunction = {
     getAllNews,
     getSectorSlider,
@@ -40,8 +47,10 @@ const exportFunction = {
     getAboutStat,
     getAboutServices,
     getHomeNews,
+    getNewsDetail,
     getMainProjects,
     getProjects,
+    getHomeSlider,
 };
 
 export default exportFunction;

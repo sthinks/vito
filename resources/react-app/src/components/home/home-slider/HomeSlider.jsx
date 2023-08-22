@@ -1,29 +1,9 @@
-import React, { useState } from "react";
-import Banner from "../../../assets/banner/Star 2.jpg";
-import Banner2 from "../../../assets/banner/ccc.jpg";
-import Banner3 from "../../../assets/banner/bbb.jpg";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
 
-const slidesData = [
-    {
-        image: Banner3,
-        title: "Safety First",
-        description: "Description for the first slide.",
-    },
-    {
-        image: Banner,
-        title: "Second Slide",
-        description: "Description for the second slide.",
-    },
-    {
-        image: Banner2,
-        title: "Third Slide",
-        description: "Description for the third slide.",
-    },
-];
+import service from "../../../service/service";
 
 function SampleNextArrow(props) {
     const { style, onClick } = props;
@@ -58,7 +38,7 @@ function SamplePrevArrow(props) {
 function HomeSlider() {
     const [showInfoBox, setShowInfoBox] = useState(false);
     const [activeSlide, setActiveSlide] = useState(0);
-
+    const [data, setData] = useState([]);
     const handleSlideChange = (currentSlide) => {
         setActiveSlide(currentSlide);
         setShowInfoBox(false); // Her slayt değişiminde kutuyu gizle
@@ -82,46 +62,31 @@ function HomeSlider() {
         cssEase: "linear",
         afterChange: (currentSlide) => handleSlideChange(currentSlide),
     };
+    useLayoutEffect(() => {
+        getHomeSliderData();
+    }, []);
+    const getHomeSliderData = async () => {
+        const result = await service.getHomeSlider();
 
+        setData(result.data);
+    };
     return (
         <div>
             <Slider {...settings}>
-                {slidesData.map((slide, index) => (
+                {data.map((slide, index) => (
                     <div key={index} className="relative max-md:mt-20">
                         <div className="slide-content relative">
-                            {index === 0 && (
-                                <h1 className="text-white font-bold text-4xl absolute text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-                                    Safety First
-                                </h1>
-                            )}
-                            {index === 0 && (
-                                <div className="absolute top-0 left-0 w-full h-full bg-blue-500 opacity-50 z-40"></div>
-                            )}
+                            <h1 className="text-white font-bold text-4xl absolute text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+                                {slide.title}
+                            </h1>
+
+                            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-40"></div>
                             <img
-                                src={slide.image}
-                                className={`w-full object-cover max-sm:h-[250px] z-10
+                                src={slide.media}
+                                className={`w-full object-cover max-sm:h-[250px] z-10 
                                 }`}
                                 alt={`imageSlider-${index}`}
                             />
-                            <Link to="/projects">
-                                {showInfoBox &&
-                                    activeSlide === index &&
-                                    index !== 0 && (
-                                        <div
-                                            className={`info-box w-1/5  max-md:hidden max-xl:text-lg max-lg:text-sm  ${
-                                                showInfoBox &&
-                                                activeSlide === index
-                                                    ? "active"
-                                                    : ""
-                                            } z-10`}
-                                        >
-                                            <h3 className="font-bold">
-                                                {slide.title}
-                                            </h3>
-                                            <p>{slide.description}</p>
-                                        </div>
-                                    )}
-                            </Link>
                         </div>
                     </div>
                 ))}

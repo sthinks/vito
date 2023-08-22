@@ -11,6 +11,7 @@ import AboutUs from "../pages/AboutUs/AboutUs";
 import News from "../pages/News/News";
 import Institutional from "../pages/institutional/Institutional";
 import Projects from "../pages/projects/Projects";
+import NewsDetail from "../pages/NewsDetail/NewsDetail";
 import MainProjects from "../components/Projects/MainProjects";
 import ProjectDetail from "../components/Projects/ProjectDetail";
 
@@ -22,6 +23,8 @@ function AppRoute() {
                     <Route element={<ShortFooterLayout />}>
                         <Route path="/vito-global" element={<Global />} />
                         <Route path="/news" element={<News />} />
+                        <Route path="/news/:slug" element={<NewsDetail />} />
+
                         {/* <Route
                             path="/projects-ongoing"
                             element={<MainProjects />}

@@ -88,7 +88,7 @@ function AboutUs() {
                         {data.map((item, i) => (
                             <div
                                 key={i}
-                                className={`w-2/6 max-md:w-3/6  h-40 p-2 cursor-pointer hover:-translate-y-2 transition delay-200 ease-in max-md:hover:-translate-x-0`}
+                                className={`w-2/6 max-md:w-3/6  h-40 p-2  hover:-translate-y-2 transition delay-200 ease-in max-md:hover:-translate-x-0`}
                             >
                                 <div
                                     className={`w-full h-full shadow-md shadow-slate-800 flex flex-col justify-center items-center`}
@@ -285,7 +285,7 @@ function AboutUs() {
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
             </div>
-            <div className="w-full px-24 flex justify-center items-center flex-col max-md:px-6">
+            <div className="w-full container mx-auto px-24 flex justify-center items-center flex-col max-md:px-6">
                 <p className="text-2xl font-bold text-black py-4 text-center ">
                     CODE OF ETHICS AND BUSINESS CONDUCT
                 </p>
@@ -295,7 +295,7 @@ function AboutUs() {
                     Employees and Business Partners to always act in a compliant
                     manner.
                 </p>
-                <p className="text-xl font-normal text-slate-700 text-center py-5">
+                <p className="text-lg font-normal text-slate-700 text-center py-5">
                     “Respect for people” is the core element of our philosophy.
                     We value human rights and employee rights. Harassment and
                     mobbingare unethical ways of behaving towards a person.

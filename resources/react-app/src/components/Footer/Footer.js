@@ -8,6 +8,12 @@ import { Dialog, Transition } from "@headlessui/react";
 import { useInView } from "react-intersection-observer";
 import { BiLogoTwitter, BiLogoLinkedin } from "react-icons/bi";
 import footerWave from "../../assets/footer/footerwaves.png";
+import baku from "../../assets/footer/bakü.jpg";
+import katar from "../../assets/footer/Katar.jpg";
+import bergama from "../../assets/footer/bergama.png";
+import dubai from "../../assets/footer/dubai.jpg";
+import vadi from "../../assets/footer/Vadistanbul.jpg";
+import mumbai from "../../assets/footer/mumbai.jpg";
 
 function Footer() {
     const [isOpen, setIsOpen] = useState(false);
@@ -29,32 +35,51 @@ function Footer() {
     const date = new Date();
     const locationList = [
         {
-            address: "Ayazağa, Vadistanbul, Azerbaycan Cd. 3B D:1B",
-            location: "Blok, 34485 Sarıyer/İstanbul",
-            img: "https://1.bp.blogspot.com/-b05_L9u_wf4/X5d2fWg1SQI/AAAAAAAANRs/JzHRWiZWsOo_RKXo3IKsRMqVwOz2mArmwCLcBGAsYHQ/w1200-h630-p-k-no-nu/Vadistanbul.jpg",
+            address: "ViTO Head Office",
+            location:
+                "Ayazağa, Vadistanbul, Azerbaycan Cd. 3B D:1B Blok, 34485 Sarıyer/İstanbul",
+            img: vadi,
             left: 54,
             top: 19,
         },
         {
             address: "Technicon Mumbai",
-            location: "Indian",
-            img: "https://img.freepik.com/free-photo/new-york-skycraper-sunset-usa_268835-758.jpg?w=740&t=st=1689763378~exp=1689763978~hmac=838893463fe82ede3b799e9d933f90c02a9d85e015208afd647f95f0ad9f2201",
+            location:
+                "Office No 404,4th Floor, Filix Condominium, L.B.S Marg, Bhandup West, Maharashtra, Mumbai, India",
+            img: mumbai,
             left: 69,
             top: 42,
         },
         {
             address: "Technicon Dubai",
-            location: "Dubai",
-            img: "https://img.freepik.com/free-photo/axelborg-towers_181624-29215.jpg?w=740&t=st=1689763407~exp=1689764007~hmac=9a9ea5aa64efdf9f8b1cec63726d6de4109e8a0f22d3ca549cc4b90c1251d470",
+            location:
+                "Jebel Ali free zone, Office S10123O019, Dubai, United Arab Emirates",
+            img: dubai,
             left: 59,
             top: 42,
         },
         {
             address: "Technicon Bakü",
-            location: "Azerbaycan",
-            img: "https://img.freepik.com/free-photo/axelborg-towers_181624-29215.jpg?w=740&t=st=1689763407~exp=1689764007~hmac=9a9ea5aa64efdf9f8b1cec63726d6de4109e8a0f22d3ca549cc4b90c1251d470",
-            left: 69,
+            location: "Xocalı prospekti 37, Demirchi Tower, 21-ci mərtəbə",
+            img: baku,
+            left: 59,
             top: 20,
+        },
+        {
+            address: "Vito Qatar",
+            location:
+                "Al-Gassar Tower Street 920 Zone 63 Building No 27 West Bay  P.O Box 26660  Doha QATARLandline No: +974 400 784 54",
+            img: katar,
+            top: 38,
+            left: 55,
+        },
+        {
+            address: "Bergama Industry",
+            location:
+                "Bergama OSB Mahallesi, 3.Cadde, No:1, 35700 İzmir,Türkiye +90 232 690 0 690",
+            img: bergama,
+            top: 21,
+            left: 53,
         },
     ];
     function closeModal() {
@@ -120,7 +145,6 @@ function Footer() {
                         <div className="text-white text-base max-md:text-sm">
                             <p>Vadistanbul Ayazağa Mah.</p>
 
-
                             <p>
                                 Azerbaycan Cad. 3B 1B Blok <br />
                             </p>
@@ -131,7 +155,6 @@ function Footer() {
                                     CONTACT <br />
                                     <a
                                         className="font-normal"
-
                                         href="tel:+902122323030"
                                     >
                                         +90 (212) 232 30 30

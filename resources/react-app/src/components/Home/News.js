@@ -24,7 +24,7 @@ function Haber() {
         <div ref={ref} className="py-10 bg-white ">
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5">
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
-                <p className="text-6xl font-semibold text-[#093977] max-md:text-5xl">
+                <p className="font-bold text-4xl my-5 mx-0 text-[#093977] text-center">
                     NEWS
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
@@ -45,7 +45,6 @@ function Haber() {
                                 alt="newsimage"
                             />
 
-
                             <div className="absolute bg-[#456998] w-full h-full opacity-50 z-40" />
                             <p className="absolute text-2xl font-semibold text-white z-50 text-center">
                                 {news[0].title}
@@ -63,7 +62,7 @@ function Haber() {
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href="/news">Devamı</a>
+                                <a href={`news/${news[0].slug}`}>Devamı</a>
                             </p>
                         </div>
                     </div>
@@ -97,7 +96,7 @@ function Haber() {
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href="/news">Devamı</a>
+                                <a href={`news/${news[1].slug}`}>Devamı</a>
                             </p>
                         </div>
                     </div>
@@ -131,7 +130,7 @@ function Haber() {
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href="/news">Devamı</a>
+                                <a href={`news/${news[2].slug}`}>Devamı</a>
                             </p>
                         </div>
                     </div>
