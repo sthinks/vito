@@ -16,8 +16,8 @@ class ProjectController extends Controller
             {
                 $item->image_gallery = json_decode($item->image_gallery);
                 $image_gallery = $item->image_gallery;
-                for ($i=0; $i < count($image_gallery); $i++) { 
-                  
+                for ($i=0; $i < count($image_gallery); $i++) {
+
                     $image_gallery[$i] = [
                         "url" =>  url(
                     sprintf('storage/%s', str_replace('\\', '/', $image_gallery[$i]))),
@@ -28,5 +28,26 @@ class ProjectController extends Controller
             }
         });
         return response()->json($projects);
-    } 
+    }
+    public function getByProject($slug)
+    {
+        $projects = Project::where('slug',$slug)->first();
+
+             if($projects->image_gallery != null)
+            {
+                $projects->image_gallery = json_decode($projects->image_gallery);
+                $image_gallery = $projects->image_gallery;
+                for ($i=0; $i < count($image_gallery); $i++) {
+
+                    $image_gallery[$i] = [
+                        "url" =>  url(
+                    sprintf('storage/%s', str_replace('\\', '/', $image_gallery[$i]))),
+                        "index" => $i + 1 // Index 0'dan değil 1'den başlamalı
+                    ];
+                $projects->image_gallery = $image_gallery;
+                }
+            }
+
+        return response()->json($projects);
+    }
 }

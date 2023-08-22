@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "/js/app.js": "/js/app.js?id=5869a96f0c75dfe46e27ac8f848a7212",
     "/css/app.css": "/css/app.css?id=68b329da9893e34099c7d8ad5cb9c940",
+=======
+    "/js/app.js": "/js/app.js?id=6752df9c3559334e54c73d9e6cea9676",
+    "/css/app.css": "/css/app.css?id=81051bcc2cf1bedf378224b0a93e2877",
+>>>>>>> main
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/slick-carousel/slick/slick.eot": "/fonts/vendor/slick-carousel/slick/slick.eot?id=4bb08b6ed048eaf8be2a371ffc8faec2",
     "/fonts/vendor/slick-carousel/slick/slick.svg": "/fonts/vendor/slick-carousel/slick/slick.svg?id=f97e3bbf73254b0112091d0192f17aec",
@@ -115,8 +120,14 @@
     "/js/chunks/reactPlayerYouTube.js": "/js/chunks/reactPlayerYouTube.js?id=6d4a158ce03dd2c763b5d1022180e336",
     "/logo192.png": "/logo192.png?id=995306f3f1b50873ba0fe4c857a90d22",
     "/logo512.png": "/logo512.png?id=93c81d868a39562d52258e5b5b267644",
+<<<<<<< HEAD
     "/manifest.json": "/manifest.json?id=d9d975cebe2ec20b6c652e1e4c12ccf0",
     "/mix-manifest.json": "/mix-manifest.json?id=c0d1125056bf7845547d99f2230f5f3e",
     "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850",
     "/images/newsbg.jpg": "/images/newsbg.jpg?id=00483668e22d4abe700147c54fbd69cd"
+=======
+    "/manifest.json": "/manifest.json?id=89be60895176466398d53bd4a693d9f6",
+    "/mix-manifest.json": "/mix-manifest.json?id=1e89962a7c0e87b198132d456cb15224",
+    "/robots.txt": "/robots.txt?id=61c27d2cd39a713f7829422c3d9edcc7"
+>>>>>>> main
 }

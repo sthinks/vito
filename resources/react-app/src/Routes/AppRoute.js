@@ -12,6 +12,8 @@ import News from "../pages/News/News";
 import Institutional from "../pages/institutional/Institutional";
 import Projects from "../pages/projects/Projects";
 import NewsDetail from "../pages/NewsDetail/NewsDetail";
+import MainProjects from "../components/Projects/MainProjects";
+import ProjectDetail from "../components/Projects/ProjectDetail";
 
 function AppRoute() {
     return (
@@ -23,12 +25,24 @@ function AppRoute() {
                         <Route path="/news" element={<News />} />
                         <Route path="/news/:slug" element={<NewsDetail />} />
 
+                        {/* <Route
+                            path="/projects-ongoing"
+                            element={<MainProjects />}
+                        /> */}
+                        <Route
+                            path="/projects/:slug"
+                            element={<MainProjects />}
+                        />
                         <Route
                             path="/instituonal"
                             element={<Institutional />}
                         />
                         <Route path="/projects" element={<Projects />} />
                     </Route>
+                    <Route
+                        path="/projects/project-detail/:slug"
+                        element={<ProjectDetail />}
+                    />
                     <Route element={<RootLayout />}>
                         <Route path="/" element={<Home />} />
                         <Route path="/sector" element={<Sector />} />
