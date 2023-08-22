@@ -1,7 +1,7 @@
 import React from "react";
 import ActiveFirst from "../../assets/home-activity/developp.png";
 import ActiveSecond from "../../assets/home-activity/epc.jpg";
-import ActiveThird from "../../assets/home-activity/bergama.png";
+import ActiveThird from "../../assets/home-activity/bergamaa.png";
 import ActiveFourth from "../../assets/home-activity/acd.png";
 import ActivityCard from "./ActivityCard";
 

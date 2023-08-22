@@ -54,33 +54,22 @@ function AboutUs() {
                         ABOUT US
                     </p>
                     <p className="text-xl font-normal max-md:text-lg text-center text-white z-50 py-10">
-                        ViTO Companies Group, founded in the year 2000, is
-                        steadily growing in a healthy manner. Its main
-                        activities include the assembly and construction of
-                        power plants, petrochemical facilities, refineries, and
-                        industrial plants. ViTO has successfully delivered
-                        projects for clients in the global petroleum and energy
-                        sector, ensuring strict adherence to safety and quality,
-                        and meeting project deadlines. Today, with our expert
-                        employees in offices located in Mumbai, Doha, Dubai,
-                        Baku, Istanbul, Izmir, and Frankfurt, as well as our
-                        quality production in the factory in Bergama, we provide
-                        services to clients worldwide.Our engineering office in
-                        Mumbai, India specializes in storage tank services that
-                        comply with internationally recognized standards. We are
-                        one of the few companies capable of offering
-                        comprehensive project management and procurement
-                        services under one roof, thanks to our expert teams in
-                        Doha, Dubai, Baku, Istanbul, Izmir, and Frankfurt.As a
-                        leading contracting company, we provide engineering,
-                        procurement, and construction services for tank farm
-                        projects consisting of cryogenic and atmospheric
-                        pressure tanks.To date, we have successfully completed
-                        turnkey projects for facilities consisting of 83 tanks
-                        with a total capacity of 2.3 million cubic meters. We
-                        have completed project disciplines vertically, including
-                        construction, electro-mechanical assembly, piping, and
-                        electrical instrumentation.
+                        Founded in 2000, we have steadily grown our company over
+                        the years and transformed it into ViTO group of
+                        companies. During this growth process, we have realized
+                        many important projects in the field of contracting by
+                        establishing partnerships with reputable foreign
+                        companies all over the world. In this context, 100% of
+                        the IVT company we established after 2017 joined the
+                        ViTO group of companies. Likewise, in 2019, we were
+                        among the founding partners of the Bergama Industrial
+                        Zone, where prefabricated parts for pressure vessels and
+                        pipes are produced. Currently, we export our products to
+                        three continents and deliver them to customers all over
+                        the world. Successful management and timely delivery of
+                        projects by prioritizing customer satisfaction and
+                        occupational safety are the basic principles of our
+                        company.
                     </p>
                 </div>
                 {data != null && (
