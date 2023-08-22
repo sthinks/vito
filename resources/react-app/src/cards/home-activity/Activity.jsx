@@ -1,8 +1,8 @@
 import React from "react";
-import ActiveFirst from "../../assets/home-activity/activity-1.png";
-import ActiveSecond from "../../assets/home-activity/activity-2.png";
-import ActiveThird from "../../assets/home-activity/activity-3.png";
-import ActiveFourth from "../../assets/home-activity/activity4.png";
+import ActiveFirst from "../../assets/home-activity/developp.png";
+import ActiveSecond from "../../assets/home-activity/epc.jpg";
+import ActiveThird from "../../assets/home-activity/bergama.png";
+import ActiveFourth from "../../assets/home-activity/acd.png";
 import ActivityCard from "./ActivityCard";
 
 function Activity() {

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../../assets/header/logo.png";
+import Logo2 from "../../assets/header/ads.png";
+
 import { Link } from "react-router-dom";
 import Turkish from "../../assets/header/turkish_flag.jpg";
 import British from "../../assets/header/british_flag.jpg";
@@ -47,7 +49,7 @@ function Header() {
                     <div className="flex justify-center items-center logo">
                         <Link to="/">
                             <img
-                                src={Logo}
+                                src={Logo2}
                                 alt="sa"
                                 className="w-[250px] mr-10 max-xl:w-[140px] max-lg:w-[120px] max-lg:mr-0 "
                             />
@@ -131,7 +133,7 @@ function Header() {
             ) : (
                 <nav className="bg-[#1b4378] h-20 flex p-5 justify-between items-center fixed z-20 w-full opacity-90">
                     <div className="flex justify-center items-center">
-                        <img src={Logo} alt="sa" className="w-[150px]" />
+                        <img src={Logo2} alt="sa" className="w-[150px]" />
                     </div>
                     <div className={`hamburger-menu ${isOpen ? "open" : ""}`}>
                         <div className="hamburger-icon" onClick={toggleMenu}>

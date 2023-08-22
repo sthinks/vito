@@ -7,20 +7,20 @@ function HomeAnimation() {
         {
             id: 0,
             targetValue: 21000,
-            unit: "km",
+            unit: "Ton",
             content: "Steel Struction Erection",
         },
         {
             id: 1,
             targetValue: 69000,
-            unit: "km",
+            unit: "Ton",
             content: "Plate for Tanks Fabrication and Erection",
         },
         {
             id: 2,
-            targetValue: 23000000,
+            targetValue: 2300000,
             unit: "m³",
-            content: "Plate for Fabrication and Erection",
+            content: "Storage Capacity for Tanks",
         },
     ];
 

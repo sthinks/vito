@@ -1,31 +1,37 @@
 import React from "react";
-import AboutImg from "../../../assets/homeAbout/AOSTE 3.jpg";
-import AboutImg2 from "../../../assets/homeAbout/COFOT 1.jpg";
-import AboutImg3 from "../../../assets/homeAbout/COFOT 5.jpg";
-import AboutImg4 from "../../../assets/homeAbout/STAR Rafineri.jpg";
-import AboutImg5 from "../../../assets/homeAbout/asote.jpg";
+import AboutImg from "../../../assets/homeAbout/1y.jpg";
+import AboutImg2 from "../../../assets/homeAbout/2y.jpg";
+import AboutImg3 from "../../../assets/homeAbout/3y.png";
+import AboutImg4 from "../../../assets/homeAbout/4y.jpg";
+import AboutImg5 from "../../../assets/homeAbout/Aoste.jpg";
+import AboutImg6 from "../../../assets/homeAbout/whoare.png";
+import ReactPlayer from "react-player";
 import HomeAboutSlider from "./HomeAboutSlider";
 function HomeAbout() {
     const arrayImage = [
         {
             id: 0,
-            url: AboutImg,
+            url: AboutImg6,
         },
         {
             id: 1,
-            url: AboutImg2,
+            url: AboutImg5,
         },
         {
             id: 2,
-            url: AboutImg3,
-        },
-        {
-            id: 3,
             url: AboutImg4,
         },
         {
+            id: 3,
+            url: AboutImg3,
+        },
+        {
             id: 4,
-            url: AboutImg5,
+            url: AboutImg2,
+        },
+        {
+            id: 4,
+            url: AboutImg,
         },
     ];
     return (
@@ -35,32 +41,38 @@ function HomeAbout() {
             </h1>
             <HomeAboutSlider sliderImage={arrayImage} />
             <div className="m-20">
-                <h2 className="text-center font-bold text-3xl">ViTO Group</h2>
                 <div className="flex justify-between items-center mt-5 max-md:flex-col max-md:justify-center max-md:items-center">
-                    <div className="w-[60%] max-md:w-full">
-                        <p className="text-center mt-6 ">
-                            The entire life of assets in the oil & gas and
-                            energy sectors. a specialized industrial service
-                            focused on cycles is the provider. In addition to
-                            project development and financing, We offer EPC and
-                            maintenance and repair services to our customers.
-                            From operators/owners to multinational EPC companies
-                            and Serving a wide range of premium customers up to
-                            OEMs we give. Currently has managerial
-                            responsibilities A full-time team of over 50
-                            professionals we employ and people up to 1,000 to
-                            1,500 people We can carry out projects with our
-                            strength.
+                    <div className="w-[49%] h-[300px] flex flex-col justify-arround max-md:w-full">
+                        <h2 className="text-center font-bold text-3xl ">
+                            ViTO Group
+                        </h2>
+                        <p className="text-center mt-6 text-black opacity-70 font-medium leading-9 italic">
+                            We provide turnkey construction and erection
+                            services under one roof for all projects in the
+                            OIL&GAS and energy sectors by project management and
+                            procurement with our engineering office in India and
+                            specialized engineers in Turkey. We are a leading
+                            organization in the sector that EPCs storage
+                            facilities such as tank farms. In our factory in
+                            Bergama, which has all international quality
+                            certificates, we can produce pressure vessels,
+                            piping prefabrication and various steel
+                            constructions at world standards.
+                            <br />
+                            <a
+                                className="text-blue-600 hover:underline px-2"
+                                href="/about-us"
+                            >
+                                Read More
+                            </a>
                         </p>
                     </div>
-                    <div class="w-[30%] h-[350px] flex justify-center items-center max-md:mt-10 max-md:w-full">
-                        <iframe
-                            class="w-full h-full"
-                            src="https://www.youtube.com/embed/Qd1yzIDtQiU"
-                            frameborder="0"
-                            allowfullscreen
-                            title="tanıtım"
-                        ></iframe>
+                    <div class="w-[49%] h-[300px] flex justify-center items-center max-md:mt-10 max-md:w-full">
+                        <ReactPlayer
+                            url="https://www.youtube.com/embed/Qd1yzIDtQiU"
+                            playing={true} // Otomatik oynatmayı sağlar
+                            controls={true}
+                        />
                     </div>
                 </div>
             </div>

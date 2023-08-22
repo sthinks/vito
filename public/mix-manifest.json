@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-    "/js/app.js": "/js/app.js?id=5869a96f0c75dfe46e27ac8f848a7212",
+    "/js/app.js": "/js/app.js?id=a07a2afcb869c43a0fc816965d8a2c16",
     "/css/app.css": "/css/app.css?id=68b329da9893e34099c7d8ad5cb9c940",
-=======
-    "/js/app.js": "/js/app.js?id=6752df9c3559334e54c73d9e6cea9676",
-    "/css/app.css": "/css/app.css?id=81051bcc2cf1bedf378224b0a93e2877",
->>>>>>> main
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/slick-carousel/slick/slick.eot": "/fonts/vendor/slick-carousel/slick/slick.eot?id=4bb08b6ed048eaf8be2a371ffc8faec2",
     "/fonts/vendor/slick-carousel/slick/slick.svg": "/fonts/vendor/slick-carousel/slick/slick.svg?id=f97e3bbf73254b0112091d0192f17aec",
@@ -76,6 +71,7 @@
     "/images/logo.png": "/images/logo.png?id=f90c33931597a30780d156710afe1043",
     "/images/logo.svg": "/images/logo.svg?id=06e733283fa43d1dd57738cfc409adbd",
     "/images/mapcursor.png": "/images/mapcursor.png?id=3f08e712af323911a25a86290cf68031",
+    "/images/newsbg.jpg": "/images/newsbg.jpg?id=00483668e22d4abe700147c54fbd69cd",
     "/images/pr1.png": "/images/pr1.png?id=2fce9cab20e7b5ba6b4f6d9219712569",
     "/images/pr2.png": "/images/pr2.png?id=8441f5d9704763def1edf84e22c95928",
     "/images/pr3.png": "/images/pr3.png?id=2ba8a8e76e293df6ddea9ac47f7480c2",
@@ -120,14 +116,28 @@
     "/js/chunks/reactPlayerYouTube.js": "/js/chunks/reactPlayerYouTube.js?id=6d4a158ce03dd2c763b5d1022180e336",
     "/logo192.png": "/logo192.png?id=995306f3f1b50873ba0fe4c857a90d22",
     "/logo512.png": "/logo512.png?id=93c81d868a39562d52258e5b5b267644",
-<<<<<<< HEAD
     "/manifest.json": "/manifest.json?id=d9d975cebe2ec20b6c652e1e4c12ccf0",
-    "/mix-manifest.json": "/mix-manifest.json?id=c0d1125056bf7845547d99f2230f5f3e",
+    "/mix-manifest.json": "/mix-manifest.json?id=d30feb5e5e8164a458cbf4960e2ab891",
     "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850",
-    "/images/newsbg.jpg": "/images/newsbg.jpg?id=00483668e22d4abe700147c54fbd69cd"
-=======
-    "/manifest.json": "/manifest.json?id=89be60895176466398d53bd4a693d9f6",
-    "/mix-manifest.json": "/mix-manifest.json?id=1e89962a7c0e87b198132d456cb15224",
-    "/robots.txt": "/robots.txt?id=61c27d2cd39a713f7829422c3d9edcc7"
->>>>>>> main
+    "/images/1y.jpg": "/images/1y.jpg?id=ae7494659d792c67916a0c769acae238",
+    "/images/2y.jpg": "/images/2y.jpg?id=7bf30087aeb8f82aefe14508d824ceaa",
+    "/images/3y.png": "/images/3y.png?id=5057203fa0b12c3d8974b50c4774eb43",
+    "/images/4y.jpg": "/images/4y.jpg?id=0e6289c0bedad433a372a2e6241d44b9",
+    "/images/Aoste.jpg": "/images/Aoste.jpg?id=a94fe386f0d2122a94d2effbd2c9e11d",
+    "/images/whoare.png": "/images/whoare.png?id=5e98a75ebdfaaf3c46a64f40d2fdd153",
+    "/images/meet.jpg": "/images/meet.jpg?id=d30dc2cc3e1bd9ad7170988dfd1f96be",
+    "/images/epc.jpg": "/images/epc.jpg?id=3bb91811a6335b2e6173fb1089c01cea",
+    "/images/bergama.png": "/images/bergama.png?id=07b4d911992f209c6b66737855cbea3b",
+    "/images/repair.jpeg": "/images/repair.jpeg?id=9e77c22fa3d6823412ea7205866a52fb",
+    "/images/develop.jpg": "/images/develop.jpg?id=72489224a422028a074ab01d27f66e31",
+    "/images/ongogin.png": "/images/ongogin.png?id=ed54154a9d869cce476330e11d1dbceb",
+    "/images/ads.png": "/images/ads.png?id=f5a69e6ec7ff74448d4e6e8bd30a569a",
+    "/images/developp.png": "/images/developp.png?id=1dcb5d24fa9ad149afd6bc47ac59dcbc",
+    "/images/cont.jpg": "/images/cont.jpg?id=133daddb4a9b3bbb48838df6400b62a2",
+    "/images/bakü.jpg": "/images/bakü.jpg?id=5989e6d1fb07fde377acd4176c10fc6d",
+    "/images/dubai.jpg": "/images/dubai.jpg?id=aee149dadeaad317b8aa25354a6ec1ff",
+    "/images/Katar.jpg": "/images/Katar.jpg?id=38a124d230cb5f13002574ec4678dfa8",
+    "/images/Vadistanbul.jpg": "/images/Vadistanbul.jpg?id=d0f5d19b0ba6e94ee5045d9266797012",
+    "/images/mumbai.jpg": "/images/mumbai.jpg?id=7b2fefc8fcdf784b9a48dd910998b250",
+    "/images/acd.png": "/images/acd.png?id=b63fb2c72be62835c37616633f7de793"
 }

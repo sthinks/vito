@@ -10,10 +10,11 @@ class BaseController extends Controller
     {
         $slider = Slider::orderBy('created_at','DESC')->get();
         $slider->map(function($item){
-            if($item->image != null)
+            if($item->media != null)
             {
-                $item->image = url(
-                    sprintf('storage/%s', str_replace('\\', '/', $item->image))
+                
+                $item->media = url(
+                    sprintf('storage/%s', str_replace('\\', '/', $item->media))
                 );
             }
 

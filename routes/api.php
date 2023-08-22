@@ -36,5 +36,6 @@ Route::get('get-about-services',[\App\Http\Controllers\AboutusController::class,
 Route::get('get-projects',[\App\Http\Controllers\ProjectController::class,'getProjects',]);
 Route::get('get-home-sliders',[\App\Http\Controllers\BaseController::class,'getHomeSlider',]);
 Route::get('get-project-detail/{slug}',[\App\Http\Controllers\ProjectController::class,'getByProject',]);
+Route::get('get-home-slider',[\App\Http\Controllers\BaseController::class,'getHomeSlider',]);
 
 

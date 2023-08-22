@@ -80,7 +80,7 @@ function HomeAboutSlider({ sliderImage, bg }) {
                                 className={
                                     item.style === true
                                         ? "w-full h-[40rem] outline-0 flex justify-center items-center "
-                                        : `w-56 h-56 outline-0`
+                                        : `w-56 h-80 max-lg:h-56 outline-0`
                                 }
                             >
                                 <img
@@ -96,7 +96,7 @@ function HomeAboutSlider({ sliderImage, bg }) {
                             </div>
                         </div>
                     ) : (
-                        <div className="w-56 h-56 outline-0">
+                        <div className="w-56 h-80 max-lg:h-56 outline-0">
                             <img
                                 key={i}
                                 className="w-full h-full object-cover p-2 cursor-pointer"
