@@ -1,5 +1,5 @@
 {
-    "/js/app.js": "/js/app.js?id=6752df9c3559334e54c73d9e6cea9676",
+    "/js/app.js": "/js/app.js?id=f439d44fa8cff087f94c1a4e25c0a9df",
     "/css/app.css": "/css/app.css?id=81051bcc2cf1bedf378224b0a93e2877",
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/slick-carousel/slick/slick.eot": "/fonts/vendor/slick-carousel/slick/slick.eot?id=4bb08b6ed048eaf8be2a371ffc8faec2",
@@ -116,6 +116,8 @@
     "/logo192.png": "/logo192.png?id=995306f3f1b50873ba0fe4c857a90d22",
     "/logo512.png": "/logo512.png?id=93c81d868a39562d52258e5b5b267644",
     "/manifest.json": "/manifest.json?id=89be60895176466398d53bd4a693d9f6",
-    "/mix-manifest.json": "/mix-manifest.json?id=1e89962a7c0e87b198132d456cb15224",
-    "/robots.txt": "/robots.txt?id=61c27d2cd39a713f7829422c3d9edcc7"
+    "/mix-manifest.json": "/mix-manifest.json?id=fccfe5b076ff7a3854a19be02c149f45",
+    "/robots.txt": "/robots.txt?id=61c27d2cd39a713f7829422c3d9edcc7",
+    "/images/vito-blue-logo.png": "/images/vito-blue-logo.png?id=f5a69e6ec7ff74448d4e6e8bd30a569a",
+    "/images/blue.png": "/images/blue.png?id=f5a69e6ec7ff74448d4e6e8bd30a569a"
 }
