@@ -98,7 +98,11 @@ function Header() {
                                 } `}
                                 to="/instituonal"
                             >
+<<<<<<< HEAD
                                 CORPORATE
+=======
+                                INSTITUONAL
+>>>>>>> main
                             </Link>
                         </li>
                         <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">

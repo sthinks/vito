@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import News from "../../components/Home/News";
-import Header from "../../components/header/Header";
+
 import HomeSlider from "../../components/home/home-slider/HomeSlider";
 import HomeAbout from "../../components/home/homeAbout/HomeAbout";
 import Activity from "../../components/home/activity/ActivityHome";
