@@ -98,7 +98,7 @@ function Header() {
                                 } `}
                                 to="/instituonal"
                             >
-                                INSTITUONAL
+                                CORPORATE
                             </Link>
                         </li>
                         <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
@@ -238,7 +238,7 @@ function Header() {
                                     <Link to="/about-us">ABOUT US </Link>
                                 </li>
                                 <li className="text-white font-bold text-lg max-xl:text-sm">
-                                    <Link to="/instituonal"> INSTITUONAL </Link>
+                                    <Link to="/instituonal"> CORPORATE </Link>
                                 </li>
                                 <li className="text-white font-bold text-lg max-xl:text-sm">
                                     <Link to="/vito-global"> GLOBAL </Link>

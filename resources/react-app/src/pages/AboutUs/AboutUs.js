@@ -6,6 +6,7 @@ import service from "../../service/service";
 import CountUp from "react-countup";
 import serviceBg from "../../assets/aboutus/servicebg.png";
 import { useInView } from "react-intersection-observer";
+import CEO from "../../assets/aboutus/Resim1.jpg";
 function AboutUs() {
     const [data, setData] = useState(null);
     const [dataService, setDataService] = useState(null);
@@ -49,28 +50,59 @@ function AboutUs() {
                     src={AboutWawes}
                     alt="AboutUsWawes"
                 />
-                <div className="w-full flex justify-center items-center flex-col text-center pt-56 pb-20 px-36 max-lg:px-20 max-md:px-12">
+                <div className="w-full flex justify-center items-center flex-col text-center pt-56 pb-20 px-36 max-lg:px-20  max-md:px-2">
                     <p className="text-7xl font-bold max-md:text-5xl text-center text-white tracking-widest z-50 py-10">
                         ABOUT US
                     </p>
-                    <p className="text-xl font-normal max-md:text-lg text-center text-white z-50 py-10">
-                        Founded in 2000, we have steadily grown our company over
-                        the years and transformed it into ViTO group of
-                        companies. During this growth process, we have realized
-                        many important projects in the field of contracting by
-                        establishing partnerships with reputable foreign
-                        companies all over the world. In this context, 100% of
-                        the IVT company we established after 2017 joined the
-                        ViTO group of companies. Likewise, in 2019, we were
-                        among the founding partners of the Bergama Industrial
-                        Zone, where prefabricated parts for pressure vessels and
-                        pipes are produced. Currently, we export our products to
-                        three continents and deliver them to customers all over
-                        the world. Successful management and timely delivery of
-                        projects by prioritizing customer satisfaction and
-                        occupational safety are the basic principles of our
-                        company.
+                    <p className="text-xl font-normal max-lg:text-lg max-md:text-base text-center text-white z-50 py-10 ">
+                        Founded in 2000, ViTO has grown steadily over the years
+                        and we have become ViTO Group of Companies. During this
+                        growth process, we have realized various important
+                        projects in the field of contracting with partnerships
+                        with companies that are world-wide in their field. IVT
+                        company, which we established within this framework, was
+                        100% included in ViTO Group of Companies in 2017. In
+                        2019, we became one of the founding partners of Bergama
+                        Industry company to manufacture pressure vessels and
+                        pipe prefabrication in Bergama Organized Industry. We
+                        are currently exporting to 3 continents. The most
+                        prominent principles of our company are the delivery of
+                        projects on the day of the project and the management of
+                        projects in customer satisfaction and occupational
+                        safety.
                     </p>
+                </div>
+                <div className="w-full flex justify-between items-center my-5 h-[450px] max-xl:h-[550px] max-lg:h-auto max-md:flex-col">
+                    <img
+                        className="w-2/6 h-full object-cover object-top max-md:w-full"
+                        src={CEO}
+                        alt="CEO"
+                    />
+                    <div className="w-4/6 h-full px-10 py-5 max-md:w-full max-md:px-2">
+                        <p className="text-3xl font-bold max-lg:text-xl max-md:text-lg text-center text-white z-50 py-10">
+                            THE MESSAGE OF THE CHAIRMAN & CEO
+                        </p>
+                        <p className="text-xl font-normal max-lg:text-lg max-md:text-base text-center text-white z-50 py-10">
+                            Founded in 2000, we have steadily grown our company
+                            over the years and transformed it into ViTO group of
+                            companies. In this growth process, we have realized
+                            many important projects in the field of contracting
+                            by establishing reputable foreign partnerships in
+                            the world. In this context, we added our joint
+                            venture contracting company, which we established
+                            with our foreign partners, to our ViTO group of
+                            companies as IVT company in 2017. After that, in
+                            2019, we opened our Bergama Industry Factory, where
+                            pressure vessels and pipe prefabrication are
+                            manufactured, in Bergama Organized Industrial Zone.
+                            Currently, we export our products to three
+                            continents and deliver them to customers all over
+                            the world. The main principles of our company are
+                            timely delivery of projects, customer satisfaction
+                            and successful management of projects by
+                            prioritizing occupational safety.
+                        </p>
+                    </div>
                 </div>
                 {data != null && (
                     <div className="w-full flex flex-wrap pb-20 justify-center items-center">
@@ -274,37 +306,37 @@ function AboutUs() {
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
             </div>
-            <div className="w-full container mx-auto px-24 flex justify-center items-center flex-col max-md:px-6">
-                <p className="text-2xl font-bold text-black py-4 text-center ">
+            <div className="w-full container mx-auto px-36 flex justify-center items-center flex-col max-md:px-6">
+                <p className="text-2xl font-bold text-black py-2 text-center ">
                     CODE OF ETHICS AND BUSINESS CONDUCT
                 </p>
-                <p className="text-lg font-normal text-slate-700 text-center py-5">
+                <p className="text-lg font-normal text-slate-700 text-center py-2">
                     ViTO Group displays the highest standards for understanding
                     and observing laws and regulations; and expects its
                     Employees and Business Partners to always act in a compliant
                     manner.
                 </p>
-                <p className="text-lg font-normal text-slate-700 text-center py-5">
+                <p className="text-lg font-normal text-slate-700 text-center py-2">
                     “Respect for people” is the core element of our philosophy.
                     We value human rights and employee rights. Harassment and
                     mobbingare unethical ways of behaving towards a person.
                 </p>
-                <p className="text-lg font-normal text-slate-700 text-center py-5">
+                <p className="text-lg font-normal text-slate-700 text-center py-2">
                     Protecting the environment and human health are the basic
                     principles that we prioritize in all our activities.
                 </p>
-                <p className="text-lg font-normal text-slate-700 text-center py-5">
+                <p className="text-lg font-normal text-slate-700 text-center py-2">
                     We pay utmost attention to business ethics and moral values.
                     We do not engage in any type of corruption, including
                     facilitation payments, all forms of bribery and corrupt
                     practices, and money laundering.
                 </p>
-                <p className="text-lg font-normal text-slate-700 text-center py-5">
+                <p className="text-lg font-normal text-slate-700 text-center py-2">
                     ViTO Group Employees and Business Partners shall not
                     directly or indirectly obtain personal gain from any
                     transactions and contractsrelated to ViTO Group.
                 </p>
-                <p className="text-lg font-normal text-slate-700 text-center py-5">
+                <p className="text-lg font-normal text-slate-700 text-center py-2">
                     If Employees and Business Partners suspect any actual or
                     potential violation, we expect them to speak up. All such
                     communicationwill be kept confidential.
