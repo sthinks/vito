@@ -70,7 +70,7 @@ function News() {
                                     }}
                                 />
                                 <p className="text-base text-sky-500 font-medium">
-                                    <a href={`news/${item.slug}`}>Devamı</a>
+                                    <a href={`news/${item.slug}`}>Read More</a>
                                 </p>
                             </div>
                         </div>

@@ -75,7 +75,7 @@ function HomeSlider() {
             <Slider {...settings}>
                 {data.map((slide, index) => (
                     <div key={index} className="relative max-md:mt-20">
-                        <div className="slide-content relative">
+                        <div className="slide-content relative overflow-hidden animate-zoomIn">
                             <h1 className="text-white font-bold text-4xl absolute text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
                                 {slide.title}
                             </h1>
@@ -83,8 +83,7 @@ function HomeSlider() {
                             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-40"></div>
                             <img
                                 src={slide.media}
-                                className={`w-full object-cover max-sm:h-[250px] z-10 
-                                }`}
+                                className={`w-full object-cover max-sm:h-[250px] z-10 transform-gpu transition-transform`}
                                 alt={`imageSlider-${index}`}
                             />
                         </div>
