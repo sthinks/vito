@@ -2,10 +2,9 @@ import React, { useLayoutEffect, useState } from "react";
 import service from "../../service/service";
 import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
-
+import newsBanner from "../../assets/news/newsbanner.jpg";
 function News() {
     const [news, setNews] = useState(null);
-    const [openText, setOpenText] = useState(0);
     const [newsAnim, setNewsAnim] = useState(false);
     const { ref, inView, entry } = useInView({
         /* Optional options */
@@ -23,19 +22,27 @@ function News() {
         }
     }
     useLayoutEffect(() => {
-        window.scrollTo(0, 0);
         getAllNews();
+        window.scrollTo(0, 0);
     }, []);
     return (
         <div className="w-full">
-            <div className="w-full flex justify-center items-center pb-32 pt-56">
-                <p className="text-6xl font-extrabold tracking-widest">NEWS</p>
+            <div className="w-full flex justify-center items-center relative ">
+                <img
+                    className="w-full h-full"
+                    src={newsBanner}
+                    alt="NewsBanner"
+                />
+                <div className="w-full h-full absolute bg-black opacity-40 left-0 bottom-0" />
+                <p className="absolute text-6xl font-extrabold tracking-widest text-white">
+                    NEWS
+                </p>
             </div>
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5">
                 <hr className="w-full border-2 border-[#456998] max-sm:hidden" />
             </div>
             {news && (
-                <div className="w-full flex flex-wrap justify-between px-24 max-xl:px-5 max-md:px-2 max-md:justify-between max-sm:flex-col max-sm:justify-center max-sm:items-center">
+                <div className="w-full flex flex-wrap justify-evenly px-24 max-xl:px-5 max-md:px-2 max-md:justify-evenly max-sm:flex-col max-sm:justify-center max-sm:items-center">
                     {news.map((item, i) => (
                         <div
                             onClick={() => navigate(`/news/${item.slug}`)}
@@ -70,7 +77,7 @@ function News() {
                                     }}
                                 />
                                 <p className="text-base text-sky-500 font-medium">
-                                    <a href={`news/${item.slug}`}>Read More</a>
+                                    <a href={`/news/${item.slug}`}>Read More</a>
                                 </p>
                             </div>
                         </div>

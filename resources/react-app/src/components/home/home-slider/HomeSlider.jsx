@@ -74,9 +74,9 @@ function HomeSlider() {
         <div>
             <Slider {...settings}>
                 {data.map((slide, index) => (
-                    <div key={index} className="relative max-md:mt-20">
+                    <div key={index} className="relative">
                         <div className="slide-content relative overflow-hidden animate-zoomIn">
-                            <h1 className="text-white font-bold text-4xl absolute text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+                            <h1 className="text-white font-bold text-4xl max-lg:text-2xl max-md:text-lg absolute text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
                                 {slide.title}
                             </h1>
 

@@ -14,6 +14,9 @@ import Projects from "../pages/projects/Projects";
 import NewsDetail from "../pages/NewsDetail/NewsDetail";
 import MainProjects from "../components/Projects/MainProjects";
 import ProjectDetail from "../components/Projects/ProjectDetail";
+import Kvkk from "../pages/KVKK/Kvkk";
+import Services from "../pages/Services/Services";
+import Page from "../pages/Page/Page";
 
 function AppRoute() {
     return (
@@ -24,6 +27,11 @@ function AppRoute() {
                         <Route path="/vito-global" element={<Global />} />
                         <Route path="/news" element={<News />} />
                         <Route path="/news/:slug" element={<NewsDetail />} />
+                        <Route path="/service" element={<Services />} />
+
+                        <Route path="/service/:slug" element={<Services />} />
+                        <Route path="/pages/:slug" element={<Page />} />
+                        <Route path="/our-policies" element={<Kvkk />} />
 
                         {/* <Route
                             path="/projects-ongoing"

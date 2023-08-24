@@ -2,13 +2,18 @@ import React, { useState, Fragment, useEffect } from "react";
 import logo from "../../assets/footer/vitologo.png";
 import map from "../../assets/footer/footermap.png";
 import bglogo from "../../assets/footer/bgfooter.png";
-import bglogosecond from "../../assets/footer/bgsecond.png";
 import mapcursor from "../../assets/footer/mapcursor.png";
 import { Dialog, Transition } from "@headlessui/react";
 import { useInView } from "react-intersection-observer";
+import title from "../../assets/header/title.png";
+import buda from "../../assets/footer/buda.jpg";
 import { BiLogoTwitter, BiLogoLinkedin } from "react-icons/bi";
-import footerWave from "../../assets/footer/footerwaves.png";
-
+import baku from "../../assets/footer/bakü.jpg";
+import katar from "../../assets/footer/Katar.jpg";
+import bergama from "../../assets/footer/bergama.png";
+import dubai from "../../assets/footer/dubai.jpg";
+import vadi from "../../assets/footer/Vadistanbul.jpg";
+import mumbai from "../../assets/footer/mumbai.jpg";
 function Footer2() {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
@@ -29,32 +34,58 @@ function Footer2() {
     const date = new Date();
     const locationList = [
         {
-            address: "Ayazağa, Vadistanbul, Azerbaycan Cd. 3B D:1B",
-            location: "Blok, 34485 Sarıyer/İstanbul",
-            img: "https://1.bp.blogspot.com/-b05_L9u_wf4/X5d2fWg1SQI/AAAAAAAANRs/JzHRWiZWsOo_RKXo3IKsRMqVwOz2mArmwCLcBGAsYHQ/w1200-h630-p-k-no-nu/Vadistanbul.jpg",
-            left: 54,
-            top: 19,
+            address: "ViTO Head Office",
+            location:
+                "Ayazağa, Vadistanbul, Azerbaycan Cd. 3B D:1B Blok, 34485 Sarıyer/İstanbul",
+            img: vadi,
+            left: 55,
+            top: 22,
         },
         {
             address: "Technicon Mumbai",
-            location: "Indian",
-            img: "https://img.freepik.com/free-photo/new-york-skycraper-sunset-usa_268835-758.jpg?w=740&t=st=1689763378~exp=1689763978~hmac=838893463fe82ede3b799e9d933f90c02a9d85e015208afd647f95f0ad9f2201",
-            left: 69,
-            top: 42,
+            location:
+                "Office No 404,4th Floor, Filix Condominium, L.B.S Marg, Bhandup West, Maharashtra, Mumbai, India",
+            img: mumbai,
+            left: 70,
+            top: 44,
         },
         {
             address: "Technicon Dubai",
-            location: "Dubai",
-            img: "https://img.freepik.com/free-photo/axelborg-towers_181624-29215.jpg?w=740&t=st=1689763407~exp=1689764007~hmac=9a9ea5aa64efdf9f8b1cec63726d6de4109e8a0f22d3ca549cc4b90c1251d470",
-            left: 59,
-            top: 42,
+            location:
+                "Jebel Ali free zone, Office S10123O019, Dubai, United Arab Emirates",
+            img: dubai,
+            left: 61,
+            top: 45,
         },
         {
             address: "Technicon Bakü",
-            location: "Azerbaycan",
-            img: "https://img.freepik.com/free-photo/axelborg-towers_181624-29215.jpg?w=740&t=st=1689763407~exp=1689764007~hmac=9a9ea5aa64efdf9f8b1cec63726d6de4109e8a0f22d3ca549cc4b90c1251d470",
-            left: 69,
-            top: 20,
+            location: "Xocalı prospekti 37, Demirchi Tower, 21-ci mərtəbə",
+            img: baku,
+            left: 61,
+            top: 24,
+        },
+        {
+            address: "Vito Qatar",
+            location:
+                "Al-Gassar Tower Street 920 Zone 63 Building No 27 West Bay  P.O Box 26660  Doha QATARLandline No: +974 400 784 54",
+            img: katar,
+            top: 42,
+            left: 57,
+        },
+        {
+            address: "Bergama Industry",
+            location:
+                "Bergama OSB Mahallesi, 3.Cadde, No:1, 35700 İzmir,Türkiye +90 232 690 0 690",
+            img: bergama,
+            top: 24,
+            left: 54,
+        },
+        {
+            address: "Vigor Construction",
+            location: "Budapest Hungary",
+            img: buda,
+            top: 17,
+            left: 51,
         },
     ];
     function closeModal() {
@@ -93,7 +124,7 @@ function Footer2() {
                                 setSelectedIndex(i);
                                 openModal();
                             }}
-                            className="absolute  w-[4%] hover:scale-110 ease-in duration-100 cursor-pointer map-image-cursor"
+                            className="absolute  w-[3%] hover:scale-110 ease-in duration-100 cursor-pointer map-image-cursor"
                             style={{
                                 left: `${item.left}%`,
                                 top: `${item.top}%`,
@@ -109,6 +140,11 @@ function Footer2() {
                             src={logo}
                             alt="Vito Logo"
                             className="w-52 max-md:w-36"
+                        />
+                        <img
+                            src={title}
+                            alt="Vito Title"
+                            className="w-52 max-md:w-36 md:-top-9 relative"
                         />
                         <div className="text-white text-base max-md:text-sm">
                             <p>Vadistanbul Ayazağa Mah.</p>
@@ -141,43 +177,47 @@ function Footer2() {
                                     <a href="/instituonal">INSTITUTIONAL</a>
                                 </li>
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="#">SERVICES</a>
+                                    <a href="/service">SERVICES</a>
                                 </li>
                             </ul>
                             <ul className="">
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="#">PROJECTS</a>
+                                    <a href="/projects">PROJECTS</a>
                                 </li>
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="#">SECTORS</a>
+                                    <a href="/sector">SECTORS</a>
                                 </li>
                             </ul>
                             <ul className="">
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="#">HUMAN RESOURCES</a>
+                                    <a href="/human-resources">
+                                        HUMAN RESOURCES
+                                    </a>
                                 </li>
                             </ul>
                             <ul className="">
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="#">MEDIA</a>
+                                    <a href="/news">MEDIA</a>
                                 </li>
                             </ul>
                             <ul className="">
+                                <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
+                                    <a href="/pages/vito-lighting-text">KVKK</a>
+                                </li>
+                                <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
+                                    <a href="/pages/cookie-policy">
+                                        COOKIE POLICY
+                                    </a>
+                                </li>
+                                <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
+                                    <a href="/our-policies">OUR POLICIES</a>
+                                </li>
                                 <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2]">
-                                    <a href="#">CONTACT</a>
+                                    <a href="/contact">CONTACT</a>
                                 </li>
                             </ul>
                         </div>
                         <div className="flex justify-end items-center max-lg:mt-5">
-                            <div className="flex justify-center items-center mr-12 max-sm:mr-0 max-lg:hidden">
-                                <a
-                                    href="https://www.linkedin.com/company/vitogroup?originalSubdomain=tr"
-                                    target="blank"
-                                >
-                                    <BiLogoLinkedin className="text-3xl mx-1 text-[#456998] cursor-pointer hover:text-white max-md:text-white" />
-                                </a>
-                            </div>
-
                             <p className="text-sm max-lg:hidden ">
                                 Vito ©. Copyright {date.getFullYear()}
                             </p>
@@ -186,10 +226,6 @@ function Footer2() {
                 </div>
                 <div className="w-full flex max-lg:flex p-4">
                     <div className="hidden  max-lg:flex justify-center items-center mr-12 max-sm:mr-0">
-                        <a href="https://twitter.com/GroupVito" target="blank">
-                            <BiLogoTwitter className="text-3xl mx-1 text-[#456998] cursor-pointer hover:text-[#1DA1F2] max-md:text-[#1DA1F2]" />
-                        </a>
-
                         <a
                             href="https://www.linkedin.com/company/vitogroup?originalSubdomain=tr"
                             target="blank"
@@ -228,16 +264,16 @@ function Footer2() {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden  bg-white  text-left align-middle shadow-xl transition-all">
+                                <Dialog.Panel className="w-full max-w-xs  transform overflow-hidden  bg-white  text-left align-middle shadow-xl transition-all">
                                     <div className="flex max-md:flex-col">
                                         <img
                                             src={
                                                 locationList[selectedIndex].img
                                             }
-                                            className="w-1/4 max-md:w-full max-md:h-44 max-md:object-cover max-md:object-bottom"
+                                            className="w-[35%] max-md:w-full max-md:h-44 max-md:object-cover max-md:object-bottom"
                                             alt="LocationImage"
                                         />
-                                        <div className="w-3/4 p-6 max-md:w-full">
+                                        <div className="w-[65%] p-6 max-md:w-full">
                                             <Dialog.Title
                                                 as="h3"
                                                 className="text-lg font-medium leading-6 text-gray-900"

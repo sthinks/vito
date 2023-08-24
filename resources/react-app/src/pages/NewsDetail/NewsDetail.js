@@ -6,14 +6,15 @@ import GlobalSlider from "../../components/Global/GlobalSlider";
 function NewsDetail() {
     const [data, setData] = useState(null);
     const { slug } = useParams();
-
-    useEffect(() => {
-        getByNewsDetail();
-    }, []);
     const getByNewsDetail = async () => {
         const result = await service.getNewsDetail(slug);
         setData(result.data);
     };
+    useEffect(() => {
+        getByNewsDetail();
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="w-full">
             {data && (

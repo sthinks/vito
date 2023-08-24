@@ -8,6 +8,14 @@ import globalLayer from "../../assets/global/Layer 2.png";
 import GlobalSlider from "../../components/Global/GlobalSlider";
 import globalLogoBg from "../../assets/global/globalvitologo.png";
 import service from "../../service/service";
+import baku from "../../assets/footer/bakü.jpg";
+import katar from "../../assets/footer/Katar.jpg";
+import bergama from "../../assets/footer/bergama.png";
+import dubai from "../../assets/footer/dubai.jpg";
+import vadi from "../../assets/footer/Vadistanbul.jpg";
+import mumbai from "../../assets/footer/mumbai.jpg";
+import buda from "../../assets/footer/buda.jpg";
+
 function Global() {
     const [data, setData] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -41,32 +49,58 @@ function Global() {
     }
     const locationList = [
         {
-            address: "Ayazağa, Vadistanbul, Azerbaycan Cd. 3B D:1B",
-            location: "Blok, 34485 Sarıyer/İstanbul",
-            img: "https://1.bp.blogspot.com/-b05_L9u_wf4/X5d2fWg1SQI/AAAAAAAANRs/JzHRWiZWsOo_RKXo3IKsRMqVwOz2mArmwCLcBGAsYHQ/w1200-h630-p-k-no-nu/Vadistanbul.jpg",
-            left: 54,
-            top: 19,
+            address: "ViTO Head Office",
+            location:
+                "34485, Ayazağa, Vadistanbul, Azerbaycan Cd. 3B D:1B Blok, Sarıyer/İstanbul",
+            img: vadi,
+            left: 55,
+            top: 22,
         },
         {
             address: "Technicon Mumbai",
-            location: "Indian",
-            img: "https://img.freepik.com/free-photo/new-york-skycraper-sunset-usa_268835-758.jpg?w=740&t=st=1689763378~exp=1689763978~hmac=838893463fe82ede3b799e9d933f90c02a9d85e015208afd647f95f0ad9f2201",
-            left: 69,
-            top: 42,
+            location:
+                "Office No 404,4th Floor, Filix Condominium, L.B.S Marg, Bhandup West, Maharashtra, Mumbai, India",
+            img: mumbai,
+            left: 70,
+            top: 44,
         },
         {
             address: "Technicon Dubai",
-            location: "Dubai",
-            img: "https://img.freepik.com/free-photo/axelborg-towers_181624-29215.jpg?w=740&t=st=1689763407~exp=1689764007~hmac=9a9ea5aa64efdf9f8b1cec63726d6de4109e8a0f22d3ca549cc4b90c1251d470",
-            left: 59,
-            top: 42,
+            location:
+                "Jebel Ali free zone, Office S10123O019, Dubai, United Arab Emirates",
+            img: dubai,
+            left: 61,
+            top: 45,
         },
         {
             address: "Technicon Bakü",
-            location: "Azerbaycan",
-            img: "https://img.freepik.com/free-photo/axelborg-towers_181624-29215.jpg?w=740&t=st=1689763407~exp=1689764007~hmac=9a9ea5aa64efdf9f8b1cec63726d6de4109e8a0f22d3ca549cc4b90c1251d470",
-            left: 69,
-            top: 20,
+            location: "Xocalı prospekti 37, Demirchi Tower, 21-ci mərtəbə",
+            img: baku,
+            left: 61,
+            top: 24,
+        },
+        {
+            address: "Vito Qatar",
+            location:
+                "P.O Box 26660,Al-Gassar Tower Street 920 Zone 63 Building No 27 West Bay Doha QATARLandline No: +974 400 784 54",
+            img: katar,
+            top: 42,
+            left: 57,
+        },
+        {
+            address: "Bergama Industry",
+            location:
+                "35700, Bergama OSB Mahallesi, 3.Cadde, No:1,  İzmir,Türkiye +90 232 690 0 690",
+            img: bergama,
+            top: 24,
+            left: 54,
+        },
+        {
+            address: "Vigor Construction",
+            location: "Budapest Hungary",
+            img: buda,
+            top: 17,
+            left: 51,
         },
     ];
     return (
@@ -76,7 +110,7 @@ function Global() {
                 <p className="absolute text-6xl font-bold max-md:text-3xl text-center text-[#093977] tracking-widest z-50">
                     ViTO GLOBAL
                 </p>
-                <div className="w-full h-full absolute bg-cyan-400 opacity-20 z-40" />
+                <div className="w-full h-full absolute bg-black opacity-30 z-40" />
             </div>
             <div
                 className={`w-full bg-[#093977] relative map-container ${
@@ -95,10 +129,10 @@ function Global() {
                         <img
                             src={mapcursor}
                             onClick={() => {
-                                setSelectedIndex(1);
+                                setSelectedIndex(i);
                                 openModal();
                             }}
-                            className="absolute  w-[4%] hover:scale-110 ease-in duration-100 cursor-pointer map-image-cursor"
+                            className="absolute  w-[3%] hover:scale-110 ease-in duration-100 cursor-pointer map-image-cursor"
                             style={{
                                 left: `${item.left}%`,
                                 top: `${item.top}%`,
@@ -143,7 +177,7 @@ function Global() {
                             className="text-9xl font-bold text-white tracking-[1.2rem]"
                             style={{ writingMode: "vertical-rl" }}
                         >
-                            VITO GLOBAL
+                            ViTO GLOBAL
                         </p>
                     </div>
                 </div>
@@ -180,16 +214,16 @@ function Global() {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden  bg-white  text-left align-middle shadow-xl transition-all">
+                                <Dialog.Panel className="w-full max-w-xs transform overflow-hidden  bg-white  text-left align-middle shadow-xl transition-all">
                                     <div className="flex max-md:flex-col">
                                         <img
                                             src={
                                                 locationList[selectedIndex].img
                                             }
-                                            className="w-1/4 max-md:w-full max-md:h-44 max-md:object-cover max-md:object-bottom"
+                                            className="w-[35%] max-md:w-full max-md:h-44 max-md:object-cover max-md:object-bottom"
                                             alt="LocationImage"
                                         />
-                                        <div className="w-3/4 p-6 max-md:w-full">
+                                        <div className="w-[65%] p-6 max-md:w-full">
                                             <Dialog.Title
                                                 as="h3"
                                                 className="text-lg font-medium leading-6 text-gray-900"

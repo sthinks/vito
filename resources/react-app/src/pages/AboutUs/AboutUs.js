@@ -6,7 +6,8 @@ import service from "../../service/service";
 import CountUp from "react-countup";
 import serviceBg from "../../assets/aboutus/servicebg.png";
 import { useInView } from "react-intersection-observer";
-import CEO from "../../assets/aboutus/Resim1.jpg";
+import CEO from "../../assets/institutional/vedattbey.jpg";
+import { useNavigate } from "react-router-dom";
 function AboutUs() {
     const [data, setData] = useState(null);
     const [dataService, setDataService] = useState(null);
@@ -34,7 +35,7 @@ function AboutUs() {
             setNewsAnim(true);
         }
     }
-
+    const navigate = useNavigate();
     return (
         <>
             <div
@@ -50,26 +51,26 @@ function AboutUs() {
                     src={AboutWawes}
                     alt="AboutUsWawes"
                 />
-                <div className="w-full flex justify-center items-center flex-col text-center pt-56 pb-20 px-36 max-lg:px-20  max-md:px-2">
+                <div className="w-full flex justify-center items-center flex-col text-center pt-56 pb-20 px-36 max-lg:px-20  max-md:px-2 h-auto">
                     <p className="text-7xl font-bold max-md:text-5xl text-center text-white tracking-widest z-50 py-10">
                         ABOUT US
                     </p>
                     <p className="text-xl font-normal max-lg:text-lg max-md:text-base text-center text-white z-50 py-10 ">
-                        Founded in 2000, ViTO has grown steadily over the years
-                        and we have become ViTO Group of Companies. During this
-                        growth process, we have realized various important
-                        projects in the field of contracting with partnerships
-                        with companies that are world-wide in their field. IVT
-                        company, which we established within this framework, was
-                        100% included in ViTO Group of Companies in 2017. In
-                        2019, we became one of the founding partners of Bergama
-                        Industry company to manufacture pressure vessels and
-                        pipe prefabrication in Bergama Organized Industry. We
-                        are currently exporting to 3 continents. The most
-                        prominent principles of our company are the delivery of
-                        projects on the day of the project and the management of
-                        projects in customer satisfaction and occupational
-                        safety.
+                        ViTO has grown steadily over the past 24 years to become
+                        today's ViTO Group of Companies. During this growth
+                        process, it has realized various important projects in
+                        the field of contracting with partnerships with
+                        world-class companies in its field. IVT company, which
+                        we had previously established, was 100% included in ViTO
+                        Group of Companies in 2017.
+                        <br />
+                        In 2019, he became one of the founding partners of
+                        Bergama Industry company to manufacture pressure vessels
+                        and pipe prefabrication in Bergama Organized Industry.
+                        Currently exporting to 3 continents, Bergama Endüstri's
+                        most prominent principles are the delivery of projects
+                        on time, customer satisfaction and managing projects in
+                        occupational safety.
                     </p>
                 </div>
                 <div className="w-full flex justify-between items-center my-5 h-[450px] max-xl:h-[550px] max-lg:h-auto max-md:flex-col">
@@ -78,29 +79,32 @@ function AboutUs() {
                         src={CEO}
                         alt="CEO"
                     />
-                    <div className="w-4/6 h-full px-10 py-5 max-md:w-full max-md:px-2">
+                    <div className="w-4/6  px-10 py-5 max-md:w-full max-md:px-2 h-auto">
                         <p className="text-3xl font-bold max-lg:text-xl max-md:text-lg text-center text-white z-50 py-10">
                             THE MESSAGE OF THE CHAIRMAN & CEO
                         </p>
                         <p className="text-xl font-normal max-lg:text-lg max-md:text-base text-center text-white z-50 py-10">
                             Founded in 2000, we have steadily grown our company
-                            over the years and transformed it into ViTO group of
-                            companies. In this growth process, we have realized
-                            many important projects in the field of contracting
-                            by establishing reputable foreign partnerships in
-                            the world. In this context, we added our joint
-                            venture contracting company, which we established
-                            with our foreign partners, to our ViTO group of
-                            companies as IVT company in 2017. After that, in
-                            2019, we opened our Bergama Industry Factory, where
-                            pressure vessels and pipe prefabrication are
-                            manufactured, in Bergama Organized Industrial Zone.
-                            Currently, we export our products to three
-                            continents and deliver them to customers all over
-                            the world. The main principles of our company are
-                            timely delivery of projects, customer satisfaction
-                            and successful management of projects by
-                            prioritizing occupational safety.
+                            over the years and transformed it into today's ViTO
+                            group of companies.
+                            <br />
+                            During this growth process, we established many
+                            experienced and reputable foreign partnerships in
+                            the world and realized important projects in the
+                            field of contracting. In this context, we added our
+                            joint venture contracting company, which we
+                            established with our foreign partners, to our ViTO
+                            group of companies as IVT company in 2017. After
+                            that, in 2019, we opened our Bergama Industry
+                            Factory, where pressure vessels and pipe
+                            prefabrication are manufactured, in Bergama
+                            Organized Industrial Zone. Currently, we export our
+                            products to three continents and deliver them to
+                            customers all over the world. The priority of our
+                            company is the timely delivery of projects managed
+                            by our experienced staff and the successful
+                            execution of projects by prioritizing customer
+                            satisfaction and occupational safety.
                         </p>
                     </div>
                 </div>
@@ -151,14 +155,17 @@ function AboutUs() {
                             </p>
                             <p className="text-lg font-light text-white py-2">
                                 Our vision is to become a leading contracting
-                                company in the petrochemical and refinery
-                                sectors. We aspire to achieve a leadership
-                                position in the industry by delivering the
-                                highest quality services, embracing innovation,
-                                and executing projects that are environmentally
-                                conscious. Our vision is built upon the
-                                principles of leadership, excellence, and
-                                continuous improvement.
+                                company in the petrochemical, hydrogen and
+                                refinery sectors, renowned for our commitment to
+                                sustainability. We aspire to achieve a
+                                leadership position in the industry by
+                                delivering the highest quality services,
+                                embracing innovation, and executing projects
+                                that are environmentally conscious. Our vision
+                                is built upon the principles of leadership,
+                                excellence, and continuous improvement, all
+                                while contributing significantly to a
+                                carbon-free future.
                             </p>
                         </div>
                     </div>
@@ -264,7 +271,8 @@ function AboutUs() {
                     dataService.map((item, i) => (
                         <div
                             key={i}
-                            className="w-2/6 flex justify-center items-center max-md:w-5/6"
+                            className="w-2/6 flex justify-center items-center max-md:w-5/6 cursor-pointer"
+                            onClick={() => navigate(`/service/${item.slug}`)}
                         >
                             <div className="relative rounded-full w-64 h-64 flex justify-center items-center max-sm:w-52 max-sm:h-52 max-sm:m-2">
                                 {/* Dönen Çerçeve */}
