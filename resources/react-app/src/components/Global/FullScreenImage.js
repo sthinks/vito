@@ -10,8 +10,6 @@ function FullScreenImage({
 }) {
     const imageRef = useRef();
     const nextHandler = (imgIndex) => {
-        console.log(imgIndex);
-        console.log(sliderImage.length);
         if (imgIndex === sliderImage.length - 1) {
             setImgIndex(0);
         } else {
@@ -19,8 +17,6 @@ function FullScreenImage({
         }
     };
     const prevHandler = (imgIndex) => {
-        console.log(imgIndex);
-        console.log(sliderImage.length);
         if (imgIndex - 1 === 0) {
             setImgIndex(sliderImage.length - 1);
         } else {
@@ -55,7 +51,7 @@ function FullScreenImage({
                 <MdKeyboardArrowLeft className="text-6xl hover:text-7xl duration-200 cursor-pointer" />
             </p>
             <img
-                className="w-[80%] h-[80%] object-cover z-50"
+                className="w-[80%] h-[80%] object-contain z-50"
                 src={sliderImage[imgIndex].url}
                 alt="Üretim resmi"
             />

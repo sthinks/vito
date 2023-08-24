@@ -33,10 +33,11 @@ function SamplePrevArrow(props) {
     );
 }
 function GlobalSlider({ sliderImage, bg }) {
+    console.log("sliderImage", sliderImage.length);
     var settings = {
         dots: false,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: sliderImage.length < 4 ? 2 : 4,
         infinite: true,
         slidesToScroll: 2,
         initialSlide: 0,
@@ -92,12 +93,18 @@ function GlobalSlider({ sliderImage, bg }) {
         <>
             <Slider className={bg ? `bg-white` : ""} {...settings}>
                 {sliderImage.map((item, i) => (
-                    <div className="w-56 h-56 outline-0">
+                    <div
+                        className={
+                            sliderImage.length
+                                ? "w-64 h-72 object-cover outline-0"
+                                : "w-56 h-56 outline-0"
+                        }
+                    >
                         <img
                             key={i}
                             onMouseDown={(e) => setDrag(e.pageX)}
                             onMouseUp={(e) => dontDragHandler(e.pageX, item)}
-                            className="w-full h-full object-cover p-2 cursor-pointer"
+                            className="w-full h-full object-contain p-2 cursor-pointer"
                             src={item.url}
                             alt="images"
                         />

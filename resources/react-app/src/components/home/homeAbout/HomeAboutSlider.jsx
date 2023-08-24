@@ -96,7 +96,7 @@ function HomeAboutSlider({ sliderImage, bg }) {
                             </div>
                         </div>
                     ) : (
-                        <div className="w-56 h-80 max-lg:h-56 outline-0">
+                        <div className="w-56 h-80 max-lg:h-56 max-md:h-full outline-0">
                             <img
                                 key={i}
                                 className="w-full h-full object-cover p-2 cursor-pointer"

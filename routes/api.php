@@ -37,5 +37,5 @@ Route::get('get-projects',[\App\Http\Controllers\ProjectController::class,'getPr
 Route::get('get-home-sliders',[\App\Http\Controllers\BaseController::class,'getHomeSlider',]);
 Route::get('get-project-detail/{slug}',[\App\Http\Controllers\ProjectController::class,'getByProject',]);
 Route::get('get-home-slider',[\App\Http\Controllers\BaseController::class,'getHomeSlider',]);
-
+Route::get('get-base-page/{slug}',[\App\Http\Controllers\BaseController::class,'getBasePage',]);
 

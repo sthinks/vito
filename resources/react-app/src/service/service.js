@@ -40,6 +40,10 @@ const getHomeSlider = async () => {
     const result = await axiosInstance.get(`get-home-slider`);
     return result;
 };
+const getBasePage = async (slug) => {
+    const result = await axiosInstance.get(`get-base-page/${slug}`);
+    return result;
+};
 const exportFunction = {
     getAllNews,
     getSectorSlider,
@@ -51,6 +55,7 @@ const exportFunction = {
     getMainProjects,
     getProjects,
     getHomeSlider,
+    getBasePage,
 };
 
 export default exportFunction;

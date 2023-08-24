@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ActivityCard({ key, src, content, color }) {
+function ActivityCard({ key, src, content, color, slug }) {
+    const handleClick = () => {
+        window.location.href = "/about-us#spinnig-service";
+    };
     return (
-        <li className="w-full flex justify-center items-center flex-col ">
-            <Link to="/projects">
+        <li
+            className="w-full flex justify-center items-center flex-col"
+            onClick={handleClick}
+        >
+            <Link to={`/${slug}`}>
                 <img
                     src={src}
                     alt="imgphoto"

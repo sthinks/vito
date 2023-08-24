@@ -37,12 +37,12 @@ function HomeAbout() {
     return (
         <div>
             <h1 className="text-[#093977] text-center text-4xl my-10 font-bold max-md:text-3xl ">
-                WHO WE ARE ?
+                WHO WE ARE
             </h1>
             <HomeAboutSlider sliderImage={arrayImage} />
-            <div className="m-20">
+            <div className="m-20 max-md:px-5 max-md:m-0 max-md:py-4">
                 <div className="flex justify-between items-center mt-5 max-md:flex-col max-md:justify-center max-md:items-center">
-                    <div className="w-[49%] h-[300px] flex flex-col justify-arround max-md:w-full">
+                    <div className="w-[49%] h-[300px] flex flex-col justify-arround max-md:w-full max-lg:h-auto py-5">
                         <h2 className="text-center font-bold text-3xl ">
                             ViTO Group
                         </h2>
@@ -67,10 +67,9 @@ function HomeAbout() {
                             </a>
                         </p>
                     </div>
-                    <div class="w-[49%] h-[300px] flex justify-center items-center max-md:mt-10 max-md:w-full">
+                    <div class="w-[49%] h-[300px] max-md:h-auto flex justify-center items-center max-md:mt-10 max-md:w-full py-5">
                         <ReactPlayer
                             url="https://www.youtube.com/embed/Qd1yzIDtQiU"
-                            playing={true} // Otomatik oynatmayı sağlar
                             controls={true}
                         />
                     </div>
