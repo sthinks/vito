@@ -5,44 +5,9 @@ import services from "../../service/service";
 import Header from "../header/Header";
 import ShortFooter from "../Footer/ShortFooter";
 import ProjectBaner from "../../assets/projects/project-banner.png";
-
-import ProjectSlider from "./ProjectSlider";
-
-import PrCard2 from "../../assets/projects/Star1.jpg";
-import PrCard3 from "../../assets/projects/Star1.png";
-import PrCard4 from "../../assets/projects/Star2.jpg";
-import PrCard5 from "../../assets/projects/Star Jetty piping.jpg";
-import PrCard6 from "../../assets/projects/Star Rafiner.jpg";
+import HomeAboutSlider from "../home/homeAbout/HomeAboutSlider";
 
 const ProjectDetail = () => {
-    const projectImage = [
-        {
-            id: 0,
-            url: PrCard2,
-            style: true,
-        },
-        {
-            id: 1,
-            url: PrCard3,
-            style: true,
-        },
-        {
-            id: 2,
-            url: PrCard4,
-            style: true,
-        },
-        {
-            id: 3,
-            url: PrCard5,
-            style: true,
-        },
-        {
-            id: 4,
-            url: PrCard6,
-            style: true,
-        },
-    ];
-
     const [project, setProject] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const param = useParams();
@@ -61,16 +26,16 @@ const ProjectDetail = () => {
     useEffect(() => {
         getMainProject();
     }, []);
-    // console.log(project.color_code);
+
     return (
         <>
-            <Header />
             <div>
                 {isLoading ? (
                     <p>Loading .... </p>
                 ) : project ? (
                     <div
-                        className={`relative top-0 z-10 bg-[${project.color_code}]`}
+                        className={`relative top-0 z-10 `}
+                        style={{ backgroundColor: `${project?.color_code}` }}
                     >
                         <img
                             src={ProjectBaner}
@@ -99,48 +64,62 @@ const ProjectDetail = () => {
                             </div>
                             <div className="w-3/4 leading-9">
                                 <h1 className="mb-6 text-white text-3xl font-bold  ">
-                                    {project.title}
+                                    {project.project_name}
                                 </h1>
                                 <h2 className="font-bold text-3xl mb-5">
-                                    Description
-                                </h2>
-                                <p
-                                    className="text-2xl"
-                                    dangerouslySetInnerHTML={{
-                                        __html: project.description,
-                                    }}
-                                />
-
-                                <h2 className="font-bold text-3xl my-5">
-                                    Value Added
+                                    CLIENT
                                 </h2>
 
                                 <p
                                     className="text-2xl"
                                     dangerouslySetInnerHTML={{
-                                        __html: project.value_added,
+                                        __html: project.client,
+                                    }}
+                                />
+
+                                <h2 className="font-bold text-3xl my-5">
+                                    SCOPE
+                                </h2>
+
+                                <p
+                                    className="text-2xl"
+                                    dangerouslySetInnerHTML={{
+                                        __html: project.scope,
                                     }}
                                 />
                                 <h2 className="font-bold text-3xl my-5">
-                                    Results
+                                    SUBCONTRACTOR
                                 </h2>
-                                {project.results && (
+                                {project.subcontractor && (
                                     <p
                                         className="text-2xl"
                                         dangerouslySetInnerHTML={{
-                                            __html: project.results,
+                                            __html: project.subcontractor,
                                         }}
                                     />
                                 )}
+                                <h2 className="font-bold text-3xl my-5">
+                                    PROJECT STATUS
+                                </h2>
+
+                                <p
+                                    className="text-2xl"
+                                    dangerouslySetInnerHTML={{
+                                        __html: project.project_status,
+                                    }}
+                                />
                             </div>
                         </div>
+                        {project && (
+                            <HomeAboutSlider
+                                sliderImage={project?.card_gallery}
+                            />
+                        )}
                     </div>
                 ) : (
                     <p>Not Found</p>
                 )}
             </div>
-            <ProjectSlider sliderImage={projectImage} />
-            <ShortFooter />
         </>
     );
 };

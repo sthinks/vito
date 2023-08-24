@@ -98,11 +98,7 @@ function Header() {
                                 } `}
                                 to="/instituonal"
                             >
-<<<<<<< HEAD
                                 CORPORATE
-=======
-                                INSTITUONAL
->>>>>>> main
                             </Link>
                         </li>
                         <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
@@ -124,7 +120,7 @@ function Header() {
                                         ? "text-[#fff]"
                                         : "text-[#1b4378] hover:bg-[#1b4378] hover:text-[#fff] hover:py-[30px] hover:px-[5px]"
                                 } `}
-                                to="/projects"
+                                to="/projects/main-projects"
                             >
                                 PROJECTS
                             </Link>

@@ -39,14 +39,15 @@ function AppRoute() {
                         />
                         <Route path="/projects" element={<Projects />} />
                     </Route>
-                    <Route
-                        path="/projects/project-detail/:slug"
-                        element={<ProjectDetail />}
-                    />
+
                     <Route element={<RootLayout />}>
                         <Route path="/" element={<Home />} />
                         <Route path="/sector" element={<Sector />} />
                         <Route path="/about-us" element={<AboutUs />} />
+                        <Route
+                            path="/projects/project-detail/:slug"
+                            element={<ProjectDetail />}
+                        />
                     </Route>
                     <Route element={<RootLayout2 />}>
                         <Route path="/contact" element={<Contact />} />

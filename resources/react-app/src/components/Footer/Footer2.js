@@ -171,13 +171,6 @@ function Footer2() {
                         <div className="flex justify-end items-center max-lg:mt-5">
                             <div className="flex justify-center items-center mr-12 max-sm:mr-0 max-lg:hidden">
                                 <a
-                                    href="https://twitter.com/GroupVito"
-                                    target="blank"
-                                >
-                                    <BiLogoTwitter className="text-3xl mx-1 text-[#456998] cursor-pointer hover:text-[#1DA1F2] max-md:text-[#1DA1F2]" />
-                                </a>
-
-                                <a
                                     href="https://www.linkedin.com/company/vitogroup?originalSubdomain=tr"
                                     target="blank"
                                 >
