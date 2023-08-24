@@ -12,19 +12,25 @@ class ProjectController extends Controller
         $projects = Project::orderBy('order','ASC')->get();
         $projects->map(function($item){
 
-             if($item->image_gallery != null)
+             if($item->card_gallery != null)
             {
-                $item->image_gallery = json_decode($item->image_gallery);
-                $image_gallery = $item->image_gallery;
-                for ($i=0; $i < count($image_gallery); $i++) {
+                $item->card_gallery = json_decode($item->card_gallery);
+                $card_gallery = $item->card_gallery;
+                for ($i=0; $i < count($card_gallery); $i++) {
 
-                    $image_gallery[$i] = [
+                    $card_gallery[$i] = [
                         "url" =>  url(
-                    sprintf('storage/%s', str_replace('\\', '/', $image_gallery[$i]))),
+                    sprintf('storage/%s', str_replace('\\', '/', $card_gallery[$i]))),
                         "index" => $i + 1 // Index 0'dan değil 1'den başlamalı
                     ];
-                $item->image_gallery = $image_gallery;
+                $item->card_gallery = $card_gallery;
                 }
+                $item->card_image = url(
+                    sprintf('storage/%s', str_replace('\\', '/', $item->card_image))
+                );
+                $item->banner = url(
+                    sprintf('storage/%s', str_replace('\\', '/', $item->banner))
+                );
             }
         });
         return response()->json($projects);
@@ -33,20 +39,26 @@ class ProjectController extends Controller
     {
         $projects = Project::where('slug',$slug)->first();
 
-             if($projects->image_gallery != null)
+             if($projects->card_gallery != null)
             {
-                $projects->image_gallery = json_decode($projects->image_gallery);
-                $image_gallery = $projects->image_gallery;
-                for ($i=0; $i < count($image_gallery); $i++) {
+                $projects->card_gallery = json_decode($projects->card_gallery);
+                $card_gallery = $projects->card_gallery;
+                for ($i=0; $i < count($card_gallery); $i++) {
 
-                    $image_gallery[$i] = [
+                    $card_gallery[$i] = [
                         "url" =>  url(
-                    sprintf('storage/%s', str_replace('\\', '/', $image_gallery[$i]))),
+                    sprintf('storage/%s', str_replace('\\', '/', $card_gallery[$i]))),
                         "index" => $i + 1 // Index 0'dan değil 1'den başlamalı
                     ];
-                $projects->image_gallery = $image_gallery;
+                $projects->card_gallery = $card_gallery;
                 }
             }
+            $projects->card_image = url(
+                sprintf('storage/%s', str_replace('\\', '/', $projects->card_image))
+            );
+            $projects->banner = url(
+                sprintf('storage/%s', str_replace('\\', '/', $projects->banner))
+            );
 
         return response()->json($projects);
     }
