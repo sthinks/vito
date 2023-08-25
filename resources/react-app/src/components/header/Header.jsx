@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import Logo from "../../assets/header/logo.png";
 import LogoTitle from "../../assets/header/title.png";
 import BlueLogo from "../../assets/header/blue.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaLinkedinIn } from "react-icons/fa";
 import "./HamburgerMenu.css";
 function Header() {
     const [isVisible, setIsVisible] = useState(true);
     const [isToggled, setIsToggled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [childMenu, setChildMenu] = useState(false);
     const handleToggle = (checked) => {
         setIsToggled(checked);
     };
@@ -55,7 +56,7 @@ function Header() {
             window.removeEventListener("resize", handleResize);
         };
     }, [isOpen]);
-
+    const navigate = useNavigate();
     return (
         <header>
             <nav
@@ -63,9 +64,13 @@ function Header() {
                     hasOpacity ? "bg-transparent" : "bg-[#fff] opacity-100"
                 } h-20 flex justify-center items-center fixed z-[9999] w-full transition-all max-md:hidden`}
             >
-                <div className="flex justify-center items-center logo">
+                <div
+                    className="flex justify-center items-center logo"
+                    onClick={() => navigate("/")}
+                >
                     <Link className="relative" to="/">
                         <img
+                            onClick={() => navigate("/")}
                             src={hasOpacity ? Logo : BlueLogo}
                             alt="sa"
                             className="w-[250px] mr-10 max-xl:w-[140px] max-lg:w-[120px] max-lg:mr-0 "
@@ -81,7 +86,7 @@ function Header() {
                         />
                     </Link>
                 </div>
-                <ul className="flex flex-row gap-10 max-xl:gap-6 max-lg:mt-2 max-lg:gap-4 navbar-ul ">
+                <ul className="flex flex-row gap-10 max-xl:gap-6 max-lg:mt-2 max-lg:gap-4 navbar-ul items-center ">
                     <li className="text-white font-bold text-lg ml-5 max-lg:text-xs max-xl:text-base">
                         <Link
                             className={`py-[30px] px-[5px] ${
@@ -118,7 +123,7 @@ function Header() {
                             GLOBAL
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
+                    <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base relative flex justify-center items-center">
                         <Link
                             className={`py-[30px] px-[5px] ${
                                 hasOpacity
@@ -234,7 +239,12 @@ function Header() {
                 }
             >
                 <div className="flex justify-center items-center">
-                    <img src={BlueLogo} alt="sa" className="w-[150px]" />
+                    <img
+                        src={BlueLogo}
+                        alt="sa"
+                        className="w-[150px]"
+                        onClick={() => navigate("/")}
+                    />
                 </div>
                 <div className={`hamburger-menu ${isOpen ? "open" : ""}`}>
                     <div className="hamburger-icon" onClick={toggleMenu}>
@@ -246,25 +256,67 @@ function Header() {
                         {/* Burada menü öğelerini ekleyebilirsiniz */}
                         <ul className="bg-[#1b4378] ">
                             <li className="text-white font-bold text-lg  max-xl:text-sm ">
-                                <Link to="/about-us">ABOUT US </Link>
+                                <Link
+                                    to="/about-us"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    ABOUT US{" "}
+                                </Link>
                             </li>
                             <li className="text-white font-bold text-lg max-xl:text-sm">
-                                <Link to="/instituonal"> CORPORATE </Link>
+                                <Link
+                                    to="/instituonal"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {" "}
+                                    CORPORATE{" "}
+                                </Link>
                             </li>
                             <li className="text-white font-bold text-lg max-xl:text-sm">
-                                <Link to="/vito-global"> GLOBAL </Link>
+                                <Link
+                                    to="/vito-global"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {" "}
+                                    GLOBAL{" "}
+                                </Link>
                             </li>
                             <li className="text-white font-bold text-lg max-xl:text-sm">
-                                <Link to="/projects"> PROJECTS </Link>
+                                <Link
+                                    to="/projects"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {" "}
+                                    PROJECTS{" "}
+                                </Link>
+                            </li>
+
+                            <li className="text-white font-bold text-lg max-xl:text-sm">
+                                <Link
+                                    to="/sector"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {" "}
+                                    SECTORS{" "}
+                                </Link>
                             </li>
                             <li className="text-white font-bold text-lg max-xl:text-sm">
-                                <Link to="/sector"> SECROTS </Link>
+                                <Link
+                                    to="/news"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {" "}
+                                    NEWS{" "}
+                                </Link>
                             </li>
                             <li className="text-white font-bold text-lg max-xl:text-sm">
-                                <Link to="/news"> NEWS </Link>
-                            </li>
-                            <li className="text-white font-bold text-lg max-xl:text-sm">
-                                <Link to="/contact"> CONTACT </Link>
+                                <Link
+                                    to="/contact"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {" "}
+                                    CONTACT{" "}
+                                </Link>
                             </li>
                             {/* <li className="flex items-center gap-3">
                                     <img

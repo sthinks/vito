@@ -36,7 +36,7 @@ function HomeAboutSlider({ sliderImage, bg }) {
     var settings = {
         dots: false,
         speed: 1000,
-        slidesToShow: 3,
+        slidesToShow: sliderImage.length < 4 ? 2 : 4,
         infinite: true,
         slidesToScroll: 1,
         initialSlide: 0,

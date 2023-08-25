@@ -117,7 +117,7 @@ function Footer() {
                     className="absolute right-0 bottom-0 w-[55%] max-md:w-[85%]"
                 />
 
-                <div className="relative top-20 mb-[20rem] max-lg:mb-[14rem] max-md:mb-[8rem] max-md:top-10">
+                <div className="relative top-20 mb-[20rem] max-lg:mb-[14rem] max-md:mb-[20rem] max-md:top-10">
                     <img
                         className="map-image"
                         id="image-id"
@@ -151,7 +151,7 @@ function Footer() {
                         <img
                             src={title}
                             alt="Vito Title"
-                            className="w-52 max-md:w-36 md:-top-9 relative"
+                            className="w-52 max-lg:w-36 lg:-top-9 relative"
                         />
                         <div className="text-white text-base max-md:text-sm">
                             <p>Vadistanbul Ayazağa Mah.</p>
@@ -176,7 +176,7 @@ function Footer() {
                     </div>
                     <div className=" flex justify-between w-4/6 max-lg:w-full text-white flex-col z-40">
                         <div className="flex justify-between text-white max-lg:flex-wrap  max-md:gap-5 max-md:flex-initial max-md:items-start">
-                            <ul className="">
+                            <ul className="max-md:w-[22%]">
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                     <a href="/">HOME</a>
                                 </li>
@@ -187,39 +187,44 @@ function Footer() {
                                     <a href="/service">SERVICES</a>
                                 </li>
                             </ul>
-                            <ul className="">
+                            <ul className="max-md:w-[22%]">
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/project">PROJECTS</a>
+                                    <a href="/projects/main-projects">
+                                        PROJECTS
+                                    </a>
                                 </li>
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                     <a href="/sector">SECTORS</a>
                                 </li>
                             </ul>
-                            <ul className="">
+                            <ul className="max-md:w-[22%]">
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/human-resources">
-                                        HUMAN RESOURCES
+                                    <a href="/our-policies">HUMAN RESOURCES</a>
+                                </li>
+                            </ul>
+                            <ul className="max-md:w-[22%]">
+                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
+                                    <a href="/news">NEWS</a>
+                                </li>
+                            </ul>
+                            <ul className="max-md:w-[22%]">
+                                <li className="pb-2 max-sm:text-sm text-end max-sm:text-start hover:text-[#1DA1F2] text-white">
+                                    <a
+                                        href="/pages/vito-clarification-text
+"
+                                    >
+                                        GDPR
                                     </a>
                                 </li>
-                            </ul>
-                            <ul className="">
-                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/news">MEDIA</a>
-                                </li>
-                            </ul>
-                            <ul className="">
-                                <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
-                                    <a href="/pages/vito-lighting-text">KVKK</a>
-                                </li>
-                                <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
+                                <li className="pb-2 max-sm:text-sm text-end max-sm:text-start hover:text-[#1DA1F2] text-white">
                                     <a href="/pages/cookie-policy">
                                         COOKIE POLICY
                                     </a>
                                 </li>
-                                <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
+                                {/* <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
                                     <a href="/our-policies">OUR POLICIES</a>
-                                </li>
-                                <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2]">
+                                </li> */}
+                                <li className="pb-2 max-sm:text-sm text-end max-sm:text-start hover:text-[#1DA1F2]">
                                     <a href="/contact">CONTACT</a>
                                 </li>
                             </ul>

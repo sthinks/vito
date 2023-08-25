@@ -1,27 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SectorBanner from "../../assets/sector/sectors.jpg";
 import { useNavigate, useParams } from "react-router-dom";
 function Services() {
     const slug = useParams();
-
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
-        if (slug.slug !== undefined) {
-            document
-                .querySelector(`#${slug.slug}`)
-                .scrollIntoView({ behavior: "smooth", block: "center" });
-        }
+        getTake();
     }, [slug]);
+    const getTake = () => {
+        if (slug.slug !== undefined) {
+            const targetElement = document.querySelector(`#${slug.slug}`);
+
+            if (targetElement) {
+                const viewportHeight = window.innerHeight;
+                const elementRect = targetElement.getBoundingClientRect();
+                const offset =
+                    -(viewportHeight / 2) + elementRect.height * 0.25; // Biraz yukarı kaydırma
+
+                window.scrollTo({
+                    top: elementRect.top + offset,
+                    behavior: "smooth",
+                });
+            }
+        } else {
+            window.scrollTo(0, 0);
+        }
+    };
     return (
         <div className="w-full">
-            {" "}
-            <div className="w-full flex justify-center items-center relative ">
+            <div className="w-full flex justify-center items-center relative max-md:h-[250px] ">
                 <img
-                    className="w-full h-full"
+                    className="w-full h-full object-cover"
                     src={SectorBanner}
                     alt="SectorBanner"
                 />
                 <div className="w-full h-full absolute bg-black opacity-60 left-0 bottom-0" />
-                <p className="absolute text-6xl font-extrabold tracking-widest text-white">
+                <p className="absolute text-6xl font-extrabold max-md:text-3xl tracking-widest text-white">
                     SERVICES
                 </p>
             </div>

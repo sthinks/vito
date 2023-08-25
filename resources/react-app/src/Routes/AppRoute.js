@@ -37,10 +37,7 @@ function AppRoute() {
                             path="/projects-ongoing"
                             element={<MainProjects />}
                         /> */}
-                        <Route
-                            path="/projects/:slug"
-                            element={<MainProjects />}
-                        />
+                        <Route path="/projects" element={<MainProjects />} />
                         <Route
                             path="/instituonal"
                             element={<Institutional />}

@@ -19,7 +19,7 @@ function ActivityHome() {
             <div className="flex flex-row justify-center items-center mt-10 max-md:flex-col max-md:gap-4 h-[600px] max-lg:h-[350px] py-20">
                 <div
                     className="w-1/2 h-full relative cursor-pointer max-md:w-full"
-                    onClick={() => navigate("projects/ongoing-projects")}
+                    onClick={() => navigate("projects")}
                 >
                     <img
                         src={Famous}
@@ -36,7 +36,7 @@ function ActivityHome() {
 
                 <div
                     className="w-1/2 h-full relative cursor-pointer max-md:w-full"
-                    onClick={() => navigate("/projects/main-projects")}
+                    onClick={() => navigate("/projects")}
                 >
                     <img
                         src={Continous}

@@ -8,6 +8,7 @@ import serviceBg from "../../assets/aboutus/servicebg.png";
 import { useInView } from "react-intersection-observer";
 import CEO from "../../assets/institutional/vedattbey.jpg";
 import { useNavigate } from "react-router-dom";
+import Kvkk from "../KVKK/Hseq";
 function AboutUs() {
     const [data, setData] = useState(null);
     const [dataService, setDataService] = useState(null);
@@ -64,13 +65,13 @@ function AboutUs() {
                         we had previously established, was 100% included in ViTO
                         Group of Companies in 2017.
                         <br />
-                        In 2019, he became one of the founding partners of
-                        Bergama Industry company to manufacture pressure vessels
-                        and pipe prefabrication in Bergama Organized Industry.
-                        Currently exporting to 3 continents, Bergama Endüstri's
-                        most prominent principles are the delivery of projects
-                        on time, customer satisfaction and managing projects in
-                        occupational safety.
+                        In 2019, the Group became one of the founding partners
+                        of Bergama Industry factory to manufacture pressure
+                        vessels and pipe prefabrication in Bergama Organized
+                        Industry Zone. Currently exporting to three continents,
+                        Bergama Industry's most prominent principles are the
+                        delivery of projects on time, customer satisfaction and
+                        managing projects in occupational health and safety.
                     </p>
                 </div>
                 <div className="w-full flex justify-between items-center my-5 h-[450px] max-xl:h-[550px] max-lg:h-auto max-md:flex-col">
@@ -270,6 +271,7 @@ function AboutUs() {
                 {dataService != null &&
                     dataService.map((item, i) => (
                         <div
+                            id="spinning-service"
                             key={i}
                             className="w-2/6 flex justify-center items-center max-md:w-5/6 cursor-pointer"
                             onClick={() => navigate(`/service/${item.slug}`)}
@@ -350,6 +352,14 @@ function AboutUs() {
                     communicationwill be kept confidential.
                 </p>
             </div>
+            <div className="w-full flex justify-center items-center px-24 gap-16 my-10 max-xl:px-10 max-md:px-5 max-xl:gap-5 relative z-40 ">
+                <hr className="w-[40%] border-2 border-[#456998] max-sm:hidden" />
+                <p className="w-[20%] text-6xl font-semibold text-[#093977] max-md:text-5xl text-center">
+                    HSE-Q
+                </p>
+                <hr className="w-[40%] border-2 border-[#456998] max-sm:hidden" />
+            </div>
+            <Kvkk />
         </>
     );
 }

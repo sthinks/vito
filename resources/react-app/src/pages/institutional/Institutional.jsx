@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Header from "../../components/header/Header";
 import VedatBey from "../.././assets/institutional/VedatBeyCv.png";
-import Fuat from "../.././assets/institutional/Fuat Şengül.png";
+import Fuat from "../.././assets/institutional/fuat.png";
 import Burhan from "../.././assets/institutional/burhanbey.jpg";
 import Dinc from "../.././assets/institutional/dinsellier.jpg";
 import Zeki from "../.././assets/institutional/zekigunay.png";
@@ -250,27 +250,24 @@ function Institutional() {
                         Dinç Şenlier
                     </h2>
                     <p className="text-white text-left">
-                        DİNÇ ŞENLİER Electronics Engineer, M.Sc. Vito
-                        Mühendislik İnşaat ve Taahhüt A.Ş., Deputy Managing
-                        Director Born in 1953, Dinç Şenlier graduated from the
-                        Middle East Technical University, Department of
-                        Electrical Engineering in 1976, and then completed his
-                        master's degree at the same university and received the
-                        title of Electronics Engineer M.Sc. in 1980. He started
-                        his career as a Research Assistant at METU in 1976, and
-                        continued his career at PTT General Directorate and
-                        Aselsan before joining Tekfen Group in 1982. For 40
-                        years until 2022, he worked in almost every position and
-                        responsibility in Tekfen, one of Turkey's largest
-                        groups. After working as a General Manager at 2 Tekfen
-                        Group companies producing for the Defense Industry for 8
-                        years, and then as Management Representative in the
-                        Contracting company, he served as the consultant to the
-                        President of Tekfen Group Companies and guided and
-                        leaded in many areas. Şenlier, who has been working as
-                        the Deputy Managing Director of ViTO Mühendislik İnşaat
-                        ve Taahhüt A.Ş. since the beginning of 2022, is married
-                        and has one son.
+                        Dinç Şenlier graduated from the Middle East Technical
+                        University, Department of Electrical Engineering in
+                        1976, and then completed his master's degree at the same
+                        university and received the title of Electronics
+                        Engineer M.Sc. in 1980. He started his career as a
+                        Research Assistant at METU in 1976, and continued his
+                        career at PTT General Directorate and Aselsan before
+                        joining Tekfen Group in 1982. For 40 years until 2022,
+                        he worked in almost every position and responsibility in
+                        Tekfen, one of Turkey's largest groups. After working as
+                        a General Manager at 2 Tekfen Group companies producing
+                        for the Defense Industry for 8 years, and then as
+                        Management Representative in the Contracting company, he
+                        served as the consultant to the President of Tekfen
+                        Group Companies and guided and leaded in many areas.
+                        Şenlier, who has been working as the Deputy Managing
+                        Director of ViTO Mühendislik İnşaat ve Taahhüt A.Ş.
+                        since the beginning of 2022, is married and has one son.
                     </p>
                 </div>
                 <div className="w-[32%] max-lg:w-full h-auto">

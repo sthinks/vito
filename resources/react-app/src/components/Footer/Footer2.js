@@ -134,7 +134,7 @@ function Footer2() {
                     ))}
                 </div>
 
-                <div className="flex px-10 max-sm:px-2 pb-14 h-96 justify-between relative z-20 max-lg:flex-col-reverse">
+                <div className="flex px-10 max-sm:px-2 pb-14 h-[26rem] justify-between relative z-20 max-lg:flex-col-reverse">
                     <div className="flex flex-col justify-between w-2/6 max-lg:w-full max-md:mt-5 max-md:gap-5">
                         <img
                             src={logo}
@@ -190,9 +190,7 @@ function Footer2() {
                             </ul>
                             <ul className="">
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/human-resources">
-                                        HUMAN RESOURCES
-                                    </a>
+                                    <a href="/our-policies">HUMAN RESOURCES</a>
                                 </li>
                             </ul>
                             <ul className="">
@@ -202,16 +200,21 @@ function Footer2() {
                             </ul>
                             <ul className="">
                                 <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
-                                    <a href="/pages/vito-lighting-text">KVKK</a>
+                                    <a
+                                        href="/pages/vito-clarification-text
+"
+                                    >
+                                        GDPR
+                                    </a>
                                 </li>
                                 <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
                                     <a href="/pages/cookie-policy">
                                         COOKIE POLICY
                                     </a>
                                 </li>
-                                <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
+                                {/* <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
                                     <a href="/our-policies">OUR POLICIES</a>
-                                </li>
+                                </li> */}
                                 <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2]">
                                     <a href="/contact">CONTACT</a>
                                 </li>

@@ -64,7 +64,7 @@ function ShortFooter() {
                         </ul>
                         <ul className="">
                             <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                <a href="/human-resources">HUMAN RESOURCES</a>
+                                <a href="/our-policies">HUMAN RESOURCES</a>
                             </li>
                         </ul>
                         <ul className="">
@@ -74,14 +74,19 @@ function ShortFooter() {
                         </ul>
                         <ul className="">
                             <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
-                                <a href="/pages/vito-lighting-text">KVKK</a>
+                                <a
+                                    href="/pages/vito-clarification-text
+"
+                                >
+                                    GDPR
+                                </a>
                             </li>
                             <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
                                 <a href="/pages/cookie-policy">COOKIE POLICY</a>
                             </li>
-                            <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
+                            {/* <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
                                 <a href="/our-policies">OUR POLICIES</a>
-                            </li>
+                            </li> */}
                             <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2]">
                                 <a href="/contact">CONTACT</a>
                             </li>
