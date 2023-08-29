@@ -47,18 +47,6 @@ function HomeAbout() {
                             ViTO Group
                         </h2>
                         <p className="text-center mt-6 text-black opacity-70 font-medium leading-9 italic">
-                            {/* ViTO has extensive experience in providing a
-                            comprehensive range of intricate turnkey
-                            construction and erection services, seamlessly
-                            integrated under a single umbrella, catering to
-                            projects within the Oil & Gas, hydrogen and energy
-                            sectors. Widely recognized as industry leaders, we
-                            have also achieved excellence in constructing
-                            storage facilities and tank farms as accomplished
-                            EPC contractors. In 2019, the Group became one of
-                            the founding partners of Bergama Industry factory to
-                            manufacture pressure vessels and pipe prefabrication
-                            in Bergama Organized Industry Zone. */}
                             ViTO has extensive experience in providing a
                             comprehensive range of intricate turnkey
                             construction and erection services, seamlessly

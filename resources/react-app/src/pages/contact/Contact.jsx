@@ -22,16 +22,13 @@ function Contact() {
             >
                 <div className="w-full h-full bg-black absolute top-0 left-0 opacity-50 z-20" />
                 <div className="w-full flex justify-center items-center z-40 relative">
-                    <div className="w-1/4 h-auto relative -left-40 max-sm:hidden">
-                        <p
-                            className="text-[13rem] font-bold text-white tracking-[1.2rem] "
-                            style={{
-                                writingMode: "vertical-rl",
-                                rotate: "180deg",
-                            }}
-                        >
-                            VİTO
-                        </p>
+                    <div className="w-1/4 h-[1300px] max-lg:h-[900px]  flex justify-start items-end max-sm:hidden z-30 ">
+                        <img
+                            src={contactLogo}
+                            className="w-32 tracking-[1.2rem] mb-5 "
+                            style={{ writingMode: "vertical-rl" }}
+                            alt="ContactLogo"
+                        />
                     </div>
                     <div className="w-3/4  flex justify-start items-end mt-52 ">
                         <div className="w-full pt-36">

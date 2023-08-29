@@ -3,8 +3,7 @@ import Home from "../pages/Home/Home";
 import RootLayout from "../layouts/RootLayout";
 import RootLayout2 from "../layouts/RootLayout2";
 import ShortFooterLayout from "../layouts/ShortFooterLayout";
-import Contact from "../pages/Contact/Contact";
-import Deneme from "../components/Deneme/MenuFirst";
+import Contact from "../pages/contact/Contact";
 import Sector from "../pages/Sector/Sector";
 import Global from "../pages/Global/Global";
 import AboutUs from "../pages/AboutUs/AboutUs";
@@ -38,10 +37,7 @@ function AppRoute() {
                             element={<MainProjects />}
                         /> */}
                         <Route path="/projects" element={<MainProjects />} />
-                        <Route
-                            path="/instituonal"
-                            element={<Institutional />}
-                        />
+                        <Route path="/corporate" element={<Institutional />} />
                         <Route path="/projects" element={<Projects />} />
                     </Route>
 
@@ -58,7 +54,6 @@ function AppRoute() {
                         <Route path="/contact" element={<Contact />} />
                     </Route>
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/deneme" element={<Deneme />} />
                 </Route>
                 <Route path="/register" element={<div>register</div>} />
             </Routes>

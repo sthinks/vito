@@ -311,7 +311,7 @@ function AboutUs() {
             </div>
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5 relative z-40 ">
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
-                <p className="text-6xl font-semibold text-[#093977] max-md:text-5xl">
+                <p className="text-6xl text-center max-sm:w-full font-semibold text-[#093977] max-md:text-5xl">
                     ETHIC
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
@@ -354,7 +354,7 @@ function AboutUs() {
             </div>
             <div className="w-full flex justify-center items-center px-24 gap-16 my-10 max-xl:px-10 max-md:px-5 max-xl:gap-5 relative z-40 ">
                 <hr className="w-[40%] border-2 border-[#456998] max-sm:hidden" />
-                <p className="w-[20%] text-6xl font-semibold text-[#093977] max-md:text-5xl text-center">
+                <p className="w-[20%] max-sm:w-full text-6xl font-semibold text-[#093977] max-md:text-5xl text-center">
                     HSE-Q
                 </p>
                 <hr className="w-[40%] border-2 border-[#456998] max-sm:hidden" />

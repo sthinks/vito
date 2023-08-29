@@ -88,7 +88,7 @@ function HomeAboutSlider({ sliderImage, bg }) {
                                     className={
                                         item.style
                                             ? "w-3/4 h-3/4 object-cover p-2 cursor-pointer rounded-full"
-                                            : "w-full h-full object-cover p-2 cursor-pointer "
+                                            : "w-full h-full  object-cover p-2 cursor-pointer "
                                     }
                                     src={item.url}
                                     alt="images"
@@ -99,7 +99,7 @@ function HomeAboutSlider({ sliderImage, bg }) {
                         <div className="w-56 h-80 max-lg:h-56 max-md:h-full outline-0">
                             <img
                                 key={i}
-                                className="w-full h-full object-cover p-2 cursor-pointer"
+                                className="w-full h-full max-sm:h-[200px] object-cover p-2 cursor-pointer"
                                 src={item.url}
                                 alt="images"
                             />

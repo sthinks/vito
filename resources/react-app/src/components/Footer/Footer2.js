@@ -174,7 +174,7 @@ function Footer2() {
                                     <a href="/">HOME</a>
                                 </li>
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/instituonal">INSTITUTIONAL</a>
+                                    <a href="/corporate">CORPORATE</a>
                                 </li>
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                     <a href="/service">SERVICES</a>

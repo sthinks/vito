@@ -44,7 +44,7 @@ function Institutional() {
             <div className="relative w-full flex justify-center items-center h-full object-cover max-lg:h-auto">
                 <img src={InstBanner} alt="instbanner" />
                 <div className="absolute bg-blue-800 opacity-25 w-full h-full left-0 top-0" />
-                <h2 className="overlay-text max-md:text-5xl mt-10 absolute text-center text-6xl text-white bg-opacity-70 px-2 py-1 rounded font-bold">
+                <h2 className="overlay-text max-md:text-5xl max-sm:text-2xl max-sm:mt-0 mt-10 absolute text-center text-6xl text-white bg-opacity-70 px-2 py-1 rounded font-bold">
                     CORPORATE
                 </h2>
             </div>
@@ -351,7 +351,7 @@ function Institutional() {
                         projectsFuat and worked with companies such as BP,
                         Technip, Bechtel and Shell in oil and gas projects in
                         different regions from Libya to Sakhalin. In 2010, he
-                        started working at Akenerji Ces and until 2015, he was
+                        started working at Akenerji CEZ and until 2015, he was
                         involved in the construction of one of the largest
                         combined power plants in Turkey, from the feed-in phase
                         to the commissioning phase. Between 2015-2017, he worked

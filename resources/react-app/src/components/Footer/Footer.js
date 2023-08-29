@@ -181,7 +181,7 @@ function Footer() {
                                     <a href="/">HOME</a>
                                 </li>
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/instituonal">INSTITUTIONAL</a>
+                                    <a href="/corporate">CORPORATE</a>
                                 </li>
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                     <a href="/service">SERVICES</a>
@@ -189,9 +189,7 @@ function Footer() {
                             </ul>
                             <ul className="max-md:w-[22%]">
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/projects/main-projects">
-                                        PROJECTS
-                                    </a>
+                                    <a href="/projects">PROJECTS</a>
                                 </li>
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
                                     <a href="/sector">SECTORS</a>

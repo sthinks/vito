@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Slider from "react-slick";
@@ -40,8 +40,24 @@ function HomeSlider() {
     const [activeSlide, setActiveSlide] = useState(0);
     const [data, setData] = useState([]);
     const handleSlideChange = (currentSlide) => {
+        const prevSlide = document.querySelector(
+            ".slide-content.animate-zoomIn.scale-up-center"
+        );
+        if (prevSlide) {
+            prevSlide.classList.remove("scale-up-center");
+            void prevSlide.offsetWidth; // Bir reflow tetikleyerek CSS sınıfı kaldırma işlemini güncelleme
+        }
+
+        // Şu anki slaytın animasyonunu ekleyin
+        const currentSlidee = document.querySelector(
+            ".slick-current .slide-content"
+        );
+        if (currentSlidee) {
+            currentSlidee.classList.add("scale-up-center");
+        }
         setActiveSlide(currentSlide);
-        setShowInfoBox(false); // Her slayt değişiminde kutuyu gizle
+        setShowInfoBox(false);
+        // Her slayt değişiminde kutuyu gizle
         const timer = setTimeout(() => {
             setShowInfoBox(true);
         }, 2000); // 2 saniye sonra kutuyu göster
@@ -59,6 +75,7 @@ function HomeSlider() {
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
         fade: true,
+        pauseOnHover: false,
         cssEase: "linear",
         afterChange: (currentSlide) => handleSlideChange(currentSlide),
     };
@@ -70,6 +87,7 @@ function HomeSlider() {
 
         setData(result.data);
     };
+
     return (
         <div>
             <Slider {...settings}>
@@ -83,7 +101,7 @@ function HomeSlider() {
                             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-40"></div>
                             <img
                                 src={slide.media}
-                                className={`w-full object-cover max-sm:h-[250px] z-10 transform-gpu transition-transform`}
+                                className={`scale-up-center w-full object-cover max-sm:h-[250px] z-10 transform-gpu transition-transform`}
                                 alt={`imageSlider-${index}`}
                             />
                         </div>

@@ -106,7 +106,7 @@ function Header() {
                                     ? "text-[#fff]"
                                     : "text-[#1b4378] hover:bg-[#1b4378] hover:text-[#fff] hover:py-[30px] hover:px-[5px]"
                             } `}
-                            to="/instituonal"
+                            to="/corporate"
                         >
                             CORPORATE
                         </Link>
@@ -265,11 +265,10 @@ function Header() {
                             </li>
                             <li className="text-white font-bold text-lg max-xl:text-sm">
                                 <Link
-                                    to="/instituonal"
+                                    to="/corporate"
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    {" "}
-                                    CORPORATE{" "}
+                                    CORPORATE
                                 </Link>
                             </li>
                             <li className="text-white font-bold text-lg max-xl:text-sm">
@@ -286,8 +285,7 @@ function Header() {
                                     to="/projects"
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    {" "}
-                                    PROJECTS{" "}
+                                    PROJECTS
                                 </Link>
                             </li>
 
