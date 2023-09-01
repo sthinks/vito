@@ -56,7 +56,10 @@ function MainProjects() {
                                     key={i}
                                     onClick={() =>
                                         navigate(
-                                            `/projects/project-detail/${item.slug}`
+                                            `/projects/project-detail/${item.slug}`,
+                                            {
+                                                id: item.id,
+                                            }
                                         )
                                     }
                                     className={

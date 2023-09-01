@@ -1,7 +1,6 @@
 import React, { useLayoutEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import service from "../../service/service";
-import { pdfjs } from "react-pdf";
 function Page() {
     const [data, setData] = useState(null);
     const slug = useParams();
