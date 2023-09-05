@@ -28,7 +28,7 @@ function Activity() {
         {
             id: 3,
             src: ActiveFourth,
-            description: "MAINTANCE AND SPARE PARTS",
+            description: "MAINTENANCE",
             slug: "service",
         },
     ];

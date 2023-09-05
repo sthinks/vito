@@ -7,14 +7,14 @@ function HomeAnimation() {
         {
             id: 0,
             targetValue: 21000,
-            unit: "Ton",
-            content: "Steel Struction Erection",
+            unit: "Tons",
+            content: "Steel Structure Erection",
         },
         {
             id: 1,
             targetValue: 69000,
-            unit: "Ton",
-            content: "Plate for Tanks Fabrication and Erection",
+            unit: "Tons",
+            content: "Steel Plates Fabricated and Erected For Tanks",
         },
         {
             id: 2,

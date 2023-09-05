@@ -318,7 +318,7 @@ function AboutUs() {
             </div>
             <div className="w-full container mx-auto px-36 flex justify-center items-center flex-col max-md:px-6">
                 <p className="text-2xl font-bold text-black py-2 text-center ">
-                    HEALTH SAFETY ENVIRONMENT - QUALITY
+                    CODE OF ETHICS AND BUSINESS CONDUCT
                 </p>
                 <p className="text-lg font-normal text-slate-700 text-center py-2">
                     ViTO Group displays the highest standards for understanding

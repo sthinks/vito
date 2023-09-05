@@ -16,7 +16,7 @@ function Hseq() {
             <div className="container mx-auto px-24 max-lg:px-16 max-md:px-5 my-14">
                 <div className="py-2">
                     <p className="text-2xl font-bold text-black py-2 text-center ">
-                        CODE OF ETHICS AND BUSINESS CONDUCT
+                        HEALTH SAFETY ENVIRONMENT - QUALITY
                     </p>
                     <p className="text-lg  py-2">
                         As VITO, we embrace the Total Quality Management

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import Header from "../../components/header/Header";
+import React, { useEffect, useState } from "react";
+
 import VedatBey from "../.././assets/institutional/VedatBeyCv.png";
 import Fuat from "../.././assets/institutional/fuat.png";
 import Burhan from "../.././assets/institutional/burhanbey.jpg";
@@ -240,7 +240,7 @@ function Institutional() {
             <div className="container mx-auto flex flex-row items-center justify-center my-2">
                 <div className="w-2/5 h-[2px] bg-[#093977] mr-4"></div>
                 <h1 className="font-bold text-4xl my-5 mx-0 text-[#093977] text-center">
-                    MANAGMENT
+                    MANAGEMENT
                 </h1>
                 <div className="w-2/5 h-[2px] bg-[#093977] ml-4"></div>
             </div>
