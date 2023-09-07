@@ -9,7 +9,7 @@ import image5 from "../../assets/sector/sliderImage/5.png";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
-    console.log(className);
+
     return (
         <MdKeyboardArrowRight
             className="slick-arrow slick-next right-4 max-lg:right-2 h-72 w-72 z-50 max-xl:w-56 max-xl:h-56 max-lg:w-44 max-lg:h-44 max-md:w-20  max-md:h-20"

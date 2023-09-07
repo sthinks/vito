@@ -4,6 +4,7 @@ import backSectorImage from "../../assets/sector/bgsector2.png";
 import rightImage from "../../assets/sector/asasa.png";
 import leftImage from "../../assets/sector/bgsector.png";
 import SectorBanner from "../../assets/sector/sectors.jpg";
+import Wave from "../../assets/footer/footerwaves.png";
 function Sector() {
     useEffect(() => {
         window.scrollTo(0, 0); // Sayfanın en üstüne kaydır
@@ -106,6 +107,11 @@ function Sector() {
                     </div>
                 </div>
             </div>
+            <img
+                className="w-full rotate-180 relative bottom-28 -mb-11"
+                src={Wave}
+                alt="Wawes"
+            />
         </div>
     );
 }

@@ -42,7 +42,7 @@ function Footer2() {
             top: 22,
         },
         {
-            address: "Technicon Mumbai",
+            address: "Technicon Engineering",
             location:
                 "Office No 404,4th Floor, Filix Condominium, L.B.S Marg, Bhandup West, Maharashtra, Mumbai, India",
             img: mumbai,
@@ -54,11 +54,11 @@ function Footer2() {
             location:
                 "Jebel Ali free zone, Office S10123O019, Dubai, United Arab Emirates",
             img: dubai,
-            left: 61,
-            top: 45,
+            left: 60,
+            top: 39,
         },
         {
-            address: "Technicon Bakü",
+            address: "Technicon Baku",
             location: "Xocalı prospekti 37, Demirchi Tower, 21-ci mərtəbə",
             img: baku,
             left: 61,
@@ -69,8 +69,8 @@ function Footer2() {
             location:
                 "Al-Gassar Tower Street 920 Zone 63 Building No 27 West Bay  P.O Box 26660  Doha QATARLandline No: +974 400 784 54",
             img: katar,
-            top: 42,
-            left: 57,
+            top: 36,
+            left: 58,
         },
         {
             address: "Bergama Industry",
@@ -102,7 +102,6 @@ function Footer2() {
                     showMap ? "show-map" : ""
                 }`}
                 ref={ref}
-                onScroll={(e) => console.log(e.currentTarget.scrollTop)}
             >
                 <img
                     src={bglogo}
@@ -112,13 +111,14 @@ function Footer2() {
 
                 <div className="relative top-20 mb-[31rem] max-lg:mb-[20rem] max-md:mb-[12rem] max-md:top-10">
                     <img
-                        className="map-image"
+                        className="map-image w-full"
                         id="image-id"
                         src={map}
                         alt="FooterMap"
                     />
                     {locationList.map((item, i) => (
                         <img
+                            key={i}
                             src={mapcursor}
                             onClick={() => {
                                 setSelectedIndex(i);

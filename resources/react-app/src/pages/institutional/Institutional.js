@@ -34,8 +34,6 @@ function Institutional() {
         } else {
             setObjectPosition(objectPosition + value);
         }
-
-        console.log(objectPosition);
     };
     //İmage slider end
 
@@ -148,15 +146,13 @@ function Institutional() {
                     />
                 </div>
                 <div className="w-[8%] flex-col text-center  max-lg:hidden">
-                    <div className="k bg-[#093977] h-4/5 relative flex justify-center">
+                    <div className="k bg-[#093977] h-4/5 relative flex justify-center items-center">
                         <p
                             className="text-white text-2xl p-1 max-lg:hidden"
                             style={{
                                 writingMode: "vertical-rl",
 
                                 position: "absolute",
-                                height: "250px",
-                                top: "90px",
                             }}
                         >
                             Vice Chairman of <br /> the Board of Directors
@@ -282,9 +278,6 @@ function Institutional() {
                         className="text-white text-2xl p-1"
                         style={{
                             writingMode: "vertical-rl",
-                            marginLeft: "-50%",
-                            marginTop: "50%",
-                            height: "350px",
                         }}
                     >
                         Deputy Managing Director HSEQ
@@ -309,7 +302,6 @@ function Institutional() {
                         className="text-white text-2xl p-1"
                         style={{
                             writingMode: "vertical-rl",
-                            marginLeft: "15%",
                             marginTop: "100%",
                             height: "400px",
                             textAlign: "center",
@@ -407,14 +399,11 @@ function Institutional() {
                     </p>
                 </div>
                 <div className="w-[8%] flex-col text-center  max-lg:hidden">
-                    <div className=" bg-[#093977] h-4/5 relative flex justify-center">
+                    <div className=" bg-[#093977] h-4/5 relative flex justify-center items-center">
                         <p
                             className="text-white text-2xl p-1"
                             style={{
                                 writingMode: "vertical-rl",
-                                marginLeft: "-20%",
-                                marginTop: "20%",
-                                height: "350px",
                             }}
                         >
                             Head Office Project Director

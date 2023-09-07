@@ -32,10 +32,8 @@ function News() {
     }, []);
     return isLoading ? (
         <>
-        {console.log("fsdfgsdgsgsg")}
-        <Loading />
+            <Loading />
         </>
-
     ) : (
         <div className="w-full">
             <div className="w-full flex justify-center items-center relative ">

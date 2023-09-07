@@ -45,6 +45,8 @@ function AppRoute() {
                         <Route path="/" element={<Home />} />
                         <Route path="/sector" element={<Sector />} />
                         <Route path="/about-us" element={<AboutUs />} />
+                        <Route path="/about-us/:slug" element={<AboutUs />} />
+
                         <Route
                             path="/projects/project-detail/:slug"
                             element={<ProjectDetail />}

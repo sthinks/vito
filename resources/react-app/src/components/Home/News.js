@@ -62,7 +62,7 @@ function Haber() {
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href={`news/${news[0].slug}`}>Devamı</a>
+                                <a href={`news/${news[0].slug}`}>Read More</a>
                             </p>
                         </div>
                     </div>
@@ -96,7 +96,7 @@ function Haber() {
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href={`news/${news[1].slug}`}>Devamı</a>
+                                <a href={`news/${news[1].slug}`}>Read More</a>
                             </p>
                         </div>
                     </div>

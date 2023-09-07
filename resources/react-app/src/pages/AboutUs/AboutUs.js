@@ -7,18 +7,36 @@ import CountUp from "react-countup";
 import serviceBg from "../../assets/aboutus/servicebg.png";
 import { useInView } from "react-intersection-observer";
 import CEO from "../../assets/institutional/vedattbey.jpg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Kvkk from "../KVKK/Hseq";
 function AboutUs() {
     const [data, setData] = useState(null);
     const [dataService, setDataService] = useState(null);
     const [newsAnim, setNewsAnim] = useState(false);
-
+    const { slug } = useParams();
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
         getDataStatHandler();
         getDataServiceHandler();
-    }, []);
+        setTimeout(() => {
+            if (slug !== undefined && slug === "service") {
+                const targetElement = document.querySelector(`#${slug}`);
+                if (targetElement) {
+                    const viewportHeight = window.innerHeight;
+                    const elementRect = targetElement.getBoundingClientRect();
+                    const offset =
+                        -(viewportHeight / 2) + elementRect.height * 2; // Biraz yukarı kaydırma
+
+                    window.scrollTo({
+                        top: elementRect.bottom + offset,
+                        behavior: "smooth",
+                    });
+                }
+            } else {
+                window.scrollTo(0, 0);
+            }
+        }, 1000);
+    }, [slug]);
     const getDataStatHandler = async () => {
         const result = await service.getAboutStat();
         setData(result.data);
@@ -36,7 +54,7 @@ function AboutUs() {
             setNewsAnim(true);
         }
     }
-    const navigate = useNavigate();
+
     return (
         <>
             <div
@@ -259,7 +277,10 @@ function AboutUs() {
             </div>
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5 relative z-40 ">
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
-                <p className="text-6xl font-semibold text-[#093977] max-md:text-5xl">
+                <p
+                    className="text-6xl font-semibold text-[#093977] max-md:text-5xl"
+                    id="service"
+                >
                     SERVICES
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />

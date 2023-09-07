@@ -55,8 +55,8 @@ function Footer() {
             location:
                 "Jebel Ali free zone, Office S10123O019, Dubai, United Arab Emirates",
             img: dubai,
-            left: 61,
-            top: 45,
+            left: 60,
+            top: 39,
         },
         {
             address: "Technicon Baku",
@@ -70,8 +70,8 @@ function Footer() {
             location:
                 "Al-Gassar Tower Street 920 Zone 63 Building No 27 West Bay  P.O Box 26660  Doha QATARLandline No: +974 400 784 54",
             img: katar,
-            top: 42,
-            left: 57,
+            top: 36,
+            left: 58,
         },
         {
             address: "Bergama Industry",
@@ -103,12 +103,11 @@ function Footer() {
                     showMap ? "show-map" : ""
                 }`}
                 ref={ref}
-                onScroll={(e) => console.log(e.currentTarget.scrollTop)}
             >
                 <img
                     src={footerWave}
                     alt="footerWave"
-                    className="relative top-[-2px]"
+                    className="w-full relative top-[-2px]"
                 />
 
                 <img
@@ -119,13 +118,14 @@ function Footer() {
 
                 <div className="relative top-20 mb-[20rem] max-lg:mb-[14rem] max-md:mb-[20rem] max-md:top-10">
                     <img
-                        className="map-image"
+                        className="map-image w-full"
                         id="image-id"
                         src={map}
                         alt="FooterMap"
                     />
                     {locationList.map((item, i) => (
                         <img
+                            key={i}
                             src={mapcursor}
                             onClick={() => {
                                 setSelectedIndex(i);

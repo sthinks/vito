@@ -32,7 +32,7 @@ function Global() {
     }, []);
     const getDataHandler = async () => {
         const result = await service.getGlobalVito();
-        console.log(result);
+
         setData(result.data);
     };
     useEffect(() => {
@@ -106,7 +106,7 @@ function Global() {
     return (
         <>
             <div className="w-full flex justify-center items-center relative">
-                <img src={globalheader} alt="VitoGlobal" />
+                <img className="w-full" src={globalheader} alt="VitoGlobal" />
                 <p className="absolute text-6xl font-bold max-md:text-3xl text-center text-[#093977] tracking-widest z-50">
                     ViTO GLOBAL
                 </p>
@@ -120,7 +120,7 @@ function Global() {
             >
                 <div className="relative top-20 mb-[10rem] max-lg:mb-[5rem]  max-md:top-10">
                     <img
-                        className="map-image"
+                        className="map-image w-full"
                         id="image-id"
                         src={map}
                         alt="FooterMap"

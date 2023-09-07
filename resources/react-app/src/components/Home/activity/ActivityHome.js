@@ -26,7 +26,7 @@ function ActivityHome() {
                         alt="contprj"
                         className="w-full h-full relative z-30 object-cover"
                     />
-                    <div className="absolute top-0 left-0 w-full h-full bg-blue-300 opacity-50 z-40" />
+                    <div className="absolute top-0 left-0 w-full h-full bg-[#2A72B0] opacity-50 z-40" />
                     <p>
                         <p className="text-white text-4xl max-lg:text-2xl max-md:text-xl font-bold absolute z-50 text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                             ONGOING PROJECTS
@@ -43,7 +43,7 @@ function ActivityHome() {
                         alt="contprj"
                         className="w-full h-full relative z-30 object-cover"
                     />
-                    <div className="absolute top-0 right-0 w-full h-full bg-blue-500 opacity-50 z-40" />
+                    <div className="absolute top-0 right-0 w-full h-full bg-[#0D2A96] opacity-50 z-40" />
                     <p to="">
                         <p className="text-white text-4xl max-lg:text-2xl max-md:text-xl font-bold absolute z-50 text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                             TURNKEY PROJECTS

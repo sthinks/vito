@@ -93,6 +93,7 @@ function GlobalSlider({ sliderImage, bg }) {
             <Slider className={bg ? `bg-white` : ""} {...settings}>
                 {sliderImage.map((item, i) => (
                     <div
+                        key={i}
                         className={
                             sliderImage.length
                                 ? "w-64 h-72 object-cover outline-0"

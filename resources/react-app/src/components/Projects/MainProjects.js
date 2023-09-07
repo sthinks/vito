@@ -8,10 +8,11 @@ function MainProjects() {
     const [projects, setProjects] = useState(null);
     const [onProjects, setOnProjects] = useState(null);
     const [projectsAnim, setProjectsAnim] = useState(false);
+
     const { ref, inView } = useInView({
-        /* Optional options */
         threshold: 0,
     });
+
     const getAllMainProjects = async () => {
         const result = await services.getProjects();
 
