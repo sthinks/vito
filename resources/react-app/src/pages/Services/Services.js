@@ -40,7 +40,10 @@ function Services() {
                 </p>
             </div>
             <div className="container mx-auto px-24 max-lg:px-16 max-md:px-5 my-14">
-                <div className="w-full my-10" id="engineering">
+                <div
+                    className="w-full py-20 border-b-2 border-gray-500"
+                    id="engineering"
+                >
                     <p className="text-3xl text-black opacity-60 max-lg:text-2xl max-md:text-xl font-bold my-2">
                         Engineering
                     </p>
@@ -65,7 +68,10 @@ function Services() {
                         engineering services are provided by Technicon Mumbai.
                     </p>
                 </div>
-                <div className="w-full my-10" id="procurement">
+                <div
+                    className="w-full py-20 border-b-2 border-gray-500"
+                    id="procurement"
+                >
                     <p className="text-3xl text-black opacity-60 max-lg:text-2xl max-md:text-xl font-bold my-2">
                         Procurement
                     </p>
@@ -82,7 +88,10 @@ function Services() {
                         and processing have been realized. 
                     </p>
                 </div>
-                <div className="w-full my-10" id="construction">
+                <div
+                    className="w-full py-20 border-b-2 border-gray-500"
+                    id="construction"
+                >
                     <p className="text-3xl text-black opacity-60 max-lg:text-2xl max-md:text-xl font-bold my-2">
                         Construction
                     </p>
@@ -121,7 +130,10 @@ function Services() {
                         traditional methods for storage terminals. 
                     </p>
                 </div>
-                <div className="w-full my-10" id="hydraulic-jack-systems">
+                <div
+                    className="w-full py-20 border-b-2 border-gray-500"
+                    id="hydraulic-jack-systems"
+                >
                     <p className="text-3xl text-black opacity-60 max-lg:text-2xl max-md:text-xl font-bold my-2">
                         Hydraulic jack systems
                     </p>
@@ -177,7 +189,7 @@ function Services() {
                         utilize the technology of the future today.
                     </p>
                 </div>
-                <div className="w-full my-10" id="manufacturing">
+                <div className="w-full py-20" id="manufacturing">
                     <p className="text-3xl text-black opacity-60 max-lg:text-2xl max-md:text-xl font-bold my-2">
                         Manufacturing
                     </p>

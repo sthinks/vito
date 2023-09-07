@@ -46,7 +46,7 @@ function ActivityHome() {
                     <div className="absolute top-0 right-0 w-full h-full bg-blue-500 opacity-50 z-40" />
                     <p to="">
                         <p className="text-white text-4xl max-lg:text-2xl max-md:text-xl font-bold absolute z-50 text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                            MAIN PROJECTS
+                            TURNKEY PROJECTS
                         </p>
                     </p>
                 </div>

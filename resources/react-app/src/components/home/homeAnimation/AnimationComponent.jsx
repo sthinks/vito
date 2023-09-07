@@ -35,7 +35,7 @@ const AnimationComponent = ({ description, targetNumber, unit }) => {
                                 end={targetNumber}
                                 redraw={true} // Bu özelliği eklemeyi unutmayın
                             />
-                            {unit}
+                      <span className="ml-2">{unit}</span>
                         </>
                     )}
                 </p>

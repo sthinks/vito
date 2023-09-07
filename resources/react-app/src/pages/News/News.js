@@ -3,9 +3,11 @@ import service from "../../service/service";
 import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import newsBanner from "../../assets/news/newsbanner.jpg";
+import Loading from "../../components/loading/Loading";
 function News() {
+    const [isLoading, setIsLoading] = useState(true);
     const [news, setNews] = useState(null);
-    const [newsAnim, setNewsAnim] = useState(false);
+    const [newsAnim, setNewsAnim] = useState(true);
     const { ref, inView, entry } = useInView({
         /* Optional options */
         threshold: 0,
@@ -15,6 +17,9 @@ function News() {
     const getAllNews = async () => {
         const result = await service.getAllNews();
         setNews(result.data);
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
     };
     if (inView === true) {
         if (newsAnim !== true) {
@@ -25,7 +30,13 @@ function News() {
         getAllNews();
         window.scrollTo(0, 0);
     }, []);
-    return (
+    return isLoading ? (
+        <>
+        {console.log("fsdfgsdgsgsg")}
+        <Loading />
+        </>
+
+    ) : (
         <div className="w-full">
             <div className="w-full flex justify-center items-center relative ">
                 <img

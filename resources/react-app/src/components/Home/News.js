@@ -130,7 +130,7 @@ function Haber() {
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href={`news/${news[2].slug}`}>Devamı</a>
+                                <a href={`news/${news[2].slug}`}>Read More</a>
                             </p>
                         </div>
                     </div>

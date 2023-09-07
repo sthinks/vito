@@ -270,11 +270,11 @@ function AboutUs() {
             >
                 {dataService != null &&
                     dataService.map((item, i) => (
-                        <div
+                        <a
                             id="spinning-service"
                             key={i}
                             className="w-2/6 flex justify-center items-center max-md:w-5/6 cursor-pointer"
-                            onClick={() => navigate(`/service/${item.slug}`)}
+                            href={`/service/${item.slug}#${item.slug}`}
                         >
                             <div className="relative rounded-full w-64 h-64 flex justify-center items-center max-sm:w-52 max-sm:h-52 max-sm:m-2">
                                 {/* Dönen Çerçeve */}
@@ -306,7 +306,7 @@ function AboutUs() {
                                     {item.title}
                                 </p>
                             </div>
-                        </div>
+                        </a>
                     ))}
             </div>
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5 relative z-40 ">

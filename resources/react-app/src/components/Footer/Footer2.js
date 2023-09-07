@@ -195,7 +195,7 @@ function Footer2() {
                             </ul>
                             <ul className="">
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/news">MEDIA</a>
+                                    <a href="/news">NEWS</a>
                                 </li>
                             </ul>
                             <ul className="">

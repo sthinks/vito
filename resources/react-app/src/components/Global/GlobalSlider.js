@@ -33,7 +33,6 @@ function SamplePrevArrow(props) {
     );
 }
 function GlobalSlider({ sliderImage, bg }) {
-    console.log("sliderImage", sliderImage.length);
     var settings = {
         dots: false,
         speed: 500,

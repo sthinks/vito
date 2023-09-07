@@ -2,15 +2,12 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import services from "../../service/service";
-import Header from "../header/Header";
-import ShortFooter from "../Footer/ShortFooter";
-import ProjectBaner from "../../assets/projects/project123.png";
-import HomeAboutSlider from "../home/homeAbout/HomeAboutSlider";
 import GlobalSlider from "../Global/GlobalSlider";
 
 const ProjectDetail = () => {
     const [project, setProject] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
+
     const param = useParams();
 
     const getMainProject = async () => {
@@ -20,14 +17,12 @@ const ProjectDetail = () => {
             if (result.data) {
                 window.scrollTo(0, 0);
             }
-
             setIsLoading(false);
         } catch (error) {
             console.error("Error fetching project data:", error);
             setIsLoading(false);
         }
     };
-
     useEffect(() => {
         getMainProject();
     }, []);
@@ -47,6 +42,7 @@ const ProjectDetail = () => {
                         />
                         <div className="absolute bg-black opacity-40 w-full h-full top-0 left-0" />
                     </div>
+
                     <div className="flex p-10 justify-evenly items-center text-white relative">
                         <div
                             className="max-md:hidden"
