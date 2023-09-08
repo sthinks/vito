@@ -3,7 +3,7 @@ import contactBanner from "../../assets/contact/contactbanner.png";
 import contactLogo from "../../assets/contact/contactlogo.png";
 import { BsTelephone } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
-
+import {Helmet} from "react-helmet"
 import { IoLocationSharp } from "react-icons/io5";
 
 function Contact() {
@@ -12,6 +12,16 @@ function Contact() {
     }, []);
     return (
         <>
+            <Helmet>
+
+                <meta name="description" content="Vito Contact" />
+                <meta name="keywords" content="Vito İletisim" />
+                <meta
+                    name="og:title"
+                    content="ViTO Energy Engineering Construction and Contracting Inc"
+                />
+                <meta name="og:title" content="ViTO Energy Engineering " />
+            </Helmet>
             <div
                 className="w-full bg-[#093977] relative"
                 style={{

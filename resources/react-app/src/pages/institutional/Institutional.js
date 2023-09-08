@@ -10,7 +10,7 @@ import Tahir from "../.././assets/institutional/tahirbey.jpg";
 import InstBanner from "../.././assets/institutional/kurumsl.png";
 import History from "../.././assets/institutional/ghistory.png";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-
+import { Helmet } from "react-helmet";
 const paragraphStyles = {
     WebkitLineClamp: 5,
     WebkitBoxOrient: "vertical",
@@ -39,6 +39,15 @@ function Institutional() {
 
     return (
         <>
+            <Helmet>
+                <meta name="description" content="Vito Institutional" />
+                <meta name="keywords" content="Vito Institutional Page" />
+                <meta
+                    name="og:title"
+                    content="ViTO Energy Engineering Construction and Contracting Inc"
+                />
+                <meta name="og:title" content="ViTO Energy Engineering " />
+            </Helmet>
             <div className="relative w-full flex justify-center items-center h-full object-cover max-lg:h-auto">
                 <img src={InstBanner} alt="instbanner" />
                 <div className="absolute bg-blue-800 opacity-25 w-full h-full left-0 top-0" />

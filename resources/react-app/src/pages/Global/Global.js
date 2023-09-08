@@ -15,7 +15,7 @@ import dubai from "../../assets/footer/dubai.jpg";
 import vadi from "../../assets/footer/Vadistanbul.jpg";
 import mumbai from "../../assets/footer/mumbai.jpg";
 import buda from "../../assets/footer/buda.jpg";
-
+import {Helmet} from "react-helmet"
 function Global() {
     const [data, setData] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -105,6 +105,15 @@ function Global() {
     ];
     return (
         <>
+            <Helmet>
+                <meta name="description" content="Vito Global" />
+                <meta name="keywords" content="Vito Global Page" />
+                <meta
+                    name="og:title"
+                    content="ViTO Energy Engineering Construction and Contracting Inc"
+                />
+                <meta name="og:title" content="ViTO Energy Engineering " />
+            </Helmet>
             <div className="w-full flex justify-center items-center relative">
                 <img className="w-full" src={globalheader} alt="VitoGlobal" />
                 <p className="absolute text-6xl font-bold max-md:text-3xl text-center text-[#093977] tracking-widest z-50">

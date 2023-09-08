@@ -7,7 +7,8 @@ import CountUp from "react-countup";
 import serviceBg from "../../assets/aboutus/servicebg.png";
 import { useInView } from "react-intersection-observer";
 import CEO from "../../assets/institutional/vedattbey.jpg";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Kvkk from "../KVKK/Hseq";
 function AboutUs() {
     const [data, setData] = useState(null);
@@ -57,6 +58,16 @@ function AboutUs() {
 
     return (
         <>
+            <Helmet>
+                <title>Home</title>
+                <meta name="description" content="Vito Ana Sayfa" />
+                <meta name="keywords" content="Vito Home Page" />
+                <meta
+                    name="og:title"
+                    content="ViTO Energy Engineering Construction and Contracting Inc"
+                />
+                <meta name="og:title" content="ViTO Energy Engineering " />
+            </Helmet>
             <div
                 className="w-full bg-[#093977] relative"
                 style={{
@@ -81,15 +92,14 @@ function AboutUs() {
                         the field of contracting with partnerships with
                         world-class companies in its field. IVT company, which
                         we had previously established, was 100% included in ViTO
-                        Group of Companies in 2017.
-                        <br />
-                        In 2019, the Group became one of the founding partners
-                        of Bergama Industry factory to manufacture pressure
-                        vessels and pipe prefabrication in Bergama Organized
-                        Industry Zone. Currently exporting to three continents,
-                        Bergama Industry's most prominent principles are the
-                        delivery of projects on time, customer satisfaction and
-                        managing projects in occupational health and safety.
+                        Group of Companies in 2017. In 2019, the Group became
+                        one of the founding partners of Bergama Industry factory
+                        to manufacture pressure vessels and pipe prefabrication
+                        in Bergama Organized Industry Zone. Currently exporting
+                        to three continents, Bergama Industry's most prominent
+                        principles are the delivery of projects on time,
+                        customer satisfaction and managing projects in
+                        occupational health and safety.
                     </p>
                 </div>
                 <div className="w-full flex justify-between items-center my-5 h-[450px] max-xl:h-[550px] max-lg:h-auto max-md:flex-col">
@@ -102,21 +112,19 @@ function AboutUs() {
                         <p className="text-3xl font-bold max-lg:text-xl max-md:text-lg text-center text-white z-50 py-10">
                             THE MESSAGE OF THE CHAIRMAN & CEO
                         </p>
-                        <p className="text-xl font-normal max-lg:text-lg max-md:text-base text-center text-white z-50 py-10">
+                        <p className="text-xl text-left font-normal max-lg:text-lg max-md:text-base text-white z-50 py-10">
                             Founded in 2000, we have steadily grown our company
                             over the years and transformed it into today's ViTO
-                            group of companies.
-                            <br />
-                            During this growth process, we established many
-                            experienced and reputable foreign partnerships in
-                            the world and realized important projects in the
-                            field of contracting. In this context, we added our
-                            joint venture contracting company, which we
-                            established with our foreign partners, to our ViTO
-                            group of companies as IVT company in 2017. After
-                            that, in 2019, we opened our Bergama Industry
-                            Factory, where pressure vessels and pipe
-                            prefabrication are manufactured, in Bergama
+                            group of companies. During this growth process, we
+                            established many experienced and reputable foreign
+                            partnerships in the world and realized important
+                            projects in the field of contracting. In this
+                            context, we added our joint venture contracting
+                            company, which we established with our foreign
+                            partners, to our ViTO group of companies as IVT
+                            company in 2017. After that, in 2019, we opened our
+                            Bergama Industry Factory, where pressure vessels and
+                            pipe prefabrication are manufactured, in Bergama
                             Organized Industrial Zone. Currently, we export our
                             products to three continents and deliver them to
                             customers all over the world. The priority of our
@@ -341,36 +349,25 @@ function AboutUs() {
                 <p className="text-2xl font-bold text-black py-2 text-center ">
                     CODE OF ETHICS AND BUSINESS CONDUCT
                 </p>
-                <p className="text-lg font-normal text-slate-700 text-center py-2">
+                <p className="text-lg py-2">
                     ViTO Group displays the highest standards for understanding
                     and observing laws and regulations; and expects its
                     Employees and Business Partners to always act in a compliant
-                    manner.
-                </p>
-                <p className="text-lg font-normal text-slate-700 text-center py-2">
-                    “Respect for people” is the core element of our philosophy.
-                    We value human rights and employee rights. Harassment and
-                    mobbingare unethical ways of behaving towards a person.
-                </p>
-                <p className="text-lg font-normal text-slate-700 text-center py-2">
-                    Protecting the environment and human health are the basic
-                    principles that we prioritize in all our activities.
-                </p>
-                <p className="text-lg font-normal text-slate-700 text-center py-2">
-                    We pay utmost attention to business ethics and moral values.
-                    We do not engage in any type of corruption, including
-                    facilitation payments, all forms of bribery and corrupt
-                    practices, and money laundering.
-                </p>
-                <p className="text-lg font-normal text-slate-700 text-center py-2">
-                    ViTO Group Employees and Business Partners shall not
-                    directly or indirectly obtain personal gain from any
-                    transactions and contractsrelated to ViTO Group.
-                </p>
-                <p className="text-lg font-normal text-slate-700 text-center py-2">
-                    If Employees and Business Partners suspect any actual or
-                    potential violation, we expect them to speak up. All such
-                    communicationwill be kept confidential.
+                    manner. “Respect for people” is the core element of our
+                    philosophy. We value human rights and employee rights.
+                    Harassment and mobbingare unethical ways of behaving towards
+                    a person. Protecting the environment and human health are
+                    the basic principles that we prioritize in all our
+                    activities. We pay utmost attention to business ethics and
+                    moral values. We do not engage in any type of corruption,
+                    including facilitation payments, all forms of bribery and
+                    corrupt practices, and money laundering. ViTO Group
+                    Employees and Business Partners shall not directly or
+                    indirectly obtain personal gain from any transactions and
+                    contractsrelated to ViTO Group. If Employees and Business
+                    Partners suspect any actual or potential violation, we
+                    expect them to speak up. All such communicationwill be kept
+                    confidential.
                 </p>
             </div>
             <div className="w-full flex justify-center items-center px-24 gap-16 my-10 max-xl:px-10 max-md:px-5 max-xl:gap-5 relative z-40 ">

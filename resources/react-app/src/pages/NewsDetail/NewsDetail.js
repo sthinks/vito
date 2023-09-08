@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import service from "../../service/service";
 import newsBg from "../../assets/news/newsbg.jpg";
 import GlobalSlider from "../../components/Global/GlobalSlider";
+import {Helmet} from "react-helmet"
 function NewsDetail() {
     const [data, setData] = useState(null);
     const { slug } = useParams();
@@ -16,6 +17,16 @@ function NewsDetail() {
     }, []);
 
     return (
+        <>
+          <Helmet>
+                <meta name="description" content="Vito NewsDetail" />
+                <meta name="keywords" content="Vito NewsDetail Page" />
+                <meta
+                    name="og:title"
+                    content="ViTO Energy Engineering Construction and Contracting Inc"
+                />
+                <meta name="og:title" content="ViTO Energy Engineering " />
+            </Helmet>
         <div className="w-full">
             {data && (
                 <>
@@ -62,6 +73,7 @@ function NewsDetail() {
                 </>
             )}
         </div>
+        </>
     );
 }
 

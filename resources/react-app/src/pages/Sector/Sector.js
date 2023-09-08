@@ -5,11 +5,22 @@ import rightImage from "../../assets/sector/asasa.png";
 import leftImage from "../../assets/sector/bgsector.png";
 import SectorBanner from "../../assets/sector/sectors.jpg";
 import Wave from "../../assets/footer/footerwaves.png";
+import {Helmet} from "react-helmet";
 function Sector() {
     useEffect(() => {
         window.scrollTo(0, 0); // Sayfanın en üstüne kaydır
     }, []);
     return (
+        <>
+          <Helmet>
+                <meta name="description" content="Vito Sector" />
+                <meta name="keywords" content="Vito Sector Page" />
+                <meta
+                    name="og:title"
+                    content="ViTO Energy Engineering Construction and Contracting Inc"
+                />
+                <meta name="og:title" content="ViTO Energy Engineering " />
+            </Helmet>
         <div className="w-full">
             <div className="w-full flex justify-center items-center relative max-md:h-[250px]">
                 <img
@@ -113,6 +124,7 @@ function Sector() {
                 alt="Wawes"
             />
         </div>
+        </>
     );
 }
 

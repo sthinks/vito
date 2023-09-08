@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useState } from "react";
 import service from "../../service/service";
+import {Helmet} from "react-helmet"
 function Kvkk() {
     const [data, setData] = useState(null);
     useLayoutEffect(() => {
@@ -12,6 +13,16 @@ function Kvkk() {
         setData(result.data);
     };
     return (
+        <>
+          <Helmet>
+                <meta name="description" content="Vito KVKK" />
+                <meta name="keywords" content="Vito KVKK Page" />
+                <meta
+                    name="og:title"
+                    content="ViTO Energy Engineering Construction and Contracting Inc"
+                />
+                <meta name="og:title" content="ViTO Energy Engineering " />
+            </Helmet>
         <div className="w-full">
             <div className="w-full flex justify-center items-center relative h-[200px] bg-[#00dcff]">
                 <div className="w-full h-full absolute bg-black opacity-60 left-0 bottom-0" />
@@ -77,7 +88,9 @@ function Kvkk() {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 
 export default Kvkk;
+

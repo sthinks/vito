@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import newsBanner from "../../assets/news/newsbanner.jpg";
 import Loading from "../../components/loading/Loading";
+
 function News() {
     const [isLoading, setIsLoading] = useState(true);
     const [news, setNews] = useState(null);
@@ -31,6 +32,7 @@ function News() {
         window.scrollTo(0, 0);
     }, []);
     return isLoading ? (
+
         <>
             <Loading />
         </>
@@ -95,6 +97,8 @@ function News() {
             )}
         </div>
     );
+
 }
 
 export default News;
+
