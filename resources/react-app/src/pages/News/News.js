@@ -18,9 +18,7 @@ function News() {
     const getAllNews = async () => {
         const result = await service.getAllNews();
         setNews(result.data);
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 2000);
+        setIsLoading(false);
     };
     if (inView === true) {
         if (newsAnim !== true) {
@@ -31,12 +29,7 @@ function News() {
         getAllNews();
         window.scrollTo(0, 0);
     }, []);
-    return isLoading ? (
-
-        <>
-            <Loading />
-        </>
-    ) : (
+    return (
         <div className="w-full">
             <div className="w-full flex justify-center items-center relative ">
                 <img
@@ -97,8 +90,6 @@ function News() {
             )}
         </div>
     );
-
 }
 
 export default News;
-

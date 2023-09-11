@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useState } from "react";
 import service from "../../service/service";
-import {Helmet} from "react-helmet"
+import { Helmet } from "react-helmet";
 function Hseq() {
     const [data, setData] = useState(null);
     useLayoutEffect(() => {
@@ -14,7 +14,7 @@ function Hseq() {
     };
     return (
         <>
-          <Helmet>
+            <Helmet>
                 <meta name="description" content="Vito HSEQ" />
                 <meta name="keywords" content="Vito HSEQ Page" />
                 <meta
@@ -23,84 +23,85 @@ function Hseq() {
                 />
                 <meta name="og:title" content="ViTO Energy Engineering " />
             </Helmet>
-        <div className="w-full">
-            <div className="container mx-auto px-24 max-lg:px-16 max-md:px-5 my-14">
-                <div className="py-2">
-                    <p className="text-2xl font-bold text-black py-2 text-center ">
-                        HEALTH SAFETY ENVIRONMENT - QUALITY
-                    </p>
-                    <p className="text-lg  py-2">
-                        As VITO, we embrace the Total Quality Management
-                        philosophy as a management methodology that involves the
-                        participation of all our departments, applied in all our
-                        activities, and considers continuous improvement as a
-                        way of life. Providing a safe and healthy workplace,
-                        conducting our business activities in an environmentally
-                        protective manner, continuously improving our systems to
-                        achieve and sustain customer satisfaction are our
-                        principles. Our commitment is to eliminate the harm that
-                        can be caused to employees, third parties, property, and
-                        the environment; to take necessary measures to analyze
-                        and minimize risks; to stop work in high-risk situations
-                        until measures are taken; We believe that all
-                        accunderlinehover:idents are preventable and we continue
-                        to pursue the goal of "Zero Accidents" in all our
-                        activities. We communicate our principles and
-                        commitments regarding
-                        <a
-                            className="cursor-pointer font-bold hover:underline hover:text-blue-500"
-                            href={data?.pdf_links[1]}
-                            target="blank"
-                        >
-                            {" "}
-                            "Quality"{" "}
-                        </a>
-                        and
-                        <a
-                            className="cursor-pointer font-bold hover:underline hover:text-blue-500"
-                            href={data?.pdf_links[0]}
-                            target="blank"
-                        >
-                            {" "}
-                            "Health, Safety, and Environment Policy"{" "}
-                        </a>
-                        to our employees and third parties through our Policies.
-                        To achieve the goals we set with our Policies, we take
-                        guidance from{" "}
-                        <a
-                            className="cursor-pointer font-bold hover:underline hover:text-blue-500"
-                            href={data?.pdf_links[2]}
-                            target="blank"
+            <div className="w-full">
+                <div className="w-full container mx-auto px-36 flex justify-center items-center flex-col max-md:px-6">
+                    <div className="py-2">
+                        <p className="text-2xl font-bold text-black py-2 text-center ">
+                            HEALTH SAFETY ENVIRONMENT - QUALITY
+                        </p>
+                        <p className="text-lg py-2">
+                            As VITO, we embrace the Total Quality Management
+                            philosophy as a management methodology that involves
+                            the participation of all our departments, applied in
+                            all our activities, and considers continuous
+                            improvement as a way of life. Providing a safe and
+                            healthy workplace, conducting our business
+                            activities in an environmentally protective manner,
+                            continuously improving our systems to achieve and
+                            sustain customer satisfaction are our principles.
+                            Our commitment is to eliminate the harm that can be
+                            caused to employees, third parties, property, and
+                            the environment; to take necessary measures to
+                            analyze and minimize risks; to stop work in
+                            high-risk situations until measures are taken; We
+                            believe that all accunderlinehover:idents are
+                            preventable and we continue to pursue the goal of
+                            "Zero Accidents" in all our activities. We
+                            communicate our principles and commitments regarding
+                            <a
+                                className="cursor-pointer font-bold hover:underline hover:text-blue-500"
+                                href={data?.pdf_links[1]}
+                                target="blank"
                             >
-                            {" "}
-                            ISO 9001:2015{" "}
-                        </a>{" "}
-                        Quality ,{" "}
-                        <a
-                            className="cursor-pointer font-bold hover:underline hover:text-blue-500"
-                            href={data?.pdf_links[4]}
-                            target="blank"
-                        >
-                            {" "}
-                            ISO 45001:2018{" "}
-                        </a>{" "}
-                        Occupational Health and Safety, and{" "}
-                        <a
-                            className="cursor-pointer font-bold hover:underline hover:text-blue-500"
-                            href={data?.pdf_links[3]}
-                            target="blank"
-                        >
-                            {" "}
-                            ISO 14001:2015{" "}
-                        </a>{" "}
-                        Environmental Management System Standards. We prove the
-                        conformity of our Management Systems applied in all our
-                        projects and workplaces, including our Head Office, with
-                        the standards by the certificates provided by accredited
-                        audit institutions.
-                    </p>
-                </div>
-                {/* <div className="py-2">
+                                {" "}
+                                "Quality"{" "}
+                            </a>
+                            and
+                            <a
+                                className="cursor-pointer font-bold hover:underline hover:text-blue-500"
+                                href={data?.pdf_links[0]}
+                                target="blank"
+                            >
+                                {" "}
+                                "Health, Safety, and Environment Policy"{" "}
+                            </a>
+                            to our employees and third parties through our
+                            Policies. To achieve the goals we set with our
+                            Policies, we take guidance from{" "}
+                            <a
+                                className="cursor-pointer font-bold hover:underline hover:text-blue-500"
+                                href={data?.pdf_links[2]}
+                                target="blank"
+                            >
+                                {" "}
+                                ISO 9001:2015{" "}
+                            </a>{" "}
+                            Quality ,{" "}
+                            <a
+                                className="cursor-pointer font-bold hover:underline hover:text-blue-500"
+                                href={data?.pdf_links[4]}
+                                target="blank"
+                            >
+                                {" "}
+                                ISO 45001:2018{" "}
+                            </a>{" "}
+                            Occupational Health and Safety, and{" "}
+                            <a
+                                className="cursor-pointer font-bold hover:underline hover:text-blue-500"
+                                href={data?.pdf_links[3]}
+                                target="blank"
+                            >
+                                {" "}
+                                ISO 14001:2015{" "}
+                            </a>{" "}
+                            Environmental Management System Standards. We prove
+                            the conformity of our Management Systems applied in
+                            all our projects and workplaces, including our Head
+                            Office, with the standards by the certificates
+                            provided by accredited audit institutions.
+                        </p>
+                    </div>
+                    {/* <div className="py-2">
                     <p className="text-3xl font-bold py-2">
                     Our Human Resources Policy
                     </p>
@@ -158,11 +159,10 @@ function Hseq() {
                         to apply for our open positions.
                         </p>
                 </div> */}
+                </div>
             </div>
-        </div>
-                        </>
+        </>
     );
 }
 
 export default Hseq;
-

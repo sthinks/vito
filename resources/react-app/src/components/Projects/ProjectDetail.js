@@ -68,7 +68,7 @@ const ProjectDetail = () => {
             ) : (
                 selectedProject && (
                     <div
-                        className={`relative top-0 z-10 `}
+                        className={`relative top-0`}
                         style={{
                             backgroundColor: `${selectedProject.data.color_code}`,
                         }}
@@ -84,8 +84,8 @@ const ProjectDetail = () => {
                                 <div
                                     className={
                                         selectedProject.index === 0
-                                            ? "w-48 max-md:w-24 text-2xl h-14 ml-4 max-md:text-base opacity-50 text-white flex justify-end p-4 max-md:p-1 items-center"
-                                            : "w-48 max-md:w-24 text-2xl h-14 ml-4 max-md:text-base cursor-pointer  text-white flex justify-end p-4 max-md:p-1 items-center hover:-translate-x-4 duration-100"
+                                            ? "w-48 max-md:w-24 text-2xl max-md:text-base h-14 ml-4 max-md:text-base opacity-50 text-white flex justify-end p-4 max-md:p-1 items-center"
+                                            : "w-48 max-md:w-24 text-2xl max-md:text-base h-14 ml-4 max-md:text-base cursor-pointer  text-white flex justify-end p-4 max-md:p-1 items-center hover:-translate-x-4 duration-100"
                                     }
                                     onClick={() =>
                                         previousHandler(selectedProject.index)
@@ -102,8 +102,8 @@ const ProjectDetail = () => {
                                     className={
                                         selectedProject.index ===
                                         project.length - 1
-                                            ? "w-48 max-md:w-24 text-2xl max-md:text-base h-14 mr-4  opacity-50 text-white flex justify-start p-4 max-md:p-1 items-center"
-                                            : "w-48 max-md:w-24 text-2xl max-md:text-base h-14 mr-4 cursor-pointer  text-white flex justify-start p-4 max-md:p-1 items-center hover:translate-x-4 duration-100"
+                                            ? "w-48 max-md:w-24 text-2xl max-md:text-base max-md:text-base h-14 mr-4  opacity-50 text-white flex justify-start p-4 max-md:p-1 items-center"
+                                            : "w-48 max-md:w-24 text-2xl max-md:text-base max-md:text-base h-14 mr-4 cursor-pointer  text-white flex justify-start p-4 max-md:p-1 items-center hover:translate-x-4 duration-100"
                                     }
                                     onClick={() =>
                                         nextHandler(selectedProject.index)
@@ -119,7 +119,7 @@ const ProjectDetail = () => {
                             </div>
                         </div>
 
-                        <div className="flex p-10 justify-evenly items-center text-white relative">
+                        <div className="flex p-10 max-md:p-1 justify-evenly items-center text-white relative">
                             <div
                                 className="max-md:hidden"
                                 style={{
@@ -139,49 +139,49 @@ const ProjectDetail = () => {
                                     PROJECTS
                                 </h1>
                             </div>
-                            <div className="w-3/4 leading-9">
-                                <h1 className="mb-6 text-white text-3xl font-bold  ">
+                            <div className="w-3/4 max-md:w-full leading-9">
+                                <h1 className="mb-6 text-white text-3xl max-md:text-xl font-bold  ">
                                     {selectedProject.data.project_name}
                                 </h1>
-                                <h2 className="font-bold text-3xl mb-5">
+                                <h2 className="font-bold text-3xl max-md:text-xl  mb-5">
                                     CLIENT
                                 </h2>
 
                                 <p
-                                    className="text-2xl"
+                                    className="text-2xl max-md:text-base"
                                     dangerouslySetInnerHTML={{
                                         __html: selectedProject.data.client,
                                     }}
                                 />
 
-                                <h2 className="font-bold text-3xl my-5">
+                                <h2 className="font-bold text-3xl max-md:text-xl my-5">
                                     SCOPE
                                 </h2>
 
                                 <p
-                                    className="text-2xl"
+                                    className="text-2xl max-md:text-base"
                                     dangerouslySetInnerHTML={{
                                         __html: selectedProject.data.scope,
                                     }}
                                 />
-                                <h2 className="font-bold text-3xl my-5">
+                                <h2 className="font-bold text-3xl max-md:text-xl my-5">
                                     SUBCONTRACTOR
                                 </h2>
                                 {selectedProject.data.subcontractor && (
                                     <p
-                                        className="text-2xl"
+                                        className="text-2xl max-md:text-base"
                                         dangerouslySetInnerHTML={{
                                             __html: selectedProject.data
                                                 .subcontractor,
                                         }}
                                     />
                                 )}
-                                <h2 className="font-bold text-3xl my-5">
+                                <h2 className="font-bold text-3xl max-md:text-xl my-5">
                                     PROJECT STATUS
                                 </h2>
 
                                 <p
-                                    className="text-2xl"
+                                    className="text-2xl max-md:text-base"
                                     dangerouslySetInnerHTML={{
                                         __html: selectedProject.data
                                             .project_status,

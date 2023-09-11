@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('/contact', [
+    \App\Http\Controllers\ContactController::class,
+    'submit',
+]);
+
 Route::get('/all-news', [
     \App\Http\Controllers\NewsController::class,
     'getAllNews',

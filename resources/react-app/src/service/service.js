@@ -44,6 +44,10 @@ const getBasePage = async (slug) => {
     const result = await axiosInstance.get(`get-base-page/${slug}`);
     return result;
 };
+const contactForm = async (values) => {
+    const result = await axiosInstance.post("/contact", values);
+    return result;
+};
 const exportFunction = {
     getAllNews,
     getSectorSlider,
@@ -56,6 +60,7 @@ const exportFunction = {
     getProjects,
     getHomeSlider,
     getBasePage,
+    contactForm,
 };
 
 export default exportFunction;

@@ -112,7 +112,7 @@ function AboutUs() {
                         <p className="text-3xl font-bold max-lg:text-xl max-md:text-lg text-center text-white z-50 py-10">
                             THE MESSAGE OF THE CHAIRMAN & CEO
                         </p>
-                        <p className="text-xl text-left font-normal max-lg:text-lg max-md:text-base text-white z-50 py-10">
+                        <p className="text-left max-lg:text-lg max-md:text-base z-50 py-10 text-lg font-light text-white ">
                             Founded in 2000, we have steadily grown our company
                             over the years and transformed it into today's ViTO
                             group of companies. During this growth process, we
@@ -175,7 +175,7 @@ function AboutUs() {
                         src={AboutusRight}
                         alt="AboutusRightImage"
                     />
-                    <div className="w-full flex justify-start items-center px-20 pb-20 max-sm:px-0 max-sm:pb-0 max-sm:justify-center">
+                    <div className="w-full flex justify-start items-center px-20 pb-3 max-sm:px-0 max-sm:pb-0 max-sm:justify-center">
                         <div className="w-[40%] max-lg:w-[55%] max-sm:w-5/6">
                             <p className="text-4xl font-bold text-white py-2">
                                 OUR VISION

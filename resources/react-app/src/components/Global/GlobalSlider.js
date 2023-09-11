@@ -104,7 +104,7 @@ function GlobalSlider({ sliderImage, bg }) {
                             key={i}
                             onMouseDown={(e) => setDrag(e.pageX)}
                             onMouseUp={(e) => dontDragHandler(e.pageX, item)}
-                            className="w-full h-full object-contain p-2 cursor-pointer"
+                            className="w-full h-full object-cover p-2 cursor-pointer"
                             src={item.url}
                             alt="images"
                         />

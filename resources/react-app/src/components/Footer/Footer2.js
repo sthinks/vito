@@ -54,8 +54,8 @@ function Footer2() {
             location:
                 "Jebel Ali free zone, Office S10123O019, Dubai, United Arab Emirates",
             img: dubai,
-            left: 60,
-            top: 39,
+            left: 64,
+            top: 37,
         },
         {
             address: "Technicon Baku",
@@ -69,8 +69,8 @@ function Footer2() {
             location:
                 "Al-Gassar Tower Street 920 Zone 63 Building No 27 West Bay  P.O Box 26660  Doha QATARLandline No: +974 400 784 54",
             img: katar,
-            top: 36,
-            left: 58,
+            top: 37,
+            left: 62,
         },
         {
             address: "Bergama Industry",

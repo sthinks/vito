@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import AnimationComponent from "./AnimationComponent";
 import { useInView } from "react-intersection-observer";
+import steel from "../../../assets/home-anim/aaas.png";
+import steelplant from "../../../assets/home-anim/steelll.png";
+import steeltank from "../../../assets/home-anim/aaa.png";
 
 function HomeAnimation() {
     const animationDatas = [
@@ -9,18 +12,21 @@ function HomeAnimation() {
             targetValue: 21000,
             unit: "Tons",
             content: "Steel Structure Erection",
+            icon: steel,
         },
         {
             id: 1,
             targetValue: 69000,
             unit: "Tons",
             content: "Steel Plates Fabricated and Erected For Tanks",
+            icon: steelplant,
         },
         {
             id: 2,
             targetValue: 2300000,
             unit: "m³",
             content: "Storage Capacity for Tanks",
+            icon: steeltank,
         },
     ];
 
@@ -31,6 +37,7 @@ function HomeAnimation() {
                     <AnimationComponent
                         unit={item.unit}
                         key={item.id}
+                        icon={item.icon}
                         targetNumber={item.targetValue}
                         description={item.content}
                     />
