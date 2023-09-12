@@ -4,7 +4,6 @@ import backSectorImage from "../../assets/sector/bgsector2.png";
 import rightImage from "../../assets/sector/asasa.png";
 import leftImage from "../../assets/sector/bgsector.png";
 import SectorBanner from "../../assets/sector/sectors.jpg";
-import Wave from "../../assets/footer/footerwaves.png";
 import { Helmet } from "react-helmet";
 function Sector() {
     useEffect(() => {
@@ -13,13 +12,15 @@ function Sector() {
     return (
         <>
             <Helmet>
-                <meta name="description" content="Vito Sector" />
-                <meta name="keywords" content="Vito Sector Page" />
+                <meta charSet="utf-8" />
+                <title>ViTO Sectors</title>
+                <link rel="canonical" href={`/sectors`} />
                 <meta
-                    name="og:title"
+                    name="description"
                     content="ViTO Energy Engineering Construction and Contracting Inc"
                 />
-                <meta name="og:title" content="ViTO Energy Engineering " />
+                <meta name="description" content="ViTO Sectors" />
+                <meta name="description" content="ViTO Energy Projects" />
             </Helmet>
             <div className="w-full">
                 <div className="w-full flex justify-center items-center relative h-[500px] max-md:h-[250px]">
@@ -121,11 +122,6 @@ function Sector() {
                         </div>
                     </div>
                 </div>
-                <img
-                    className="w-full rotate-180 relative bottom-28 -mb-11"
-                    src={Wave}
-                    alt="Wawes"
-                />
             </div>
         </>
     );

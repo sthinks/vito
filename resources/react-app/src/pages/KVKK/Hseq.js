@@ -14,15 +14,6 @@ function Hseq() {
     };
     return (
         <>
-            <Helmet>
-                <meta name="description" content="Vito HSEQ" />
-                <meta name="keywords" content="Vito HSEQ Page" />
-                <meta
-                    name="og:title"
-                    content="ViTO Energy Engineering Construction and Contracting Inc"
-                />
-                <meta name="og:title" content="ViTO Energy Engineering " />
-            </Helmet>
             <div className="w-full">
                 <div className="w-full container mx-auto px-36 flex justify-center items-center flex-col max-md:px-6">
                     <div className="py-2">

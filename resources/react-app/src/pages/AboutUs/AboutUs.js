@@ -59,14 +59,16 @@ function AboutUs() {
     return (
         <>
             <Helmet>
-                <title>Home</title>
-                <meta name="description" content="Vito Ana Sayfa" />
-                <meta name="keywords" content="Vito Home Page" />
+                <meta charSet="utf-8" />
+                <title>ViTO About Us</title>
+                <link rel="canonical" href={`/about-us`} />
                 <meta
-                    name="og:title"
+                    name="description"
                     content="ViTO Energy Engineering Construction and Contracting Inc"
                 />
-                <meta name="og:title" content="ViTO Energy Engineering " />
+                <meta name="description" content="ViTO About Us" />
+                <meta name="description" content="ViTO Aboutus" />
+                <meta name="description" content="ViTO Energy Projects" />
             </Helmet>
             <div
                 className="w-full bg-[#093977] relative"

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SectorBanner from "../../assets/sector/sectors.jpg";
 import { useNavigate, useParams } from "react-router-dom";
+import Helmet from "react-helmet";
 function Services() {
     const slug = useParams();
     const [loading, setLoading] = useState(false);
@@ -28,6 +29,17 @@ function Services() {
     };
     return (
         <div className="w-full">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>ViTO Services</title>
+                <link rel="canonical" href={`/services`} />
+                <meta
+                    name="description"
+                    content="ViTO Energy Engineering Construction and Contracting Inc"
+                />
+                <meta name="description" content="ViTO Services" />
+                <meta name="description" content="ViTO Energy Projects" />
+            </Helmet>
             <div className="w-full flex justify-center items-center relative max-md:h-[250px] ">
                 <img
                     className="w-full h-full object-cover"

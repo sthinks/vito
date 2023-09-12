@@ -1,10 +1,9 @@
-import React, { useState, Fragment, useEffect } from "react";
+import React, { useState, Fragment, useEffect, useRef } from "react";
 import logo from "../../assets/footer/vitologo.png";
 import map from "../../assets/footer/footermap.png";
 import title from "../../assets/header/title.png";
 import bglogo from "../../assets/footer/bgfooter.png";
 import mapcursor from "../../assets/footer/mapcursor.png";
-import { Dialog, Transition } from "@headlessui/react";
 import { useInView } from "react-intersection-observer";
 import footerWave from "../../assets/footer/footerwaves.png";
 import baku from "../../assets/footer/bakü.jpg";
@@ -14,9 +13,23 @@ import dubai from "../../assets/footer/dubai.jpg";
 import vadi from "../../assets/footer/Vadistanbul.jpg";
 import mumbai from "../../assets/footer/mumbai.jpg";
 import buda from "../../assets/footer/buda.jpg";
+import Modal from "./MapModal";
+import styled from "styled-components";
+
+const ModalContent = styled.div`
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: #5c3aff;
+    }
+`;
 
 function Footer() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, toggle] = useState(false);
+
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     const { ref, inView, entry } = useInView({
@@ -24,6 +37,9 @@ function Footer() {
         threshold: 0,
     });
     const [showMap, setShowMap] = useState(false);
+    function handlOpenModal(open) {
+        toggle(open);
+    }
 
     useEffect(() => {
         // Sayfa yüklendiğinde veya uygun bir tetikleyiciyle haritayı göstermek için setShowMap değerini true yapın
@@ -89,13 +105,17 @@ function Footer() {
             left: 51,
         },
     ];
-    function closeModal() {
-        setIsOpen(false);
-    }
-    function openModal() {
-        setIsOpen(true);
-    }
 
+    const imageRef = useRef();
+    useEffect(() => {
+        const closeDropdown = (e) => {
+            if (e.target.className === "sc-bcPKhP bLLjPR") {
+                handlOpenModal(false);
+            }
+        };
+        document.body.addEventListener("click", closeDropdown);
+        return () => document.body.removeEventListener("click", closeDropdown);
+    }, []);
     return (
         <>
             <div
@@ -116,6 +136,31 @@ function Footer() {
                     className="absolute right-0 bottom-0 w-[55%] max-md:w-[85%]"
                 />
 
+                <Modal
+                    isOpen={isOpen}
+                    ref={imageRef}
+                    handleClose={() => handlOpenModal(false)}
+                >
+                    <ModalContent>
+                        <div className="flex max-md:flex-col z-[200] w-full h-full">
+                            <img
+                                src={locationList[selectedIndex].img}
+                                className="w-[35%] max-md:w-full max-md:h-44 max-md:object-cover max-md:object-bottom"
+                                alt="LocationImage"
+                            />
+                            <div className="w-[65%] p-6 max-md:w-full">
+                                <p className="text-lg font-medium leading-6 text-gray-900">
+                                    {locationList[selectedIndex].address}
+                                </p>
+                                <div className="mt-2">
+                                    <p className="text-sm text-gray-500">
+                                        {locationList[selectedIndex].location}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </ModalContent>
+                </Modal>
                 <div className="relative top-20 mb-[20rem] max-lg:mb-[14rem] max-md:mb-[20rem] max-md:top-10">
                     <img
                         className="map-image w-full"
@@ -129,7 +174,7 @@ function Footer() {
                             src={mapcursor}
                             onClick={() => {
                                 setSelectedIndex(i);
-                                openModal();
+                                handlOpenModal(true);
                             }}
                             className="absolute  w-[3%] hover:scale-110 ease-in duration-100 cursor-pointer map-image-cursor"
                             style={{
@@ -240,68 +285,6 @@ function Footer() {
                     </p>
                 </div>
             </div>
-
-            <Transition appear show={isOpen} as={Fragment}>
-                <Dialog as="div" className="relative z-50" onClose={closeModal}>
-                    <Transition.Child
-                        as={Fragment}
-                        enter="ease-out duration-600"
-                        enterFrom="opacity-0"
-                        enterTo="opacity-100"
-                        leave="ease-in duration-300"
-                        leaveFrom="opacity-100"
-                        leaveTo="opacity-0"
-                    >
-                        <div className="fixed inset-0 bg-black bg-opacity-25" />
-                    </Transition.Child>
-
-                    <div className="fixed inset-0 overflow-y-auto">
-                        <div className="flex min-h-full items-center justify-center text-center">
-                            <Transition.Child
-                                as={Fragment}
-                                enter="ease-out duration-500"
-                                enterFrom="opacity-0 scale-95 mr-20"
-                                enterTo="opacity-100 scale-100 max-md:w-5/6"
-                                leave="ease-in duration-200 ml-20"
-                                leaveFrom="opacity-100 scale-100"
-                                leaveTo="opacity-0 scale-95"
-                            >
-                                <Dialog.Panel className="w-full max-w-xs transform overflow-hidden  bg-white  text-left align-middle shadow-xl transition-all">
-                                    <div className="flex max-md:flex-col z-[200]">
-                                        <img
-                                            src={
-                                                locationList[selectedIndex].img
-                                            }
-                                            className="w-[35%] max-md:w-full max-md:h-44 max-md:object-cover max-md:object-bottom"
-                                            alt="LocationImage"
-                                        />
-                                        <div className="w-[65%] p-6 max-md:w-full">
-                                            <Dialog.Title
-                                                as="h3"
-                                                className="text-lg font-medium leading-6 text-gray-900"
-                                            >
-                                                {
-                                                    locationList[selectedIndex]
-                                                        .address
-                                                }
-                                            </Dialog.Title>
-                                            <div className="mt-2">
-                                                <p className="text-sm text-gray-500">
-                                                    {
-                                                        locationList[
-                                                            selectedIndex
-                                                        ].location
-                                                    }
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Dialog.Panel>
-                            </Transition.Child>
-                        </div>
-                    </div>
-                </Dialog>
-            </Transition>
         </>
     );
 }

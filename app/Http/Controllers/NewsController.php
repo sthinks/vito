@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\News;
 
 use Illuminate\Http\Request;
+use stdClass;
 
 class NewsController extends Controller
 {
@@ -108,7 +109,21 @@ class NewsController extends Controller
                 }
             }
            
+            if ($data->metatag != null) {
+                $metatagArray = explode(",", $data->metatag);
+                $metatagObjects = [];
 
+                foreach ($metatagArray as $value) {
+                    // Her bir değeri içeren bir obje oluşturun
+                    $metatagObject = new stdClass();
+                    $metatagObject->value = $value;
+                    
+                    // Oluşturulan objeyi $metatagObjects dizisine ekleyin
+                    $metatagObjects[] = $metatagObject;
+                }
+
+                $data->metatag = $metatagObjects;
+            }
             
         return response()->json($data);
     }

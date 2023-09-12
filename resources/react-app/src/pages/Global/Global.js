@@ -1,4 +1,10 @@
-import React, { useState, Fragment, useEffect, useLayoutEffect } from "react";
+import React, {
+    useState,
+    Fragment,
+    useEffect,
+    useLayoutEffect,
+    useRef,
+} from "react";
 import globalheader from "../../assets/global/globalheader.png";
 import map from "../../assets/footer/footermap.png";
 import mapcursor from "../../assets/footer/mapcursor.png";
@@ -16,23 +22,39 @@ import vadi from "../../assets/footer/Vadistanbul.jpg";
 import mumbai from "../../assets/footer/mumbai.jpg";
 import buda from "../../assets/footer/buda.jpg";
 import { Helmet } from "react-helmet";
+import Modal from "../../components/Footer/MapModal";
+import styled from "styled-components";
+
+const ModalContent = styled.div`
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: #5c3aff;
+    }
+`;
+
 function Global() {
     const [data, setData] = useState(null);
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, toggle] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [showMap, setShowMap] = useState(false);
     const { ref, inView, entry } = useInView({
         /* Optional options */
         threshold: 0,
     });
+    function handlOpenModal(open) {
+        toggle(open);
+    }
 
     useLayoutEffect(() => {
-        window.scrollTo(0, 0);
         getDataHandler();
+        window.scrollTo(0, 0);
     }, []);
     const getDataHandler = async () => {
         const result = await service.getGlobalVito();
-
         setData(result.data);
     };
     useEffect(() => {
@@ -41,12 +63,7 @@ function Global() {
             setShowMap(true);
         }
     }, [inView]);
-    function closeModal() {
-        setIsOpen(false);
-    }
-    function openModal() {
-        setIsOpen(true);
-    }
+
     const locationList = [
         {
             address: "ViTO Head Office",
@@ -103,16 +120,30 @@ function Global() {
             left: 51,
         },
     ];
+    const imageRef = useRef();
+    useEffect(() => {
+        const closeDropdown = (e) => {
+            if (e.target.className === "sc-bcPKhP bLLjPR") {
+                handlOpenModal(false);
+            }
+        };
+        document.body.addEventListener("click", closeDropdown);
+        return () => document.body.removeEventListener("click", closeDropdown);
+    }, []);
     return (
         <>
             <Helmet>
+                <title>ViTO Global</title>
+
                 <meta name="description" content="Vito Global" />
                 <meta name="keywords" content="Vito Global Page" />
+                <link rel="canonical" href={`/vito-global`} />
+
                 <meta
-                    name="og:title"
+                    name="description"
                     content="ViTO Energy Engineering Construction and Contracting Inc"
                 />
-                <meta name="og:title" content="ViTO Energy Engineering " />
+                <meta name="description" content="ViTO Energy Engineering " />
             </Helmet>
             <div className="w-full flex justify-center items-center relative">
                 <img className="w-full" src={globalheader} alt="VitoGlobal" />
@@ -134,12 +165,40 @@ function Global() {
                         src={map}
                         alt="FooterMap"
                     />
+                    <Modal
+                        isOpen={isOpen}
+                        ref={imageRef}
+                        handleClose={() => handlOpenModal(false)}
+                    >
+                        <ModalContent>
+                            <div className="flex max-md:flex-col z-[200] w-full h-full">
+                                <img
+                                    src={locationList[selectedIndex].img}
+                                    className="w-[35%] max-md:w-full max-md:h-44 max-md:object-cover max-md:object-bottom"
+                                    alt="LocationImage"
+                                />
+                                <div className="w-[65%] p-6 max-md:w-full">
+                                    <p className="text-lg font-medium leading-6 text-gray-900">
+                                        {locationList[selectedIndex].address}
+                                    </p>
+                                    <div className="mt-2">
+                                        <p className="text-sm text-gray-500">
+                                            {
+                                                locationList[selectedIndex]
+                                                    .location
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </ModalContent>
+                    </Modal>
                     {locationList.map((item, i) => (
                         <img
                             src={mapcursor}
                             onClick={() => {
                                 setSelectedIndex(i);
-                                openModal();
+                                handlOpenModal(true);
                             }}
                             className="absolute  w-[3%] hover:scale-110 ease-in duration-100 cursor-pointer map-image-cursor"
                             style={{
@@ -198,67 +257,6 @@ function Global() {
                     />
                 </div>
             </div>
-            <Transition appear show={isOpen} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={closeModal}>
-                    <Transition.Child
-                        as={Fragment}
-                        enter="ease-out duration-600"
-                        enterFrom="opacity-0"
-                        enterTo="opacity-100"
-                        leave="ease-in duration-300"
-                        leaveFrom="opacity-100"
-                        leaveTo="opacity-0"
-                    >
-                        <div className="fixed inset-0 bg-black bg-opacity-25" />
-                    </Transition.Child>
-
-                    <div className="fixed inset-0 overflow-y-auto">
-                        <div className="flex min-h-full items-center justify-center text-center">
-                            <Transition.Child
-                                as={Fragment}
-                                enter="ease-out duration-500"
-                                enterFrom="opacity-0 scale-95 mr-20"
-                                enterTo="opacity-100 scale-100 max-md:w-5/6"
-                                leave="ease-in duration-200 ml-20"
-                                leaveFrom="opacity-100 scale-100"
-                                leaveTo="opacity-0 scale-95"
-                            >
-                                <Dialog.Panel className="w-full max-w-xs transform overflow-hidden  bg-white  text-left align-middle shadow-xl transition-all">
-                                    <div className="flex max-md:flex-col">
-                                        <img
-                                            src={
-                                                locationList[selectedIndex].img
-                                            }
-                                            className="w-[35%] max-md:w-full max-md:h-44 max-md:object-cover max-md:object-bottom"
-                                            alt="LocationImage"
-                                        />
-                                        <div className="w-[65%] p-6 max-md:w-full">
-                                            <Dialog.Title
-                                                as="h3"
-                                                className="text-lg font-medium leading-6 text-gray-900"
-                                            >
-                                                {
-                                                    locationList[selectedIndex]
-                                                        .address
-                                                }
-                                            </Dialog.Title>
-                                            <div className="mt-2">
-                                                <p className="text-sm text-gray-500">
-                                                    {
-                                                        locationList[
-                                                            selectedIndex
-                                                        ].location
-                                                    }
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Dialog.Panel>
-                            </Transition.Child>
-                        </div>
-                    </div>
-                </Dialog>
-            </Transition>
         </>
     );
 }

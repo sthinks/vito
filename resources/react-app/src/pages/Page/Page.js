@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import service from "../../service/service";
+import Helmet from "react-helmet";
 function Page() {
     const [data, setData] = useState(null);
     const slug = useParams();
@@ -16,6 +17,16 @@ function Page() {
     };
     return (
         <div className="w-full">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <link rel="canonical" href={`/news`} />
+                <meta
+                    name="description"
+                    content="ViTO Energy Engineering Construction and Contracting Inc"
+                />
+                <meta name="description" content="ViTO News" />
+                <meta name="description" content="ViTO Energy Projects" />
+            </Helmet>
             <div className="w-full flex justify-center items-center relative h-[200px] bg-[#00dcff]">
                 <div className="w-full h-full absolute bg-black opacity-60 left-0 bottom-0" />
             </div>

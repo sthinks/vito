@@ -220,3 +220,21 @@ input:-webkit-autofill,
   input:-webkit-autofill:focus {
     transition: background-color 0s 600000s, color 0s 600000s;
   }
+.sc-bcPKhP{
+    z-index: 999;
+}
+.MHsYS {
+    width: 400px !important;
+    height: 200px !important;
+    border-radius: 0px !important;
+}
+.gOkLQP {
+    z-index: 99999 !important;
+}
+@media screen and (max-width: 768px) {
+  .sc-bcPKhP .MHsYS {
+    width: 80% !important;
+    height: auto !important;
+   
+}
+}

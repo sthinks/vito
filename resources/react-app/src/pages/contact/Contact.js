@@ -73,18 +73,21 @@ function Contact() {
     return (
         <>
             <Helmet>
+                <title>ViTO Contact</title>
+                <link rel="canonical" href={`/contact`} />
+
                 <meta name="description" content="Vito Contact" />
                 <meta name="keywords" content="Vito İletisim" />
                 <meta
-                    name="og:title"
+                    name="description"
                     content="ViTO Energy Engineering Construction and Contracting Inc"
                 />
-                <meta name="og:title" content="ViTO Energy Engineering " />
-                <meta name="og:title" content="ViTO Enerji " />
-                <meta name="og:title" content="ViTO Contact " />
-                <meta name="og:title" content="ViTO İletişim " />
+                <meta name="description" content="ViTO Energy Engineering " />
+                <meta name="description" content="ViTO Enerji " />
+                <meta name="description" content="ViTO Contact " />
+                <meta name="description" content="ViTO İletişim " />
                 <meta
-                    name="og:title"
+                    name="description"
                     content="ViTO Energy Engineering Contact"
                 />
             </Helmet>

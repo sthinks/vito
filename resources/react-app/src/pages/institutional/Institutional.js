@@ -40,13 +40,16 @@ function Institutional() {
     return (
         <>
             <Helmet>
+                <title>ViTO Corporate</title>
+                <link rel="canonical" href={`/corporate`} />
+
                 <meta name="description" content="Vito Institutional" />
                 <meta name="keywords" content="Vito Institutional Page" />
                 <meta
-                    name="og:title"
+                    name="description"
                     content="ViTO Energy Engineering Construction and Contracting Inc"
                 />
-                <meta name="og:title" content="ViTO Energy Engineering " />
+                <meta name="description" content="ViTO Energy Engineering " />
             </Helmet>
             <div className="relative w-full flex justify-center items-center h-full object-cover max-lg:h-auto">
                 <img src={InstBanner} alt="instbanner" />
