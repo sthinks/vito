@@ -23,6 +23,9 @@ class ContactController extends Controller
             'fullname' => ['required', 'string'],
             'phone' => ['required', 'string'],
             'mail' => ['required', 'string'],
+            'subject' => ['required', 'string'],
+            'message' => ['required', 'string'],
+
         ]);
 
         if ($validation->fails()) {
@@ -35,12 +38,18 @@ class ContactController extends Controller
                 'fullname' => $data['fullname'],
                 'phone' => $data['phone'],
                 'mail' => $data['mail'],
+                'subject' => $data['subject'],
+                'message' => $data['message'],
+
             ]);
             if ($added) {
                 $details = [
                     'fullname' => $data['fullname'],
                     'phone' => $data['phone'],
                     'mail' => $data['mail'],
+                    'subject' => $data['subject'],
+                    'message' => $data['message'],
+
                 ];
                 Mail::to('info@vito.com.tr')->send(new SendContactMail($details));
                 return response()->json([

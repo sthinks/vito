@@ -39,6 +39,8 @@ function Contact() {
             fullname: "",
             phone: "",
             mail: "",
+            subject: "",
+            message: "",
         },
         validationSchema: Yup.object({
             fullname: Yup.string().min(2).required("Zorunlu alan"),
@@ -48,6 +50,8 @@ function Contact() {
             mail: Yup.string()
                 .email("Geçerli bir e-posta adresi girin")
                 .required("Zorunlu alan"),
+            subject: Yup.string().min(2).required("Zorunlu alan"),
+            message: Yup.string().min(2).required("Zorunlu alan"),
         }),
 
         onSubmit: async (values, { resetForm }) => {
@@ -147,7 +151,7 @@ function Contact() {
                             >
                                 <label
                                     className="text-white py-2 font-medium"
-                                    htmlFor="firstName"
+                                    htmlFor="fullname"
                                 >
                                     Name / Surname
                                 </label>
@@ -166,7 +170,7 @@ function Contact() {
                                 />
                                 <label
                                     className="text-white py-2 font-medium"
-                                    htmlFor="firstName"
+                                    htmlFor="phone"
                                 >
                                     Mobile Phone
                                 </label>
@@ -174,8 +178,8 @@ function Contact() {
                                     className={
                                         formik.touched.phone &&
                                         formik.errors.phone
-                                            ? "bg-[#041c3b] rounded-lg mt-2 py-2 p-2 shadow-lg w-full text-white  max-sm:w-full border-2 border-red-400"
-                                            : "bg-[#041c3b] rounded-lg mt-2 border border-white py-2 p-2 text-white shadow-lg w-full  max-sm:w-full"
+                                            ? "bg-[#041c3b] rounded-lg  py-2 p-2 shadow-lg w-full text-white  max-sm:w-full border-2 border-red-400"
+                                            : "bg-[#041c3b] rounded-lg  border border-white py-2 p-2 text-white shadow-lg w-full  max-sm:w-full"
                                     }
                                     id="phone"
                                     name="phone"
@@ -185,7 +189,7 @@ function Contact() {
                                 />
                                 <label
                                     className="text-white py-2 font-medium"
-                                    htmlFor="firstName"
+                                    htmlFor="mail"
                                 >
                                     E-mail
                                 </label>
@@ -193,14 +197,52 @@ function Contact() {
                                     className={
                                         formik.touched.mail &&
                                         formik.errors.mail
-                                            ? " bg-[#041c3b] rounded-lg mt-2 py-2 p-2 shadow-lg w-full text-white max-sm:w-full border-2 border-red-400"
-                                            : "  bg-[#041c3b] border border-white rounded-lg mt-2 py-2 p-2 text-white shadow-lg w-full  max-sm:w-full"
+                                            ? " bg-[#041c3b] rounded-lg py-2 p-2 shadow-lg w-full text-white max-sm:w-full border-2 border-red-400"
+                                            : "  bg-[#041c3b] border border-white rounded-lg py-2 p-2 text-white shadow-lg w-full  max-sm:w-full"
                                     }
                                     id="mail"
                                     name="mail"
                                     type="text"
                                     onChange={formik.handleChange}
                                     value={formik.values.mail}
+                                />
+                                <label
+                                    className="text-white py-2 font-medium"
+                                    htmlFor="subject"
+                                >
+                                    Subject
+                                </label>
+                                <input
+                                    className={
+                                        formik.touched.subject &&
+                                        formik.errors.subject
+                                            ? " bg-[#041c3b] rounded-lg  py-2 p-2 shadow-lg w-full text-white max-sm:w-full border-2 border-red-400"
+                                            : "  bg-[#041c3b] border border-white rounded-lg  py-2 p-2 text-white shadow-lg w-full  max-sm:w-full"
+                                    }
+                                    id="subject"
+                                    name="subject"
+                                    type="text"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.subject}
+                                />
+                                <label
+                                    className="text-white py-2 font-medium"
+                                    htmlFor="message"
+                                >
+                                    Message
+                                </label>
+                                <textarea
+                                    className={
+                                        formik.touched.message &&
+                                        formik.errors.message
+                                            ? " bg-[#041c3b] resize-none h-28 rounded-lg  py-2 p-2 shadow-lg w-full text-white max-sm:w-full border-2 border-red-400"
+                                            : "  bg-[#041c3b] resize-none h-28 border border-white rounded-lg  py-2 p-2 text-white shadow-lg w-full  max-sm:w-full"
+                                    }
+                                    id="message"
+                                    name="message"
+                                    type="text"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.message}
                                 />
                                 <div className="w-full flex justify-start items-center mt-5">
                                     {loading ? (
