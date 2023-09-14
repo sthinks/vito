@@ -10,11 +10,15 @@ import CEO from "../../assets/institutional/vedattbey.jpg";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Kvkk from "../KVKK/Hseq";
+import { useTranslation } from "react-i18next";
+
 function AboutUs() {
     const [data, setData] = useState(null);
     const [dataService, setDataService] = useState(null);
     const [newsAnim, setNewsAnim] = useState(false);
     const { slug } = useParams();
+    const { t, i18n } = useTranslation();
+
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
         getDataStatHandler();
@@ -60,7 +64,7 @@ function AboutUs() {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>ViTO About Us</title>
+                <title>ViTO {t("nav_aboutus")}</title>
                 <link rel="canonical" href={`/about-us`} />
                 <meta
                     name="description"
@@ -85,23 +89,10 @@ function AboutUs() {
                 />
                 <div className="w-full flex justify-center items-center flex-col text-center pt-56 pb-20 px-36 max-lg:px-20  max-md:px-2 h-auto">
                     <p className="text-7xl font-bold max-md:text-5xl text-center text-white tracking-widest z-50 py-10">
-                        ABOUT US
+                        {t("nav_aboutus")}
                     </p>
                     <p className="text-xl font-normal max-lg:text-lg max-md:text-base text-center text-white z-50 py-10 ">
-                        ViTO has grown steadily over the past 24 years to become
-                        today's ViTO Group of Companies. During this growth
-                        process, it has realized various important projects in
-                        the field of contracting with partnerships with
-                        world-class companies in its field. IVT company, which
-                        we had previously established, was 100% included in ViTO
-                        Group of Companies in 2017. In 2019, the Group became
-                        one of the founding partners of Bergama Industry factory
-                        to manufacture pressure vessels and pipe prefabrication
-                        in Bergama Organized Industry Zone. Currently exporting
-                        to three continents, Bergama Industry's most prominent
-                        principles are the delivery of projects on time,
-                        customer satisfaction and managing projects in
-                        occupational health and safety.
+                        {t("about_us_content")}
                     </p>
                 </div>
                 <div className="w-full flex justify-between items-center my-5 h-[450px] max-xl:h-[550px] max-lg:h-auto max-md:flex-col">
@@ -112,28 +103,10 @@ function AboutUs() {
                     />
                     <div className="w-4/6  px-10 py-5 max-md:w-full max-md:px-2 h-auto">
                         <p className="text-3xl font-bold max-lg:text-xl max-md:text-lg text-center text-white z-50 py-10">
-                            THE MESSAGE OF THE CHAIRMAN & CEO
+                            {t("about_us_ceo_message")}
                         </p>
                         <p className="text-left max-lg:text-lg max-md:text-base z-50 py-10 text-lg font-light text-white ">
-                            Founded in 2000, we have steadily grown our company
-                            over the years and transformed it into today's ViTO
-                            group of companies. During this growth process, we
-                            established many experienced and reputable foreign
-                            partnerships in the world and realized important
-                            projects in the field of contracting. In this
-                            context, we added our joint venture contracting
-                            company, which we established with our foreign
-                            partners, to our ViTO group of companies as IVT
-                            company in 2017. After that, in 2019, we opened our
-                            Bergama Industry Factory, where pressure vessels and
-                            pipe prefabrication are manufactured, in Bergama
-                            Organized Industrial Zone. Currently, we export our
-                            products to three continents and deliver them to
-                            customers all over the world. The priority of our
-                            company is the timely delivery of projects managed
-                            by our experienced staff and the successful
-                            execution of projects by prioritizing customer
-                            satisfaction and occupational safety.
+                            {t("about_us_ceo_message_content")}
                         </p>
                     </div>
                 </div>
@@ -180,21 +153,10 @@ function AboutUs() {
                     <div className="w-full flex justify-start items-center px-20 pb-3 max-sm:px-0 max-sm:pb-0 max-sm:justify-center">
                         <div className="w-[40%] max-lg:w-[55%] max-sm:w-5/6">
                             <p className="text-4xl font-bold text-white py-2">
-                                OUR VISION
+                                {t("about_us_vision")}
                             </p>
                             <p className="text-lg font-light text-white py-2">
-                                Our vision is to become a leading contracting
-                                company in the petrochemical, hydrogen and
-                                refinery sectors, renowned for our commitment to
-                                sustainability. We aspire to achieve a
-                                leadership position in the industry by
-                                delivering the highest quality services,
-                                embracing innovation, and executing projects
-                                that are environmentally conscious. Our vision
-                                is built upon the principles of leadership,
-                                excellence, and continuous improvement, all
-                                while contributing significantly to a
-                                carbon-free future.
+                                {t("about_us_vision_content")}
                             </p>
                         </div>
                     </div>
@@ -213,72 +175,26 @@ function AboutUs() {
                         <div className="w-3/4 relative -left-40 max-lg:-left-24 max-md:-left-12 max-sm:left-0 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:w-full">
                             <div className="w-3/6 max-lg:w-5/6 my-10">
                                 <p className="text-4xl font-bold text-white py-2">
-                                    OUR MISSION
+                                    {t("about_us_mission")}
                                 </p>
                                 <p className="text-lg font-light text-white py-2">
-                                    Our mission is to provide high-quality,
-                                    reliable, and sustainable solutions that
-                                    meet and exceed the needs and expectations
-                                    of our customers. We strive to successfully
-                                    complete projects in the petrochemical and
-                                    refinery sectors, maintain the highest
-                                    safety standards, and prioritize customer
-                                    satisfaction.
+                                    {t("about_us_mission_content")}
                                 </p>
                             </div>
                             <div className="w-5/6  my-10">
                                 <p className="text-4xl font-bold text-white py-2">
-                                    OUR VALUES
+                                    {t("about_us_value")}
                                 </p>
                                 <p className="text-lg font-light text-white py-2">
-                                    Customer Focus: We strive to understand our
-                                    customers' needs, provide customized
-                                    solutions, and establish long-term business
-                                    relationships. Quality and Reliability: We
-                                    uphold high-quality standards in our
-                                    projects, commit to delivering reliable and
-                                    timely services. Innovation and Continuous
-                                    Improvement: We develop innovative solutions
-                                    to be at the forefront of the industry,
-                                    invest in research and technology, and
-                                    continuously improve ourselves.
-                                    Environmental Awareness: We plan our
-                                    projects with consideration for
-                                    environmental impact, adhere to
-                                    environmental management systems, and strive
-                                    to provide sustainable solutions. Teamwork
-                                    and Collaboration: We encourage teamwork,
-                                    foster open communication and a culture of
-                                    collaboration among our employees.
+                                    {t("about_us_value_content")}
                                 </p>
                             </div>
                             <div className="w-5/6  my-10">
                                 <p className="text-4xl font-bold text-white py-2">
-                                    OUR WORKING PRINCIPLE
+                                    {t("about_us_work_prencible")}
                                 </p>
                                 <p className="text-lg font-light text-white py-2">
-                                    Ethical Principles: We fully comply with
-                                    business ethics and integrity principles,
-                                    adhere to laws and regulations. Occupational
-                                    Health and Safety: The safety and health of
-                                    our employees are our top priorities. We
-                                    take necessary precautions to ensure
-                                    compliance with occupational health and
-                                    safety policies. Continuous Improvement: We
-                                    constantly review our work processes,
-                                    identify improvement opportunities, and
-                                    strive to enhance efficiency. Transparency
-                                    and Accountability: We maintain transparent
-                                    communication and accountability towards our
-                                    customers, suppliers, and employees. Social
-                                    Responsibility: We are committed to being
-                                    socially responsible, supporting social
-                                    responsibility projects, and contributing to
-                                    sustainability. Based on these values and
-                                    working principles, we aim to maintain the
-                                    highest level of quality and customer
-                                    satisfaction as a leading company in the
-                                    petrochemical and refinery sectors.
+                                    {t("about_us_work_prencible_content")}
                                 </p>
                             </div>
                         </div>
@@ -291,7 +207,7 @@ function AboutUs() {
                     className="text-6xl font-semibold text-[#093977] max-md:text-5xl"
                     id="service"
                 >
-                    SERVICES
+                    {t("nav_services")}
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
             </div>
@@ -343,34 +259,15 @@ function AboutUs() {
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5 relative z-40 ">
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
                 <p className="text-6xl text-center max-sm:w-full font-semibold text-[#093977] max-md:text-5xl">
-                    ETHIC
+                    {t("about_us_ethic")}
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
             </div>
             <div className="w-full container mx-auto px-36 flex justify-center items-center flex-col max-md:px-6">
                 <p className="text-2xl font-bold text-black py-2 text-center ">
-                    CODE OF ETHICS AND BUSINESS CONDUCT
+                    {t("about_us_ethic_title")}
                 </p>
-                <p className="text-lg py-2">
-                    ViTO Group displays the highest standards for understanding
-                    and observing laws and regulations; and expects its
-                    Employees and Business Partners to always act in a compliant
-                    manner. “Respect for people” is the core element of our
-                    philosophy. We value human rights and employee rights.
-                    Harassment and mobbingare unethical ways of behaving towards
-                    a person. Protecting the environment and human health are
-                    the basic principles that we prioritize in all our
-                    activities. We pay utmost attention to business ethics and
-                    moral values. We do not engage in any type of corruption,
-                    including facilitation payments, all forms of bribery and
-                    corrupt practices, and money laundering. ViTO Group
-                    Employees and Business Partners shall not directly or
-                    indirectly obtain personal gain from any transactions and
-                    contractsrelated to ViTO Group. If Employees and Business
-                    Partners suspect any actual or potential violation, we
-                    expect them to speak up. All such communicationwill be kept
-                    confidential.
-                </p>
+                <p className="text-lg py-2">{t("about_us_ethic_content")}</p>
             </div>
             <div className="w-full flex justify-center items-center px-24 gap-16 my-10 max-xl:px-10 max-md:px-5 max-xl:gap-5 relative z-40 ">
                 <hr className="w-[40%] border-2 border-[#456998] max-sm:hidden" />

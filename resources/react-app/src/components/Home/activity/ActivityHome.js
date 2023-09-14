@@ -3,15 +3,18 @@ import Activity from "../../../cards/home-activity/Activity";
 import Famous from "../../../assets/home-activity/onggoo.jpg";
 import Continous from "../../../assets/home-activity/ongogin.png";
 import { Link, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function ActivityHome() {
     const navigate = useNavigate();
+    const { t, i18n } = useTranslation();
+
     return (
         <>
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5">
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
                 <p className="font-bold text-4xl my-5 mx-0 text-[#093977] text-center">
-                    FIELDS OF ACTIVITY
+                    {t("home_activity_title")}
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
             </div>
@@ -29,7 +32,7 @@ function ActivityHome() {
                     <div className="absolute top-0 left-0 w-full h-full bg-[#2A72B0] opacity-50 z-40" />
                     <p>
                         <p className="text-white text-4xl max-lg:text-2xl max-md:text-xl font-bold absolute z-50 text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                            ONGOING PROJECTS
+                            {t("home_activity_going")}
                         </p>
                     </p>
                 </div>
@@ -46,7 +49,7 @@ function ActivityHome() {
                     <div className="absolute top-0 right-0 w-full h-full bg-[#0D2A96] opacity-50 z-40" />
                     <p to="">
                         <p className="text-white text-4xl max-lg:text-2xl max-md:text-xl font-bold absolute z-50 text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                            TURNKEY PROJECTS
+                            {t("home_activity_main")}
                         </p>
                     </p>
                 </div>

@@ -5,7 +5,11 @@ import rightImage from "../../assets/sector/asasa.png";
 import leftImage from "../../assets/sector/bgsector.png";
 import SectorBanner from "../../assets/sector/sectors.jpg";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
+
 function Sector() {
+    const { t, i18n } = useTranslation();
+
     useEffect(() => {
         window.scrollTo(0, 0); // Sayfanın en üstüne kaydır
     }, []);
@@ -31,7 +35,7 @@ function Sector() {
                     />
                     <div className="w-full h-full absolute bg-black opacity-40 left-0 bottom-0" />
                     <p className="absolute text-6xl font-extrabold tracking-widest text-white">
-                        SECTORS
+                        {t("nav_sector")}
                     </p>
                 </div>
                 <div>
@@ -49,27 +53,16 @@ function Sector() {
                     <div className="w-ful flex justify-end my-2 relative -bottom-10 max-lg:-bottom-2">
                         <div className="w-4/6 pr-8 max-lg:w-full max-lg:px-2">
                             <p className="text-end text-6xl font-semibold py-4 max-md:text-center">
-                                Oil & Gas
+                                {t("sector_oilandgaz")}
                             </p>
 
                             <div className="text-end text-lg mt-10">
-                                <p>- EPC Tank Farm</p>
-                                <p>- Piping and E&I</p>
+                                {t("sector_t1")}
+                                <p></p>
+                                <p>{t("sector_t2")}</p>
                             </div>
                             <p className="text-end text-lg mt-10">
-                                As a leading EPC company providing storage
-                                facilities for the sectors. We have installed
-                                more than 2.3 million cubic meters of total
-                                storage capacity, more than 2.4 million WDI pipe
-                                welding and various mechanical and pipeline
-                                works. We are specialized for tanks up to 90
-                                meters in diameter, including sphericali
-                                hydrogenic and cylindrical tanks used for
-                                storing various products such as crude oil,
-                                gasoline, diesel, kerosene, reformate, naphtha
-                                and LPG. In addition to mechanical works, we
-                                also undertake electrical and instrumentation
-                                works, tank foundations.
+                                {t("sector_t3")}
                             </p>
                         </div>
                     </div>
@@ -92,32 +85,16 @@ function Sector() {
                     <div className="w-ful flex justify-start relative -top-14 max-lg:-top-2">
                         <div className="w-4/6 pl-8 max-lg:w-full max-lg:px-2">
                             <p className="text-start text-6xl font-semibold py-4 max-md:text-center">
-                                Energy
+                                {t("sector_energy")}
                             </p>
 
                             <div className="text-start text-lg mt-10">
-                                <p>
-                                    - We have participated in the supply of
-                                    approximately 5,000 MW installed capacity in
-                                    numerous power plants in Turkey and other
-                                    EMEA countries. Our role ranges from
-                                    individual equipment supply to turnkey
-                                    supply of the entire facility. We focus on
-                                    the following types of power plants:
-                                </p>
-                                <p>
-                                    - Combined cycle and open cycle facilities
-                                </p>
-                                <p>
-                                    - Renewable energy sources such as
-                                    hydroelectric power plants
-                                </p>
+                                <p>{t("sector_e1")}</p>
+                                <p>{t("sector_e2")}</p>
+                                <p>{t("sector_e3")}</p>
                             </div>
                             <p className="text-start text-lg mt-10">
-                                In the energy sector, we assist leading OEMs
-                                (Original Equipment Manufacturers) in supplying
-                                energy islands and provide turnkey delivery of
-                                facility works.
+                                {t("sector_e4")}
                             </p>
                         </div>
                     </div>

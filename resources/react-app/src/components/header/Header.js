@@ -4,15 +4,15 @@ import LogoTitle from "../../assets/header/title.png";
 import BlueLogo from "../../assets/header/blue.png";
 import { Link, useNavigate } from "react-router-dom";
 import { FaLinkedinIn } from "react-icons/fa";
+import ReactCountryFlag from "react-country-flag";
+import engIcon from "../../assets/header/engIcons.svg";
+import trIcon from "../../assets/header/trIcon.svg";
+import { useTranslation } from "react-i18next";
 import "./HamburgerMenu.css";
 function Header() {
     const [isVisible, setIsVisible] = useState(true);
-    const [isToggled, setIsToggled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-    const [childMenu, setChildMenu] = useState(false);
-    const handleToggle = (checked) => {
-        setIsToggled(checked);
-    };
+    const { t, i18n } = useTranslation();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -57,28 +57,33 @@ function Header() {
         };
     }, [isOpen]);
     const navigate = useNavigate();
+    const changeLanguage = (lang) => {
+        console.log(i18n.language);
+        i18n.changeLanguage(lang);
+        localStorage.setItem("lang", lang);
+    };
     return (
         <header>
             <nav
                 className={`${
-                    hasOpacity ? "bg-transparent" : "bg-[#fff] opacity-100"
-                } h-20 flex justify-center items-center fixed z-[9999] w-full transition-all max-md:hidden`}
+                    hasOpacity ? "bg-transparent" : "bg-[#fff] opacity-100 "
+                } h-20 flex justify-center px-28 max-2xl:px-20 max-xl:px-10 max-lg:px-4 items-center fixed z-[9999] w-full transition-all max-md:hidden`}
             >
                 <div
-                    className="flex justify-center items-center logo"
+                    className="flex justify-center items-center logo w-2/12"
                     onClick={() => navigate("/")}
                 >
-                    <Link className="relative" to="/">
+                    <Link className="relative w-[80%]" to="/">
                         <img
                             onClick={() => navigate("/")}
                             src={hasOpacity ? Logo : BlueLogo}
-                            alt="sa"
-                            className="w-[250px] mr-10 max-xl:w-[140px] max-lg:w-[120px] max-lg:mr-0 "
+                            alt="Logo"
+                            className="w-full"
                         />
                         <img
                             className={
                                 hasOpacity
-                                    ? "absolute -bottom-10 left-14 w-[200px] max-xl:w-[100px] max-lg:w-[80px]"
+                                    ? "absolute -bottom-10 w-full"
                                     : "hidden"
                             }
                             src={LogoTitle}
@@ -86,34 +91,34 @@ function Header() {
                         />
                     </Link>
                 </div>
-                <ul className="flex flex-row gap-10 max-xl:gap-6 max-lg:mt-2 max-lg:gap-4 navbar-ul items-center ">
-                    <li className="text-white font-bold text-lg ml-5 max-lg:text-xs max-xl:text-base">
+                <ul className="flex flex-row justify-around navbar-ul items-center w-9/12">
+                    <li className="text-white font-bold text-base max-lg:text-xs  text-center w-[10%]">
                         <Link
-                            className={`py-[30px] px-[5px] ${
+                            className={`${
                                 hasOpacity
                                     ? "text-[#fff]"
-                                    : "text-[#1b4378] hover:bg-[#1b4378] hover:text-[#fff] hover:py-[30px] hover:px-[5px]"
+                                    : "text-[#1b4378] hover:bg-[#1b4378]  hover:text-[#fff] hover:py-[30px] hover:px-[5px]"
                             } `}
                             to="/about-us"
                         >
-                            ABOUT US
+                            {t("nav_aboutus")}
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
+                    <li className="text-white font-bold text-base max-lg:text-xs  text-center w-[10%]">
                         <Link
-                            className={`py-[30px] px-[5px] ${
+                            className={`${
                                 hasOpacity
                                     ? "text-[#fff]"
                                     : "text-[#1b4378] hover:bg-[#1b4378] hover:text-[#fff] hover:py-[30px] hover:px-[5px]"
                             } `}
                             to="/corporate"
                         >
-                            CORPORATE
+                            {t("nav_corporate")}
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
+                    <li className="text-white font-bold text-base max-lg:text-xs  text-center w-[10%]">
                         <Link
-                            className={`py-[30px] px-[5px] ${
+                            className={`${
                                 hasOpacity
                                     ? "text-[#fff]"
                                     : "text-[#1b4378] hover:bg-[#1b4378] hover:text-[#fff] hover:py-[30px] hover:px-[5px]"
@@ -123,112 +128,90 @@ function Header() {
                             GLOBAL
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base relative flex justify-center items-center">
+                    <li className="text-white font-bold text-lg  max-lg:text-xs max-xl:text-base text-center w-[10%]">
                         <Link
-                            className={`py-[30px] px-[5px] ${
+                            className={`${
                                 hasOpacity
                                     ? "text-[#fff]"
                                     : "text-[#1b4378] hover:bg-[#1b4378] hover:text-[#fff] hover:py-[30px] hover:px-[5px]"
                             } `}
                             to="/projects"
                         >
-                            PROJECTS
+                            {t("nav_project")}
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
+                    <li className="text-white font-bold text-lg  max-lg:text-xs max-xl:text-base text-center w-[10%]">
                         <Link
-                            className={`py-[30px] px-[5px] ${
+                            className={`${
                                 hasOpacity
                                     ? "text-[#fff]"
                                     : "text-[#1b4378] hover:bg-[#1b4378] hover:text-[#fff] hover:py-[30px] hover:px-[5px]"
                             } `}
                             to="/sector"
                         >
-                            SECTORS
+                            {t("nav_sector")}
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
+                    <li className="text-white font-bold text-base max-lg:text-xs  text-center w-[10%]">
                         <Link
-                            className={`py-[30px] px-[5px] ${
+                            className={`${
                                 hasOpacity
                                     ? "text-[#fff]"
                                     : "text-[#1b4378] hover:bg-[#1b4378] hover:text-[#fff] hover:py-[30px] hover:px-[5px]"
                             } `}
                             to="/news"
                         >
-                            NEWS
+                            {t("nav_news")}
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-lg max-lg:text-xs max-xl:text-base">
+                    <li className="text-white font-bold text-lg  max-lg:text-xs max-xl:text-base text-center w-[10%]">
                         <Link
-                            className={`py-[30px] px-[5px] ${
+                            className={`${
                                 hasOpacity
                                     ? "text-[#fff]"
                                     : "text-[#1b4378] hover:bg-[#1b4378] hover:text-[#fff] hover:py-[30px] hover:px-[5px]"
                             } `}
                             to="/contact"
                         >
-                            CONTACT
+                            {t("nav_contact")}
                         </Link>
                     </li>
-                    {/* <li>
-                            <img
-                                className="w-[30px] h-[20px]"
-                                src={Turkish}
-                                alt="turkish_flag"
-                            />
-                        </li>
-
-                        <li>
-                            <img
-                                className="w-[30px] h-[20px]"
-                                src={British}
-                                alt="british_flag"
-                            />
-                        </li> */}
-                    <li className="flex flex-row justify-center items-center gap-2">
-                        {/* <div className="text-[#456998] text-3xl cursor-pointer max-lg:text-2xl">
-                                <a
-                                    href="https://twitter.com/groupvito"
-                                    target="blank"
-                                >
-                                    <AiOutlineTwitter className="hover:text-[#1DA1F2]" />
-                                </a>
-                            </div> */}
-
-                        <div className="text-[#456998] text-3xl cursor-pointer max-lg:text-2xl">
-                            <a
-                                href="https://tr.linkedin.com/company/vitogroup"
-                                target="blank"
-                            >
-                                <FaLinkedinIn
-                                    className={`${
-                                        hasOpacity
-                                            ? "text-white"
-                                            : "text-[#1b4378]"
-                                    }`}
-                                />
-                            </a>
-                        </div>
-                    </li>
-                    {/* <li>
-                            <div className="flex ">
-                                <label>
-                                    <Switch
-                                        onChange={handleToggle}
-                                        checked={isToggled}
-                                        onColor="#86d3ff"
-                                        onHandleColor="#2693e6"
-                                        handleDiameter={24}
-                                        uncheckedIcon={false}
-                                        checkedIcon={false}
-                                        height={20}
-                                        width={48}
-                                    />
-                                </label>
-                            </div>
-                        </li> */}
                 </ul>
+                <div className="w-1/12 flex justify-around items-center">
+                    <div
+                        className={`flex justify-around items-center  ${
+                            hasOpacity ? "text-white" : "text-black"
+                        }`}
+                    >
+                        {i18n.language === "tr" ? (
+                            <img
+                                className="w-6 cursor-pointer"
+                                src={engIcon}
+                                alt="EngIcon"
+                                onClick={() => changeLanguage("en")}
+                            />
+                        ) : (
+                            <img
+                                className="w-6 cursor-pointer"
+                                src={trIcon}
+                                alt="TrIcon"
+                                onClick={() => changeLanguage("tr")}
+                            />
+                        )}
+                    </div>
+                    <div className="text-[#456998] text-3xl cursor-pointer max-lg:text-2xl ">
+                        <a
+                            href="https://tr.linkedin.com/company/vitogroup"
+                            target="blank"
+                        >
+                            <FaLinkedinIn
+                                className={`${
+                                    hasOpacity ? "text-white" : "text-[#1b4378]"
+                                }`}
+                            />
+                        </a>
+                    </div>
+                </div>
             </nav>
 
             <nav

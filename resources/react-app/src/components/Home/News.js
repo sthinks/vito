@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import services from "../../service/service";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
+
 function Haber() {
     const [news, setNews] = useState(null);
     const [newsAnim, setNewsAnim] = useState(false);
@@ -17,6 +19,8 @@ function Haber() {
             setNewsAnim(true);
         }
     }
+    const { t, i18n } = useTranslation();
+
     useEffect(() => {
         getAllNews();
     }, []);
@@ -25,7 +29,7 @@ function Haber() {
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5">
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
                 <p className="font-bold text-4xl my-5 mx-0 text-[#093977] text-center">
-                    NEWS
+                    {t("home_new")}
                 </p>
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
             </div>
@@ -96,7 +100,9 @@ function Haber() {
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href={`news/${news[1].slug}`}>Read More</a>
+                                <a href={`news/${news[1].slug}`}>
+                                    {t("home_who_go")}.
+                                </a>
                             </p>
                         </div>
                     </div>

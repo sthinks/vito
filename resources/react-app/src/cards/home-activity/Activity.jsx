@@ -7,15 +7,17 @@ import ActivityCard from "./ActivityCard";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
 import serviceBg from "../../assets/aboutus/servicebg.png";
+import { useTranslation } from "react-i18next";
 
 function Activity() {
     const [newsAnim, setNewsAnim] = useState(false);
+    const { t, i18n } = useTranslation();
 
     const active_cards = [
         {
             id: 0,
             src: ActiveFirst,
-            description: "PROJECT DEVELOPMENT",
+            description: t("home_activity_project"),
             slug: "projects",
             color_code: "#369797",
         },
@@ -29,14 +31,14 @@ function Activity() {
         {
             id: 2,
             src: ActiveThird,
-            description: "FABRICATION",
+            description: t("home_activity_project2"),
             slug: "about-us/service",
             color_code: "#6b39ba",
         },
         {
             id: 3,
             src: ActiveFourth,
-            description: "MAINTANCE AND SPARE PARTS",
+            description: t("home_activity_project3"),
             slug: "about-us/service",
             color_code: "#7bba54",
         },
@@ -90,7 +92,7 @@ function Activity() {
                         />
                         <div className="absolute z-40 w-full h-full border-4 border-black   rounded-full bg-black opacity-30" />
                     </div>
-                    <p className="relative text-black text-lg font-semibold text-center">
+                    <p className="relative text-black text-lg font-semibold text-center mt-3">
                         {item.description}
                     </p>
                 </div>

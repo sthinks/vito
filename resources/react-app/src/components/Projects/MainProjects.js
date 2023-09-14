@@ -4,9 +4,12 @@ import { useInView } from "react-intersection-observer";
 import { useNavigate, useParams } from "react-router-dom";
 import projectBanner from "../../assets/projects/project.png";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 function MainProjects() {
     const param = useParams();
+    const { t, i18n } = useTranslation();
+
     const [projects, setProjects] = useState(null);
     const [onProjects, setOnProjects] = useState(null);
     const [projectsAnim, setProjectsAnim] = useState(false);
@@ -58,7 +61,7 @@ function MainProjects() {
                     <div className="w-full mt-20 flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5">
                         <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
                         <p className="text-4xl max-lg:text-3xl max-md:text-2xl  font-semibold text-center text-[#093977] max-sm:underline max-sm:w-full">
-                            TURNKEY PROJECTS
+                            {t("home_activity_main")}
                         </p>
                         <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
                     </div>
@@ -94,7 +97,7 @@ function MainProjects() {
                                             <a
                                                 href={`/projects/project-detail/${item.slug}`}
                                             >
-                                                Details...
+                                                {t("details")}...
                                             </a>
                                         </p>
                                     </div>
@@ -105,7 +108,7 @@ function MainProjects() {
                     <div className="w-full mt-20 flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5">
                         <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
                         <p className="text-4xl max-lg:text-3xl max-md:text-2xl  font-semibold text-center text-[#093977] max-sm:underline max-sm:w-full">
-                            ONGOING PROJECTS
+                            {t("home_activity_going")}
                         </p>
                         <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
                     </div>
@@ -145,7 +148,7 @@ function MainProjects() {
                                             <a
                                                 href={`/projects/project-detail/${item.slug}`}
                                             >
-                                                Details...
+                                                {t("details")}...
                                             </a>
                                         </p>
                                     </div>

@@ -6,14 +6,18 @@ import { AiOutlineMail } from "react-icons/ai";
 import { Helmet } from "react-helmet";
 import { IoLocationSharp } from "react-icons/io5";
 import { useFormik } from "formik";
+import { useTranslation } from "react-i18next";
+
 import * as Yup from "yup";
 import service from "../../service/service";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function Contact() {
     const [loading, setLoading] = useState(false);
+    const { t, i18n } = useTranslation();
+
     const notify = () =>
-        toast.success("The form was sent successfully.", {
+        toast.success(t("contact_meta_SUCCCES"), {
             position: "top-right",
             autoClose: false,
             hideProgressBar: false,
@@ -24,7 +28,7 @@ function Contact() {
             theme: "colored",
         });
     const notifyError = () =>
-        toast.error("Form could not be sent.", {
+        toast.error(t("contact_meta_FAİL"), {
             position: "top-right",
             autoClose: false,
             hideProgressBar: false,
@@ -77,7 +81,7 @@ function Contact() {
     return (
         <>
             <Helmet>
-                <title>ViTO Contact</title>
+                <title>ViTO {t("contact_meta_title")}</title>
                 <link rel="canonical" href={`/contact`} />
 
                 <meta name="description" content="Vito Contact" />
@@ -117,7 +121,7 @@ function Contact() {
                     <div className="w-3/4  flex justify-start items-start mt-52  flex-col ">
                         <div className="w-full pt-36">
                             <p className="text-4xl text-white font-bold">
-                                Regional Offices
+                                {t("contact_title")}
                             </p>
                             <hr className="w-full my-4 border-2" />
                             <div className="text-white text-lg mb-4 flex">
@@ -142,7 +146,7 @@ function Contact() {
                         </div>
                         <div className="w-full my-10">
                             <p className="text-4xl text-white font-bold">
-                                Contact Form
+                                {t("contact_form")}
                             </p>
                             <hr className="w-full my-4 border-2" />
                             <form
@@ -153,7 +157,7 @@ function Contact() {
                                     className="text-white py-2 font-medium"
                                     htmlFor="fullname"
                                 >
-                                    Name / Surname
+                                    {t("contact_form_field1")}
                                 </label>
                                 <input
                                     className={
@@ -172,7 +176,7 @@ function Contact() {
                                     className="text-white py-2 font-medium"
                                     htmlFor="phone"
                                 >
-                                    Mobile Phone
+                                    {t("contact_form_field2")}
                                 </label>
                                 <input
                                     className={
@@ -210,7 +214,7 @@ function Contact() {
                                     className="text-white py-2 font-medium"
                                     htmlFor="subject"
                                 >
-                                    Subject
+                                    {t("contact_form_field4")}
                                 </label>
                                 <input
                                     className={
@@ -229,7 +233,7 @@ function Contact() {
                                     className="text-white py-2 font-medium"
                                     htmlFor="message"
                                 >
-                                    Message
+                                    {t("contact_form_field5")}
                                 </label>
                                 <textarea
                                     className={
@@ -251,14 +255,14 @@ function Contact() {
                                             className="bg-[#041c3b] rounded-lg border border-white px-5 py-2 text-[#ffffff9e] animate-bounce"
                                             disabled
                                         >
-                                            SENDING
+                                            {t("contact_form_field7")}
                                         </button>
                                     ) : (
                                         <button
                                             className="bg-[#041c3b] rounded-lg border border-white px-5 py-2 hover:bg-[#16365e] duration-150 hover:scale-105 text-white "
                                             type="submit"
                                         >
-                                            SUBMIT
+                                            {t("contact_form_field6")}
                                         </button>
                                     )}
                                 </div>

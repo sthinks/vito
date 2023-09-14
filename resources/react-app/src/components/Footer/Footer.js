@@ -15,6 +15,7 @@ import mumbai from "../../assets/footer/mumbai.jpg";
 import buda from "../../assets/footer/buda.jpg";
 import Modal from "./MapModal";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const ModalContent = styled.div`
     height: 100%;
@@ -47,6 +48,7 @@ function Footer() {
             setShowMap(true);
         }
     }, [inView]);
+    const { t, i18n } = useTranslation();
 
     const date = new Date();
     const locationList = [
@@ -208,7 +210,7 @@ function Footer() {
                             <p>Türkiye</p>
                             <div className="flex justify-start items-start mt-5">
                                 <p className="font-bold ">
-                                    CONTACT <br />
+                                    {t("nav_contact")} <br />
                                     <a
                                         className="font-normal"
                                         href="tel:+902122323030"
@@ -223,31 +225,35 @@ function Footer() {
                         <div className="flex justify-between text-white max-lg:flex-wrap  max-md:gap-5 max-md:flex-initial max-md:items-start">
                             <ul className="max-md:w-[22%]">
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/">HOME</a>
+                                    <a href="/"> {t("nav_home")}</a>
                                 </li>
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/corporate">CORPORATE</a>
+                                    <a href="/corporate">
+                                        {t("nav_corporate")}
+                                    </a>
                                 </li>
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/service">SERVICES</a>
-                                </li>
-                            </ul>
-                            <ul className="max-md:w-[22%]">
-                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/projects">PROJECTS</a>
-                                </li>
-                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/sector">SECTORS</a>
+                                    <a href="/service">{t("nav_services")}</a>
                                 </li>
                             </ul>
                             <ul className="max-md:w-[22%]">
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/our-policies">HUMAN RESOURCES</a>
+                                    <a href="/projects">{t("nav_project")}</a>
+                                </li>
+                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
+                                    <a href="/sector">{t("nav_sector")}</a>
                                 </li>
                             </ul>
                             <ul className="max-md:w-[22%]">
                                 <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
-                                    <a href="/news">NEWS</a>
+                                    <a href="/our-policies">
+                                        {t("nav_humanres")}
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul className="max-md:w-[22%]">
+                                <li className="pb-2 max-sm:text-sm text-start hover:text-[#1DA1F2]">
+                                    <a href="/news">{t("nav_news")}</a>
                                 </li>
                             </ul>
                             <ul className="max-md:w-[22%]">
@@ -256,19 +262,19 @@ function Footer() {
                                         href="/pages/vito-clarification-text
 "
                                     >
-                                        GDPR
+                                        {t("nav_kvkk")}
                                     </a>
                                 </li>
                                 <li className="pb-2 max-sm:text-sm text-end max-sm:text-start hover:text-[#1DA1F2] text-white">
                                     <a href="/pages/cookie-policy">
-                                        COOKIE POLICY
+                                        {t("nav_policy")}
                                     </a>
                                 </li>
                                 {/* <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
                                     <a href="/our-policies">OUR POLICIES</a>
                                 </li> */}
                                 <li className="pb-2 max-sm:text-sm text-end max-sm:text-start hover:text-[#1DA1F2]">
-                                    <a href="/contact">CONTACT</a>
+                                    <a href="/contact">{t("nav_contact")}</a>
                                 </li>
                             </ul>
                         </div>

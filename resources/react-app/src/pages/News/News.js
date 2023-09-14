@@ -5,11 +5,14 @@ import { useInView } from "react-intersection-observer";
 import newsBanner from "../../assets/news/newsbanner.jpg";
 import Loading from "../../components/loading/Loading";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 function News() {
     const [isLoading, setIsLoading] = useState(true);
     const [news, setNews] = useState(null);
     const [newsAnim, setNewsAnim] = useState(true);
+    const { t, i18n } = useTranslation();
+
     const { ref, inView, entry } = useInView({
         /* Optional options */
         threshold: 0,
@@ -34,7 +37,7 @@ function News() {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>ViTO News</title>
+                <title>ViTO {t("title_news")}</title>
                 <link rel="canonical" href={`/news`} />
                 <meta
                     name="description"
@@ -52,7 +55,7 @@ function News() {
                     />
                     <div className="w-full h-full absolute bg-black opacity-40 left-0 bottom-0" />
                     <p className="absolute text-6xl font-extrabold tracking-widest text-white">
-                        NEWS
+                        {t("nav_news")}
                     </p>
                 </div>
                 <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5">
@@ -95,7 +98,7 @@ function News() {
                                     />
                                     <p className="text-base text-sky-500 font-medium">
                                         <a href={`/news/${item.slug}`}>
-                                            Read More
+                                            {t("news_read_more")}
                                         </a>
                                     </p>
                                 </div>

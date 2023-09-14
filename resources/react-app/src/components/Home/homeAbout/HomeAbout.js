@@ -7,6 +7,8 @@ import AboutImg5 from "../../../assets/homeAbout/Aoste.jpg";
 import AboutImg6 from "../../../assets/homeAbout/whoare.png";
 import ReactPlayer from "react-player";
 import HomeAboutSlider from "./HomeAboutSlider";
+import { useTranslation } from "react-i18next";
+
 function HomeAbout() {
     const arrayImage = [
         {
@@ -34,37 +36,29 @@ function HomeAbout() {
             url: AboutImg,
         },
     ];
+    const { t, i18n } = useTranslation();
+
     return (
         <div>
             <h1 className="text-[#093977] text-center text-4xl my-10 font-bold max-md:text-3xl ">
-                WHO WE ARE
+                {t("home_who")}
             </h1>
             <HomeAboutSlider sliderImage={arrayImage} />
             <div className="m-20 max-md:px-5 max-md:m-0 max-md:py-4">
                 <div className="flex justify-between items-center mt-5 max-md:flex-col max-md:justify-center max-md:items-center">
                     <div className="w-[49%] h-[300px] flex flex-col justify-arround max-md:w-full max-lg:h-auto py-5">
                         <h2 className="text-center font-bold text-3xl ">
-                            ViTO Group
+                            {t("home_who_title")}
                         </h2>
                         <p className="text-center mt-6 text-black opacity-70 font-medium leading-9 italic">
-                            ViTO has extensive experience in providing a
-                            comprehensive range of intricate turnkey
-                            construction and erection services, seamlessly
-                            integrated under a single umbrella, catering to
-                            projects within the Oil & Gas, hydrogen and energy
-                            sectors. Widely recognized as industry leaders, ViTO
-                            has also achieved excellence in constructing storage
-                            facilities and tank farms as accomplished EPC
-                            contractors. In 2019, the Group became one of the
-                            founding partners of Bergama Industry factory to
-                            manufacture pressure vessels and pipe prefabrication
-                            in Bergama Organized Industry Zone.
+                            {t("home_who_content")}
+
                             <br />
                             <a
                                 className="text-blue-600 hover:underline px-2"
                                 href="/about-us"
                             >
-                                Read More
+                                {t("home_who_go")}
                             </a>
                         </p>
                     </div>

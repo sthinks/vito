@@ -5,11 +5,13 @@ import GlobalSlider from "../Global/GlobalSlider";
 import Waves from "../../assets/footer/footerwaves.png";
 import Loading from "../../components/loading/Loading.js";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 const ProjectDetail = () => {
     const [project, setProject] = useState(null);
     const [selectedProject, setSelectedProject] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
+    const { t, i18n } = useTranslation();
 
     const param = useParams();
 
@@ -122,7 +124,7 @@ const ProjectDetail = () => {
                                                 "polygon(100% 0%, 100% 50%, 100% 100%, 20% 100%, 0% 50%, 20% 0%)",
                                         }}
                                     >
-                                        PREVIOUS
+                                        {t("project_PREVIOUS")}
                                     </div>
                                     <div
                                         className={
@@ -140,7 +142,7 @@ const ProjectDetail = () => {
                                                 "polygon(80% 0%, 100% 50%, 80% 100%, 0% 100%, 0% 50%, 0% 0%)",
                                         }}
                                     >
-                                        NEXT
+                                        {t("project_NEXT")}
                                     </div>
                                 </div>
                             </div>
@@ -162,7 +164,7 @@ const ProjectDetail = () => {
                                             fontWeight: "bold",
                                         }}
                                     >
-                                        PROJECTS
+                                        {t("project_PROJECTS")}
                                     </h1>
                                 </div>
                                 <div className="w-3/4 max-md:w-full leading-9">
@@ -170,7 +172,7 @@ const ProjectDetail = () => {
                                         {selectedProject.data.project_name}
                                     </h1>
                                     <h2 className="font-bold text-3xl max-md:text-xl  mb-5">
-                                        CLIENT
+                                        {t("project_CLIENT")}
                                     </h2>
 
                                     <p
@@ -181,7 +183,7 @@ const ProjectDetail = () => {
                                     />
 
                                     <h2 className="font-bold text-3xl max-md:text-xl my-5">
-                                        SCOPE
+                                        {t("project_SCOPE")}
                                     </h2>
 
                                     <p
@@ -191,7 +193,7 @@ const ProjectDetail = () => {
                                         }}
                                     />
                                     <h2 className="font-bold text-3xl max-md:text-xl my-5">
-                                        SUBCONTRACTOR
+                                        {t("project_SUBCONTRACTOR")}
                                     </h2>
                                     {selectedProject.data.subcontractor && (
                                         <p
@@ -203,7 +205,7 @@ const ProjectDetail = () => {
                                         />
                                     )}
                                     <h2 className="font-bold text-3xl max-md:text-xl my-5">
-                                        PROJECT STATUS
+                                        {t("project_PROJECT_STATUS")}
                                     </h2>
 
                                     <p
