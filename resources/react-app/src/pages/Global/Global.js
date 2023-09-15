@@ -1,10 +1,4 @@
-import React, {
-    useState,
-    Fragment,
-    useEffect,
-    useLayoutEffect,
-    useRef,
-} from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 import globalheader from "../../assets/global/globalheader.png";
 import map from "../../assets/footer/footermap.png";
 import mapcursor from "../../assets/footer/mapcursor.png";
@@ -24,6 +18,7 @@ import buda from "../../assets/footer/buda.jpg";
 import { Helmet } from "react-helmet";
 import Modal from "../../components/Footer/MapModal";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const ModalContent = styled.div`
     height: 100%;
@@ -53,6 +48,8 @@ function Global() {
         getDataHandler();
         window.scrollTo(0, 0);
     }, []);
+    const { t, i18n } = useTranslation();
+
     const getDataHandler = async () => {
         const result = await service.getGlobalVito();
         setData(result.data);
@@ -133,7 +130,7 @@ function Global() {
     return (
         <>
             <Helmet>
-                <title>ViTO Global</title>
+                <title>ViTO {t("meta_title_global")}</title>
 
                 <meta name="description" content="Vito Global" />
                 <meta name="keywords" content="Vito Global Page" />
@@ -145,10 +142,10 @@ function Global() {
                 />
                 <meta name="description" content="ViTO Energy Engineering " />
             </Helmet>
-            <div className="w-full flex justify-center items-center relative">
+            <div className="w-full flex justify-center items-center relative ">
                 <img className="w-full" src={globalheader} alt="VitoGlobal" />
                 <p className="absolute text-6xl font-bold max-md:text-3xl text-center text-[#093977] tracking-widest z-50">
-                    ViTO GLOBAL
+                    ViTO {t("nav_global")}
                 </p>
                 <div className="w-full h-full absolute bg-black opacity-30 z-40" />
             </div>

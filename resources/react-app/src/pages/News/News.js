@@ -47,7 +47,7 @@ function News() {
                 <meta name="description" content="ViTO Energy Projects" />
             </Helmet>
             <div className="w-full">
-                <div className="w-full flex justify-center items-center relative ">
+                <div className="w-full flex justify-center items-center relative h-[500px] max-md:h-[200px]">
                     <img
                         className="w-full h-full"
                         src={newsBanner}

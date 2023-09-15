@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Logo from "../../assets/header/logo.png";
 import LogoTitle from "../../assets/header/title.png";
 import BlueLogo from "../../assets/header/blue.png";
@@ -8,6 +8,11 @@ import ReactCountryFlag from "react-country-flag";
 import engIcon from "../../assets/header/engIcons.svg";
 import trIcon from "../../assets/header/trIcon.svg";
 import { useTranslation } from "react-i18next";
+import { BsFillPeopleFill, BsBuilding } from "react-icons/bs";
+import { BiWorld, BiImages, BiSolidContact, BiNews } from "react-icons/bi";
+import { IoAnalyticsOutline } from "react-icons/io5";
+import { LuLanguages } from "react-icons/lu";
+
 import "./HamburgerMenu.css";
 function Header() {
     const [isVisible, setIsVisible] = useState(true);
@@ -28,7 +33,7 @@ function Header() {
     };
 
     const [hasOpacity, setHasOpacity] = useState(true);
-
+    const mobilRef = useRef();
     const handleScroll = () => {
         if (window.scrollY > 0) {
             setHasOpacity(false);
@@ -43,6 +48,19 @@ function Header() {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
+    }, []);
+    useEffect(() => {
+        const closeDropdown = (e) => {
+            console.log(e.target.className);
+            if (
+                e.target.className ===
+                "w-full absolute h-screen top-[80px] flex justify-end left-0 z-[9999]"
+            ) {
+                setIsOpen(false);
+            }
+        };
+        document.body.addEventListener("click", closeDropdown);
+        return () => document.body.removeEventListener("click", closeDropdown);
     }, []);
 
     useEffect(() => {
@@ -62,6 +80,7 @@ function Header() {
         i18n.changeLanguage(lang);
         localStorage.setItem("lang", lang);
     };
+    const date = new Date();
     return (
         <header>
             <nav
@@ -83,7 +102,7 @@ function Header() {
                         <img
                             className={
                                 hasOpacity
-                                    ? "absolute -bottom-10 w-full"
+                                    ? "absolute -bottom-10 max-lg:-bottom-6 w-full"
                                     : "hidden"
                             }
                             src={LogoTitle}
@@ -92,7 +111,7 @@ function Header() {
                     </Link>
                 </div>
                 <ul className="flex flex-row justify-around navbar-ul items-center w-9/12">
-                    <li className="text-white font-bold text-base max-lg:text-xs  text-center w-[10%]">
+                    <li className="text-white font-bold text-base max-xl:text-xs  text-center w-full">
                         <Link
                             className={`${
                                 hasOpacity
@@ -104,7 +123,7 @@ function Header() {
                             {t("nav_aboutus")}
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-base max-lg:text-xs  text-center w-[10%]">
+                    <li className="text-white font-bold text-base max-xl:text-xs  text-center w-full">
                         <Link
                             className={`${
                                 hasOpacity
@@ -116,7 +135,7 @@ function Header() {
                             {t("nav_corporate")}
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-base max-lg:text-xs  text-center w-[10%]">
+                    <li className="text-white font-bold text-base max-xl:text-xs  text-center w-full">
                         <Link
                             className={`${
                                 hasOpacity
@@ -128,7 +147,7 @@ function Header() {
                             GLOBAL
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-lg  max-lg:text-xs max-xl:text-base text-center w-[10%]">
+                    <li className="text-white font-bold text-base max-xl:text-xs  text-center w-full">
                         <Link
                             className={`${
                                 hasOpacity
@@ -140,7 +159,7 @@ function Header() {
                             {t("nav_project")}
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-lg  max-lg:text-xs max-xl:text-base text-center w-[10%]">
+                    <li className="text-white font-bold text-base max-xl:text-xs  text-center w-full">
                         <Link
                             className={`${
                                 hasOpacity
@@ -152,7 +171,7 @@ function Header() {
                             {t("nav_sector")}
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-base max-lg:text-xs  text-center w-[10%]">
+                    <li className="text-white font-bold text-base max-xl:text-xs  text-center w-full">
                         <Link
                             className={`${
                                 hasOpacity
@@ -164,7 +183,7 @@ function Header() {
                             {t("nav_news")}
                         </Link>
                     </li>
-                    <li className="text-white font-bold text-lg  max-lg:text-xs max-xl:text-base text-center w-[10%]">
+                    <li className="text-white font-bold text-base max-xl:text-xs  text-center w-full">
                         <Link
                             className={`${
                                 hasOpacity
@@ -217,8 +236,8 @@ function Header() {
             <nav
                 className={
                     hasOpacity
-                        ? "bg-[#fff] h-20  p-5 justify-between items-center relative z-[9999] w-full opacity-90 hidden max-md:flex"
-                        : "bg-[#fff] h-20  p-5 justify-between items-center fixed z-[9999] w-full opacity-90 hidden max-md:flex"
+                        ? "bg-[#fff] h-20 w-full p-5 justify-between items-center relative z-[9999]  opacity-90 hidden max-md:flex"
+                        : "bg-[#fff] h-20 w-full p-5 justify-between items-center fixed z-[9999] opacity-90 hidden max-md:flex"
                 }
             >
                 <div className="flex justify-center items-center">
@@ -229,108 +248,133 @@ function Header() {
                         onClick={() => navigate("/")}
                     />
                 </div>
+                <div
+                    ref={mobilRef}
+                    className={
+                        !isOpen
+                            ? "hidden"
+                            : "w-full absolute h-screen top-[80px] flex justify-end left-0 z-[9999]"
+                    }
+                >
+                    <nav
+                        className={
+                            !isOpen
+                                ? "hidden"
+                                : " w-[65%] h-screen  bg-white flex flex-col justify-between"
+                        }
+                    >
+                        {/* Burada menü öğelerini ekleyebilirsiniz */}
+                        <ul className="bg-white ">
+                            <li className="text-black font-bold text-lg  max-xl:text-sm ">
+                                <Link
+                                    to="/about-us"
+                                    className="w-full flex justify-end items-center gap-10 p-3"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {t("nav_aboutus")}
+                                    <BsFillPeopleFill className="text-2xl text-[#264ea4]" />
+                                </Link>
+                            </li>
+                            <li className="text-black font-bold text-lg max-xl:text-sm ">
+                                <Link
+                                    to="/corporate"
+                                    className="w-full flex justify-end items-center gap-10 p-3"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {t("nav_corporate")}
+                                    <BsBuilding className="text-2xl text-[#264ea4]" />
+                                </Link>
+                            </li>
+                            <li className="text-black font-bold text-lg max-xl:text-sm ">
+                                <Link
+                                    to="/vito-global"
+                                    className="w-full flex justify-end items-center gap-10 p-3"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {" "}
+                                    {t("nav_global")}
+                                    <BiWorld className="text-2xl text-[#264ea4]" />
+                                </Link>
+                            </li>
+                            <li className="text-black font-bold text-lg max-xl:text-sm ">
+                                <Link
+                                    to="/projects"
+                                    className="w-full flex justify-end items-center gap-10 p-3"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {t("nav_project")}
+                                    <BiImages className="text-2xl text-[#264ea4]" />
+                                </Link>
+                            </li>
+
+                            <li className="text-black font-bold text-lg max-xl:text-sm ">
+                                <Link
+                                    to="/sector"
+                                    className="w-full flex justify-end items-center gap-10 p-3"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {" "}
+                                    {t("nav_sector")}
+                                    <IoAnalyticsOutline className="text-2xl text-[#264ea4]" />
+                                </Link>
+                            </li>
+                            <li className="text-black font-bold text-lg max-xl:text-sm ">
+                                <Link
+                                    to="/news"
+                                    className="w-full flex justify-end items-center gap-10 p-3"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {" "}
+                                    {t("nav_news")}
+                                    <BiNews className="text-2xl text-[#264ea4]" />
+                                </Link>
+                            </li>
+                            <li className="text-black font-bold text-lg max-xl:text-sm ">
+                                <Link
+                                    to="/contact"
+                                    className="w-full flex justify-end items-center gap-10 p-3"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {" "}
+                                    {t("nav_contact")}
+                                    <BiSolidContact className="text-2xl text-[#264ea4]" />
+                                </Link>
+                            </li>
+                            <li className="text-black font-bold text-lg max-xl:text-sm ">
+                                <div className="w-full flex justify-end items-center gap-10 p-3">
+                                    {i18n.language === "tr" ? (
+                                        <img
+                                            className="w-6 cursor-pointer"
+                                            src={engIcon}
+                                            alt="EngIcon"
+                                            onClick={() => changeLanguage("en")}
+                                        />
+                                    ) : (
+                                        <img
+                                            className="w-6 cursor-pointer"
+                                            src={trIcon}
+                                            alt="TrIcon"
+                                            onClick={() => changeLanguage("tr")}
+                                        />
+                                    )}
+
+                                    <LuLanguages className="text-2xl text-[#264ea4]" />
+                                </div>
+                            </li>
+                        </ul>
+                        <div className="w-full flex justify-between items-center">
+                            <p className="text-sm text-black ">
+                                Vito ©. Copyright {date.getFullYear()}
+                            </p>
+                        </div>
+                    </nav>
+                </div>
                 <div className={`hamburger-menu ${isOpen ? "open" : ""}`}>
                     <div className="hamburger-icon" onClick={toggleMenu}>
                         <div className="bar"></div>
                         <div className="bar"></div>
                         <div className="bar"></div>
                     </div>
-                    <nav className={!isOpen ? "hidden" : "menu  z-[9999]"}>
-                        {/* Burada menü öğelerini ekleyebilirsiniz */}
-                        <ul className="bg-[#1b4378] ">
-                            <li className="text-white font-bold text-lg  max-xl:text-sm ">
-                                <Link
-                                    to="/about-us"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    ABOUT US{" "}
-                                </Link>
-                            </li>
-                            <li className="text-white font-bold text-lg max-xl:text-sm">
-                                <Link
-                                    to="/corporate"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    CORPORATE
-                                </Link>
-                            </li>
-                            <li className="text-white font-bold text-lg max-xl:text-sm">
-                                <Link
-                                    to="/vito-global"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {" "}
-                                    GLOBAL{" "}
-                                </Link>
-                            </li>
-                            <li className="text-white font-bold text-lg max-xl:text-sm">
-                                <Link
-                                    to="/projects"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    PROJECTS
-                                </Link>
-                            </li>
-
-                            <li className="text-white font-bold text-lg max-xl:text-sm">
-                                <Link
-                                    to="/sector"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {" "}
-                                    SECTORS{" "}
-                                </Link>
-                            </li>
-                            <li className="text-white font-bold text-lg max-xl:text-sm">
-                                <Link
-                                    to="/news"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {" "}
-                                    NEWS{" "}
-                                </Link>
-                            </li>
-                            <li className="text-white font-bold text-lg max-xl:text-sm">
-                                <Link
-                                    to="/contact"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {" "}
-                                    CONTACT{" "}
-                                </Link>
-                            </li>
-                            {/* <li className="flex items-center gap-3">
-                                    <img
-                                        className="w-[30px] h-[20px]"
-                                        src={Turkish}
-                                        alt="turkish_flag"
-                                    />
-                                    <img
-                                        className="w-[30px] h-[20px]"
-                                        src={British}
-                                        alt="british_flag"
-                                    />
-                                </li>
-
-                                <li>
-                                    <div className="flex ">
-                                        <label>
-                                            <Switch
-                                                onChange={handleToggle}
-                                                checked={isToggled}
-                                                onColor="#86d3ff"
-                                                onHandleColor="#2693e6"
-                                                handleDiameter={24}
-                                                uncheckedIcon={false}
-                                                checkedIcon={false}
-                                                height={20}
-                                                width={48}
-                                            />
-                                        </label>
-                                    </div>
-                                </li> */}
-                        </ul>
-                    </nav>
                 </div>
             </nav>
         </header>

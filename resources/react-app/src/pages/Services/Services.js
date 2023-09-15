@@ -44,7 +44,7 @@ function Services() {
                 <meta name="description" content="ViTO Services" />
                 <meta name="description" content="ViTO Energy Projects" />
             </Helmet>
-            <div className="w-full flex justify-center items-center relative max-md:h-[250px] ">
+            <div className="w-full flex justify-center items-center relative max-md:h-[200px] ">
                 <img
                     className="w-full h-full object-cover"
                     src={SectorBanner}

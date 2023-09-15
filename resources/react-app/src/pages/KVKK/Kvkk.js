@@ -1,12 +1,15 @@
 import React, { useLayoutEffect, useState } from "react";
 import service from "../../service/service";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
+
 function Kvkk() {
     const [data, setData] = useState(null);
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
         getPages();
     }, []);
+    const { t, i18n } = useTranslation();
 
     const getPages = async () => {
         const result = await service.getBasePage("our-policies");
@@ -21,63 +24,33 @@ function Kvkk() {
                 <div className="container mx-auto px-24 max-lg:px-16 max-md:px-5 my-14">
                     <div className="py-2">
                         <p className="text-3xl font-bold py-2">
-                            Our Human Resources Policy
+                            {t("our_human_policy_title")}
                         </p>
                         <p className="text-lg   py-2">
-                            VITO defends the principle of equal opportunities in
-                            our recruitment policy. While trying to reach the
-                            right candidate in line with our needs, it cares
-                            about the fairest execution of our processes. As an
-                            employer, it has adopted the principle of providing
-                            equal opportunity and processes such as employee
-                            selection, interview, recruitment, classification,
-                            training, promotion, wage offer are only based on
-                            merit and qualification, regardless of race,
-                            religion, belief, color, nationality, disability,
-                            gender or age. operates on its principles. ViTO
-                            Human Resources basic policy; It is based on the
-                            principle of working in accordance with the
-                            understanding of service focused on respect for
-                            people, within the framework of the relevant
-                            legislation and determined policies. ViTO; It has
-                            adopted as a strategic goal to have employees who
-                            are open to change, modern, innovative, efficient
-                            and specialized in their field by developing their
-                            structure in accordance with corporate values and
-                            who can transfer these expertise to others.
-                        </p>
-                    </div>
-                    <div className="py-2">
-                        <p className="text-3xl font-bold py-2">Why Vito</p>
-                        <p className="text-lg  py-2">
-                            Starting from the selection process, it offers equal
-                            opportunities to its employees in all processes, the
-                            right people are placed in the right positions,
-                            promotes from within the organization for new
-                            positions, cares about the morale and motivation of
-                            its employees, makes training plans for its
-                            employees, provides an open communication
-                            environment, and all these processes are in
-                            accordance with the law to protect personal data.
-                            Our basic principle is to be an organization that
-                            puts people at its center by conducting business.
+                            {t("our_human_policy_content")}
                         </p>
                     </div>
                     <div className="py-2">
                         <p className="text-3xl font-bold py-2">
-                            Career Opportunities
+                            {t("our_policy_why_vito")}
                         </p>
                         <p className="text-lg  py-2">
-                            You can follow us on Kariyer.net and linkedin for
-                            our current job opportunities. You can send your
-                            current CV to{" "}
+                            {t("our_policy_why_vito_content")}
+                        </p>
+                    </div>
+                    <div className="py-2">
+                        <p className="text-3xl font-bold py-2">
+                            {t("our_policy_career")}
+                        </p>
+                        <p className="text-lg  py-2">
+                            {t("our_policy_career_conetent1")}
                             <a
-                                className="cursor-pointer hover:underline hover:text-blue-500"
+                                className="cursor-pointer hover:underline hover:text-blue-500 font-semibold"
                                 href="mailto:cv@vito.com.tr"
                             >
                                 cv@vito.com.tr
                             </a>{" "}
-                            to apply for our open positions.
+                            {t("our_policy_career_conetent2")}
                         </p>
                     </div>
                 </div>

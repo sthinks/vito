@@ -64,7 +64,7 @@ function AboutUs() {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>ViTO {t("nav_aboutus")}</title>
+                <title>ViTO {t("about_us_title_head")}</title>
                 <link rel="canonical" href={`/about-us`} />
                 <meta
                     name="description"

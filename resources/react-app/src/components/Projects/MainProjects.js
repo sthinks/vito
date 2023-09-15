@@ -19,7 +19,7 @@ function MainProjects() {
     });
 
     const getAllMainProjects = async () => {
-        const result = await services.getProjects();
+        const result = await services.getProjects(i18n.language);
 
         const filterDataMain = result.data.filter((x) => x.continues === 0);
         setProjects(filterDataMain);
@@ -35,13 +35,14 @@ function MainProjects() {
     useEffect(() => {
         getAllMainProjects();
         window.scrollTo(0, 0);
-    }, [param]);
+    }, [param, i18n.language]);
+
     const navigate = useNavigate();
     return (
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>ViTO Projects</title>
+                <title>ViTO {t("project_title_head")}</title>
                 <link rel="canonical" href={`/projects`} />
                 <meta
                     name="description"
@@ -49,12 +50,17 @@ function MainProjects() {
                 />
                 <meta name="description" content="ViTO Energy Projects" />
             </Helmet>
-            <div className="w-full flex justify-center items-center h-[500px] max-md:h-[250px]">
+            <div className="w-full relative flex justify-center items-center h-[500px] max-md:h-[200px]">
                 <img
                     src={projectBanner}
                     alt="projectbanner"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover top-0"
                 />
+                <div className="w-full h-full top-0 absolute bg-black opacity-40 left-0 bottom-0" />
+
+                <p className="absolute text-6xl font-extrabold tracking-widest text-white">
+                    {t("nav_project")}
+                </p>
             </div>
             <>
                 <div ref={ref} className="py-10 bg-white ">

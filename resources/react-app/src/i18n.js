@@ -11,9 +11,12 @@ const resources = {
             nav_kvkk: "KVKK",
             nav_policy: "ÇEREZ POLİTİKASI",
             nav_aboutus: "HAKKIMIZDA",
+            nav_aboutus2: "HAKKIMIZDA",
+            nav_aboutus3: "",
+
             nav_corporate: "KURUMSAL",
             nav_project: "PROJELER",
-            nav_sector: "SEKTÖR",
+            nav_sector: "SEKTÖRLER",
             nav_news: "HABERLER",
             nav_contact: "İLETİŞİM",
             home_who: "BİZ KİMİZ",
@@ -138,18 +141,40 @@ const resources = {
             contact_meta_title: "İletişim",
             contact_meta_SUCCCES: "Form başarıyla gönderildi.",
             contact_meta_FAİL: "Form gönderilemedi.",
+            our_human_policy_title: "İnsan kaynakları Politikamız",
+            our_human_policy_content:
+                "VİTO, işe alım politikamızda eşit fırsatlar ilkesini savunur. İhtiyaçlarımız doğrultusunda doğru adaya ulaşmaya çalışırken süreçlerimizin en adil şekilde yürütülmesini önemser. İşveren olarak eşit fırsat sunma ilkesini benimsemiştir ve çalışan seçme, mülakat, işe alma, sınıflama, eğitim, terfi, ücret teklifi gibi işlemleri ırk, din, inanç, renk, milliyet, engelli olup olmama, cinsiyet ya da yaş ayrımı yapmaksızın sadece liyakat ve vasıf esaslarına göre yürütür. ViTO İnsan Kaynakları temel politikası; ilgili mevzuatlar ve belirlenen politikalar çerçevesinde, insana saygı odaklı hizmet anlayışına bağlı olarak çalışmak ilkesini esas alır. ViTO; değişime açık, çağdaş, yenilikçi, verimlilik ve kurumsal değerlere uygun yapısını geliştirerek alanında uzmanlaşmış ve bu uzmanlıkları başkalarına aktarabilecek çalışanlara sahip olmayı stratejik amaç olarak benimsemiştir.",
+            our_policy_why_vito: "Neden ViTO",
+            our_policy_why_vito_content:
+                "Seçim sürecinden başlayarak bütün süreçlerde çalışanlarına fırsat eşitliği sunan, doğru kişilerin doğru pozisyonlara yerleştirildiği, yeni pozisyonlar için kurum içerisinden yükseltme yapan, çalışanlarının moral ve motivasyonunu önemseyen, çalışanları için eğitim planlamaları yapan, açık iletişim ortamı sağlayan ve tüm bu süreçleri kişisel verileri koruma kanuna uygun olarak yürüterek insanı odağına koyan bir kuruluş olmak temel prensibimiz.",
+            our_policy_career: "Kariyer Fırsatları",
+            our_policy_career_conetent1:
+                "Güncel iş fırsatlarımız için kariyer.net ve linkedin üzerinden bizleri takip edebilirsiniz. Açık pozisyonlarımıza başvuruda bulunmak için ",
+            our_policy_career_conetent2:
+                "adresine güncel özgeçmişinizi gönderebilirsiniz.",
+            home_title_head: "ViTO Enerji Mühendislik İnşaat ve Taahhüt A.Ş",
+            sector_title_head: "Sektörler",
+            project_title_head: "Projeler",
+            corporate_title_head: "Kurumsal",
+            about_us_title_head: "Hakkımızda",
+            nav_global: "KÜRESEL",
+            meta_title_global: "Küresel",
         },
     },
     en: {
         translation: {
+            meta_title_global: "Global",
+
             title_news: "News",
             nav_home: "HOME",
             nav_services: "SERVICES",
             nav_humanres: "HUMAN RESOURCES",
             nav_kvkk: "GDPR",
             nav_policy: "COOKIE POLICY",
-
+            nav_global: "GLOBAL",
             nav_aboutus: "ABOUT US",
+            nav_aboutus2: "ABOUT",
+            nav_aboutus3: "US",
             nav_corporate: "CORPORATE",
             nav_project: "PROJECTS",
             nav_sector: "SECTORS",
@@ -278,6 +303,22 @@ const resources = {
             contact_meta_title: "Contact",
             contact_meta_SUCCCES: "The form was sent successfully.",
             contact_meta_FAİL: "Form could not be sent.",
+            our_human_policy_title: "Our Human Resources Policy",
+            our_human_policy_content:
+                "VITO defends the principle of equal opportunities in our recruitment policy. While trying to reach the right candidate in line with our needs, it cares about the fairest execution of our processes. As an employer, it has adopted the principle of providing equal opportunity and processes such as employee selection, interview, recruitment, classification, training, promotion, wage offer are only based on merit and qualification, regardless of race, religion, belief, color, nationality, disability, gender or age. operates on its principles. ViTO Human Resources basic policy; It is based on the principle of working in accordance with the understanding of service focused on respect for people, within the framework of the relevant legislation and determined policies. ViTO; It has adopted as a strategic goal to have employees who are open to change, modern, innovative, efficient and specialized in their field by developing their structure in accordance with corporate values and who can transfer these expertise to others.",
+            our_policy_why_vito: "Why Vito",
+            our_policy_why_vito_content:
+                "Starting from the selection process, it offers equal opportunities to its employees in all processes, the right people are placed in the right positions, promotes from within the organization for new positions, cares about the morale and motivation of its employees, makes training plans for its employees, provides an open communication environment, and all these processes are in accordance with the law to protect personal data. Our basic principle is to be an organization that puts people at its center by conducting business.",
+            our_policy_career: "Career Opportunities",
+            our_policy_career_conetent1:
+                "You can follow us on Kariyer.net and linkedin for our current job opportunities. You can send your current CV to",
+            our_policy_career_conetent2: "to apply for our open positions.",
+            home_title_head:
+                "ViTO Energy Engineering Construction and Contracting Inc",
+            sector_title_head: "Sectors",
+            project_title_head: "Projects",
+            corporate_title_head: "Corporate",
+            about_us_title_head: "About Us",
         },
     },
 };

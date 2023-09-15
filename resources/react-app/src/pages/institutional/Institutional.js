@@ -44,7 +44,7 @@ function Institutional() {
     return (
         <>
             <Helmet>
-                <title>ViTO Corporate</title>
+                <title>ViTO {t("corporate_title_head")}</title>
                 <link rel="canonical" href={`/corporate`} />
 
                 <meta name="description" content="Vito Institutional" />

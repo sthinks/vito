@@ -17,7 +17,7 @@ const ProjectDetail = () => {
 
     const getMainProject = async () => {
         try {
-            const result = await services.getProjects();
+            const result = await services.getProjects(i18n.language);
 
             setProject(result.data);
             const selectedProjectData = result.data.filter(
@@ -32,8 +32,6 @@ const ProjectDetail = () => {
                 data: selectedProjectData[0],
                 index: dataIndex,
             };
-            console.log("project", projectStatusData);
-            console.log("select", selectData);
             setSelectedProject(selectData);
             if (result.data) {
                 window.scrollTo(0, 0);
@@ -49,7 +47,7 @@ const ProjectDetail = () => {
     useEffect(() => {
         getMainProject();
         setIsLoading(true);
-    }, [param]);
+    }, [param, i18n.language]);
 
     const navigate = useNavigate();
 
@@ -99,7 +97,7 @@ const ProjectDetail = () => {
                                 backgroundColor: `${selectedProject.data.color_code}`,
                             }}
                         >
-                            <div className="w-full h-[500px] max-md:h-[250px] relative">
+                            <div className="w-full h-[500px] max-md:h-[200px] relative">
                                 <img
                                     src={selectedProject.data.banner}
                                     alt="banner"

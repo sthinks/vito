@@ -32,10 +32,6 @@ function AppRoute() {
                         <Route path="/pages/:slug" element={<Page />} />
                         <Route path="/our-policies" element={<Kvkk />} />
 
-                        {/* <Route
-                            path="/projects-ongoing"
-                            element={<MainProjects />}
-                        /> */}
                         <Route path="/projects" element={<MainProjects />} />
                         <Route path="/corporate" element={<Institutional />} />
                         <Route path="/projects" element={<Projects />} />

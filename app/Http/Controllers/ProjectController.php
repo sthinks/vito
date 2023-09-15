@@ -8,9 +8,14 @@ use stdClass;
 
 class ProjectController extends Controller
 {
-    public function getProjects()
+    public function getProjects(Request $request)
     {
-        $projects = Project::orderBy('order','ASC')->get();
+        $acceptLanguage = $request->header('Accept-Language');
+        $languageCode = explode(',', $acceptLanguage)[0];
+        $languageCode = explode('-', $languageCode)[0];
+
+        $projects = Project::orderBy('order','ASC')->withTranslations($languageCode)->get();
+        $projects = $projects->translate($languageCode);
         $projects->map(function($item){
              if ($item->metatag != null) {
                 $metatagArray = explode(",", $item->metatag);

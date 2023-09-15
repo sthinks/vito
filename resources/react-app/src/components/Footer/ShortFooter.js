@@ -75,7 +75,7 @@ function ShortFooter() {
                             </li>
                         </ul>
                         <ul className="max-md:w-[22%]">
-                            <li className="pb-2 max-sm:text-sm text-end max-sm:text-start hover:text-[#1DA1F2] text-white">
+                            <li className="pb-2 max-sm:text-sm text-end max-md:text-start hover:text-[#1DA1F2] text-white">
                                 <a
                                     href="/pages/vito-clarification-text
 "
@@ -83,7 +83,7 @@ function ShortFooter() {
                                     {t("nav_kvkk")}
                                 </a>
                             </li>
-                            <li className="pb-2 max-sm:text-sm text-end max-sm:text-start hover:text-[#1DA1F2] text-white">
+                            <li className="pb-2 max-sm:text-sm text-end max-md:text-start hover:text-[#1DA1F2] text-white">
                                 <a href="/pages/cookie-policy">
                                     {t("nav_policy")}
                                 </a>
@@ -91,7 +91,7 @@ function ShortFooter() {
                             {/* <li className="pb-2 max-sm:text-sm text-end hover:text-[#1DA1F2] text-white">
                                     <a href="/our-policies">OUR POLICIES</a>
                                 </li> */}
-                            <li className="pb-2 max-sm:text-sm text-end max-sm:text-start hover:text-[#1DA1F2]">
+                            <li className="pb-2 max-sm:text-sm text-end max-md:text-start hover:text-[#1DA1F2]">
                                 <a href="/contact">{t("nav_contact")}</a>
                             </li>
                         </ul>

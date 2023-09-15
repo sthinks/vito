@@ -17,7 +17,7 @@ function Sector() {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>ViTO Sectors</title>
+                <title>ViTO {t("sector_title_head")}</title>
                 <link rel="canonical" href={`/sectors`} />
                 <meta
                     name="description"
@@ -27,7 +27,7 @@ function Sector() {
                 <meta name="description" content="ViTO Energy Projects" />
             </Helmet>
             <div className="w-full">
-                <div className="w-full flex justify-center items-center relative h-[500px] max-md:h-[250px]">
+                <div className="w-full flex justify-center items-center relative h-[500px] max-md:h-[200px]">
                     <img
                         className="w-full h-full object-cover"
                         src={SectorBanner}

@@ -1,7 +1,12 @@
 import axiosInstance from "../utils/axiosClient";
 
-const getAllNews = async () => {
-    const result = await axiosInstance.get("all-news");
+const getAllNews = async (lang) => {
+    const result = await axiosInstance.get("all-news", {
+        headers: {
+            "Content-Type": "application/json",
+            "Accept-Language": lang,
+        },
+    });
     return result;
 };
 const getHomeNews = async () => {
@@ -28,8 +33,13 @@ const getNewsDetail = async (slug) => {
     const result = await axiosInstance.get(`news-detail/${slug}`);
     return result;
 };
-const getProjects = async () => {
-    const result = await axiosInstance.get(`get-projects`);
+const getProjects = async (lang) => {
+    const result = await axiosInstance.get(`get-projects`, {
+        headers: {
+            "Content-Type": "application/json",
+            "Accept-Language": lang,
+        },
+    });
     return result;
 };
 const getMainProjects = async (slug) => {

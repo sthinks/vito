@@ -11,7 +11,7 @@ function Haber() {
         threshold: 0,
     });
     const getAllNews = async () => {
-        const result = await services.getHomeNews();
+        const result = await services.getHomeNews(i18n.language);
         setNews(result.data);
     };
     if (inView === true) {
@@ -23,7 +23,7 @@ function Haber() {
 
     useEffect(() => {
         getAllNews();
-    }, []);
+    }, [i18n.language]);
     return (
         <div ref={ref} className="py-10 bg-white ">
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5">
