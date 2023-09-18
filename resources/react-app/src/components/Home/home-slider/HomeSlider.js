@@ -1,4 +1,5 @@
 import React, { useLayoutEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Slider from "react-slick";
@@ -39,6 +40,8 @@ function HomeSlider() {
     const [showInfoBox, setShowInfoBox] = useState(false);
     const [activeSlide, setActiveSlide] = useState(0);
     const [data, setData] = useState([]);
+    const { t, i18n } = useTranslation();
+
     const handleSlideChange = (currentSlide) => {
         const prevSlide = document.querySelector(
             ".slide-content.animate-zoomIn.scale-up-center"
@@ -81,9 +84,9 @@ function HomeSlider() {
     };
     useLayoutEffect(() => {
         getHomeSliderData();
-    }, []);
+    }, [i18n.language]);
     const getHomeSliderData = async () => {
-        const result = await service.getHomeSlider();
+        const result = await service.getHomeSlider(i18n.language);
 
         setData(result.data);
     };

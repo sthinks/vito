@@ -8,6 +8,6 @@ use TCG\Voyager\Traits\Translatable;
 
 class BasePage extends Model
 {
-     use Translatable;
+    use Translatable;
     protected $translatable = ['content','title'];
 }

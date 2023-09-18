@@ -6,10 +6,13 @@ use Illuminate\Http\Request;
 
 class GlobalController extends Controller
 {
-    public function getGlobalVito()
+    public function getGlobalVito(Request $request)
     {
-        $global = VitoGlobal::orderBy('created_at','ASC')->get();
-        
+        $acceptLanguage = $request->header('Accept-Language');
+        $languageCode = explode(',', $acceptLanguage)[0];
+        $languageCode = explode('-', $languageCode)[0];
+        $global = VitoGlobal::orderBy('created_at','ASC')->withTranslations($languageCode)->get();
+        $global = $global->translate($languageCode);
         $global->map(function($item){
             if($item->images != null)
             {

@@ -9,28 +9,53 @@ const getAllNews = async (lang) => {
     });
     return result;
 };
-const getHomeNews = async () => {
-    const result = await axiosInstance.get("home-news");
+const getHomeNews = async (lang) => {
+    const result = await axiosInstance.get("home-news", {
+        headers: {
+            "Content-Type": "application/json",
+            "Accept-Language": lang,
+        },
+    });
     return result;
 };
 const getSectorSlider = async () => {
     const result = await axiosInstance.get("get-sector-slider");
     return result;
 };
-const getGlobalVito = async () => {
-    const result = await axiosInstance.get("get-vito-global");
+const getGlobalVito = async (lang) => {
+    const result = await axiosInstance.get("get-vito-global", {
+        headers: {
+            "Content-Type": "application/json",
+            "Accept-Language": lang,
+        },
+    });
     return result;
 };
-const getAboutStat = async () => {
-    const result = await axiosInstance.get("get-about-stats");
+const getAboutStat = async (lang) => {
+    const result = await axiosInstance.get("get-about-stats", {
+        headers: {
+            "Content-Type": "application/json",
+            "Accept-Language": lang,
+        },
+    });
     return result;
 };
-const getAboutServices = async () => {
-    const result = await axiosInstance.get("get-about-services");
+const getAboutServices = async (lang) => {
+    const result = await axiosInstance.get("get-about-services", {
+        headers: {
+            "Content-Type": "application/json",
+            "Accept-Language": lang,
+        },
+    });
     return result;
 };
-const getNewsDetail = async (slug) => {
-    const result = await axiosInstance.get(`news-detail/${slug}`);
+const getNewsDetail = async (slug, lang) => {
+    const result = await axiosInstance.get(`news-detail/${slug}`, {
+        headers: {
+            "Content-Type": "application/json",
+            "Accept-Language": lang,
+        },
+    });
     return result;
 };
 const getProjects = async (lang) => {
@@ -46,12 +71,22 @@ const getMainProjects = async (slug) => {
     const result = await axiosInstance.get(`get-project-detail/${slug}`);
     return result;
 };
-const getHomeSlider = async () => {
-    const result = await axiosInstance.get(`get-home-slider`);
+const getHomeSlider = async (lang) => {
+    const result = await axiosInstance.get(`get-home-slider`, {
+        headers: {
+            "Content-Type": "application/json",
+            "Accept-Language": lang,
+        },
+    });
     return result;
 };
-const getBasePage = async (slug) => {
-    const result = await axiosInstance.get(`get-base-page/${slug}`);
+const getBasePage = async (slug, lang) => {
+    const result = await axiosInstance.get(`get-base-page/${slug}`, {
+        headers: {
+            "Content-Type": "application/json",
+            "Accept-Language": lang,
+        },
+    });
     return result;
 };
 const contactForm = async (values) => {

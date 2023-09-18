@@ -36,6 +36,8 @@ function Global() {
     const [isOpen, toggle] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [showMap, setShowMap] = useState(false);
+    const { t, i18n } = useTranslation();
+
     const { ref, inView, entry } = useInView({
         /* Optional options */
         threshold: 0,
@@ -47,11 +49,10 @@ function Global() {
     useLayoutEffect(() => {
         getDataHandler();
         window.scrollTo(0, 0);
-    }, []);
-    const { t, i18n } = useTranslation();
+    }, [i18n.language]);
 
     const getDataHandler = async () => {
-        const result = await service.getGlobalVito();
+        const result = await service.getGlobalVito(i18n.language);
         setData(result.data);
     };
     useEffect(() => {
@@ -130,7 +131,7 @@ function Global() {
     return (
         <>
             <Helmet>
-                <title>ViTO {t("meta_title_global")}</title>
+                <title>ViTO Global</title>
 
                 <meta name="description" content="Vito Global" />
                 <meta name="keywords" content="Vito Global Page" />
@@ -145,7 +146,7 @@ function Global() {
             <div className="w-full flex justify-center items-center relative ">
                 <img className="w-full" src={globalheader} alt="VitoGlobal" />
                 <p className="absolute text-6xl font-bold max-md:text-3xl text-center text-[#093977] tracking-widest z-50">
-                    ViTO {t("nav_global")}
+                    ViTO Global
                 </p>
                 <div className="w-full h-full absolute bg-black opacity-30 z-40" />
             </div>

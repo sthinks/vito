@@ -2,17 +2,20 @@ import React, { useLayoutEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import service from "../../service/service";
 import Helmet from "react-helmet";
+import { useTranslation } from "react-i18next";
+
 function Page() {
     const [data, setData] = useState(null);
     const slug = useParams();
+    const { t, i18n } = useTranslation();
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
         getPages();
-    }, [slug]);
+    }, [slug, i18n.language]);
 
     const getPages = async () => {
-        const result = await service.getBasePage(slug.slug);
+        const result = await service.getBasePage(slug.slug, i18n.language);
         setData(result.data);
     };
     return (

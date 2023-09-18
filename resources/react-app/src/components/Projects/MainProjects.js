@@ -102,6 +102,7 @@ function MainProjects() {
                                         <p className="text-base text-sky-500 font-medium">
                                             <a
                                                 href={`/projects/project-detail/${item.slug}`}
+                                                target="blank"
                                             >
                                                 {t("details")}...
                                             </a>
@@ -122,13 +123,10 @@ function MainProjects() {
                     {onProjects && (
                         <div className="w-full container mx-auto  flex flex-wrap justify-evenly px-16 max-xl:px-5 max-md:px-2 max-md:justify-between max-sm:flex-col max-sm:justify-center max-sm:items-center">
                             {onProjects?.map((item, i) => (
-                                <div
+                                <a
                                     key={i}
-                                    onClick={() =>
-                                        navigate(
-                                            `/projects/project-detail/${item.slug}`
-                                        )
-                                    }
+                                    href={`/projects/project-detail/${item.slug}`}
+                                    target="blank"
                                     className={
                                         projectsAnim
                                             ? "w-[30%] cursor-pointer my-2 h-3/4 max-md:w-[30%] max-md:h-[60%] max-sm:w-5/6 max-sm:my-2 bg-white relative shadow-lg animate-card-first"
@@ -153,12 +151,13 @@ function MainProjects() {
                                         <p className="text-base text-sky-500 font-medium">
                                             <a
                                                 href={`/projects/project-detail/${item.slug}`}
+                                                target="blank"
                                             >
                                                 {t("details")}...
                                             </a>
                                         </p>
                                     </div>
-                                </div>
+                                </a>
                             ))}
                         </div>
                     )}

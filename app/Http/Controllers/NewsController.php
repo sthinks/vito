@@ -8,9 +8,13 @@ use stdClass;
 
 class NewsController extends Controller
 {
-    public function getAllNews()
+    public function getAllNews(Request $request)
     {
-        $data = News::all();
+        $acceptLanguage = $request->header('Accept-Language');
+        $languageCode = explode(',', $acceptLanguage)[0];
+        $languageCode = explode('-', $languageCode)[0];
+        $data = News::withTranslations($languageCode)->get();
+        $data = $data->translate($languageCode);
         $data->map(function ($item) {
             if ($item->media) {
                 $item->media = url(
@@ -40,9 +44,13 @@ class NewsController extends Controller
 
         return response()->json($data);
     }
-    public function getHomeNews()
+    public function getHomeNews(Request $request)
     {
-        $data = News::orderBy('created_at','DESC')->take(3)->get();
+        $acceptLanguage = $request->header('Accept-Language');
+        $languageCode = explode(',', $acceptLanguage)[0];
+        $languageCode = explode('-', $languageCode)[0];
+        $data = News::orderBy('created_at','DESC')->take(3)->withTranslations($languageCode)->get();
+        $data = $data->translate($languageCode);
         $data->map(function ($item) {
             if ($item->media) {
                 $item->media = url(
@@ -74,9 +82,13 @@ class NewsController extends Controller
 
         return response()->json($data);
     }
-    public function getByNews($slug)
+    public function getByNews(Request $request,$slug)
     {
-        $data = News::where('slug',$slug)->first();
+        $acceptLanguage = $request->header('Accept-Language');
+        $languageCode = explode(',', $acceptLanguage)[0];
+        $languageCode = explode('-', $languageCode)[0];
+        $data = News::where('slug',$slug)->withTranslations($languageCode)->first();
+        $data = $data->translate($languageCode);
           if ($data->media) {
                 $data->media = url(
                     sprintf('storage/%s', str_replace('\\', '/', $data->media))

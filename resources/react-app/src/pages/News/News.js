@@ -20,7 +20,7 @@ function News() {
     const navigate = useNavigate();
 
     const getAllNews = async () => {
-        const result = await service.getAllNews();
+        const result = await service.getAllNews(i18n.language);
         setNews(result.data);
         setIsLoading(false);
     };
@@ -32,7 +32,7 @@ function News() {
     useLayoutEffect(() => {
         getAllNews();
         window.scrollTo(0, 0);
-    }, []);
+    }, [i18n.language]);
     return (
         <>
             <Helmet>

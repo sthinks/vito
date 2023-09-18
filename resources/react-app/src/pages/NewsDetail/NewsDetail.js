@@ -4,18 +4,22 @@ import service from "../../service/service";
 import newsBg from "../../assets/news/newsbg.jpg";
 import GlobalSlider from "../../components/Global/GlobalSlider";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
+
 function NewsDetail() {
     const [data, setData] = useState(null);
     const { slug } = useParams();
+    const { t, i18n } = useTranslation();
+
     const getByNewsDetail = async () => {
-        const result = await service.getNewsDetail(slug);
+        const result = await service.getNewsDetail(slug, i18n.language);
         setData(result.data);
         console.log(result.data);
     };
     useEffect(() => {
         getByNewsDetail();
         window.scrollTo(0, 0);
-    }, []);
+    }, [i18n.language]);
 
     return (
         <>

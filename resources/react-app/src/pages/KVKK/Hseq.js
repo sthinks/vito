@@ -5,14 +5,15 @@ import { useTranslation } from "react-i18next";
 
 function Hseq() {
     const [data, setData] = useState(null);
+    const { t, i18n } = useTranslation();
+
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
         getPages();
-    }, []);
-    const { t, i18n } = useTranslation();
+    }, [i18n.language]);
 
     const getPages = async () => {
-        const result = await service.getBasePage("our-policies");
+        const result = await service.getBasePage("our-policies", i18n.language);
         setData(result.data);
     };
     return (

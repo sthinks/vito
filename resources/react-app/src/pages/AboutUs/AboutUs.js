@@ -11,6 +11,7 @@ import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Kvkk from "../KVKK/Hseq";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 function AboutUs() {
     const [data, setData] = useState(null);
@@ -21,8 +22,6 @@ function AboutUs() {
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
-        getDataStatHandler();
-        getDataServiceHandler();
         setTimeout(() => {
             if (slug !== undefined && slug === "service") {
                 const targetElement = document.querySelector(`#${slug}`);
@@ -42,12 +41,16 @@ function AboutUs() {
             }
         }, 1000);
     }, [slug]);
+    useEffect(() => {
+        getDataStatHandler();
+        getDataServiceHandler();
+    }, [i18n.language]);
     const getDataStatHandler = async () => {
-        const result = await service.getAboutStat();
+        const result = await service.getAboutStat(i18n.language);
         setData(result.data);
     };
     const getDataServiceHandler = async () => {
-        const result = await service.getAboutServices();
+        const result = await service.getAboutServices(i18n.language);
         setDataService(result.data);
     };
     const { ref, inView } = useInView({
@@ -71,6 +74,10 @@ function AboutUs() {
                     content="ViTO Energy Engineering Construction and Contracting Inc"
                 />
                 <meta name="description" content="ViTO About Us" />
+                <meta name="description" content="ViTO Hakkımızda" />
+                <meta name="description" content="ViTO Servisler" />
+                <meta name="description" content="ViTO Services" />
+                <meta name="description" content="ViTO Etik" />
                 <meta name="description" content="ViTO Aboutus" />
                 <meta name="description" content="ViTO Energy Projects" />
             </Helmet>
