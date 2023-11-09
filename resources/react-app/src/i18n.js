@@ -273,7 +273,7 @@ const resources = {
             coprote_history: "HISTORY",
             coprota_managment: "MANAGEMENT",
             project_PREVIOUS: "PREVIOUS",
-            project_NEXT: "PREVIOUS",
+            project_NEXT: "NEXT",
             project_PROJECTS: "PROJECTS",
             project_CLIENT: "CLIENT",
             project_SCOPE: "SCOPE",

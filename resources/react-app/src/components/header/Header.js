@@ -292,7 +292,7 @@ function Header() {
                                     onClick={() => setIsOpen(false)}
                                 >
                                     {" "}
-                                    {t("nav_global")}
+                                    GLOBAL
                                     <BiWorld className="text-2xl text-[#264ea4]" />
                                 </Link>
                             </li>

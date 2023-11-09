@@ -1,5 +1,5 @@
 {
-    "/js/app.js": "/js/app.js?id=a5c14987db4395911b6ff3e4e9798513",
+    "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css?id=68b329da9893e34099c7d8ad5cb9c940",
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/react-notifications/lib/notification.eot": "/fonts/vendor/react-notifications/lib/notification.eot?id=15f7b32bdafc27b1b380e0eae4db9a0f",
@@ -339,5 +339,6 @@
     "/storage_old/vito-globals/August2023/smgGsrK6xMFgaY29hpI9.png": "/storage_old/vito-globals/August2023/smgGsrK6xMFgaY29hpI9.png?id=291ec4a08e157e022dacb2fbf30eb2d5",
     "/storage_old/vito-globals/August2023/tojYPnRsrmIqvp7c6pUa.png": "/storage_old/vito-globals/August2023/tojYPnRsrmIqvp7c6pUa.png?id=df3e65e76e3f2c2d83b7f05b14615936",
     "/storage_old/vito-globals/August2023/Wk67fp4DNaqL6gTUkw6g.png": "/storage_old/vito-globals/August2023/Wk67fp4DNaqL6gTUkw6g.png?id=067bb6f3583dc99877b0dbe428de0014",
-    "/storage_old/vito-globals/August2023/XJocRAnpwyWNxLvVAjE0.jpg": "/storage_old/vito-globals/August2023/XJocRAnpwyWNxLvVAjE0.jpg?id=c639a1c247d163288364fe3af2bcc5b9"
+    "/storage_old/vito-globals/August2023/XJocRAnpwyWNxLvVAjE0.jpg": "/storage_old/vito-globals/August2023/XJocRAnpwyWNxLvVAjE0.jpg?id=c639a1c247d163288364fe3af2bcc5b9",
+    "/images/vitopup.png": "/images/vitopup.png?id=49787eaadf11674053ca09525d394321"
 }

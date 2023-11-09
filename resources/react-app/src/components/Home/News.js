@@ -66,7 +66,10 @@ function Haber() {
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href={`news/${news[0].slug}`}>Read More</a>
+                                <a href={`news/${news[0].slug}`}>
+                                    {" "}
+                                    {t("home_who_go")}.
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -136,7 +139,10 @@ function Haber() {
                                 }}
                             />
                             <p className="text-base text-sky-500 font-medium">
-                                <a href={`news/${news[2].slug}`}>Read More</a>
+                                <a href={`news/${news[2].slug}`}>
+                                    {" "}
+                                    {t("home_who_go")}.
+                                </a>
                             </p>
                         </div>
                     </div>

@@ -46,7 +46,7 @@ function HomeAbout() {
             <HomeAboutSlider sliderImage={arrayImage} />
             <div className="m-20 max-md:px-5 max-md:m-0 max-md:py-4">
                 <div className="flex justify-between items-center mt-5 max-md:flex-col max-md:justify-center max-md:items-center">
-                    <div className="w-[49%] h-[300px] flex flex-col justify-arround max-md:w-full max-lg:h-auto py-5">
+                    <div className="w-[49%] h-auto flex flex-col justify-arround max-md:w-full max-lg:h-auto py-5">
                         <h2 className="text-center font-bold text-3xl ">
                             {t("home_who_title")}
                         </h2>
