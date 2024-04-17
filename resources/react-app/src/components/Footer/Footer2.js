@@ -10,6 +10,8 @@ import buda from "../../assets/footer/buda.jpg";
 import { BiLogoTwitter, BiLogoLinkedin } from "react-icons/bi";
 import baku from "../../assets/footer/bakü.jpg";
 import katar from "../../assets/footer/Katar.jpg";
+import katarllc from "../../assets/footer/dubaillc.png";
+
 import bergama from "../../assets/footer/bergama.png";
 import dubai from "../../assets/footer/dubai.jpg";
 import vadi from "../../assets/footer/Vadistanbul.jpg";
@@ -91,6 +93,13 @@ function Footer2() {
             img: katar,
             top: 37,
             left: 62,
+        },
+        {
+            address: "Vito Engineering And Construction Middle East - L.L.C",
+            location: "127, Zayed The Fırst St, Al Zahıyah, Abu Dhabi",
+            img: katarllc,
+            top: 39,
+            left: 63,
         },
         {
             address: "Bergama Industry",
@@ -199,7 +208,7 @@ function Footer2() {
                             <p>Vadistanbul Ayazağa Mah.</p>
 
                             <p>
-                                Azerbaycan Cad. 3B 1B Blok <br />
+                                Azerbaycan Cad. 1B Blok <br />
                             </p>
                             <p>34485 Sarıyer-İstanbul</p>
                             <p>Türkiye</p>

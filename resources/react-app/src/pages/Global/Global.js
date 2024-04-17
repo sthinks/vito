@@ -10,6 +10,7 @@ import globalLogoBg from "../../assets/global/globalvitologo.png";
 import service from "../../service/service";
 import baku from "../../assets/footer/bakü.jpg";
 import katar from "../../assets/footer/Katar.jpg";
+import katarllc from "../../assets/footer/dubaillc.png";
 import bergama from "../../assets/footer/bergama.png";
 import dubai from "../../assets/footer/dubai.jpg";
 import vadi from "../../assets/footer/Vadistanbul.jpg";
@@ -101,6 +102,13 @@ function Global() {
             img: katar,
             top: 37,
             left: 62,
+        },
+        {
+            address: "Vito Engineering And Construction Middle East - L.L.C",
+            location: "127, Zayed The Fırst St, Al Zahıyah, Abu Dhabi",
+            img: katarllc,
+            top: 39,
+            left: 63,
         },
         {
             address: "Bergama Industry",

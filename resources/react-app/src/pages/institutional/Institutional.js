@@ -56,7 +56,11 @@ function Institutional() {
                 <meta name="description" content="ViTO Energy Engineering " />
             </Helmet>
             <div className="relative w-full flex justify-center items-center h-full object-cover max-lg:h-auto">
-                <img src={InstBanner} alt="instbanner" />
+                <img
+                    className="w-full h-fll object-cover"
+                    src={InstBanner}
+                    alt="instbanner"
+                />
                 <div className="absolute bg-blue-800 opacity-25 w-full h-full left-0 top-0" />
                 <h2 className="overlay-text max-md:text-5xl max-sm:text-2xl max-sm:mt-0 mt-10 absolute text-center text-6xl text-white bg-opacity-70 px-2 py-1 rounded font-bold">
                     {t("nav_corporate")}
@@ -140,7 +144,7 @@ function Institutional() {
                             className="text-white text-3xl"
                             style={{
                                 transform: "rotate(-180deg)",
-                                writingMode: "vertical-lr",
+                                writingMode: "vertical-rl",
                             }}
                         >
                             {t("coprote_burhan_title")}
@@ -251,7 +255,7 @@ function Institutional() {
             </div>
             <div className="flex flex-row justify-between w-full h-full max-lg:flex-col-reverse">
                 <div className="bg-[#26697ce3]  text-white w-[65%] p-4 text-left h-auto max-lg:w-full max-lg:h-auto px-36 max-xl:px-12 max-md:px-3 flex flex-col justify-center items-start">
-                    <h2 className="text-3xl font-semibold">Reha Akın</h2>
+                    <h2 className="text-3xl font-semibold">Hüseyin Özcan</h2>
                     <p className=" mt-5">{t("coprote_reha_cv")}</p>
                 </div>
                 <div className="w-[27%] h-auto max-lg:w-full">
@@ -304,12 +308,14 @@ function Institutional() {
                 <div className="w-[27%] max-lg:w-full h-auto">
                     <img
                         src={Tahir}
-                        alt="Tahir"
+                        alt="Ekrem Şenbabaoğlu"
                         className="w-full h-full max-lg:w-full object-cover"
                     />
                 </div>
                 <div className="bg-[#6786bc]  text-white w-[65%] p-4 text-left max-lg:w-full h-auto px-36 max-xl:px-12 max-md:px-3 flex flex-col justify-center items-start">
-                    <h2 className="text-3xl font-semibold">Tahir Kolat</h2>
+                    <h2 className="text-3xl font-semibold">
+                        Ekrem Şenbabaoğlu
+                    </h2>
                     <p className=" mt-5">{t("coprote_tahir_cv")}</p>
                 </div>
             </div>

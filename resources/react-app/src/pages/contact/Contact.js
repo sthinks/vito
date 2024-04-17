@@ -128,7 +128,7 @@ function Contact() {
                                 <IoLocationSharp className="text-red-700 text-3xl mt-3 mr-2" />
                                 <p>
                                     Vadistanbul Ayazağa Mah. <br />
-                                    Azerbaycan Cad. 3B 1B Blok <br />
+                                    Azerbaycan Cad. 1B Blok <br />
                                     34485 Sarıyer-İstanbul <br />
                                     Türkiye
                                 </p>

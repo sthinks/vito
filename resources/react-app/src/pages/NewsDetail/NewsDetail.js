@@ -66,7 +66,7 @@ function NewsDetail() {
                         </div>
                         <div className="container mx-auto px-16 max-lg:px-5 flex my-5 max-lg:flex-col">
                             {data.media != null && (
-                                <div className="h-[250px] my-2 w-3/12 max-lg:w-full">
+                                <div className="h-auto my-2 w-3/12 max-lg:w-full">
                                     <img
                                         className="w-full h-full object-fill"
                                         src={data.media}

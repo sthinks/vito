@@ -16,10 +16,14 @@ import ProjectDetail from "../components/Projects/ProjectDetail";
 import Kvkk from "../pages/KVKK/Kvkk";
 import Services from "../pages/Services/Services";
 import Page from "../pages/Page/Page";
+import Popup from "../components/popup/popup";
+import { useState } from "react";
 
 function AppRoute() {
+    const [modal, setModal] = useState(false);
     return (
         <>
+            {modal && <Popup setModal={setModal} />}
             <Routes>
                 <Route>
                     <Route element={<ShortFooterLayout />}>

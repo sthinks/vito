@@ -8,6 +8,7 @@ import { useInView } from "react-intersection-observer";
 import footerWave from "../../assets/footer/footerwaves.png";
 import baku from "../../assets/footer/bakü.jpg";
 import katar from "../../assets/footer/Katar.jpg";
+import katarllc from "../../assets/footer/dubaillc.png";
 import bergama from "../../assets/footer/bergama.png";
 import dubai from "../../assets/footer/dubai.jpg";
 import vadi from "../../assets/footer/Vadistanbul.jpg";
@@ -55,7 +56,7 @@ function Footer() {
         {
             address: "ViTO Head Office",
             location:
-                "Ayazağa, Vadistanbul, Azerbaycan Cd. 3B D:1B Blok, 34485 Sarıyer/İstanbul",
+                "Ayazağa, Vadistanbul, Azerbaycan Cad. 1B Blok, 34485 Sarıyer/İstanbul",
             img: vadi,
             left: 55,
             top: 22,
@@ -90,6 +91,13 @@ function Footer() {
             img: katar,
             top: 37,
             left: 62,
+        },
+        {
+            address: "Vito Engineering And Construction Middle East - L.L.C",
+            location: "127, Zayed The Fırst St, Al Zahıyah, Abu Dhabi",
+            img: katarllc,
+            top: 39,
+            left: 63,
         },
         {
             address: "Bergama Industry",
@@ -204,7 +212,7 @@ function Footer() {
                             <p>Vadistanbul Ayazağa Mah.</p>
 
                             <p>
-                                Azerbaycan Cad. 3B 1B Blok <br />
+                                Azerbaycan Cad. 1B Blok <br />
                             </p>
                             <p>34485 Sarıyer-İstanbul</p>
                             <p>Türkiye</p>
