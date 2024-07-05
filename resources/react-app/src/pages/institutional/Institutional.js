@@ -216,16 +216,16 @@ function Institutional() {
             </div>
             {/*Dinçer    */}
 
-            <div className="flex flex-row justify-between  bg-[#be677b] w-full max-lg:flex-col">
-                <div className="w-[5%] h-full bg-[#be677b] max-lg:hidden">
+            <div className="flex flex-row justify-between  bg-[#093977] w-full max-lg:flex-col">
+                <div className="w-[5%] h-full bg-[#093977] max-lg:hidden">
                     <p
                         className="text-white text-2xl p-1"
                         style={{
                             writingMode: "vertical-rl",
+                            transform: "rotate(-180deg)",
                             marginTop: "100%",
                             height: "400px",
                             textAlign: "center",
-                            transform: "rotate(180deg)",
                         }}
                     >
                         {t("coprote_zeki_title")}
@@ -245,7 +245,7 @@ function Institutional() {
                 </div>
 
                 <div className=" bg-[#00a1e0]  text-white w-[65%] p-4 text-left h-auto max-lg:w-full px-36 max-xl:px-1 flex flex-col justify-center items-start">
-                    <h2 className="text-3xl font-semibold px-5 py-2 max-md:px-0">
+                    <h2 className="text-3xl font-semibold py-2 max-md:px-0">
                         Zeki Günay
                     </h2>
                     <br />
@@ -253,7 +253,7 @@ function Institutional() {
                     <p className=" mt-5">{t("coprote_zeki_cv")}</p>
                 </div>
             </div>
-            <div className="flex flex-row justify-between w-full h-full max-lg:flex-col-reverse">
+            <div className="flex flex-row  justify-between w-full h-full max-lg:flex-col-reverse">
                 <div className="bg-[#26697ce3]  text-white w-[65%] p-4 text-left h-auto max-lg:w-full max-lg:h-auto px-36 max-xl:px-12 max-md:px-3 flex flex-col justify-center items-start">
                     <h2 className="text-3xl font-semibold">Hüseyin Özcan</h2>
                     <p className=" mt-5">{t("coprote_reha_cv")}</p>
@@ -284,41 +284,7 @@ function Institutional() {
                     <div className=" h-1/5 bg-[#00a1e0]"></div>
                 </div>
             </div>
-            <div className="flex flex-row justify-between w-full h-full max-lg:flex-col">
-                <div className="w-[8%] flex-col text-center ">
-                    <div className=" bg-[#313e72] h-4/5  flex justify-center items-center max-lg:hidden p-3">
-                        <p
-                            className="text-white text-2xl"
-                            style={{
-                                transform: "rotate(-180deg)",
-                                writingMode: "vertical-rl",
-                            }}
-                        >
-                            {t("coprote_tahir_title")}
-                        </p>
-                    </div>
 
-                    <div className=" h-1/5 bg-[#226b88]"></div>
-                </div>
-                <div className="hidden max-lg:flex bg-[#313e72] w-full justify-center items-center">
-                    <p className="text-white text-3xl p-1 max-lg:text-xl max-md:py-4 text-center">
-                        {t("coprote_tahir_title")}
-                    </p>
-                </div>
-                <div className="w-[27%] max-lg:w-full h-auto">
-                    <img
-                        src={Tahir}
-                        alt="Ekrem Şenbabaoğlu"
-                        className="w-full h-full max-lg:w-full object-cover"
-                    />
-                </div>
-                <div className="bg-[#6786bc]  text-white w-[65%] p-4 text-left max-lg:w-full h-auto px-36 max-xl:px-12 max-md:px-3 flex flex-col justify-center items-start">
-                    <h2 className="text-3xl font-semibold">
-                        Ekrem Şenbabaoğlu
-                    </h2>
-                    <p className=" mt-5">{t("coprote_tahir_cv")}</p>
-                </div>
-            </div>
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5 mt-9">
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
                 <p className="font-bold text-4xl my-5 mx-0 text-[#093977] text-center">
