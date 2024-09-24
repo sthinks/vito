@@ -5,6 +5,7 @@ import Fuat from "../.././assets/institutional/fuat.png";
 import Burhan from "../.././assets/institutional/burhanbey.jpg";
 import Dinc from "../.././assets/institutional/dinsellier.jpg";
 import Zeki from "../.././assets/institutional/zekigunay.png";
+import Canberk from "../.././assets/institutional/canberkyildiran.jpg";
 import Reha from "../.././assets/institutional/reha.jpg";
 import Tahir from "../.././assets/institutional/tahirbey.jpg";
 import InstBanner from "../.././assets/institutional/kurumsl.png";
@@ -66,7 +67,6 @@ function Institutional() {
                     {t("nav_corporate")}
                 </h2>
             </div>
-
             <div className="relative ">
                 <div className="flex justify-between w-full max-lg:flex-col">
                     <div className="flex w-2/6 max-xl:w-2/4 max-lg:w-full flex-col  ">
@@ -170,6 +170,40 @@ function Institutional() {
                     <p className=" mt-5">{t("coprote_burhan_cv")}</p>
                 </div>
             </div>
+            {/* Canberk Yıldıran */}
+            <div className="flex flex-row-reverse justify-between w-full h-full max-lg:flex-col">
+                <div className="w-[8%] flex-col text-center ">
+                    <div className=" bg-[#093977] h-4/5  flex justify-center items-center max-lg:hidden">
+                        <p
+                            className="text-white text-3xl"
+                            style={{
+                                transform: "rotate(-180deg)",
+                                writingMode: "vertical-rl",
+                            }}
+                        >
+                            {t("coprote_canberk_title")}
+                        </p>
+                    </div>
+
+                    <div className=" h-1/5 bg-[#00a1e0]"></div>
+                </div>
+                <div className="hidden max-lg:flex bg-[#093977] w-full h-auto justify-center items-center ">
+                    <p className="text-white text-3xl p-1  max-md:py-4">
+                        {t("coprote_canberk_title")}
+                    </p>
+                </div>
+                <div className="w-[27%] max-lg:w-full h-auto">
+                    <img
+                        src={Canberk}
+                        alt="Canberk Yıldıran"
+                        className="w-full h-full max-lg:w-full object-cover"
+                    />
+                </div>
+                <div className="bg-[#093977] text-white w-[65%] p-4 text-left max-lg:w-full h-auto flex flex-col justify-center items-start px-36 max-xl:px-12 max-md:px-3 ">
+                    <h2 className="text-3xl font-semibold">Canberk Yıldıran</h2>
+                    <p className=" mt-5">{t("coprote_canberk_cv")}</p>
+                </div>
+            </div>
             <div className="container mx-auto flex flex-row items-center justify-center my-2">
                 <div className="w-2/5 h-[2px] bg-[#093977] mr-4"></div>
                 <h1 className="font-bold text-4xl my-5 mx-0 text-[#093977] text-center">
@@ -215,7 +249,6 @@ function Institutional() {
                 </div>
             </div>
             {/*Dinçer    */}
-
             <div className="flex flex-row justify-between  bg-[#093977] w-full max-lg:flex-col">
                 <div className="w-[5%] h-full bg-[#093977] max-lg:hidden">
                     <p
@@ -253,7 +286,7 @@ function Institutional() {
                     <p className=" mt-5">{t("coprote_zeki_cv")}</p>
                 </div>
             </div>
-            <div className="flex flex-row  justify-between w-full h-full max-lg:flex-col-reverse">
+            {/* <div className="flex flex-row  justify-between w-full h-full max-lg:flex-col-reverse">
                 <div className="bg-[#26697ce3]  text-white w-[65%] p-4 text-left h-auto max-lg:w-full max-lg:h-auto px-36 max-xl:px-12 max-md:px-3 flex flex-col justify-center items-start">
                     <h2 className="text-3xl font-semibold">Hüseyin Özcan</h2>
                     <p className=" mt-5">{t("coprote_reha_cv")}</p>
@@ -283,8 +316,7 @@ function Institutional() {
                     </div>
                     <div className=" h-1/5 bg-[#00a1e0]"></div>
                 </div>
-            </div>
-
+            </div> */}
             <div className="w-full flex justify-center items-center px-24 gap-16 my-8 max-xl:px-10 max-md:px-5 max-xl:gap-5 mt-9">
                 <hr className="w-3/4 border-2 border-[#456998] max-sm:hidden" />
                 <p className="font-bold text-4xl my-5 mx-0 text-[#093977] text-center">
